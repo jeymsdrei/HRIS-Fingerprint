@@ -1,0 +1,45 @@
+2026-08-29 16:18:20.812 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 16:18:27.827 [Info   ] OnFormClosing | Application shutting down
+2026-08-29 16:18:28.993 [Info   ] CloseDevice | Device closed
+2026-08-29 16:22:35.274 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 16:27:30.246 [Info   ] OnFormClosing | Application shutting down
+2026-08-29 16:27:30.358 [Info   ] CloseDevice | Device closed
+2026-08-29 16:27:38.087 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 16:33:28.393 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 16:35:57.044 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 16:40:03.849 [Info   ] OnFormClosing | Application shutting down
+2026-08-29 16:40:04.549 [Info   ] CloseDevice | Device closed
+2026-08-29 16:40:11.967 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 16:50:27.629 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 16:50:53.419 [Info   ] PushPunchToHris | pushed fingerprintId=1
+2026-08-29 16:53:59.608 [Info   ] OnFormClosing | Application shutting down
+2026-08-29 16:53:59.680 [Info   ] CloseDevice | Device closed
+2026-08-29 16:54:06.223 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 16:54:36.850 [Info   ] PushPunchToHris | pushed fingerprintId=2
+2026-08-29 16:56:53.584 [Warning] PushPunchToHris | queued (1 pending): HTTP error
+2026-08-29 16:57:06.342 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=1
+2026-08-29 16:57:15.001 [Warning] PushPunchToHris | queued (2 pending): HTTP error
+2026-08-29 16:57:38.381 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=2
+2026-08-29 16:58:08.387 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=2
+2026-08-29 16:58:38.355 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=2
+2026-08-29 16:59:08.394 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=2
+2026-08-29 16:59:32.222 [Warning] PushPunchToHris | queued (3 pending): HTTP error
+2026-08-29 16:59:40.424 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=3
+2026-08-29 17:00:10.431 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=3
+2026-08-29 17:00:40.404 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=3
+2026-08-29 17:01:10.428 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=3
+2026-08-29 17:01:40.421 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=0 remaining=3
+2026-08-29 17:02:05.743 [Info   ] FlushPendingQueue | sent=0 dropped(permanent)=3 remaining=0
+2026-08-29 17:02:19.545 [Info   ] OnFormClosing | Application shutting down
+2026-08-29 17:02:19.692 [Info   ] CloseDevice | Device closed
+2026-08-29 17:02:28.344 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 17:02:43.324 [Warning] PushPunchToHris | dropped: Employee not linked in HRIS (imported=0)
+2026-08-29 17:03:00.434 [Warning] PushPunchToHris | dropped: Employee not linked in HRIS (imported=0)
+2026-08-29 17:24:49.021 [Info   ] OnFormClosing | Application shutting down
+2026-08-29 17:24:49.146 [Info   ] CloseDevice | Device closed
+2026-08-29 17:24:56.955 [Info   ] TryAutoInitialize | Device connected successfully
+2026-08-29 18:00:22.664 [Info   ] PushPunchToHris | pushed fingerprintId=1
+2026-08-29 18:31:32.390 [Info   ] PushPunchToHris | pushed fingerprintId=2
+2026-08-29 18:31:40.576 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (UNKNOWN_-17)
+2026-08-29 18:32:56.874 [Info   ] OnFormClosing | Application shutting down
+2026-08-29 18:32:57.040 [Info   ] CloseDevice | Device closed

@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "key": "company_name",
+        "value": "College of Computer and Information Sciences",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 2,
+        "key": "company_address",
+        "value": "Main Campus, Brgy. Salawag, Dasmariñas City, Cavite",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 3,
+        "key": "monthly_payroll_days",
+        "value": "[15,30]",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 4,
+        "key": "payment_method",
+        "value": "cash",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 5,
+        "key": "workdays_per_month",
+        "value": "22",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 6,
+        "key": "overtime_multiplier",
+        "value": "1.25",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 7,
+        "key": "grace_minutes",
+        "value": "15",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 8,
+        "key": "sss_ee_rate",
+        "value": "4.5",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 9,
+        "key": "sss_ee_cap",
+        "value": "1350",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 10,
+        "key": "philhealth_ee_rate",
+        "value": "2.5",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 11,
+        "key": "philhealth_ee_cap",
+        "value": "1100",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 12,
+        "key": "pagibig_ee_rate",
+        "value": "2",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 13,
+        "key": "pagibig_ee_cap",
+        "value": "200",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 14,
+        "key": "default_other_deduction",
+        "value": "0",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 15,
+        "key": "default_shift_start",
+        "value": "08:00",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 16,
+        "key": "default_shift_end",
+        "value": "17:00",
+        "group": "payroll",
+        "created_at": null,
+        "updated_at": null
+    }
+]

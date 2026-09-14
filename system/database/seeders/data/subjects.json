@@ -1,0 +1,1522 @@
+[
+    {
+        "id": 1,
+        "code": "GE 1",
+        "name": "Understanding the Self",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 2,
+        "code": "GE 2",
+        "name": "Mathematics in the Modern World",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 3,
+        "code": "GE 3",
+        "name": "Art Appreciation",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 4,
+        "code": "GE 4",
+        "name": "Science, Technology and Society",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 5,
+        "code": "GE 5",
+        "name": "Purposive Communication",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 6,
+        "code": "GE 6",
+        "name": "The Contemporary World (Ang Kasalukuyang Daigdig)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 7,
+        "code": "GE 7",
+        "name": "Readings in the Philippine History",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 8,
+        "code": "GE 10 ELEC",
+        "name": "Gender and Society",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 9,
+        "code": "GE 11",
+        "name": "Life and Works of Rizal",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 10,
+        "code": "GE 12",
+        "name": "Ethics",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 11,
+        "code": "GE ELEC 3",
+        "name": "Philippine Popular Culture",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 12,
+        "code": "PATHFIT 1",
+        "name": "Movement Competency Training",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 13,
+        "code": "PATHFIT 3",
+        "name": "Dance",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 14,
+        "code": "NSTP 1",
+        "name": "Civic Welfare and Training Service 1",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 15,
+        "code": "NSTP I",
+        "name": "Literacy Training Service",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 16,
+        "code": "PROF ED 1",
+        "name": "The Child and Adolescent and Learning Principles",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 17,
+        "code": "PROF ED 6",
+        "name": "Facilitating Learner-Centered Learning",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 18,
+        "code": "PROF ED 8",
+        "name": "TTL 1",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 19,
+        "code": "PROF ED 11 FS 1",
+        "name": "Observation of Teaching in an Actual School Environment",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 20,
+        "code": "PROF ED 12 FS 2",
+        "name": "Participation and Teaching Assistantship",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 21,
+        "code": "MC SNED 01",
+        "name": "Learners with Developmental Disabilities",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 22,
+        "code": "MC SNED 02",
+        "name": "Learners with Sensory and Physical Disabilities",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 23,
+        "code": "MC SNED 03",
+        "name": "Learners w/ Emotional, Behavioral, Language and Communication Disabilities",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 24,
+        "code": "MC SNED 04",
+        "name": "Gifted and Talented Learners",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 25,
+        "code": "MC SNED 05",
+        "name": "Curriculum & Pedagogy in Inclusive Education",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 26,
+        "code": "MC SNED 11",
+        "name": "Instructional Adaptions for Teaching the Content Areas (Social Sciences, Humanities)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 27,
+        "code": "MC SNED 12",
+        "name": "Instructional Adapations for Teaching the Content Areas (Social Sciences, Humanities)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 28,
+        "code": "MC SNED 13",
+        "name": "Development of Individualized Education",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 29,
+        "code": "BENg",
+        "name": "Business English",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 30,
+        "code": "MC ALLIED 1",
+        "name": "Campus Journalism",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 31,
+        "code": "MC ELT 2",
+        "name": "Language Programs & Policies in Multilingual Societies",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 32,
+        "code": "MC ELT 3",
+        "name": "Language Learning Materials Development",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 33,
+        "code": "MC ELT 4",
+        "name": "Teaching and Assessment of Literature Studies",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 34,
+        "code": "MC ELT 5",
+        "name": "Teaching and Assessment of the Macroskills",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 35,
+        "code": "MC ENG 101",
+        "name": "Teaching English in the Elementary Grades (Language Arts)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 36,
+        "code": "MC ENG 102",
+        "name": "Teaching English in the Elementary Grades Through Literature",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 37,
+        "code": "MC LINGUIS 1",
+        "name": "Introduction to Linguistics",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 38,
+        "code": "MC LINGUIS 3",
+        "name": "Structures of English",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 39,
+        "code": "MC LIT 4",
+        "name": "Survey of Afro-Asian Literature",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 40,
+        "code": "MC LIT 5",
+        "name": "Survey of English & American Literature",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 41,
+        "code": "MC LIT 105",
+        "name": "Maikling Kwento at Nobelang Filipino",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 42,
+        "code": "ELECTIVE 1-ENG",
+        "name": "Stylistics and Discourse Analysis",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 43,
+        "code": "ELECTIVE 1-FIL",
+        "name": "Filipino para sa Natatanging Gamit",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 44,
+        "code": "MC FIL 103",
+        "name": "Ang Filipino sa Kurikulum ng Batayang Edukasyon",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 45,
+        "code": "MC FIL 104",
+        "name": "Estruktura sa Wikang Filipino",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 46,
+        "code": "MC FIL 107",
+        "name": "Pagpaplano at Ebalwasyon ng Kagamitang Panturo",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 47,
+        "code": "MC FIL 111",
+        "name": "Barayti at Baryasyon ng Wika",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 48,
+        "code": "MC MATH 1",
+        "name": "Teaching Mathematics in the Elem Grades",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 49,
+        "code": "MC MATH 100",
+        "name": "History of Mathematics",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 50,
+        "code": "MC MATH 103",
+        "name": "Plane and Solid Geometry",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 51,
+        "code": "MC MATH 106",
+        "name": "Calculus 1 with Analytic Geometry",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 52,
+        "code": "MC SSC 101",
+        "name": "Teaching Social Science in the Elementary Grades (Culture and Geography)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 53,
+        "code": "MC SSE 102",
+        "name": "Geography 2 (Physical Geography)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 54,
+        "code": "MC SSE 103",
+        "name": "Asian Studies",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 55,
+        "code": "MC SSE 104",
+        "name": "Microeconomics",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 56,
+        "code": "MC SSE 106",
+        "name": "World History 1 (Ancient and Medieval Era)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 57,
+        "code": "MC ELEC 01",
+        "name": "Social Networking for Social Integration",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 58,
+        "code": "MC VED",
+        "name": "Good Manners and Right Conduct",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 59,
+        "code": "MC ARTS",
+        "name": "Teaching Arts in the Elementary Grades",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 60,
+        "code": "MC MUSIC",
+        "name": "Teaching Music in the Elementary Grades",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 61,
+        "code": "MC PEH",
+        "name": "Teaching in PE and Health in the Elementary Grades",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 62,
+        "code": "SHS-CW",
+        "name": "Creative Writing",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 63,
+        "code": "SHS-DIASS",
+        "name": "Discipline & Ideas in the Applied Social Sciences",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 64,
+        "code": "SHS-PHIL",
+        "name": "Introduction to Philosophy of the Human Person",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 65,
+        "code": "SHS-ENTREP",
+        "name": "Entrepreneurship",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 66,
+        "code": "BACC 2",
+        "name": "Taxation (Income Taxation)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 67,
+        "code": "BACC 3",
+        "name": "Business Law (Obligation and Contract)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 68,
+        "code": "BACC 6",
+        "name": "Good Governance and Social Responsibility",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 69,
+        "code": "BACC 8",
+        "name": "Research 2",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 70,
+        "code": "BACC 8-HR",
+        "name": "Business Research 2",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 71,
+        "code": "CBMEC 2",
+        "name": "Strategic Marketing",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 72,
+        "code": "FM ELEC 101",
+        "name": "Personal Finance",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 73,
+        "code": "FM ELEC 103",
+        "name": "Risk Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 74,
+        "code": "FM ELEC 106",
+        "name": "Mutual Funds",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 75,
+        "code": "HR ELEC 101",
+        "name": "Personal Finance",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 76,
+        "code": "HR ELEC 102",
+        "name": "Environmental Management System",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 77,
+        "code": "HR ELEC 106",
+        "name": "Logistic Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 78,
+        "code": "HR ELEC 108",
+        "name": "Project Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 79,
+        "code": "MM ELEC 101",
+        "name": "Personal Finance",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 80,
+        "code": "MM ELEC 102",
+        "name": "International Marketing",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 81,
+        "code": "MM ELEC 103",
+        "name": "Sales Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 82,
+        "code": "MM ELEC 108",
+        "name": "E-Commerce and Internet Marketing",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 83,
+        "code": "MM ELT 105",
+        "name": "Services Marketing",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 84,
+        "code": "PROF MAJOR 1",
+        "name": "Admin and Office Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 85,
+        "code": "PROF MAJOR 4-FM",
+        "name": "Monetary Policy and Central Banking",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 86,
+        "code": "PROF MAJOR 4-HR",
+        "name": "Training and Development",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 87,
+        "code": "PROF MAJOR 4-MM",
+        "name": "Advertising",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 88,
+        "code": "PROF MAJOR 5-HR",
+        "name": "Compensation Administration",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 89,
+        "code": "PROF MAJOR 5-MM",
+        "name": "Distribution Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 90,
+        "code": "PROF MAJOR 6-HR",
+        "name": "Labor Relations and Negotiations",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 91,
+        "code": "PROF MAJOR 6-MM",
+        "name": "Product Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 92,
+        "code": "PROF MAJOR 7",
+        "name": "Special Topic in H.R. Mgmt. (Case Study Analysis)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 93,
+        "code": "PROF MAJOR 8",
+        "name": "Special Topic",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 94,
+        "code": "BME 1",
+        "name": "Strategic Management in Tourism Hospitality",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 95,
+        "code": "HPC 2",
+        "name": "Kitchen Essentials and Basic Food Preparation",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 96,
+        "code": "HPC 3",
+        "name": "Fundamentals in Lodging Operations",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 97,
+        "code": "HPC 8",
+        "name": "Ergonomics and Facilities Planning for the Hospitality Industry",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 98,
+        "code": "HPC 9",
+        "name": "Foreign Language 2",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 99,
+        "code": "HPC 10",
+        "name": "Research 1",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 100,
+        "code": "HPC 11",
+        "name": "Research in Hospitality 2",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 101,
+        "code": "HMPE 1",
+        "name": "Menu Design and Revenue Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 102,
+        "code": "HMPE 2",
+        "name": "Industrial/Institutional Commissary Food Service",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 103,
+        "code": "HMPE 4",
+        "name": "Front Office Operation",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 104,
+        "code": "HMPE 6",
+        "name": "Bread and Pastry",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 105,
+        "code": "THC 2",
+        "name": "Risk Management as Applied to Safety, Security, and Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 106,
+        "code": "THC 8",
+        "name": "Legal Aspects in Tourism and Hospitality",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 107,
+        "code": "THC 9",
+        "name": "Multicultural Diversity in Workplace for the Tourism Professionals",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 108,
+        "code": "MAJOR 7",
+        "name": "Quantity Cookery",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 109,
+        "code": "MAJOR 8-FSM",
+        "name": "Advance Baking",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 110,
+        "code": "MAJOR 10-FSM",
+        "name": "Bartending & Bar Service Management",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 111,
+        "code": "MAJOR 2-FSM",
+        "name": "Food Selection & Preparation",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 112,
+        "code": "HE-LIT",
+        "name": "Home Economics Literacy",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 113,
+        "code": "AL 101",
+        "name": "Algorithms and Complexity",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 114,
+        "code": "WS 103",
+        "name": "Computer Graphics",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 115,
+        "code": "AI 01",
+        "name": "Artificial Intelligence",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 116,
+        "code": "IAS 101",
+        "name": "Information Assurance and Security",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 117,
+        "code": "PF 102",
+        "name": "CS Elective 3 (Data Analytics)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 118,
+        "code": "AR101",
+        "name": "Architecture and Organization",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 119,
+        "code": "ITCS 101",
+        "name": "Office Applications",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 120,
+        "code": "THS 103",
+        "name": "CS Thesis Writing 2",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 121,
+        "code": "CS SEM",
+        "name": "Seminars",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 122,
+        "code": "SDF 104",
+        "name": "Object Oriented Programming",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 123,
+        "code": "WS 102",
+        "name": "CS Elective 1 (Parallel and Distributive Computing)",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 124,
+        "code": "CC102",
+        "name": "Fundamentals of Programming",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 125,
+        "code": "NET 103",
+        "name": "CS Elective",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 126,
+        "code": "SE 101",
+        "name": "Software Engineering 1",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 127,
+        "code": "MAJOR 1",
+        "name": "Occupational Health and Safety Practices",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 128,
+        "code": "MAJOR 2-AT",
+        "name": "Internal Combustion Engine Servicing, Repair, & Maintenance",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 129,
+        "code": "MAJOR 3-AT",
+        "name": "Preventive Maintenance & Gas/Diesel Engine Tune-Up",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 130,
+        "code": "MAJOR 10-AT",
+        "name": "Engine Overhauling & Rebuilding",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 131,
+        "code": "MAJOR 2-EST",
+        "name": "Basic Electronics",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 132,
+        "code": "MAJOR 3-EST",
+        "name": "Digital Electronics",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 133,
+        "code": "MAJOR 4",
+        "name": "Power Electronics",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 134,
+        "code": "MAJOR 8-AT",
+        "name": "Motor Cycle & Small Engine, Servicing, Repairing & Maintenance",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 135,
+        "code": "MAJOR 9",
+        "name": "Automotive Body Repair & Substrate Preparation",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 136,
+        "code": "IA-INTRO",
+        "name": "Intro. To Industrial Arts",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 138,
+        "code": "TCCIA",
+        "name": "Teaching Common Competencies in Industrial Arts",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 139,
+        "code": "TCC ICT",
+        "name": "Teaching Common Competencies ICT",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 140,
+        "code": "BK NC III",
+        "name": "Bookkeeping NC III",
+        "units": 1,
+        "created_at": "2026-08-21 10:22:29",
+        "updated_at": "2026-08-21 10:22:29"
+    },
+    {
+        "id": 149,
+        "code": "AGRI-FISH",
+        "name": "Intro. To Agriculture and Fisheries",
+        "units": 1,
+        "created_at": "2026-08-22 15:50:14",
+        "updated_at": "2026-08-22 15:50:14"
+    },
+    {
+        "id": 151,
+        "code": "DS 102",
+        "name": "Discrete Structures 2",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 152,
+        "code": "PEH",
+        "name": "Physical Education and Health",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 153,
+        "code": "MAJOR 8",
+        "name": "AC Machine",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 154,
+        "code": "MAJOR 10",
+        "name": "Industrial Electronic Circuit and Devices",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 155,
+        "code": "MAJOR 2",
+        "name": "Electrical & Electronics Circuit and Devices",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 156,
+        "code": "MAJOR 3",
+        "name": "Fundamentals of Electricity",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 157,
+        "code": "PROF ED 2",
+        "name": "Foundation of Special and Inclusive Education",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 158,
+        "code": "PROF ED 3",
+        "name": "The Teaching Profession",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 159,
+        "code": "HPC 4",
+        "name": "Applied Bus Tools and Technologies (PMS) with Laboratory",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 160,
+        "code": "THC 1",
+        "name": "Macro Perspective of Tourism and Hospitality",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 161,
+        "code": "THC 3",
+        "name": "Quality Service Management in Tourism and Hospitality",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 162,
+        "code": "FM ELEC 102",
+        "name": "Public Finance",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 163,
+        "code": "MC FSSE 101",
+        "name": "Foundation of Social Studies",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 164,
+        "code": "MC SNED 16A",
+        "name": "Practical Research 1",
+        "units": 4,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 165,
+        "code": "GE ELEC 1",
+        "name": "Environmental Science",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 166,
+        "code": "GES",
+        "name": "Civic Welfare Training Service",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 167,
+        "code": "HPC 5",
+        "name": "Introduction to Meetings, Incentives, and Conference Event Management (MICE)",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 168,
+        "code": "CCOL",
+        "name": "Introduction to Computing",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 169,
+        "code": "AL 102",
+        "name": "Automata Theory and Formal Languages",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 170,
+        "code": "PRAC",
+        "name": "Practicum (600 hrs.)",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 171,
+        "code": "HMPE 5",
+        "name": "Housekeeping Operation",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 172,
+        "code": "THC 6",
+        "name": "Professional Development and Applied Ethics",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 173,
+        "code": "HMPE 3",
+        "name": "Asian Cuisine",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 174,
+        "code": "MC SCI 101",
+        "name": "Teaching Science in the Elementary Grades (Biology and Chemistry)",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 175,
+        "code": "MC FSSE 102",
+        "name": "Places and Landscapes in the Changing World",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 176,
+        "code": "MC SSE 113",
+        "name": "Teaching Approaches in Secondary Social Studies",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 177,
+        "code": "MC ELT 1",
+        "name": "Principles and Theories of Languages Acquisition & Learning",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 178,
+        "code": "MC MATH 105",
+        "name": "Elementary Statistics and Probability",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 179,
+        "code": "MC MATH 112",
+        "name": "Calculus 3",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 180,
+        "code": "MC MATH 102",
+        "name": "Trigonometry",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 181,
+        "code": "MC MATH 111",
+        "name": "Linear Algebra",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 182,
+        "code": "MC MATH 114",
+        "name": "Advanced Statistics",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 183,
+        "code": "MC MATH 113",
+        "name": "Principles and Strategies of Teaching Mathematics",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 184,
+        "code": "MC SSE 105",
+        "name": "Socio-Cultural Anthropology",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 185,
+        "code": "MC 112",
+        "name": "Law Related Studies",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 186,
+        "code": "MC SSE 111",
+        "name": "Comparative Government and Politics",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 187,
+        "code": "HMPE 7",
+        "name": "Food and Beverage Service with Laboratory",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 188,
+        "code": "THC 10",
+        "name": "Entrepreneurship in Tourism and Hospitality",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 189,
+        "code": "MC FIL 1",
+        "name": "Pagtuturo ng Filipino sa Elementarya (1)",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 190,
+        "code": "MC FIL 112",
+        "name": "Estruktura at Gamit ng Wikang Filipino",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 191,
+        "code": "MC FIL 101",
+        "name": "Mga Natatanging Diskurso sa Wika at Panitikan",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 192,
+        "code": "MC LIT 101",
+        "name": "Kasarian at Lipunan",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 193,
+        "code": "MC FIL 105",
+        "name": "Pagtuturo at Pagtataya ng Makrong Kasanayang Pangwika",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 194,
+        "code": "MC FIL 106",
+        "name": "Ugnayan ng Wika, Kultura at Lipunan",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 195,
+        "code": "PROF ED 7",
+        "name": "Assessment of Learning 1",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 196,
+        "code": "OJT",
+        "name": "Supervised Industrial Training (240 hrs.)",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 197,
+        "code": "MC MATH 104",
+        "name": "Logic and Set Theory",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 198,
+        "code": "PROF ED 5",
+        "name": "Facilitating Learner-Centered Teaching: The Learner-Centered Approaches with Emphasis on Trainers' Methodology 1",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 199,
+        "code": "PROF MAJOR 2",
+        "name": "Financial Analysis and Reporting",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    },
+    {
+        "id": 200,
+        "code": "PROF MAJOR 3",
+        "name": "Banking and Financial Institutions",
+        "units": 3,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "employee_id": 1,
+        "benefit_id": 1,
+        "amount": 1500,
+        "effective_date": null,
+        "expiration_date": null,
+        "created_at": "2026-08-21 10:25:20",
+        "updated_at": "2026-08-21 10:25:20"
+    },
+    {
+        "id": 2,
+        "employee_id": 2,
+        "benefit_id": 1,
+        "amount": 1500,
+        "effective_date": null,
+        "expiration_date": null,
+        "created_at": "2026-08-21 10:25:20",
+        "updated_at": "2026-08-21 10:25:20"
+    },
+    {
+        "id": 3,
+        "employee_id": 3,
+        "benefit_id": 1,
+        "amount": 1500,
+        "effective_date": null,
+        "expiration_date": null,
+        "created_at": "2026-08-21 10:25:20",
+        "updated_at": "2026-08-21 10:25:20"
+    },
+    {
+        "id": 4,
+        "employee_id": 4,
+        "benefit_id": 1,
+        "amount": 1500,
+        "effective_date": null,
+        "expiration_date": null,
+        "created_at": "2026-08-21 10:25:20",
+        "updated_at": "2026-08-21 10:25:20"
+    },
+    {
+        "id": 5,
+        "employee_id": 5,
+        "benefit_id": 1,
+        "amount": 1500,
+        "effective_date": null,
+        "expiration_date": null,
+        "created_at": "2026-08-21 10:25:20",
+        "updated_at": "2026-08-21 10:25:20"
+    },
+    {
+        "id": 6,
+        "employee_id": 6,
+        "benefit_id": 1,
+        "amount": 1500,
+        "effective_date": null,
+        "expiration_date": null,
+        "created_at": "2026-08-21 10:25:20",
+        "updated_at": "2026-08-21 10:25:20"
+    }
+]

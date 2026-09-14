@@ -1,0 +1,470 @@
+[
+    {
+        "id": 1,
+        "code": "R101",
+        "name": "Room 101",
+        "building": "Main Building",
+        "capacity": 40,
+        "created_at": "2026-08-21 10:25:17",
+        "updated_at": "2026-08-21 10:25:17"
+    },
+    {
+        "id": 2,
+        "code": "R102",
+        "name": "Room 102",
+        "building": "Main Building",
+        "capacity": 40,
+        "created_at": "2026-08-21 10:25:17",
+        "updated_at": "2026-08-21 10:25:17"
+    },
+    {
+        "id": 3,
+        "code": "L201",
+        "name": "Computer Laboratory 1",
+        "building": "Technology Building",
+        "capacity": 50,
+        "created_at": "2026-08-21 10:25:17",
+        "updated_at": "2026-08-21 10:25:17"
+    },
+    {
+        "id": 4,
+        "code": "L202",
+        "name": "Computer Laboratory 2",
+        "building": "Technology Building",
+        "capacity": 50,
+        "created_at": "2026-08-21 10:25:17",
+        "updated_at": "2026-08-21 10:25:17"
+    },
+    {
+        "id": 5,
+        "code": "R301",
+        "name": "Lecture Room 301",
+        "building": "New Building",
+        "capacity": 45,
+        "created_at": "2026-08-21 10:25:17",
+        "updated_at": "2026-08-21 10:25:17"
+    },
+    {
+        "id": 6,
+        "code": "NB 104",
+        "name": "Room NB 104",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 7,
+        "code": "NB 105",
+        "name": "Room NB 105",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 8,
+        "code": "NB 106",
+        "name": "Room NB 106",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 9,
+        "code": "NB 107",
+        "name": "Room NB 107",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 10,
+        "code": "NB 108",
+        "name": "Room NB 108",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 11,
+        "code": "NB 109",
+        "name": "Room NB 109",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 12,
+        "code": "NB 110",
+        "name": "Room NB 110",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 13,
+        "code": "NB 201",
+        "name": "Room NB 201",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 14,
+        "code": "NB 202",
+        "name": "Room NB 202",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 15,
+        "code": "NB 203",
+        "name": "Room NB 203",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 16,
+        "code": "NB 204",
+        "name": "Room NB 204",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 17,
+        "code": "NB 205",
+        "name": "Room NB 205",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 18,
+        "code": "NB 206",
+        "name": "Room NB 206",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 19,
+        "code": "NB 207",
+        "name": "Room NB 207",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 20,
+        "code": "NB 208",
+        "name": "Room NB 208",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 21,
+        "code": "NB 209",
+        "name": "Room NB 209",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 22,
+        "code": "NB 210",
+        "name": "Room NB 210",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 23,
+        "code": "NB 301",
+        "name": "Room NB 301",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 24,
+        "code": "NB 302",
+        "name": "Room NB 302",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 25,
+        "code": "NB 303",
+        "name": "Room NB 303",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 26,
+        "code": "NB 304",
+        "name": "Room NB 304",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 27,
+        "code": "NB 305",
+        "name": "Room NB 305",
+        "building": "New Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 28,
+        "code": "MB 201",
+        "name": "Room MB 201",
+        "building": "Main Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 29,
+        "code": "MB 202",
+        "name": "Room MB 202",
+        "building": "Main Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 30,
+        "code": "MB 203",
+        "name": "Room MB 203",
+        "building": "Main Building",
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 31,
+        "code": "104",
+        "name": "Room 104",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 32,
+        "code": "105",
+        "name": "Room 105",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 33,
+        "code": "107",
+        "name": "Room 107",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 34,
+        "code": "108",
+        "name": "Room 108",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 35,
+        "code": "109",
+        "name": "Room 109",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 36,
+        "code": "201",
+        "name": "Room 201",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 37,
+        "code": "202",
+        "name": "Room 202",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 38,
+        "code": "204",
+        "name": "Room 204",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 39,
+        "code": "208",
+        "name": "Room 208",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 40,
+        "code": "302",
+        "name": "Room 302",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 41,
+        "code": "COM LAB",
+        "name": "Computer Laboratory",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 42,
+        "code": "COM LAB - LAB",
+        "name": "Computer Laboratory (Lab Section)",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 43,
+        "code": "CHEM RM",
+        "name": "Chemistry Room",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 44,
+        "code": "ELEC ROOM",
+        "name": "Electrical Room",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 45,
+        "code": "GYM",
+        "name": "Gymnasium",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 46,
+        "code": "GYM PANAL",
+        "name": "Gym Panal",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 47,
+        "code": "HM LAB",
+        "name": "Hospitality Management Laboratory",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 48,
+        "code": "NEW LIB",
+        "name": "New Library",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 49,
+        "code": "OLD LIBRARY",
+        "name": "Old Library",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 50,
+        "code": "PHYSICS",
+        "name": "Physics Room",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 51,
+        "code": "ROOFDECK",
+        "name": "Roofdeck",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 16:38:07",
+        "updated_at": "2026-08-22 16:38:07"
+    },
+    {
+        "id": 52,
+        "code": "CAREGIVER RM",
+        "name": "Caregiver Room",
+        "building": null,
+        "capacity": null,
+        "created_at": "2026-08-22 17:16:17",
+        "updated_at": "2026-08-22 17:16:17"
+    }
+]

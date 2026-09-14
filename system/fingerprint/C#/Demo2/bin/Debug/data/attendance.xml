@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<ArrayOfAttendanceRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AttendanceRecord>
+    <AttendanceID>1</AttendanceID>
+    <EmployeeID>BSCS-0002</EmployeeID>
+    <DateTime>2026-08-29T16:50:52.9583639+08:00</DateTime>
+    <Action>Time In</Action>
+  </AttendanceRecord>
+  <AttendanceRecord>
+    <AttendanceID>2</AttendanceID>
+    <EmployeeID>T-0001</EmployeeID>
+    <DateTime>2026-08-29T16:54:36.3333767+08:00</DateTime>
+    <Action>Time In</Action>
+  </AttendanceRecord>
+  <AttendanceRecord>
+    <AttendanceID>3</AttendanceID>
+    <EmployeeID>T-0001</EmployeeID>
+    <DateTime>2026-08-29T16:56:51.1919985+08:00</DateTime>
+    <Action>Time In</Action>
+  </AttendanceRecord>
+  <AttendanceRecord>
+    <AttendanceID>4</AttendanceID>
+    <EmployeeID>BSCS-0002</EmployeeID>
+    <DateTime>2026-08-29T16:57:12.9570665+08:00</DateTime>
+    <Action>Time In</Action>
+  </AttendanceRecord>
+  <AttendanceRecord>
+    <AttendanceID>5</AttendanceID>
+    <EmployeeID>BSCS-0002</EmployeeID>
+    <DateTime>2026-08-29T16:59:30.1757731+08:00</DateTime>
+    <Action>Time In</Action>
+  </AttendanceRecord>
+  <AttendanceRecord>
+    <AttendanceID>6</AttendanceID>
+    <EmployeeID>BSCS-0002</EmployeeID>
+    <DateTime>2026-08-29T17:02:42.5679008+08:00</DateTime>
+    <Action>Time Out</Action>
+  </AttendanceRecord>
+  <AttendanceRecord>
+    <AttendanceID>7</AttendanceID>
+    <EmployeeID>T-0001</EmployeeID>
+    <DateTime>2026-08-29T17:02:59.8979864+08:00</DateTime>
+    <Action>Time Out</Action>
+  </AttendanceRecord>
+  <AttendanceRecord>
+    <AttendanceID>8</AttendanceID>
+    <EmployeeID>BSCS-0002</EmployeeID>
+    <DateTime>2026-08-29T18:00:21.7664511+08:00</DateTime>
+    <Action>Time In</Action>
+  </AttendanceRecord>
+  <AttendanceRecord>
+    <AttendanceID>9</AttendanceID>
+    <EmployeeID>T-0001</EmployeeID>
+    <DateTime>2026-08-29T18:31:30.6782116+08:00</DateTime>
+    <Action>Time In</Action>
+  </AttendanceRecord>
+</ArrayOfAttendanceRecord>

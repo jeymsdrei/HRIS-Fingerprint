@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "department_id": null,
+        "name": "Faculty",
+        "category": "teaching",
+        "created_at": "2026-08-21 10:25:17",
+        "updated_at": "2026-08-21 10:25:17"
+    },
+    {
+        "id": 2,
+        "department_id": null,
+        "name": "Program Head",
+        "category": "teaching",
+        "created_at": "2026-08-21 10:25:17",
+        "updated_at": "2026-08-21 10:25:17"
+    }
+]

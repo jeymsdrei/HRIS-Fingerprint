@@ -1,0 +1,601 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System - Typography */
+@layer base {
+    :root {
+        /* Color palette */
+        --color-primary: rgb(79, 70, 229); /* indigo-600 */
+        --color-primary-dark: rgb(67, 56, 202); /* indigo-700 */
+        --color-primary-light: rgb(224, 231, 255); /* indigo-100 */
+        
+        --color-navy: rgb(15, 20, 25); /* navy-900 */
+        --color-navy-light: rgb(26, 35, 50); /* navy-800 */
+        
+        --color-slate: rgb(15, 23, 42); /* slate-900 */
+        --color-slate-light: rgb(30, 41, 59); /* slate-800 */
+        
+        /* Semantic colors */
+        --color-success: rgb(34, 197, 94); /* green-500 */
+        --color-warning: rgb(245, 158, 11); /* amber-500 */
+        --color-danger: rgb(239, 68, 68); /* red-500 */
+        --color-info: rgb(59, 130, 246); /* blue-500 */
+
+        /* Sidebar width (kept in sync with .app-main's left margin) */
+        --sidebar-w: 256px;
+    }
+
+    /* Responsive sidebar — always visible, just narrower on small screens */
+    @media (max-width: 1279px) {
+        :root { --sidebar-w: 220px; }
+    }
+    @media (max-width: 1023px) {
+        :root { --sidebar-w: 200px; }
+    }
+    @media (max-width: 767px) {
+        :root { --sidebar-w: 176px; }
+    }
+    @media (max-width: 479px) {
+        :root { --sidebar-w: 156px; }
+    }
+
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased;
+    }
+
+    /* Never let images force horizontal scroll on cramped screens */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Remove tap flash / text selection glitch on touch devices */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    h1 {
+        @apply text-4xl font-bold tracking-tight;
+    }
+
+    h2 {
+        @apply text-2xl font-semibold tracking-tight;
+    }
+
+    h3 {
+        @apply text-xl font-semibold;
+    }
+
+    h4 {
+        @apply text-lg font-semibold;
+    }
+}
+
+/* Design System - Components */
+@layer components {
+    /* Sidebar styles — cream surface, maroon accent.
+       Mobile: hidden off-canvas drawer (opened via .sidebar-open).
+       Desktop (>=768px): always visible, pushes content via .app-main margin. */
+    .sidebar {
+        @apply fixed top-0 bottom-0 left-0 z-40 bg-[#f9f4e8] text-[#57493a] flex flex-col;
+        width: var(--sidebar-w, 256px);
+        transform: translateX(-100%);
+        transition: transform 150ms ease-out;
+        will-change: transform;
+    }
+
+    .sidebar-open {
+        transform: translateX(0);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .sidebar-logo {
+        @apply px-6 py-6 flex items-center gap-3 border-b border-[#eaddc2];
+    }
+
+    .sidebar-nav {
+        @apply flex-1 min-h-0 overflow-y-auto px-4 py-6 space-y-6 text-sm;
+    }
+
+    .sidebar-section-label {
+        @apply px-3 pt-4 pb-2 text-xs font-semibold uppercase tracking-wider text-[#a89a80];
+    }
+
+    .sidebar-link {
+        @apply flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors duration-fast text-[#5c5040] hover:text-[#3d2b1f] hover:bg-[#efe6cf];
+    }
+
+    .sidebar-link.active {
+        @apply bg-maroon-700 text-white shadow-sm;
+    }
+
+    /* Sidebar — compact on small screens so page content keeps room */
+    @media (max-width: 767px) {
+        .sidebar-logo {
+            padding-left: 14px;
+            padding-right: 10px;
+            gap: 10px;
+        }
+
+        .sidebar-logo p:last-child {
+            font-size: 10px;
+        }
+
+        .sidebar-nav {
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 12px;
+        }
+
+        .sidebar-section-label {
+            padding-left: 8px;
+            font-size: 10px;
+        }
+
+        .sidebar-link {
+            padding-left: 6px;
+            padding-right: 6px;
+            gap: 8px;
+        }
+    }
+
+    /* Header — tighter gutters on small screens */
+    @media (max-width: 767px) {
+        .header-content {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .table-head-cell,
+        .table-body-cell {
+            white-space: nowrap;
+        }
+    }
+
+    /* Page padding — tighter gutters on small screens */
+    @media (max-width: 767px) {
+        .page-container {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+    }
+
+    /* Header styles — cream */
+    .app-header {
+        @apply sticky top-0 z-20 bg-[#f9f4e8] border-b border-[#eaddc2] h-header;
+    }
+
+    .header-content {
+        @apply flex items-center justify-between px-6 h-full;
+    }
+
+    /* Page layout */
+    .app-main {
+        @apply flex-1 min-h-0 min-w-0 flex flex-col;
+    }
+
+    .page-content {
+        @apply flex-1 min-h-0 overflow-y-auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Desktop — sidebar always visible, content pushed right */
+    @media (min-width: 768px) {
+        .sidebar {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .app-main {
+            margin-left: var(--sidebar-w, 256px);
+        }
+    }
+
+    .page-header {
+        @apply bg-white border-b border-slate-200 px-6 py-8;
+    }
+
+    .page-container {
+        @apply max-w-7xl mx-auto px-4 py-8;
+    }
+
+    /* Card styles */
+    .card {
+        @apply rounded-card border border-slate-200 bg-white shadow-card hover:shadow-md transition-shadow duration-fast;
+    }
+
+    .card-header {
+        @apply px-6 py-4 border-b border-slate-100;
+    }
+
+    .card-body {
+        @apply px-6 py-4;
+        min-width: 0;
+    }
+
+    .card-footer {
+        @apply px-6 py-4 border-t border-slate-100 bg-slate-50;
+    }
+
+    /* KPI Card styles */
+    .kpi-card {
+        @apply rounded-card border border-slate-200 bg-white p-6 shadow-card;
+    }
+
+    .kpi-value {
+        @apply text-4xl font-bold text-slate-900 mt-4;
+    }
+
+    .kpi-label {
+        @apply text-sm text-slate-600;
+    }
+
+    .kpi-subtitle {
+        @apply text-xs text-slate-500 mt-3;
+    }
+
+    /* Button styles */
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm transition-colors duration-fast cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+        touch-action: manipulation;
+        max-width: 100%;
+        white-space: nowrap;
+    }
+
+    .btn-primary {
+        @apply bg-indigo-600 text-white hover:bg-indigo-700;
+    }
+
+    .btn-secondary {
+        @apply bg-slate-100 text-slate-700 hover:bg-slate-200;
+    }
+
+    .btn-outline {
+        @apply border border-slate-300 text-slate-700 hover:bg-slate-50;
+    }
+
+    .btn-danger {
+        @apply bg-red-600 text-white hover:bg-red-700;
+    }
+
+    .btn-success {
+        @apply bg-green-600 text-white hover:bg-green-700;
+    }
+
+    .btn-info {
+        @apply bg-blue-600 text-white hover:bg-blue-700;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-xs;
+    }
+
+    /* Badge/Status styles */
+    .badge {
+        @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium;
+    }
+
+    .badge-success {
+        @apply bg-green-50 text-green-700;
+    }
+
+    .badge-warning {
+        @apply bg-amber-50 text-amber-700;
+    }
+
+    .badge-danger {
+        @apply bg-red-50 text-red-700;
+    }
+
+    .badge-info {
+        @apply bg-blue-50 text-blue-700;
+    }
+
+    .badge-neutral {
+        @apply bg-slate-100 text-slate-700;
+    }
+
+    /* Input styles */
+    .input {
+        @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 transition-colors duration-fast focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-10 disabled:bg-slate-50 disabled:text-slate-500;
+    }
+
+    .input-label {
+        @apply block text-sm font-medium text-slate-700 mb-2;
+    }
+
+    /* Table styles */
+    .table-container {
+        @apply overflow-visible;
+    }
+
+    .data-table {
+        @apply w-full text-sm;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+    }
+
+    .payroll-detail-table {
+        display: block;
+        width: 100% !important;
+        max-width: 100%;
+        min-width: 0 !important;
+        overflow: hidden;
+    }
+
+    .payroll-detail-table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .payroll-detail-table tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(7.5rem, 9rem);
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .payroll-detail-table td,
+    .payroll-detail-table td:first-child,
+    .payroll-detail-table td:last-child {
+        display: block;
+        width: auto;
+        min-width: 0;
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .data-table td:first-child {
+        width: 62%;
+    }
+
+    .data-table td:last-child {
+        width: 38%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .payroll-detail-table td:last-child {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+    }
+
+    .data-table .text-right {
+        @apply whitespace-nowrap;
+        font-variant-numeric: tabular-nums;
+        font-feature-settings: "tnum";
+    }
+
+    @media (max-width: 767px) {
+        .table-head-cell,
+        .table-body-cell {
+            @apply px-2 py-3;
+            overflow-wrap: anywhere;
+        }
+
+        .data-table {
+            font-size: 0.75rem;
+        }
+
+        .payroll-detail-table td:last-child {
+            width: auto;
+            font-size: 0.6875rem;
+            line-height: 0.875rem;
+        }
+
+        .payroll-detail-table tr {
+            grid-template-columns: minmax(0, 1fr) minmax(6.5rem, 7.5rem);
+        }
+
+        .data-table .text-right {
+            white-space: normal;
+        }
+
+        .data-table td:first-child {
+            width: 58%;
+        }
+
+        .data-table td:last-child {
+            width: 42%;
+        }
+
+        .data-table .btn {
+            white-space: normal;
+        }
+    }
+
+    .table-head {
+        @apply bg-slate-50 border-b border-slate-200;
+    }
+
+    .table-head-cell {
+        @apply px-6 py-3 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider;
+    }
+
+    .table-body-row {
+        @apply border-b border-slate-100 hover:bg-slate-50 transition-colors duration-fast;
+    }
+
+    .table-body-cell {
+        @apply px-6 py-4 text-sm text-slate-900;
+    }
+
+    /* Empty state */
+    .empty-state {
+        @apply flex flex-col items-center justify-center py-12 text-center;
+    }
+
+    .empty-state-icon {
+        @apply text-5xl mb-4 opacity-20;
+    }
+
+    .empty-state-title {
+        @apply text-lg font-semibold text-slate-900 mb-1;
+    }
+
+    .empty-state-text {
+        @apply text-sm text-slate-500 mb-4;
+    }
+
+    /* Loading state - Skeleton toolkit */
+    [x-cloak] {
+        display: none !important;
+    }
+
+    .skeleton {
+        @apply relative overflow-hidden bg-slate-200 rounded;
+    }
+
+    /* Shimmer overlay */
+    .skeleton-shimmer::after,
+    .skeleton::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transform: translateX(-100%);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+        animation: shimmer 1.6s infinite;
+    }
+
+    @keyframes shimmer {
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    /* Variants */
+    .skeleton-text {
+        @apply h-3 skeleton;
+    }
+    .skeleton-text-sm {
+        @apply h-2.5 skeleton;
+    }
+    .skeleton-title {
+        @apply h-6 skeleton;
+    }
+    .skeleton-circle {
+        @apply rounded-full skeleton;
+    }
+    .skeleton-card {
+        @apply rounded-card border border-slate-200 bg-white p-6 skeleton;
+    }
+    .skeleton-chart {
+        @apply h-full w-full skeleton;
+    }
+    .skeleton-row {
+        @apply h-14 skeleton;
+    }
+    .skeleton-button {
+        @apply h-10 w-28 skeleton;
+    }
+
+    /* Animations */
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-slide-in {
+        animation: slideIn 0.2s ease-out;
+    }
+}
+
+/* Form improvements */
+@layer components {
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='number'],
+    input[type='date'],
+    input[type='time'],
+    select,
+    textarea {
+        @apply input;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        @apply outline-none;
+    }
+}
+
+/* --- Phone robustness (applies to every page without touching views) --- */
+@layer components {
+    /* Let cards/rows shrink inside flex/grid so nothing overflows */
+    .card,
+    .kpi-card,
+    .card-body,
+    .page-container {
+        min-width: 0;
+    }
+
+    @media (max-width: 767px) {
+        /* Prevent iOS Safari auto-zoom when focusing inputs (keeps >= 16px) */
+        input,
+        select,
+        textarea {
+            font-size: 16px;
+        }
+
+        /* Denser surfaces so more content fits per screen */
+        .card-header,
+        .card-body,
+        .card-footer {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+
+        .card-header,
+        .card-body {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .kpi-card {
+            padding: 16px 14px;
+        }
+
+        .page-header {
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        /* Table cells get tighter so the horizontal scroller shows more columns */
+        .table-head-cell,
+        .table-body-cell {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        /* Compact buttons so action rows fit on small phones */
+        .btn:not(.btn-sm) {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "generated_at": "2026-08-29 10:09:22",
+    "tables": {
+        "settings": 16,
+        "departments": 2,
+        "positions": 2,
+        "courses": 16,
+        "school_years": 1,
+        "semesters": 2,
+        "subjects": 190,
+        "rooms": 52,
+        "benefits": 4,
+        "clearances": 6,
+        "users": 8,
+        "employees": 8,
+        "biometric_devices": 1,
+        "employee_benefits": 6,
+        "employee_clearances": 36,
+        "teaching_schedules": 30,
+        "work_schedules": 0,
+        "attendance_logs": 496,
+        "attendances": 376,
+        "make_up_classes": 0,
+        "loans": 3,
+        "loan_payments": 0,
+        "payroll_periods": 1,
+        "payrolls": 6,
+        "payslips": 0,
+        "payroll_receipts": 0,
+        "notifications": 0,
+        "archives": 0
+    }
+}

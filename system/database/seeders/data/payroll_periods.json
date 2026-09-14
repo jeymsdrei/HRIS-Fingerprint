@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "name": "August 2026",
+        "type": "monthly",
+        "start_date": "2026-08-01 00:00:00",
+        "end_date": "2026-08-31 00:00:00",
+        "pay_date": "2026-08-26 00:00:00",
+        "status": "processing",
+        "generated_by": null,
+        "generated_at": "2026-08-21 10:25:23",
+        "created_at": "2026-08-21 10:25:23",
+        "updated_at": "2026-08-21 10:25:23"
+    }
+]
