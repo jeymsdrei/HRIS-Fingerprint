@@ -14,7 +14,7 @@ namespace Demo.Integration
         public const string DefaultBaseUrl = "http://127.0.0.1:8000/api";
         public const string DefaultToken = "hris-device-token";
         public const int DefaultRetryAttempts = 10;
-        public const int DefaultHeartbeatIntervalSeconds = 60;
+        public const int DefaultHeartbeatIntervalSeconds = 10;
 
         private static readonly string FilePath = Path.Combine(Application.StartupPath, "hris.config");
 

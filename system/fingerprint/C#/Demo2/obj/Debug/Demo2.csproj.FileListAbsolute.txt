@@ -18,3 +18,5 @@ C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\finge
 C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\fingerprint\C#\Demo2\obj\Debug\Demo2.csproj.GenerateResource.Cache
 C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\fingerprint\C#\Demo2\obj\Debug\Demo.exe
 C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\fingerprint\C#\Demo2\obj\Debug\Demo.pdb
+C:\Users\Ryzen\AppData\Local\Temp\opencode\capbuild\Demo.exe
+C:\Users\Ryzen\AppData\Local\Temp\opencode\capbuild\Demo.pdb

@@ -111,7 +111,9 @@ namespace Demo.Integration
                 var parsed = _json.Deserialize<Dictionary<string, object>>(responseText);
                 if (parsed != null && parsed.ContainsKey("employees"))
                 {
-                    var list = parsed["employees"] as object[];
+                    // .NET 3.5 JavaScriptSerializer returns ArrayList (not object[]),
+                    // so cast to IList to handle both representations.
+                    var list = parsed["employees"] as System.Collections.IList;
                     if (list != null)
                     {
                         foreach (object item in list)

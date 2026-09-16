@@ -65,6 +65,7 @@ namespace Demo
         private PendingPushQueue _pendingQueue;
         private string _agentId;
         private System.Windows.Forms.Timer timerHrisHeartbeat;
+        private int _hrisSyncInProgress = 0;
 
         [DllImport("user32.dll", EntryPoint = "SendMessageA")]
         public static extern int SendMessage(IntPtr hwnd, int wMsg, IntPtr wParam, IntPtr lParam);
@@ -391,6 +392,24 @@ namespace Demo
         private void timerHrisHeartbeat_Tick(object sender, EventArgs e)
         {
             if (_hrisApi == null || !_hrisApi.IsConfigured) return;
+            // Never stack background syncs if one is still running.
+            if (Interlocked.Exchange(ref _hrisSyncInProgress, 1) == 1) return;
+            System.Threading.ThreadPool.QueueUserWorkItem(delegate
+            {
+                try
+                {
+                    HeartbeatSync();
+                }
+                finally
+                {
+                    Interlocked.Exchange(ref _hrisSyncInProgress, 0);
+                }
+            });
+        }
+
+        private void HeartbeatSync()
+        {
+            if (_hrisApi == null || !_hrisApi.IsConfigured) return;
             try
             {
                 string error;
@@ -400,6 +419,11 @@ namespace Demo
                     // Server may have restarted and forgotten the agent — re-register.
                     _hrisApi.RegisterAgent(_agentId, "BioClock USB Agent", HrisAgentIdentity.ComputerName, _hrisConfig.ApiBaseUrl, out error);
                 }
+
+                // Every ping is a live sync: pull newly-added/-registered employees
+                // into the enrollment list and deliver any punches stored offline.
+                RefreshEmployeesFromHris();
+                FlushPendingQueue();
             }
             catch (Exception ex)
             {
@@ -1001,46 +1025,103 @@ namespace Demo
                         return;
                     }
 
-                    // Cache merged into the local XML store; never remove
-                    // existing local entries (keep locally-enrolled staff).
+                    // Do not delete any local entries while a fetch fails or
+                    // returns nothing — the HRIS list is only authoritative when
+                    // a real, non-empty active list comes back.
+                    var hrisIds = new HashSet<string>();
                     foreach (var entry in employees)
                     {
                         string employeeId = GetString(entry, "employee_id");
-                        if (string.IsNullOrEmpty(employeeId)) continue;
-
-                        Employee emp = new Employee
-                        {
-                            EmployeeID = employeeId,
-                            FirstName = GetString(entry, "first_name"),
-                            MiddleName = GetString(entry, "middle_name"),
-                            LastName = GetString(entry, "last_name"),
-                            Department = GetString(entry, "department"),
-                            Position = GetString(entry, "position"),
-                        };
-
-                        Employee existing = _db.FindEmployeeById(employeeId);
-                        if (existing != null)
-                        {
-                            emp.Email = existing.Email;
-                            emp.Phone = existing.Phone;
-                            emp.PhotoPath = existing.PhotoPath;
-                        }
-
-                        _db.AddEmployee(emp);
+                        if (!string.IsNullOrEmpty(employeeId)) hrisIds.Add(employeeId);
                     }
-                    _db.SaveEmployees();
 
-                    if (lstEmployees != null && lstEmployees.FindForm() != null)
-                    {
-                        BeginInvoke(new MethodInvoker(delegate { LoadEmployeeChoices(); }));
-                    }
-                    FingerprintLogger.Info("RefreshEmployeesFromHris | cached " + employees.Count + " employees");
+                    // Apply the merge + reconciliation on the UI thread so the
+                    // device DB, local XML stores and the listbox stay consistent.
+                    BeginInvoke(new MethodInvoker(delegate { ApplyEmployeeSync(employees, hrisIds); }));
+                    FingerprintLogger.Info("RefreshEmployeesFromHris | fetched " + hrisIds.Count + " employees");
                 }
                 catch (Exception ex)
                 {
                     FingerprintLogger.Error("RefreshEmployeesFromHris", ex);
                 }
             });
+        }
+
+        /// <summary>
+        /// Merge the HRIS active employee list into the local store and remove
+        /// local employees that are no longer active in the HRIS (deleted or
+        /// deactivated). Their enrolled fingerprint templates are also deleted
+        /// from the device database so a removed employee can no longer clock in.
+        /// Runs on the UI thread (device SDK + local stores are UI-thread owned).
+        /// </summary>
+        private void ApplyEmployeeSync(
+            List<System.Collections.Generic.Dictionary<string, object>> employees,
+            HashSet<string> hrisIds)
+        {
+            try
+            {
+                foreach (var entry in employees)
+                {
+                    string employeeId = GetString(entry, "employee_id");
+                    if (string.IsNullOrEmpty(employeeId)) continue;
+
+                    Employee emp = new Employee
+                    {
+                        EmployeeID = employeeId,
+                        FirstName = GetString(entry, "first_name"),
+                        MiddleName = GetString(entry, "middle_name"),
+                        LastName = GetString(entry, "last_name"),
+                        Department = GetString(entry, "department"),
+                        Position = GetString(entry, "position"),
+                    };
+
+                    Employee existing = _db.FindEmployeeById(employeeId);
+                    if (existing != null)
+                    {
+                        emp.Email = existing.Email;
+                        emp.Phone = existing.Phone;
+                        emp.PhotoPath = existing.PhotoPath;
+                    }
+
+                    _db.AddEmployee(emp);
+                }
+
+                // Employees present locally but absent from the HRIS active list
+                // were deleted/deactivated in the system — remove them together
+                // with their enrolled fingerprints.
+                var toRemove = new List<Employee>();
+                foreach (Employee e in _db.Employees)
+                {
+                    if (!hrisIds.Contains(e.EmployeeID)) toRemove.Add(e);
+                }
+                foreach (Employee e in toRemove)
+                {
+                    foreach (FingerprintRecord fp in _db.Fingerprints.ToList())
+                    {
+                        if (fp.EmployeeID == e.EmployeeID)
+                        {
+                            if (mDBHandle != IntPtr.Zero)
+                            {
+                                int delRet = zkfp2.DBDel(mDBHandle, fp.FingerprintID);
+                                if (delRet != zkfp.ZKFP_ERR_OK)
+                                    FingerprintLogger.SdkError("ApplyEmployeeSync | DBDel fid=" + fp.FingerprintID, delRet);
+                            }
+                            _db.Fingerprints.Remove(fp);
+                        }
+                    }
+                    _db.Employees.Remove(e);
+                    FingerprintLogger.Info("ApplyEmployeeSync | removed inactive employee " + e.EmployeeID);
+                }
+
+                _db.SaveEmployees();
+                _db.SaveFingerprints();
+                LoadEmployeeChoices();
+                UpdateStats();
+            }
+            catch (Exception ex)
+            {
+                FingerprintLogger.Error("ApplyEmployeeSync", ex);
+            }
         }
 
         private static string GetString(System.Collections.Generic.Dictionary<string, object> dict, string key)
