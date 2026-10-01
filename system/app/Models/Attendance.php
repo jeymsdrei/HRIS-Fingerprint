@@ -14,6 +14,8 @@ use Illuminate\Support\Carbon;
  * @property int $day
  * @property int|null $department_id
  * @property int|null $device_id
+ * @property int|null $teaching_schedule_id
+ * @property int|null $work_schedule_id
  * @property Carbon|null $schedule_start
  * @property Carbon|null $schedule_end
  * @property Carbon|null $time_in
@@ -31,6 +33,8 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $updated_at
  * @property-read Department|null $department
  * @property-read BiometricDevice|null $device
+ * @property-read TeachingSchedule|null $teachingSchedule
+ * @property-read WorkSchedule|null $workSchedule
  * @property-read Employee $employee
  * @property-read string $status_color
  * @property-read string $status_label
@@ -54,6 +58,8 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attendance whereScheduleStart($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attendance whereSource($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attendance whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attendance whereTeachingScheduleId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attendance whereWorkScheduleId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attendance whereTimeIn($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attendance whereTimeOut($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Attendance whereUndertimeMinutes($value)
@@ -67,7 +73,7 @@ class Attendance extends Model
     use HasFactory;
 
     protected $fillable = [
-        'employee_id', 'date', 'day', 'department_id', 'device_id',
+        'employee_id', 'date', 'day', 'department_id', 'device_id', 'teaching_schedule_id', 'work_schedule_id', 'make_up_class_id',
         'schedule_start', 'schedule_end', 'time_in', 'time_out',
         'working_hours', 'late_minutes', 'undertime_minutes', 'overtime_minutes',
         'is_half_day', 'status', 'source', 'remarks', 'processed_by',
@@ -106,6 +112,21 @@ class Attendance extends Model
     public function device(): BelongsTo
     {
         return $this->belongsTo(BiometricDevice::class, 'device_id');
+    }
+
+    public function teachingSchedule(): BelongsTo
+    {
+        return $this->belongsTo(TeachingSchedule::class, 'teaching_schedule_id');
+    }
+
+    public function workSchedule(): BelongsTo
+    {
+        return $this->belongsTo(WorkSchedule::class, 'work_schedule_id');
+    }
+
+    public function makeUpClass(): BelongsTo
+    {
+        return $this->belongsTo(MakeUpClass::class, 'make_up_class_id');
     }
 
     public function getStatusLabelAttribute(): string

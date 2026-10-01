@@ -14,7 +14,7 @@
                     <h2 class="font-semibold text-slate-900">Courses</h2>
                 </div>
                 <div class="card-body flex flex-col">
-                    <form method="POST" action="{{ route('masterdata.courses.store') }}" class="flex gap-2 mb-5">
+                    <form method="POST" action="{{ route('masterdata.courses.store') }}" class="flex flex-wrap gap-2 mb-5">
                         @csrf
                         <input name="code" placeholder="Code" class="input w-20" required>
                         <input name="name" placeholder="Course name" class="input flex-1" required>
@@ -28,7 +28,7 @@
                                     @if ($c->total_units)
                                         <span class="text-xs text-slate-400">{{ $c->total_units }}u</span>
                                     @endif
-                                    <form method="POST" action="{{ route('masterdata.courses.destroy', $c) }}" onsubmit="return confirm('Delete course {{ $c->code }}?');">
+                                    <form method="POST" action="{{ route('masterdata.courses.destroy', $c) }}" data-confirm="Delete course {{ $c->code }}?">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-xs font-medium text-red-600 hover:text-red-800">Delete</button>
@@ -51,7 +51,7 @@
                     <h2 class="font-semibold text-slate-900">Subjects</h2>
                 </div>
                 <div class="card-body flex flex-col">
-                    <form method="POST" action="{{ route('masterdata.subjects.store') }}" class="flex gap-2 mb-5">
+                    <form method="POST" action="{{ route('masterdata.subjects.store') }}" class="flex flex-wrap gap-2 mb-5">
                         @csrf
                         <input name="code" placeholder="Code" class="input w-20" required>
                         <input name="name" placeholder="Subject name" class="input flex-1" required>
@@ -63,7 +63,7 @@
                                 <span class="text-slate-700"><b>{{ $s->code }}</b> — {{ $s->name }}</span>
                                 <div class="flex items-center gap-3">
                                     <span class="text-xs text-slate-400">{{ $s->units }}u</span>
-                                    <form method="POST" action="{{ route('masterdata.subjects.destroy', $s) }}" onsubmit="return confirm('Delete subject {{ $s->code }}?');">
+                                    <form method="POST" action="{{ route('masterdata.subjects.destroy', $s) }}" data-confirm="Delete subject {{ $s->code }}?">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-xs font-medium text-red-600 hover:text-red-800">Delete</button>
@@ -86,7 +86,7 @@
                     <h2 class="font-semibold text-slate-900">Rooms</h2>
                 </div>
                 <div class="card-body flex flex-col">
-                    <form method="POST" action="{{ route('masterdata.rooms.store') }}" class="flex gap-2 mb-5">
+                    <form method="POST" action="{{ route('masterdata.rooms.store') }}" class="flex flex-wrap gap-2 mb-5">
                         @csrf
                         <input name="code" value="{{ old('code') }}" placeholder="Code" class="input w-20" required>
                         <input name="name" value="{{ old('name') }}" placeholder="Room name" class="input flex-1" required>
@@ -105,7 +105,7 @@
                                 <span class="text-slate-700"><b>{{ $r->code }}</b> — {{ $r->name }}</span>
                                 <div class="flex items-center gap-3">
                                     <span class="text-xs text-slate-400">{{ $r->building }} · {{ $r->capacity }} seats</span>
-                                    <form method="POST" action="{{ route('masterdata.rooms.destroy', $r) }}" onsubmit="return confirm('Delete room {{ $r->code }}?');">
+                                    <form method="POST" action="{{ route('masterdata.rooms.destroy', $r) }}" data-confirm="Delete room {{ $r->code }}?">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-xs font-medium text-red-600 hover:text-red-800">Delete</button>

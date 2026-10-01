@@ -28,10 +28,10 @@
             {{-- Earnings & Deductions --}}
             <div class="card payroll-detail-card min-w-0">
                 <div class="card-header flex min-w-0 flex-wrap items-start justify-between gap-3">
-                    <div>
-                        <h2 class="break-words font-semibold text-slate-900">{{ $p->employee->full_name }}</h2>
-                        <p class="mt-1 break-words text-xs text-slate-400">{{ $p->employee->employee_id }} · {{ $p->period->name }} · {{ $p->employee->department?->name }}</p>
-                    </div>
+<div>
+                         <h2 id="payroll-employee-name" class="break-words font-semibold text-slate-900 transition-all duration-300">{{ $p->employee->full_name }}</h2>
+                         <p class="mt-1 break-words text-xs text-slate-400">{{ $p->employee->employee_id }} · {{ $p->period->name }} · {{ $p->employee->department?->name }}</p>
+                     </div>
                     <span class="badge shrink-0 {{ $p->status === 'released' ? 'badge-success' : ($p->status === 'on_hold' ? 'badge-danger' : 'badge-info') }}">{{ $p->status_label }}</span>
                 </div>
                 <div class="card-body min-w-0">
@@ -56,7 +56,7 @@
                     <table class="data-table payroll-detail-table">
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">Basic Salary</td><td class="table-body-cell text-right">₱{{ number_format($p->basic_pay, 2) }}</td></tr>
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">Teaching Hours ({{ $p->teaching_hours }}h)</td><td class="table-body-cell text-right">₱{{ number_format($p->teaching_pay, 2) }}</td></tr>
-                        <tr class="table-body-row"><td class="table-body-cell text-slate-500">Make-Up Class Pay</td><td class="table-body-cell text-right">₱{{ number_format($p->make_up_pay, 2) }}</td></tr>
+                        <tr class="table-body-row"><td class="table-body-cell text-slate-500">Approved Make-Up Classes ({{ $makeUpClasses->count() }} sessions, {{ number_format((float) $makeUpClasses->sum('hours_rendered'), 2) }}h)</td><td class="table-body-cell text-right">₱{{ number_format($p->make_up_pay, 2) }}</td></tr>
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">Allowances</td><td class="table-body-cell text-right">₱{{ number_format($p->allowances, 2) }}</td></tr>
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">Benefits</td><td class="table-body-cell text-right">₱{{ number_format($p->benefits, 2) }}</td></tr>
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">Overtime ({{ $p->overtime_hours_total }}h)</td><td class="table-body-cell text-right">₱{{ number_format($p->overtime_pay, 2) }}</td></tr>
@@ -67,9 +67,9 @@
                     <h3 class="font-semibold text-slate-700 mt-6 mb-3">Deductions</h3>
                     <div>
                     <table class="data-table payroll-detail-table">
-                        <tr class="table-body-row"><td class="table-body-cell text-slate-500">Late ({{ $p->late_minutes_total }} min)</td><td class="table-body-cell text-right">₱{{ number_format($p->deduction_late, 2) }}</td></tr>
+                        <tr class="table-body-row"><td class="table-body-cell text-slate-500">Late ({{ hm($p->late_minutes_total) }})</td><td class="table-body-cell text-right">₱{{ number_format($p->deduction_late, 2) }}</td></tr>
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">Absent ({{ $p->days_absent }} days)</td><td class="table-body-cell text-right">₱{{ number_format($p->deduction_absent, 2) }}</td></tr>
-                        <tr class="table-body-row"><td class="table-body-cell text-slate-500">Undertime ({{ $p->undertime_minutes_total }} min)</td><td class="table-body-cell text-right">₱{{ number_format($p->deduction_undertime, 2) }}</td></tr>
+                        <tr class="table-body-row"><td class="table-body-cell text-slate-500">Undertime ({{ hm($p->undertime_minutes_total) }})</td><td class="table-body-cell text-right">₱{{ number_format($p->deduction_undertime, 2) }}</td></tr>
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">Withholding Tax</td><td class="table-body-cell text-right">₱{{ number_format($p->deduction_tax, 2) }}</td></tr>
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">SSS</td><td class="table-body-cell text-right">₱{{ number_format($p->deduction_sss, 2) }}</td></tr>
                         <tr class="table-body-row"><td class="table-body-cell text-slate-500">PhilHealth</td><td class="table-body-cell text-right">₱{{ number_format($p->deduction_philhealth, 2) }}</td></tr>
@@ -99,7 +99,7 @@
                         <div class="mt-4 text-sm text-slate-500 space-y-1">
                             <p>Teaching Hours: <b>{{ $p->teaching_hours }}h</b></p>
                             <p>Overtime: <b>{{ $p->overtime_hours_total }}h</b></p>
-                            <p>Late: <b>{{ $p->late_minutes_total }} min</b> · Undertime: <b>{{ $p->undertime_minutes_total }} min</b></p>
+                            <p>Late: <b>{{ hm($p->late_minutes_total) }}</b> · Undertime: <b>{{ hm($p->undertime_minutes_total) }}</b></p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
                     <div class="card-body">
                         <div class="flex flex-wrap gap-2">
                             @if ($p->status === 'ready')
-                                <form method="POST" action="{{ route('payroll.release', $p) }}" onsubmit="return confirm('Release salary? Payslip + receipt will be generated.')">
+                                <form method="POST" action="{{ route('payroll.release', $p) }}" data-confirm="Release salary? Payslip + receipt will be generated.">
                                     @csrf
                                     <button class="btn btn-success">Release Salary</button>
                                 </form>
@@ -134,24 +134,36 @@
                                 <a href="{{ route('payslips.show', $p->payslip) }}" class="btn btn-outline">View Payslip</a>
                             @endif
                             @if ($p->receipt)
-                                <a href="{{ route('receipts.print', $p->receipt) }}" class="btn btn-outline">Receipt PDF</a>
+                                <a href="{{ route('receipts.print', $p->receipt) }}" onclick="window.__autoPrint = true;" class="btn btn-outline">Print Receipt</a>
                             @endif
                         </div>
 
-                        <form method="POST" action="{{ route('payroll.update', $p) }}" class="mt-5 space-y-3">
-                            @csrf @method('PUT')
-                            <div class="grid grid-cols-2 gap-3">
-                                <div>
-                                    <label class="input-label">Other Deduction (override)</label>
-                                    <input type="number" step="0.01" name="deduction_other" value="{{ $p->deduction_other }}" class="input">
-                                </div>
-                                <div>
-                                    <label class="input-label">Notes</label>
-                                    <input name="notes" value="{{ $p->notes }}" class="input">
-                                </div>
-                            </div>
-                            <button class="btn btn-secondary">Adjust Payroll</button>
-                        </form>
+<form method="POST" action="{{ route('payroll.update', $p) }}" class="mt-5 space-y-3" id="payroll-update-form">
+                             @csrf @method('PUT')
+                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                 <div>
+                                     <label class="input-label">Other Deduction (override)</label>
+                                     <input type="number" step="0.01" name="deduction_other" value="{{ $p->deduction_other }}" class="input">
+                                 </div>
+                                 <div>
+                                     <label class="input-label">Notes</label>
+                                     <input name="notes" value="{{ $p->notes }}" class="input">
+                                 </div>
+                             </div>
+                             <button type="submit" class="btn btn-secondary">Adjust Payroll</button>
+                         </form>
+
+                         <script>
+                             document.getElementById('payroll-update-form').addEventListener('submit', function() {
+                                 const nameEl = document.getElementById('payroll-employee-name');
+                                 if (nameEl) {
+                                     nameEl.classList.add('bg-red-100', 'text-red-900', 'px-2', 'rounded', 'animate-pulse');
+                                     setTimeout(() => {
+                                         nameEl.classList.remove('bg-red-100', 'text-red-900', 'px-2', 'rounded', 'animate-pulse');
+                                     }, 2000);
+                                 }
+                             });
+                         </script>
                     </div>
                 </div>
             </div>

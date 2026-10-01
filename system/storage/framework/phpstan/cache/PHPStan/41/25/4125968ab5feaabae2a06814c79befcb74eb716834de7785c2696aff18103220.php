@@ -1,0 +1,172 @@
+<?php declare(strict_types = 1);
+
+// odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Controllers\NotificationController.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Controllers\NotificationController
+return \PHPStan\Cache\CacheItem::__set_state(array(
+   'variableKey' => 'v2-6.70.0.3-8.2.12-4481a82b924775c1bd9154ddc9d3dc95658ad0a3e5275ad8d27f61a4ed63dbad',
+   'data' => 
+  array (
+    'locatedSource' => 
+    array (
+      'class' => 'PHPStan\\BetterReflection\\SourceLocator\\Located\\LocatedSource',
+      'data' => 
+      array (
+        'name' => 'App\\Http\\Controllers\\NotificationController',
+        'filename' => 'C:/Users/Ryzen/Desktop/hrissystem-20260812T090006Z-1-001/hrissystem/system/app/Http/Controllers/NotificationController.php',
+      ),
+    ),
+    'namespace' => 'App\\Http\\Controllers',
+    'name' => 'App\\Http\\Controllers\\NotificationController',
+    'shortName' => 'NotificationController',
+    'isInterface' => false,
+    'isTrait' => false,
+    'isEnum' => false,
+    'isBackedEnum' => false,
+    'modifiers' => 0,
+    'docComment' => NULL,
+    'attributes' => 
+    array (
+    ),
+    'startLine' => 7,
+    'endLine' => 34,
+    'startColumn' => 1,
+    'endColumn' => 1,
+    'parentClassName' => 'App\\Http\\Controllers\\Controller',
+    'implementsClassNames' => 
+    array (
+    ),
+    'traitClassNames' => 
+    array (
+    ),
+    'immediateConstants' => 
+    array (
+    ),
+    'immediateProperties' => 
+    array (
+    ),
+    'immediateMethods' => 
+    array (
+      'index' => 
+      array (
+        'name' => 'index',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 9,
+        'endLine' => 16,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Http\\Controllers',
+        'declaringClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'implementingClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'currentClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'aliasName' => NULL,
+      ),
+      'markRead' => 
+      array (
+        'name' => 'markRead',
+        'parameters' => 
+        array (
+          'notification' => 
+          array (
+            'name' => 'notification',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'App\\Models\\Notification',
+                'isIdentifier' => false,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 18,
+            'endLine' => 18,
+            'startColumn' => 30,
+            'endColumn' => 55,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 18,
+        'endLine' => 26,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Http\\Controllers',
+        'declaringClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'implementingClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'currentClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'aliasName' => NULL,
+      ),
+      'markAll' => 
+      array (
+        'name' => 'markAll',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 28,
+        'endLine' => 33,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Http\\Controllers',
+        'declaringClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'implementingClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'currentClassName' => 'App\\Http\\Controllers\\NotificationController',
+        'aliasName' => NULL,
+      ),
+    ),
+    'traitsData' => 
+    array (
+      'aliases' => 
+      array (
+      ),
+      'modifiers' => 
+      array (
+      ),
+      'precedences' => 
+      array (
+      ),
+      'hashes' => 
+      array (
+      ),
+    ),
+  ),
+));

@@ -6,15 +6,23 @@
         <div class="mb-8">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div class="flex items-center gap-4">
-                    <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xl font-bold shadow-lg">
-                        {{ mb_strtoupper(mb_substr($employee->first_name, 0, 1) . mb_substr($employee->last_name, 0, 1)) }}
-                    </div>
+                    @if ($employee->photo_path)
+                        <img src="{{ asset('storage/'.$employee->photo_path) }}" alt="{{ $employee->full_name }}" class="h-16 w-16 rounded-2xl object-cover shadow-lg cursor-pointer" data-avatar-preview>
+                    @else
+                        <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xl font-bold shadow-lg">
+                            {{ mb_strtoupper(mb_substr($employee->first_name, 0, 1) . mb_substr($employee->last_name, 0, 1)) }}
+                        </div>
+                    @endif
                     <div>
                         <h1 class="text-3xl font-bold text-slate-900">{{ $employee->full_name }}</h1>
                         <p class="text-sm text-slate-500 mt-1">{{ $employee->employee_id }} · {{ $employee->position?->name }} · {{ $employee->department?->name }}{{ $employee->course ? ' · '.$employee->course->code : '' }}</p>
                     </div>
                 </div>
                 <div class="flex gap-2">
+                    <a href="{{ route('employees.index') }}" class="btn btn-secondary btn-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        Back
+                    </a>
                     <a href="{{ route('employees.edit', $employee) }}" class="btn btn-primary btn-sm">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
@@ -22,7 +30,7 @@
                         Edit
                     </a>
                     @if ($employee->is_active)
-                    <form method="POST" action="{{ route('employees.destroy', $employee) }}" onsubmit="return confirm('Deactivate {{ $employee->full_name }}?')">
+                    <form method="POST" action="{{ route('employees.destroy', $employee) }}" data-confirm="Deactivate {{ $employee->full_name }}? Their login and record are preserved.">
                         @csrf @method('DELETE')
                         <button class="btn btn-danger btn-sm">Deactivate</button>
                     </form>

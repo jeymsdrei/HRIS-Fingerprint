@@ -46,6 +46,14 @@ class PayrollPeriod extends Model
 {
     use HasFactory;
 
+    public const DRAFT = 'draft';
+
+    public const PROCESSING = 'processing';
+
+    public const RELEASED = 'released';
+
+    public const CLOSED = 'closed';
+
     protected $fillable = [
         'name', 'type', 'start_date', 'end_date', 'pay_date',
         'status', 'generated_by', 'generated_at',

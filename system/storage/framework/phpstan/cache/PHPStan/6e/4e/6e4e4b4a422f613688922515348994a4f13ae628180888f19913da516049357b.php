@@ -424,7 +424,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php' => '70a18d38b2fd8ae2943e07216c037bc69c8ca1ba3646fa3e3ea1ed3f65b06bf8',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php' => '5948ada2c86363a5e14809ee45470f32fb5c98d246c2bbb0d95328d952d07690',
       'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\HasFactory.php' => 'b6cb2b164e90168e80963a5549541f5f3188a3ec8cfd368bf3611bd94fbd46a7',
     ),
   ),

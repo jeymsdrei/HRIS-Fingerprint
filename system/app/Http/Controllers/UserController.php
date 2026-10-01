@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Employee;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class UserController extends Controller
@@ -31,7 +30,7 @@ class UserController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'username' => ['required', 'string', 'lowercase', 'alpha_dash', 'max:255', Rule::unique('users', 'username')],
+            'username' => ['required', 'string', 'lowercase', 'max:255', 'regex:/^[a-z0-9._-]+$/', Rule::unique('users', 'username')],
             'password' => 'required|min:8',
             'role' => ['required', Rule::in(User::ROLES)],
             'employee_id' => 'nullable|exists:employees,id',
@@ -51,7 +50,7 @@ class UserController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'username' => ['required', 'string', 'lowercase', 'alpha_dash', 'max:255', Rule::unique('users', 'username')->ignore($user->id)],
+            'username' => ['required', 'string', 'lowercase', 'max:255', 'regex:/^[a-z0-9._-]+$/', Rule::unique('users', 'username')->ignore($user->id)],
             'password' => 'nullable|min:8',
             'role' => ['required', Rule::in(User::ROLES)],
             'employee_id' => 'nullable|exists:employees,id',
@@ -67,33 +66,28 @@ class UserController extends Controller
         return redirect()->route('users.index')->with('success', 'User updated.');
     }
 
-    public function toggle(User $user)
-    {
-        $user->update(['is_active' => ! $user->is_active]);
-
-        return back()->with('success', $user->is_active ? 'User activated.' : 'User deactivated.');
-    }
-
     public function destroy(User $user)
     {
-        if ($user->id === auth()->id()) {
-            return back()->with('error', 'You cannot delete your own account.');
+        if ($user->is_active) {
+            if ($user->id === auth()->id()) {
+                return back()->with('error', 'You cannot deactivate your own account.');
+            }
+
+            $user->update(['is_active' => false]);
+            $user->employee?->update(['is_active' => false]);
+
+            return back()->with('success', 'User deactivated. Their login and record are preserved.');
         }
 
-        DB::transaction(function () use ($user) {
-            $employee = $user->employee;
-            $user->delete();
-            $employee?->delete();
-        });
+        $user->update(['is_active' => true]);
+        $user->employee?->update(['is_active' => true]);
 
-        return back()->with('success', 'User deleted.');
+        return back()->with('success', 'User reactivated.');
     }
 
     public function employees()
     {
-        $employees = Employee::with('user')
-            ->whereNull('user_id')
-            ->orWhereDoesntHave('user')
+        $employees = Employee::doesntHave('user')
             ->orderBy('last_name')
             ->get();
 

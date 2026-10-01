@@ -3,13 +3,20 @@
 
     <div class="page-container">
         <div class="mb-8">
-            <h1 class="text-3xl font-bold text-slate-900">{{ $employee->exists ? 'Edit Employee' : 'Register New Employee' }}</h1>
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                <h1 class="text-3xl font-bold text-slate-900">{{ $employee->exists ? 'Edit Employee' : 'Register New Employee' }}</h1>
+                <a href="{{ $employee->exists ? route('employees.show', $employee) : route('employees.index') }}" class="btn btn-secondary btn-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    Back
+                </a>
+            </div>
             <p class="mt-2 text-slate-600">{{ $employee->exists ? 'Update employee information and assignments' : 'Add a new employee to the system' }}</p>
         </div>
 
-        <form method="POST" action="{{ $employee->exists ? route('employees.update', $employee) : route('employees.store') }}" class="space-y-6">
+        <form method="POST" action="{{ $employee->exists ? route('employees.update', $employee) : route('employees.store') }}" enctype="multipart/form-data" class="space-y-6" data-employee-form>
             @csrf
             @if ($employee->exists) @method('PUT') @endif
+            <input type="hidden" name="registration_token" value="{{ old('registration_token', (string) \Illuminate\Support\Str::uuid()) }}">
 
             <div x-data="{ classification: '{{ old('classification', $employee->classification) }}', status: '{{ old('employment_status', $employee->employment_status) }}', salaryType: '{{ old('salary_type', $employee->salary_type) }}' }">
 
@@ -19,7 +26,14 @@
                         <h2 class="font-semibold text-slate-900">Employment Classification</h2>
                     </div>
                     <div class="card-body space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            @if (!$employee->exists)
+                                <div>
+                                    <label class="input-label">Employee ID <span class="text-xs text-slate-500 font-normal">Auto-assigned</span></label>
+                                    <input type="text" class="input bg-slate-50 font-mono text-slate-500" readonly :value="classification === 'teaching' ? '{{ $nextTeachingId }}' : classification === 'non_teaching' ? '{{ $nextNonTeachingId }}' : '—'">
+                                    <p class="mt-1 text-xs text-slate-500">Shown for reference — assigned on save.</p>
+                                </div>
+                            @endif
                             <div>
                                 <label class="input-label">Classification <span class="text-red-500">*</span></label>
                                 <select name="classification" x-model="classification" class="input" required>
@@ -57,6 +71,25 @@
                         <h2 class="font-semibold text-slate-900">Personal Information</h2>
                     </div>
                     <div class="card-body space-y-6">
+                        <div class="flex flex-wrap items-center gap-5">
+                            <div class="h-24 w-24 overflow-hidden rounded-full bg-slate-100 ring-1 ring-slate-200">
+                                <img
+                                    id="employee-photo-preview"
+                                    src="{{ $employee->photo_path ? asset('storage/'.$employee->photo_path) : '' }}"
+                                    alt="Employee photo preview"
+                                    class="{{ $employee->photo_path ? '' : 'hidden' }} h-full w-full object-cover"
+                                >
+                                <div id="employee-photo-placeholder" class="{{ $employee->photo_path ? 'hidden' : '' }} flex h-full w-full items-center justify-center text-center text-xs text-slate-500">No photo</div>
+                            </div>
+                            <div>
+                                <label for="employee-photo" class="input-label">Employee Picture</label>
+                                <input id="employee-photo" name="photo" type="file" accept="image/jpeg,image/png" class="input" data-photo-input>
+                                <p class="mt-1 text-xs text-slate-500">JPG or PNG, maximum 2 MB.</p>
+                                @error('photo') <p class="mt-1 text-xs text-red-600">{{ $message }}</p> @enderror
+                                <p id="employee-photo-error" class="mt-1 hidden text-xs text-red-600"></p>
+                            </div>
+                        </div>
+
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             <div>
                                 <label class="input-label">First Name <span class="text-red-500">*</span></label>
@@ -80,35 +113,41 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             <div>
-                                <label class="input-label">Birth Date</label>
-                                <input type="date" name="birth_date" value="{{ old('birth_date', $employee->birth_date?->format('Y-m-d')) }}" class="input">
+                                <label class="input-label">Birth Date <span class="text-red-500">*</span></label>
+                                <input type="date" name="birth_date" value="{{ old('birth_date', $employee->birth_date?->format('Y-m-d')) }}" class="input" required>
+                                @error('birth_date') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                             <div>
-                                <label class="input-label">Gender</label>
-                                <select name="gender" class="input">
+                                <label class="input-label">Gender <span class="text-red-500">*</span></label>
+                                <select name="gender" class="input" required>
                                     <option value="">Select...</option>
                                     <option value="male" @selected(old('gender', $employee->gender) == 'male')>Male</option>
                                     <option value="female" @selected(old('gender', $employee->gender) == 'female')>Female</option>
                                 </select>
+                                @error('gender') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                             <div>
-                                <label class="input-label">Email</label>
-                                <input type="email" name="email" value="{{ old('email', $employee->email) }}" class="input">
+                                <label class="input-label">Email <span class="text-red-500">*</span></label>
+                                <input type="email" name="email" value="{{ old('email', $employee->email) }}" class="input" required>
+                                @error('email') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                             <div>
-                                <label class="input-label">Phone</label>
-                                <input type="tel" name="phone" value="{{ old('phone', $employee->phone) }}" class="input">
+                                <label class="input-label">Phone <span class="text-red-500">*</span></label>
+                                <input type="tel" name="phone" value="{{ old('phone', $employee->phone) }}" class="input" required>
+                                @error('phone') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="input-label">Address</label>
-                                <input type="text" name="address" value="{{ old('address', $employee->address) }}" class="input" placeholder="Street address">
+                                <label class="input-label">Address <span class="text-red-500">*</span></label>
+                                <input type="text" name="address" value="{{ old('address', $employee->address) }}" class="input" placeholder="Street address" required>
+                                @error('address') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                             <div>
-                                <label class="input-label">Date Hired</label>
-                                <input type="date" name="date_hired" value="{{ old('date_hired', $employee->date_hired?->format('Y-m-d')) }}" class="input">
+                                <label class="input-label">Date Hired <span class="text-red-500">*</span></label>
+                                <input type="date" name="date_hired" value="{{ old('date_hired', $employee->date_hired?->format('Y-m-d')) }}" class="input" required>
+                                @error('date_hired') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                         </div>
                     </div>
@@ -244,18 +283,18 @@
                 {{-- Login Account --}}
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="font-semibold text-slate-900">Login Account <span class="text-xs text-slate-500 font-normal">(Optional)</span></h2>
+                        <h2 class="font-semibold text-slate-900">Login Account</h2>
                     </div>
                     <div class="card-body space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="input-label">Username</label>
-                                <input type="text" name="login_username" value="{{ old('login_username', $employee->user?->username) }}" class="input" placeholder="e.g. jane.santos">
+                                <label class="input-label">Username <span class="text-red-500">*</span></label>
+                                <input type="text" name="login_username" value="{{ old('login_username', $employee->user?->username) }}" class="input" placeholder="e.g. jane.santos" required>
                                 @error('login_username') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                             <div>
-                                <label class="input-label">Password {{ !$employee->exists ? '(Required)' : '(Leave blank to keep current)' }}</label>
-                                <input type="password" name="login_password" class="input" placeholder="••••••••">
+                                <label class="input-label">Password <span class="text-red-500">*</span> {{ $employee->exists ? '(leave blank to keep current)' : '' }}</label>
+                                <input type="password" name="login_password" class="input" placeholder="Minimum of 6 characters" {{ !$employee->exists ? 'required' : '' }}>
                                 @error('login_password') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                         </div>
@@ -264,7 +303,7 @@
 
                 {{-- Form Actions --}}
                 <div class="card-footer flex gap-3">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" data-submit-once>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>

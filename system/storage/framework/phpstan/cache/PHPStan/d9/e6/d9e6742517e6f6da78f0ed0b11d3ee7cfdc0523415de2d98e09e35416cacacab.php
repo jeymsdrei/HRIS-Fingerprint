@@ -2,7 +2,7 @@
 
 // osfsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Services\BiometricService.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Services\BiometricService
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-fd6e9b3c51339c2acb6c330dd059a05bae090a40532aea51469f5d9588a398d7-8.2.12-6.70.0.3',
+   'variableKey' => 'v2-6c26ba82697b37ca997f53e05cc811d16ffe51fee02a4737f4775ca32f3c6dcb-8.2.12-6.70.0.3',
    'data' => 
   array (
     'locatedSource' => 
@@ -34,7 +34,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 19,
-    'endLine' => 290,
+    'endLine' => 333,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => NULL,
@@ -162,6 +162,35 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'startColumn' => 5,
         'endColumn' => 43,
       ),
+      'CMD_DELETE_USER' => 
+      array (
+        'declaringClassName' => 'App\\Services\\BiometricService',
+        'implementingClassName' => 'App\\Services\\BiometricService',
+        'name' => 'CMD_DELETE_USER',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '18',
+          'attributes' => 
+          array (
+            'startLine' => 31,
+            'endLine' => 31,
+            'startTokenPos' => 101,
+            'startFilePos' => 787,
+            'endTokenPos' => 101,
+            'endFilePos' => 788,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 31,
+        'endLine' => 31,
+        'startColumn' => 5,
+        'endColumn' => 38,
+      ),
       'HEADER' => 
       array (
         'declaringClassName' => 'App\\Services\\BiometricService',
@@ -174,20 +203,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '0x504830',
           'attributes' => 
           array (
-            'startLine' => 31,
-            'endLine' => 31,
-            'startTokenPos' => 101,
-            'startFilePos' => 779,
-            'endTokenPos' => 101,
-            'endFilePos' => 786,
+            'startLine' => 33,
+            'endLine' => 33,
+            'startTokenPos' => 112,
+            'startFilePos' => 819,
+            'endTokenPos' => 112,
+            'endFilePos' => 826,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 31,
-        'endLine' => 31,
+        'startLine' => 33,
+        'endLine' => 33,
         'startColumn' => 5,
         'endColumn' => 36,
       ),
@@ -203,20 +232,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '49',
           'attributes' => 
           array (
-            'startLine' => 33,
-            'endLine' => 33,
-            'startTokenPos' => 112,
-            'startFilePos' => 820,
-            'endTokenPos' => 112,
-            'endFilePos' => 821,
+            'startLine' => 35,
+            'endLine' => 35,
+            'startTokenPos' => 123,
+            'startFilePos' => 860,
+            'endTokenPos' => 123,
+            'endFilePos' => 861,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 33,
-        'endLine' => 33,
+        'startLine' => 35,
+        'endLine' => 35,
         'startColumn' => 5,
         'endColumn' => 33,
       ),
@@ -232,20 +261,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '15',
           'attributes' => 
           array (
-            'startLine' => 35,
-            'endLine' => 35,
-            'startTokenPos' => 123,
-            'startFilePos' => 858,
-            'endTokenPos' => 123,
-            'endFilePos' => 859,
+            'startLine' => 37,
+            'endLine' => 37,
+            'startTokenPos' => 134,
+            'startFilePos' => 898,
+            'endTokenPos' => 134,
+            'endFilePos' => 899,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 35,
-        'endLine' => 35,
+        'startLine' => 37,
+        'endLine' => 37,
         'startColumn' => 5,
         'endColumn' => 36,
       ),
@@ -261,20 +290,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '4 * 1024 * 1024',
           'attributes' => 
           array (
-            'startLine' => 37,
-            'endLine' => 37,
-            'startTokenPos' => 134,
-            'startFilePos' => 899,
-            'endTokenPos' => 142,
-            'endFilePos' => 913,
+            'startLine' => 39,
+            'endLine' => 39,
+            'startTokenPos' => 145,
+            'startFilePos' => 939,
+            'endTokenPos' => 153,
+            'endFilePos' => 953,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 37,
-        'endLine' => 37,
+        'startLine' => 39,
+        'endLine' => 39,
         'startColumn' => 5,
         'endColumn' => 52,
       ),
@@ -339,8 +368,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 39,
-        'endLine' => 42,
+        'startLine' => 41,
+        'endLine' => 44,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -397,8 +426,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 47,
-            'endLine' => 47,
+            'startLine' => 49,
+            'endLine' => 49,
             'startColumn' => 29,
             'endColumn' => 58,
             'parameterIndex' => 0,
@@ -412,12 +441,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 47,
-                'endLine' => 47,
-                'startTokenPos' => 192,
-                'startFilePos' => 1146,
-                'endTokenPos' => 192,
-                'endFilePos' => 1149,
+                'startLine' => 49,
+                'endLine' => 49,
+                'startTokenPos' => 203,
+                'startFilePos' => 1186,
+                'endTokenPos' => 203,
+                'endFilePos' => 1189,
               ),
             ),
             'type' => 
@@ -454,8 +483,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 47,
-            'endLine' => 47,
+            'startLine' => 49,
+            'endLine' => 49,
             'startColumn' => 61,
             'endColumn' => 77,
             'parameterIndex' => 1,
@@ -478,8 +507,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Establish a session with the device.
  */',
-        'startLine' => 47,
-        'endLine' => 78,
+        'startLine' => 49,
+        'endLine' => 80,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -513,8 +542,97 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 80,
-        'endLine' => 86,
+        'startLine' => 82,
+        'endLine' => 88,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Services',
+        'declaringClassName' => 'App\\Services\\BiometricService',
+        'implementingClassName' => 'App\\Services\\BiometricService',
+        'currentClassName' => 'App\\Services\\BiometricService',
+        'aliasName' => NULL,
+      ),
+      'deleteFingerprint' => 
+      array (
+        'name' => 'deleteFingerprint',
+        'parameters' => 
+        array (
+          'device' => 
+          array (
+            'name' => 'device',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'App\\Models\\BiometricDevice',
+                'isIdentifier' => false,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 93,
+            'endLine' => 93,
+            'startColumn' => 39,
+            'endColumn' => 61,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+          'fingerprintId' => 
+          array (
+            'name' => 'fingerprintId',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'int',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 93,
+            'endLine' => 93,
+            'startColumn' => 64,
+            'endColumn' => 81,
+            'parameterIndex' => 1,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'bool',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => '/**
+ * Remove a user\'s fingerprint record from a ZKTeco device.
+ */',
+        'startLine' => 93,
+        'endLine' => 104,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -552,8 +670,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 91,
-            'endLine' => 91,
+            'startLine' => 109,
+            'endLine' => 109,
             'startColumn' => 33,
             'endColumn' => 44,
             'parameterIndex' => 0,
@@ -567,12 +685,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '\'\'',
               'attributes' => 
               array (
-                'startLine' => 91,
-                'endLine' => 91,
-                'startTokenPos' => 502,
-                'startFilePos' => 2376,
-                'endTokenPos' => 502,
-                'endFilePos' => 2377,
+                'startLine' => 109,
+                'endLine' => 109,
+                'startTokenPos' => 618,
+                'startFilePos' => 2885,
+                'endTokenPos' => 618,
+                'endFilePos' => 2886,
               ),
             ),
             'type' => 
@@ -590,8 +708,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 91,
-            'endLine' => 91,
+            'startLine' => 109,
+            'endLine' => 109,
             'startColumn' => 47,
             'endColumn' => 66,
             'parameterIndex' => 1,
@@ -614,8 +732,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * ZK protocol command frame: 8-byte header + session id + payload.
  */',
-        'startLine' => 91,
-        'endLine' => 103,
+        'startLine' => 109,
+        'endLine' => 121,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -653,12 +771,50 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 105,
-            'endLine' => 105,
+            'startLine' => 123,
+            'endLine' => 123,
             'startColumn' => 34,
             'endColumn' => 45,
             'parameterIndex' => 0,
             'isOptional' => false,
+          ),
+          'payload' => 
+          array (
+            'name' => 'payload',
+            'default' => 
+            array (
+              'code' => '\'\'',
+              'attributes' => 
+              array (
+                'startLine' => 123,
+                'endLine' => 123,
+                'startTokenPos' => 750,
+                'startFilePos' => 3308,
+                'endTokenPos' => 750,
+                'endFilePos' => 3309,
+              ),
+            ),
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'string',
+                'isIdentifier' => true,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 123,
+            'endLine' => 123,
+            'startColumn' => 48,
+            'endColumn' => 67,
+            'parameterIndex' => 1,
+            'isOptional' => true,
           ),
         ),
         'returnsReference' => false,
@@ -675,8 +831,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 105,
-        'endLine' => 119,
+        'startLine' => 123,
+        'endLine' => 137,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -729,8 +885,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 121,
-        'endLine' => 147,
+        'startLine' => 139,
+        'endLine' => 165,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -768,8 +924,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 153,
-            'endLine' => 153,
+            'startLine' => 179,
+            'endLine' => 179,
             'startColumn' => 35,
             'endColumn' => 48,
             'parameterIndex' => 0,
@@ -792,9 +948,17 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Parse raw attendance data frames (12-byte records):
  * user_id(4) + state(1) + timestamp(7, YYMMDDhhmmss packed).
+ *
+ * State values (ZKTeco standard):
+ * 0 = Check In (time_in)
+ * 1 = Check Out (time_out)
+ * 2 = Break Out
+ * 3 = Break In
+ * 4 = Overtime In
+ * 5 = Overtime Out
  */',
-        'startLine' => 153,
-        'endLine' => 189,
+        'startLine' => 179,
+        'endLine' => 225,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -832,8 +996,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 194,
-            'endLine' => 194,
+            'startLine' => 230,
+            'endLine' => 230,
             'startColumn' => 36,
             'endColumn' => 58,
             'parameterIndex' => 0,
@@ -856,8 +1020,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Pull all attendance records from the device and persist them.
  */',
-        'startLine' => 194,
-        'endLine' => 222,
+        'startLine' => 230,
+        'endLine' => 258,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -895,8 +1059,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 236,
-            'endLine' => 236,
+            'startLine' => 272,
+            'endLine' => 272,
             'startColumn' => 34,
             'endColumn' => 46,
             'parameterIndex' => 0,
@@ -910,12 +1074,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 236,
-                'endLine' => 236,
-                'startTokenPos' => 1655,
-                'startFilePos' => 7132,
-                'endTokenPos' => 1655,
-                'endFilePos' => 7135,
+                'startLine' => 272,
+                'endLine' => 272,
+                'startTokenPos' => 1864,
+                'startFilePos' => 8201,
+                'endTokenPos' => 1864,
+                'endFilePos' => 8204,
               ),
             ),
             'type' => 
@@ -952,8 +1116,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 236,
-            'endLine' => 236,
+            'startLine' => 272,
+            'endLine' => 272,
             'startColumn' => 49,
             'endColumn' => 71,
             'parameterIndex' => 1,
@@ -967,12 +1131,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 236,
-                'endLine' => 236,
-                'startTokenPos' => 1665,
-                'startFilePos' => 7155,
-                'endTokenPos' => 1665,
-                'endFilePos' => 7158,
+                'startLine' => 272,
+                'endLine' => 272,
+                'startTokenPos' => 1874,
+                'startFilePos' => 8224,
+                'endTokenPos' => 1874,
+                'endFilePos' => 8227,
               ),
             ),
             'type' => 
@@ -1009,8 +1173,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 236,
-            'endLine' => 236,
+            'startLine' => 272,
+            'endLine' => 272,
             'startColumn' => 74,
             'endColumn' => 94,
             'parameterIndex' => 2,
@@ -1024,12 +1188,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '\'device\'',
               'attributes' => 
               array (
-                'startLine' => 236,
-                'endLine' => 236,
-                'startTokenPos' => 1674,
-                'startFilePos' => 7178,
-                'endTokenPos' => 1674,
-                'endFilePos' => 7185,
+                'startLine' => 272,
+                'endLine' => 272,
+                'startTokenPos' => 1883,
+                'startFilePos' => 8247,
+                'endTokenPos' => 1883,
+                'endFilePos' => 8254,
               ),
             ),
             'type' => 
@@ -1047,8 +1211,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 236,
-            'endLine' => 236,
+            'startLine' => 272,
+            'endLine' => 272,
             'startColumn' => 97,
             'endColumn' => 121,
             'parameterIndex' => 3,
@@ -1075,13 +1239,13 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * the SDK/agent log). Otherwise the legacy (employee_id, punch_time) pair
  * is used so re-syncs of the same log never double-insert.
  *
- * @param  array{fingerprint_id: int, punch_time: mixed, source_key?: string, action?: string|null}  $record
+ * @param  array{fingerprint_id: int, punch_time: mixed, source_key?: string, action?: string|null, score?: int|null}  $record
  * @param  int|null  $deviceId  Must reference a biometric_devices row. Agent
  *                              pushes (USB readers) don\'t own a network device,
  *                              so they pass null — never an agent id.
  */',
-        'startLine' => 236,
-        'endLine' => 289,
+        'startLine' => 272,
+        'endLine' => 332,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

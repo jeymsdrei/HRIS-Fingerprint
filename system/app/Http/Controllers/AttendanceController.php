@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Attendance;
 use App\Models\BiometricDevice;
 use App\Models\Department;
-use App\Models\Employee;
 use App\Services\AttendanceService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -25,7 +24,7 @@ class AttendanceController extends Controller
         // ensure today's records exist
         $service->processDate($date, $request->user()->id);
 
-        $attendances = Attendance::with(['employee.department', 'employee.position', 'device'])
+        $attendances = Attendance::with(['employee.department', 'employee.position', 'device', 'teachingSchedule.subject', 'teachingSchedule.room', 'workSchedule'])
             ->whereDate('date', $date->toDateString())
             ->when($departmentId, fn ($q, $id) => $q->where('department_id', $id))
             ->when($request->status, fn ($q, $s) => $q->where('status', $s))
@@ -82,23 +81,6 @@ class AttendanceController extends Controller
 
         return redirect()->route('attendance.index', ['date' => $attendance->date->format('Y-m-d')])
             ->with('success', 'Attendance corrected and recomputed.');
-    }
-
-    /**
-     * Manual punch registration for a specific employee.
-     */
-    public function storePunch(Request $request, AttendanceService $service)
-    {
-        $request->validate([
-            'employee_id' => 'required|exists:employees,id',
-            'punch_time' => 'required|date',
-            'device_id' => 'nullable|exists:biometric_devices,id',
-        ]);
-
-        $employee = Employee::findOrFail($request->employee_id);
-        $service->registerPunch($employee, Carbon::parse($request->punch_time), $request->device_id, 'manual');
-
-        return back()->with('success', 'Punch registered for '.$employee->full_name.'.');
     }
 
     /**

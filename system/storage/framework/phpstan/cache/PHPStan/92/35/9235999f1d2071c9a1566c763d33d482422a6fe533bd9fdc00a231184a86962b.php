@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\Employee.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\Employee
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-7d54bfd0000a3597e6c5817a215548b7b69b7c3f9ed4966a3f25a0a49867e00c',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-3b269e4e8ad6327ad285ca15fec47c711b9682eff14e64b16ac936484ee9a242',
    'data' => 
   array (
     'locatedSource' => 
@@ -25,7 +25,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'docComment' => '/**
  * @property int $id
  * @property string $employee_id
- * @property int|null $user_id
  * @property int|null $department_id
  * @property int|null $position_id
  * @property int|null $course_id
@@ -43,6 +42,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @property string $employment_status
  * @property string $salary_type
  * @property numeric $monthly_salary
+ * @property numeric $semi_monthly_salary
  * @property numeric $daily_rate
  * @property numeric $hourly_rate
  * @property numeric $teaching_load
@@ -83,8 +83,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @property-read Collection<int, Payslip> $payslips
  * @property-read int|null $payslips_count
  * @property-read Position|null $position
- * @property-read Collection<int, EmployeeRequirement> $requirements
- * @property-read int|null $requirements_count
  * @property-read Collection<int, TeachingSchedule> $teachingSchedules
  * @property-read int|null $teaching_schedules_count
  * @property-read User|null $user
@@ -131,15 +129,14 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Employee whereTeachingLoad($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Employee whereTin($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Employee whereUpdatedAt($value)
- * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Employee whereUserId($value)
  *
  * @mixin \\Eloquent
  */',
     'attributes' => 
     array (
     ),
-    'startLine' => 125,
-    'endLine' => 282,
+    'startLine' => 123,
+    'endLine' => 275,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -152,6 +149,209 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateConstants' => 
     array (
+      'CLASSIFICATION_TEACHING' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Employee',
+        'implementingClassName' => 'App\\Models\\Employee',
+        'name' => 'CLASSIFICATION_TEACHING',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'teaching\'',
+          'attributes' => 
+          array (
+            'startLine' => 127,
+            'endLine' => 127,
+            'startTokenPos' => 67,
+            'startFilePos' => 6984,
+            'endTokenPos' => 67,
+            'endFilePos' => 6993,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 127,
+        'endLine' => 127,
+        'startColumn' => 5,
+        'endColumn' => 54,
+      ),
+      'CLASSIFICATION_NON_TEACHING' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Employee',
+        'implementingClassName' => 'App\\Models\\Employee',
+        'name' => 'CLASSIFICATION_NON_TEACHING',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'non_teaching\'',
+          'attributes' => 
+          array (
+            'startLine' => 129,
+            'endLine' => 129,
+            'startTokenPos' => 78,
+            'startFilePos' => 7044,
+            'endTokenPos' => 78,
+            'endFilePos' => 7057,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 129,
+        'endLine' => 129,
+        'startColumn' => 5,
+        'endColumn' => 62,
+      ),
+      'EMPLOYMENT_PERMANENT' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Employee',
+        'implementingClassName' => 'App\\Models\\Employee',
+        'name' => 'EMPLOYMENT_PERMANENT',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'permanent\'',
+          'attributes' => 
+          array (
+            'startLine' => 131,
+            'endLine' => 131,
+            'startTokenPos' => 89,
+            'startFilePos' => 7101,
+            'endTokenPos' => 89,
+            'endFilePos' => 7111,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 131,
+        'endLine' => 131,
+        'startColumn' => 5,
+        'endColumn' => 52,
+      ),
+      'EMPLOYMENT_CONTRACTUAL' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Employee',
+        'implementingClassName' => 'App\\Models\\Employee',
+        'name' => 'EMPLOYMENT_CONTRACTUAL',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'contractual\'',
+          'attributes' => 
+          array (
+            'startLine' => 133,
+            'endLine' => 133,
+            'startTokenPos' => 100,
+            'startFilePos' => 7157,
+            'endTokenPos' => 100,
+            'endFilePos' => 7169,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 133,
+        'endLine' => 133,
+        'startColumn' => 5,
+        'endColumn' => 56,
+      ),
+      'SALARY_MONTHLY' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Employee',
+        'implementingClassName' => 'App\\Models\\Employee',
+        'name' => 'SALARY_MONTHLY',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'monthly\'',
+          'attributes' => 
+          array (
+            'startLine' => 135,
+            'endLine' => 135,
+            'startTokenPos' => 111,
+            'startFilePos' => 7207,
+            'endTokenPos' => 111,
+            'endFilePos' => 7215,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 135,
+        'endLine' => 135,
+        'startColumn' => 5,
+        'endColumn' => 44,
+      ),
+      'SALARY_DAILY' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Employee',
+        'implementingClassName' => 'App\\Models\\Employee',
+        'name' => 'SALARY_DAILY',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'daily\'',
+          'attributes' => 
+          array (
+            'startLine' => 137,
+            'endLine' => 137,
+            'startTokenPos' => 122,
+            'startFilePos' => 7251,
+            'endTokenPos' => 122,
+            'endFilePos' => 7257,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 137,
+        'endLine' => 137,
+        'startColumn' => 5,
+        'endColumn' => 40,
+      ),
+      'SALARY_SEMI_MONTHLY' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Employee',
+        'implementingClassName' => 'App\\Models\\Employee',
+        'name' => 'SALARY_SEMI_MONTHLY',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'semi_monthly\'',
+          'attributes' => 
+          array (
+            'startLine' => 139,
+            'endLine' => 139,
+            'startTokenPos' => 133,
+            'startFilePos' => 7300,
+            'endTokenPos' => 133,
+            'endFilePos' => 7313,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 139,
+        'endLine' => 139,
+        'startColumn' => 5,
+        'endColumn' => 54,
+      ),
     ),
     'immediateProperties' => 
     array (
@@ -164,23 +364,23 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'type' => NULL,
         'default' => 
         array (
-          'code' => '[\'employee_id\', \'user_id\', \'department_id\', \'position_id\', \'course_id\', \'first_name\', \'middle_name\', \'last_name\', \'suffix\', \'birth_date\', \'gender\', \'email\', \'phone\', \'address\', \'photo_path\', \'classification\', \'employment_status\', \'salary_type\', \'monthly_salary\', \'daily_rate\', \'hourly_rate\', \'teaching_load\', \'fingerprint_id\', \'fingerprint_template\', \'sss_no\', \'philhealth_no\', \'pagibig_no\', \'tin\', \'tax_status\', \'bank_name\', \'bank_account_no\', \'payment_method\', \'date_hired\', \'date_resigned\', \'is_active\']',
+          'code' => '[\'employee_id\', \'department_id\', \'position_id\', \'course_id\', \'first_name\', \'middle_name\', \'last_name\', \'suffix\', \'birth_date\', \'gender\', \'email\', \'phone\', \'address\', \'photo_path\', \'classification\', \'employment_status\', \'salary_type\', \'monthly_salary\', \'semi_monthly_salary\', \'daily_rate\', \'hourly_rate\', \'teaching_load\', \'fingerprint_id\', \'fingerprint_template\', \'sss_no\', \'philhealth_no\', \'pagibig_no\', \'tin\', \'tax_status\', \'bank_name\', \'bank_account_no\', \'payment_method\', \'date_hired\', \'date_resigned\', \'is_active\']',
           'attributes' => 
           array (
-            'startLine' => 129,
-            'endLine' => 139,
-            'startTokenPos' => 60,
-            'startFilePos' => 7114,
-            'endTokenPos' => 167,
-            'endFilePos' => 7698,
+            'startLine' => 141,
+            'endLine' => 151,
+            'startTokenPos' => 142,
+            'startFilePos' => 7343,
+            'endTokenPos' => 249,
+            'endFilePos' => 7939,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 129,
-        'endLine' => 139,
+        'startLine' => 141,
+        'endLine' => 151,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -199,23 +399,23 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'type' => NULL,
         'default' => 
         array (
-          'code' => '[\'birth_date\' => \'date\', \'date_hired\' => \'date\', \'date_resigned\' => \'date\', \'monthly_salary\' => \'decimal:2\', \'daily_rate\' => \'decimal:2\', \'hourly_rate\' => \'decimal:2\', \'teaching_load\' => \'decimal:2\', \'is_active\' => \'boolean\']',
+          'code' => '[\'birth_date\' => \'date\', \'date_hired\' => \'date\', \'date_resigned\' => \'date\', \'monthly_salary\' => \'decimal:2\', \'semi_monthly_salary\' => \'decimal:2\', \'daily_rate\' => \'decimal:2\', \'hourly_rate\' => \'decimal:2\', \'teaching_load\' => \'decimal:2\', \'is_active\' => \'boolean\']',
           'attributes' => 
           array (
-            'startLine' => 141,
-            'endLine' => 150,
-            'startTokenPos' => 176,
-            'startFilePos' => 7725,
-            'endTokenPos' => 234,
-            'endFilePos' => 8020,
+            'startLine' => 153,
+            'endLine' => 163,
+            'startTokenPos' => 258,
+            'startFilePos' => 7966,
+            'endTokenPos' => 323,
+            'endFilePos' => 8307,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 141,
-        'endLine' => 150,
+        'startLine' => 153,
+        'endLine' => 163,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -248,8 +448,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 152,
-        'endLine' => 155,
+        'startLine' => 165,
+        'endLine' => 168,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -283,8 +483,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 157,
-        'endLine' => 160,
+        'startLine' => 170,
+        'endLine' => 173,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -318,8 +518,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 162,
-        'endLine' => 165,
+        'startLine' => 175,
+        'endLine' => 178,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -345,7 +545,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
           'data' => 
           array (
-            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\HasOne',
             'isIdentifier' => false,
           ),
         ),
@@ -353,8 +553,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 167,
-        'endLine' => 170,
+        'startLine' => 180,
+        'endLine' => 183,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -388,8 +588,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 172,
-        'endLine' => 175,
+        'startLine' => 185,
+        'endLine' => 188,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -423,8 +623,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 177,
-        'endLine' => 180,
+        'startLine' => 190,
+        'endLine' => 193,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -458,8 +658,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 182,
-        'endLine' => 185,
+        'startLine' => 195,
+        'endLine' => 198,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -495,8 +695,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @return HasMany<TeachingSchedule, $this>
  */',
-        'startLine' => 190,
-        'endLine' => 193,
+        'startLine' => 203,
+        'endLine' => 206,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -532,8 +732,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @return HasMany<WorkSchedule, $this>
  */',
-        'startLine' => 198,
-        'endLine' => 201,
+        'startLine' => 211,
+        'endLine' => 214,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -567,8 +767,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 203,
-        'endLine' => 206,
+        'startLine' => 216,
+        'endLine' => 219,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -604,8 +804,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @return HasMany<MakeUpClass, $this>
  */',
-        'startLine' => 211,
-        'endLine' => 214,
+        'startLine' => 224,
+        'endLine' => 227,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -639,43 +839,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 216,
-        'endLine' => 219,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\Employee',
-        'implementingClassName' => 'App\\Models\\Employee',
-        'currentClassName' => 'App\\Models\\Employee',
-        'aliasName' => NULL,
-      ),
-      'requirements' => 
-      array (
-        'name' => 'requirements',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => 
-        array (
-          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-          'data' => 
-          array (
-            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
-            'isIdentifier' => false,
-          ),
-        ),
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 221,
-        'endLine' => 224,
+        'startLine' => 229,
+        'endLine' => 232,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -711,8 +876,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @return HasMany<EmployeeBenefit, $this>
  */',
-        'startLine' => 229,
-        'endLine' => 232,
+        'startLine' => 237,
+        'endLine' => 240,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -748,8 +913,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @return HasMany<Loan, $this>
  */',
-        'startLine' => 237,
-        'endLine' => 240,
+        'startLine' => 245,
+        'endLine' => 248,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -783,8 +948,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 242,
-        'endLine' => 245,
+        'startLine' => 250,
+        'endLine' => 253,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -818,8 +983,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 247,
-        'endLine' => 250,
+        'startLine' => 255,
+        'endLine' => 258,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -853,8 +1018,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 252,
-        'endLine' => 255,
+        'startLine' => 260,
+        'endLine' => 263,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -888,43 +1053,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 257,
-        'endLine' => 266,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\Employee',
-        'implementingClassName' => 'App\\Models\\Employee',
-        'currentClassName' => 'App\\Models\\Employee',
-        'aliasName' => NULL,
-      ),
-      'hasCompleteRequirements' => 
-      array (
-        'name' => 'hasCompleteRequirements',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => 
-        array (
-          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-          'data' => 
-          array (
-            'name' => 'bool',
-            'isIdentifier' => true,
-          ),
-        ),
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 268,
-        'endLine' => 281,
+        'startLine' => 265,
+        'endLine' => 274,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

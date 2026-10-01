@@ -35,7 +35,7 @@ return [
         ],
     ],
 
-'biometric' => [
+    'biometric' => [
         'token' => env('BIOMETRIC_API_TOKEN', 'hris-device-token'),
     ],
 

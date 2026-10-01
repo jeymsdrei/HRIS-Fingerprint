@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout hris>
     <x-slot name="title">Settings</x-slot>
 
     <div class="page-container">
@@ -17,14 +17,14 @@
                     <div class="px-5 py-4">
                         <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">{{ $group }}</h3>
                         @foreach ($settings->where('group', $group) as $setting)
-                        <div class="flex items-center justify-between py-2">
+                        <div class="flex flex-wrap items-center justify-between gap-2 py-2">
                             <div>
                                 <p class="text-sm text-slate-700">{{ str_replace('_', ' ', ucwords($setting->key)) }}</p>
                                 <p class="text-xs text-slate-400 font-mono">{{ $setting->value }}</p>
                             </div>
                             <form method="POST" action="{{ route('settings.update', $setting->key) }}" class="flex gap-2">
                                 @csrf
-                                <input name="value" value="{{ $setting->value }}" class="input w-40">
+                                <input name="value" value="{{ $setting->value }}" class="input w-32 sm:w-40">
                                 <input type="hidden" name="group" value="{{ $group }}">
                                 <button class="btn btn-secondary btn-sm">Save</button>
                             </form>

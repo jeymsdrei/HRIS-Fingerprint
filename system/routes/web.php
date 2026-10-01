@@ -34,14 +34,12 @@ Route::middleware('auth')->group(function () {
 
     // Notifications
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');
-    Route::get('/notifications/read/{notification}', [NotificationController::class, 'markRead'])->name('notifications.read');
+    Route::post('/notifications/read/{notification}', [NotificationController::class, 'markRead'])->name('notifications.read');
     Route::post('/notifications/read-all', [NotificationController::class, 'markAll'])->name('notifications.markAll');
 
     // ===== Admin =====
     Route::middleware('role:admin')->group(function () {
         Route::resource('users', UserController::class)->except(['show']);
-        Route::patch('users/{user}/toggle', [UserController::class, 'toggle'])->name('users.toggle');
-        Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
         Route::get('api/employees/unlinked', [UserController::class, 'employees'])->name('users.employees');
 
         Route::resource('departments', DepartmentController::class)->except(['show', 'edit', 'create']);
@@ -71,7 +69,7 @@ Route::middleware('auth')->group(function () {
         Route::post('settings/payroll', [SettingsController::class, 'savePayroll'])->name('settings.payroll.save');
         Route::post('settings/{key}', [SettingsController::class, 'updateKey'])->name('settings.update');
 
-Route::get('archives', [ArchiveController::class, 'index'])->name('archives.index');
+        Route::get('archives', [ArchiveController::class, 'index'])->name('archives.index');
         Route::post('archives/export', [ArchiveController::class, 'export'])->name('archives.export');
         Route::get('archives/print', [ArchiveController::class, 'export'])->name('archives.print');
         Route::post('archives/run', [ArchiveController::class, 'run'])->name('archives.run');
@@ -92,7 +90,6 @@ Route::get('archives', [ArchiveController::class, 'index'])->name('archives.inde
         Route::get('attendance', [AttendanceController::class, 'index'])->name('attendance.index');
         Route::get('attendance/{attendance}/edit', [AttendanceController::class, 'edit'])->name('attendance.edit');
         Route::put('attendance/{attendance}', [AttendanceController::class, 'update'])->name('attendance.update');
-        Route::post('attendance/punch', [AttendanceController::class, 'storePunch'])->name('attendance.punch');
         Route::post('attendance/process', [AttendanceController::class, 'processRange'])->name('attendance.process');
 
         Route::get('biometrics/punches', [BiometricController::class, 'punches'])->name('biometrics.punches');
@@ -160,13 +157,14 @@ Route::get('archives', [ArchiveController::class, 'index'])->name('archives.inde
     Route::prefix('my')->name('employee.')->middleware('role:admin,hr,payroll_officer,department_head,employee')->group(function () {
         Route::get('attendance', [EmployeeSelfServiceController::class, 'attendance'])->name('attendance');
         Route::get('schedule', [EmployeeSelfServiceController::class, 'schedule'])->name('schedule');
-        Route::get('makeup-classes', [EmployeeSelfServiceController::class, 'makeupClasses'])
-            ->middleware('role:employee')
-            ->name('makeup.index');
+        Route::get('makeup-classes', [EmployeeSelfServiceController::class, 'makeupClasses'])->name('makeup.index');
+        Route::post('makeup-classes', [EmployeeSelfServiceController::class, 'storeMakeupClass'])->name('makeup.store');
         Route::get('payslips', [EmployeeSelfServiceController::class, 'payslips'])->name('payslips');
         Route::get('payslips/{payslip}/download', [EmployeeSelfServiceController::class, 'payslipDownload'])->name('payslips.download');
+        Route::get('payslips/{payslip}/view', [EmployeeSelfServiceController::class, 'payslipView'])->name('payslips.view');
         Route::get('receipts', [EmployeeSelfServiceController::class, 'receipts'])->name('receipts');
         Route::get('receipts/{receipt}/download', [EmployeeSelfServiceController::class, 'receiptDownload'])->name('receipts.download');
+        Route::get('receipts/{receipt}/view', [EmployeeSelfServiceController::class, 'receiptView'])->name('receipts.view');
         Route::post('receipts/{receipt}/sign', [EmployeeSelfServiceController::class, 'receiptSign'])->name('receipts.sign');
         Route::get('history', [EmployeeSelfServiceController::class, 'history'])->name('history');
     });

@@ -42,7 +42,7 @@ class AttendanceLog extends Model
     use HasFactory;
 
     protected $fillable = [
-        'employee_id', 'fingerprint_id', 'device_id', 'punch_time', 'source_key', 'action', 'source', 'processed',
+        'employee_id', 'fingerprint_id', 'device_id', 'punch_time', 'source_key', 'action', 'score', 'source', 'processed',
     ];
 
     protected $casts = [

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Department;
 use App\Models\Clearance;
+use App\Models\Department;
+use App\Models\MakeUpClass;
 use App\Models\Payroll;
 use App\Models\PayrollPeriod;
 use App\Models\Setting;
@@ -15,7 +16,7 @@ class PayrollController extends Controller
 {
     public function index(Request $request)
     {
-        $periods = PayrollPeriod::withCount('payrolls')->orderByDesc('end_date')->paginate(12);
+        $periods = PayrollPeriod::withCount('payrolls')->withSum('payrolls', 'net_pay')->orderByDesc('end_date')->paginate(12);
 
         return view('payroll.index', compact('periods'));
     }
@@ -37,6 +38,14 @@ class PayrollController extends Controller
             ->withQueryString();
 
         $requiredClearanceIds = Clearance::where('is_required', true)->pluck('id');
+        $makeUpSummaries = MakeUpClass::query()
+            ->selectRaw('employee_id, COUNT(*) as sessions, SUM(hours_rendered) as hours')
+            ->whereIn('employee_id', $payrolls->pluck('employee_id'))
+            ->where('approval_status', 'approved')
+            ->whereBetween('class_date', [$period->start_date->toDateString(), $period->end_date->toDateString()])
+            ->groupBy('employee_id')
+            ->get()
+            ->keyBy('employee_id');
         foreach ($payrolls as $payroll) {
             $clearedIds = $payroll->employee->clearances
                 ->where('status', 'cleared')
@@ -45,6 +54,9 @@ class PayrollController extends Controller
                 'clearance_status',
                 $requiredClearanceIds->diff($clearedIds)->isEmpty() ? 'Approved' : 'Pending'
             );
+            $summary = $makeUpSummaries->get($payroll->employee_id);
+            $payroll->setAttribute('make_up_sessions', (int) ($summary?->sessions ?? 0));
+            $payroll->setAttribute('make_up_hours', round((float) ($summary?->hours ?? 0), 2));
         }
 
         $totals = [
@@ -114,9 +126,16 @@ class PayrollController extends Controller
     public function showLine(Payroll $payroll, PayrollService $service)
     {
         $payroll->load(['employee.department', 'period', 'payslip', 'receipt']);
+        $makeUpClasses = MakeUpClass::with('subject')
+            ->where('employee_id', $payroll->employee_id)
+            ->where('approval_status', 'approved')
+            ->whereBetween('class_date', [$payroll->period->start_date->toDateString(), $payroll->period->end_date->toDateString()])
+            ->orderBy('class_date')
+            ->orderBy('start_time')
+            ->get();
         $audit = $service->audit($payroll);
 
-        return view('payroll.line', compact('payroll', 'audit'));
+        return view('payroll.line', compact('payroll', 'audit', 'makeUpClasses'));
     }
 
     public function updateLine(Request $request, Payroll $payroll)

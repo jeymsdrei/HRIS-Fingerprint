@@ -14,7 +14,7 @@
                     <h2 class="font-semibold text-slate-900">Departments</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('departments.store') }}" class="flex gap-2 mb-5">
+                    <form method="POST" action="{{ route('departments.store') }}" class="flex flex-wrap gap-2 mb-5">
                         @csrf
                         <input name="name" placeholder="Department name" class="input flex-1" required>
                         <input name="code" placeholder="Code" class="input w-24">
@@ -33,15 +33,15 @@
                                 </button>
                                 <div x-show="open" x-cloak class="absolute right-0 top-full mt-1 w-32 rounded-lg bg-white shadow-lg border border-slate-200 py-1 z-10">
                                     <button type="button" @click="editing = true; open = false" class="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Edit</button>
-                                    <form method="POST" action="{{ route('departments.destroy', $d) }}" onsubmit="return confirm('Delete department?')">
+                                    <form method="POST" action="{{ route('departments.destroy', $d) }}" data-confirm="Delete department?">
                                         @csrf @method('DELETE')
                                         <button class="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50">Delete</button>
                                     </form>
                                 </div>
                             </div>
-                            <form x-show="editing" x-cloak method="POST" action="{{ route('departments.update', $d) }}" class="absolute inset-x-0 top-full z-20 mt-1 flex gap-2 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+                            <form x-show="editing" x-cloak method="POST" action="{{ route('departments.update', $d) }}" class="absolute inset-x-0 top-full z-20 mt-1 flex flex-wrap gap-2 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
                                 @csrf @method('PATCH')
-                                <input name="name" value="{{ $d->name }}" class="input flex-1" required>
+                                <input name="name" value="{{ $d->name }}" class="input flex-1 min-w-0" required>
                                 <input name="code" value="{{ $d->code }}" class="input w-24">
                                 <button class="btn btn-primary btn-sm">Save</button>
                                 <button type="button" @click="editing = false" class="btn btn-secondary btn-sm">Cancel</button>
@@ -99,7 +99,7 @@
                                 </button>
                                 <div x-show="open" x-cloak class="absolute right-0 top-full mt-1 w-32 rounded-lg bg-white shadow-lg border border-slate-200 py-1 z-10">
                                     <button type="button" @click="editing = true; open = false" class="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Edit</button>
-                                    <form method="POST" action="{{ route('positions.destroy', $p) }}" onsubmit="return confirm('Delete position?')">
+                                    <form method="POST" action="{{ route('positions.destroy', $p) }}" data-confirm="Delete position?">
                                         @csrf @method('DELETE')
                                         <button class="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50">Delete</button>
                                     </form>

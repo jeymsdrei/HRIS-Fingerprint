@@ -12,9 +12,9 @@
         <div class="card">
             <div class="card-body">
                 <form method="GET" class="flex flex-wrap gap-3 items-end">
-                    <div>
+                    <div class="flex-1 min-w-0 sm:flex-none">
                         <label class="input-label">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-56">
+                        <input name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-full sm:w-56">
                     </div>
                     @include('partials.employee-filters')
                     <div>
@@ -56,9 +56,9 @@
                             <td class="table-body-cell">{{ $ps->payroll->period->name }}</td>
                             <td class="table-body-cell text-right font-bold text-green-600">₱{{ number_format($ps->payroll->net_pay, 2) }}</td>
                             <td class="table-body-cell text-slate-500">{{ $ps->generated_at?->format('M d, Y h:i A') }}</td>
-                            <td class="table-body-cell text-right space-x-2">
-                                <a href="{{ route('payslips.download', $ps) }}" class="btn btn-outline btn-sm">PDF</a>
-                                <a href="{{ route('payslips.show', $ps) }}" class="btn btn-secondary btn-sm">View</a>
+<td class="table-body-cell text-right space-x-2">
+<a href="{{ route('payslips.show', $ps) }}" onclick="window.__autoPrint = true;" class="btn btn-outline btn-sm">Print</a>
+<a href="{{ route('payslips.show', $ps) }}" class="btn btn-secondary btn-sm">View</a>
                             </td>
                         </tr>
                         @empty

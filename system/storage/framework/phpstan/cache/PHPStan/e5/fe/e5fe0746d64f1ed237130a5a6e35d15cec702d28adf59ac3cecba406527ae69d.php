@@ -37,7 +37,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveExport.php' => 
     array (
-      0 => 'c59f1ef4dbbaca7b2a98b7d23c374e83d9f775132c0f7c3d6c43e51d77b73679',
+      0 => 'cff67df71b869427b64f2635f76346fa11c875c95aa6b5d6fb47cb839b9b4383',
       1 => 
       array (
         0 => 'app\\exports\\archiveexport',
@@ -58,7 +58,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveSheet.php' => 
     array (
-      0 => 'd8d9f7fdf960c0167201c5f64d10892f3f30b180a1929c474386e090ca47d0aa',
+      0 => 'd18b9d683e14fecc30884fe782f84d704c51d7bcbb082b6195b3ba3913f00bd2',
       1 => 
       array (
         0 => 'app\\exports\\archivesheet',
@@ -93,7 +93,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php' => 
     array (
-      0 => 'b3eef5ee213f8575020e5e40a941a81c23e52523d284daea1629c9b32346570f',
+      0 => 'dbb56d7b69799cd1ef15a669ec6a5aa9ee45531db22d31771a7c33f8b8b6698e',
       1 => 
       array (
         0 => 'app\\http\\controllers\\archivecontroller',
@@ -113,7 +113,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php' => 
     array (
-      0 => '3c33e584f1f940640ff85d550f912dea37bbc7734ef2e69e99cd13a246a8ca92',
+      0 => 'bc838e53d6155af560ab6673cf6881d5ff69b1cdad0f0d6bd03ca36e50d5e7e5',
       1 => 
       array (
         0 => 'app\\http\\controllers\\attendancecontroller',
@@ -123,8 +123,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         0 => 'app\\http\\controllers\\index',
         1 => 'app\\http\\controllers\\edit',
         2 => 'app\\http\\controllers\\update',
-        3 => 'app\\http\\controllers\\storepunch',
-        4 => 'app\\http\\controllers\\processrange',
+        3 => 'app\\http\\controllers\\processrange',
       ),
       3 => 
       array (
@@ -226,7 +225,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php' => 
     array (
-      0 => '82a07fee8b04223bf3587e5d3458de77275335104efa304aaf9e4a2dad1dea8c',
+      0 => '1d320142aaca93371b92986d38caceec1f0b48708b30af7b699b66a777035ba3',
       1 => 
       array (
         0 => 'app\\http\\controllers\\auth\\passwordresetlinkcontroller',
@@ -235,6 +234,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
         0 => 'app\\http\\controllers\\auth\\create',
         1 => 'app\\http\\controllers\\auth\\store',
+        2 => 'app\\http\\controllers\\auth\\personneluserbyusername',
+        3 => 'app\\http\\controllers\\auth\\syncrecoveryemail',
+        4 => 'app\\http\\controllers\\auth\\sendresetlink',
+        5 => 'app\\http\\controllers\\auth\\maskemail',
       ),
       3 => 
       array (
@@ -273,7 +276,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php' => 
     array (
-      0 => '26ac492da229ec79471eb3175b5be7a91e3e9fc60a8594393958e1210cc445a6',
+      0 => '657034939a09a1576ea4b542a2019d16aa78e8a2d9266d5b092fe227e79b2368',
       1 => 
       array (
         0 => 'app\\http\\controllers\\benefitloancontroller',
@@ -295,7 +298,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php' => 
     array (
-      0 => '24477408dc6c82f2d8de279ce01832212aff74229ed08970e18945342ac876f4',
+      0 => '3531519cd91b6555c05e90f1893885a0376ba1d9e289dbbc43182fd1714694a4',
       1 => 
       array (
         0 => 'app\\http\\controllers\\biometriccontroller',
@@ -312,8 +315,15 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         7 => 'app\\http\\controllers\\apipush',
         8 => 'app\\http\\controllers\\register',
         9 => 'app\\http\\controllers\\heartbeat',
-        10 => 'app\\http\\controllers\\employees',
-        11 => 'app\\http\\controllers\\assignfingerprint',
+        10 => 'app\\http\\controllers\\employeesyncversion',
+        11 => 'app\\http\\controllers\\scheduledays',
+        12 => 'app\\http\\controllers\\makeupclasses',
+        13 => 'app\\http\\controllers\\employees',
+        14 => 'app\\http\\controllers\\photodata',
+        15 => 'app\\http\\controllers\\buildthumbnail',
+        16 => 'app\\http\\controllers\\assignfingerprint',
+        17 => 'app\\http\\controllers\\savetemplate',
+        18 => 'app\\http\\controllers\\photo',
       ),
       3 => 
       array (
@@ -321,7 +331,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php' => 
     array (
-      0 => '5f3ff9b5035e45f0d0810be51ef281ab9983f0be46d36e0c35ffe7033e26e291',
+      0 => '3a039434ad0a5adf5f1981ec9c61960688800b47b240e34a8db91e0cfb77c500',
       1 => 
       array (
         0 => 'app\\http\\controllers\\clearancecontroller',
@@ -330,7 +340,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
         0 => 'app\\http\\controllers\\index',
         1 => 'app\\http\\controllers\\toggleclearance',
-        2 => 'app\\http\\controllers\\bulksync',
+        2 => 'app\\http\\controllers\\syncpayrollhold',
+        3 => 'app\\http\\controllers\\bulksync',
       ),
       3 => 
       array (
@@ -352,7 +363,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php' => 
     array (
-      0 => 'eada1cd5068d00843ae914c41ab826767056d21dff3bd8dfd3af2f66262c4c35',
+      0 => 'a431d45f652447b53d8788357d4006dfa17b9657369f8ebbcf4412d759939dee',
       1 => 
       array (
         0 => 'app\\http\\controllers\\dashboardcontroller',
@@ -389,7 +400,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php' => 
     array (
-      0 => '61c0c6ea0def694386618a7ccbdca5df1beceea1767ff5c004df102ab835edb0',
+      0 => '33aeed27f75a553cefccd9ed8142a66dd74e1a6641e9ddf6e48fcf630c7148b5',
       1 => 
       array (
         0 => 'app\\http\\controllers\\employeecontroller',
@@ -405,9 +416,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         6 => 'app\\http\\controllers\\destroy',
         7 => 'app\\http\\controllers\\reactivate',
         8 => 'app\\http\\controllers\\validated',
-        9 => 'app\\http\\controllers\\nextemployeeid',
-        10 => 'app\\http\\controllers\\unassignedusers',
-        11 => 'app\\http\\controllers\\syncloginaccount',
+        9 => 'app\\http\\controllers\\storeemployeephoto',
+        10 => 'app\\http\\controllers\\initializeclearances',
+        11 => 'app\\http\\controllers\\nextemployeeid',
+        12 => 'app\\http\\controllers\\unassignedusers',
+        13 => 'app\\http\\controllers\\syncloginaccount',
       ),
       3 => 
       array (
@@ -415,7 +428,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php' => 
     array (
-      0 => '208bd2ea1fa6842ddd4474557620b4bf6bf2fc50a783a37c6fedc1ea2c6c36f7',
+      0 => 'f47e96d995abc472f8ef91c4713215ee7547f712e08e3f061f691d8c281b59df',
       1 => 
       array (
         0 => 'app\\http\\controllers\\employeeselfservicecontroller',
@@ -426,15 +439,15 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         1 => 'app\\http\\controllers\\noemployeerecord',
         2 => 'app\\http\\controllers\\attendance',
         3 => 'app\\http\\controllers\\schedule',
-        4 => 'app\\http\\controllers\\payslips',
-        5 => 'app\\http\\controllers\\payslipdownload',
-        6 => 'app\\http\\controllers\\receipts',
-        7 => 'app\\http\\controllers\\receiptdownload',
-        8 => 'app\\http\\controllers\\receiptsign',
-        9 => 'app\\http\\controllers\\history',
-        10 => 'app\\http\\controllers\\requirements',
-        11 => 'app\\http\\controllers\\submitrequirement',
-        12 => 'app\\http\\controllers\\requirementdownload',
+        4 => 'app\\http\\controllers\\makeupclasses',
+        5 => 'app\\http\\controllers\\payslips',
+        6 => 'app\\http\\controllers\\payslipdownload',
+        7 => 'app\\http\\controllers\\payslipview',
+        8 => 'app\\http\\controllers\\receipts',
+        9 => 'app\\http\\controllers\\receiptdownload',
+        10 => 'app\\http\\controllers\\receiptview',
+        11 => 'app\\http\\controllers\\receiptsign',
+        12 => 'app\\http\\controllers\\history',
       ),
       3 => 
       array (
@@ -442,7 +455,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php' => 
     array (
-      0 => '32388c4c2589e2054a032ac9a352a25d453fd49e567162927c498eb695db914e',
+      0 => '4d2df8a338760b49ecdb20e8d525a8d0c99ec96ba2d909e1fe3ccd46849b0a8d',
       1 => 
       array (
         0 => 'app\\http\\controllers\\makeupclasscontroller',
@@ -485,7 +498,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\NotificationController.php' => 
     array (
-      0 => '4481a82b924775c1bd9154ddc9d3dc95658ad0a3e5275ad8d27f61a4ed63dbad',
+      0 => 'b1816c260813bcfa2841df44ae42f785fd739b66f865e76102d104506f782c76',
       1 => 
       array (
         0 => 'app\\http\\controllers\\notificationcontroller',
@@ -502,7 +515,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php' => 
     array (
-      0 => 'cc77dbd475bed63bd7f645a60f064ec499e18508e67767b80837076bf6897bc5',
+      0 => 'f137fb567edcd45ac249de81b5f8769f194d72a4e119422dcd1e855d61cd9217',
       1 => 
       array (
         0 => 'app\\http\\controllers\\payrollcontroller',
@@ -526,7 +539,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php' => 
     array (
-      0 => 'f4a7880012fb020d856bd445705b6a666d9a255493a129dbc0143384eea3bb62',
+      0 => '806931cc390366391a29d1803db17c92c1edd296d0f73fc3fd9fbe32ff5d9522',
       1 => 
       array (
         0 => 'app\\http\\controllers\\payrollreceiptcontroller',
@@ -578,7 +591,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php' => 
     array (
-      0 => '378c114e6a8dc2f74a93cb89471308de6ec957d3f7f6d47dfa6748576fc9d9aa',
+      0 => '5ac12c8b320c40fd79875471b189433679931117661181f1f43a8c1c63be4b17',
       1 => 
       array (
         0 => 'app\\http\\controllers\\reportcontroller',
@@ -601,34 +614,31 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         13 => 'app\\http\\controllers\\loanexport',
         14 => 'app\\http\\controllers\\departmentexport',
         15 => 'app\\http\\controllers\\employeeexport',
-        16 => 'app\\http\\controllers\\attendancecolumns',
-        17 => 'app\\http\\controllers\\dailycolumns',
-        18 => 'app\\http\\controllers\\payrollcolumns',
-        19 => 'app\\http\\controllers\\makeupcolumns',
-        20 => 'app\\http\\controllers\\benefitcolumns',
-        21 => 'app\\http\\controllers\\loancolumns',
-        22 => 'app\\http\\controllers\\departmentcolumns',
-        23 => 'app\\http\\controllers\\employeecolumns',
-        24 => 'app\\http\\controllers\\titlefor',
-      ),
-      3 => 
-      array (
-      ),
-    ),
-    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\RequirementController.php' => 
-    array (
-      0 => 'c7157046715fc55a4f630ccfae09e20f840049db8092a74e89da2a5398b77087',
-      1 => 
-      array (
-        0 => 'app\\http\\controllers\\requirementcontroller',
-      ),
-      2 => 
-      array (
-        0 => 'app\\http\\controllers\\index',
-        1 => 'app\\http\\controllers\\storerequirementtype',
-        2 => 'app\\http\\controllers\\upload',
-        3 => 'app\\http\\controllers\\verify',
-        4 => 'app\\http\\controllers\\download',
+        16 => 'app\\http\\controllers\\reportframe',
+        17 => 'app\\http\\controllers\\attendancecolumns',
+        18 => 'app\\http\\controllers\\dailycolumns',
+        19 => 'app\\http\\controllers\\latecolumns',
+        20 => 'app\\http\\controllers\\absentcolumns',
+        21 => 'app\\http\\controllers\\teachingcolumns',
+        22 => 'app\\http\\controllers\\payrollcolumns',
+        23 => 'app\\http\\controllers\\makeupcolumns',
+        24 => 'app\\http\\controllers\\benefitcolumns',
+        25 => 'app\\http\\controllers\\loancolumns',
+        26 => 'app\\http\\controllers\\departmentcolumns',
+        27 => 'app\\http\\controllers\\employeecolumns',
+        28 => 'app\\http\\controllers\\attendancereportrows',
+        29 => 'app\\http\\controllers\\dailyreportrows',
+        30 => 'app\\http\\controllers\\latereportrows',
+        31 => 'app\\http\\controllers\\absentreportrows',
+        32 => 'app\\http\\controllers\\teachingreportrows',
+        33 => 'app\\http\\controllers\\payrollreportrows',
+        34 => 'app\\http\\controllers\\makeupreportrows',
+        35 => 'app\\http\\controllers\\benefitreportrows',
+        36 => 'app\\http\\controllers\\loanreportrows',
+        37 => 'app\\http\\controllers\\departmentreportrows',
+        38 => 'app\\http\\controllers\\employeereportrows',
+        39 => 'app\\http\\controllers\\classlabel',
+        40 => 'app\\http\\controllers\\titlefor',
       ),
       3 => 
       array (
@@ -636,7 +646,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php' => 
     array (
-      0 => '2fd68824da448cd98d70b1eb83e2d067c79e2d06cb90329114f2106ca54a2931',
+      0 => 'f66198356f04855a4270a716ae2d099e649a5e0af12359ad69295e03a03e45d9',
       1 => 
       array (
         0 => 'app\\http\\controllers\\schedulecontroller',
@@ -655,7 +665,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\SettingsController.php' => 
     array (
-      0 => '2a383fcfd11faa5398dec427fbf7c6b81d3ed95bc986ac674df57fb64cc3d24a',
+      0 => '401c1219be0a7703a85acbbe15ee6b04d6166d90e57d3285d9fa2c56d6fa5a0a',
       1 => 
       array (
         0 => 'app\\http\\controllers\\settingscontroller',
@@ -674,7 +684,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php' => 
     array (
-      0 => 'c0c52ee0821fe69738aa9e35e61fde5cad7a57016a4180037a33a82781e3565b',
+      0 => '3fdba61a2159844f97766aa86114533658fc151596a5e6e75a62395c2a448ed2',
       1 => 
       array (
         0 => 'app\\http\\controllers\\usercontroller',
@@ -686,9 +696,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         2 => 'app\\http\\controllers\\store',
         3 => 'app\\http\\controllers\\edit',
         4 => 'app\\http\\controllers\\update',
-        5 => 'app\\http\\controllers\\toggle',
-        6 => 'app\\http\\controllers\\destroy',
-        7 => 'app\\http\\controllers\\employees',
+        5 => 'app\\http\\controllers\\destroy',
+        6 => 'app\\http\\controllers\\employees',
       ),
       3 => 
       array (
@@ -711,7 +720,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\Auth\\LoginRequest.php' => 
     array (
-      0 => 'a63878fe6288d4baa1f3cfa290a7ac085c6ab671f8c79b98265251ff6fc386a7',
+      0 => 'a351e579a4bb809034dbb45bfa0e9a7c4e50cd547628f27ffd8398aa6725fa20',
       1 => 
       array (
         0 => 'app\\http\\requests\\auth\\loginrequest',
@@ -758,7 +767,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php' => 
     array (
-      0 => 'cbef35cd6f5491e4a024180cde062cba79044f91c6d99d3f81d01b64ef04bd1f',
+      0 => 'd59e24300b6adf5046d8ddb00a28ffe294b1aba9c9f70c3763560fcefdf45f30',
       1 => 
       array (
         0 => 'app\\models\\attendance',
@@ -768,8 +777,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         0 => 'app\\models\\employee',
         1 => 'app\\models\\department',
         2 => 'app\\models\\device',
-        3 => 'app\\models\\getstatuslabelattribute',
-        4 => 'app\\models\\getstatuscolorattribute',
+        3 => 'app\\models\\teachingschedule',
+        4 => 'app\\models\\workschedule',
+        5 => 'app\\models\\makeupclass',
+        6 => 'app\\models\\getstatuslabelattribute',
+        7 => 'app\\models\\getstatuscolorattribute',
       ),
       3 => 
       array (
@@ -777,7 +789,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php' => 
     array (
-      0 => '70a18d38b2fd8ae2943e07216c037bc69c8ca1ba3646fa3e3ea1ed3f65b06bf8',
+      0 => '5948ada2c86363a5e14809ee45470f32fb5c98d246c2bbb0d95328d952d07690',
       1 => 
       array (
         0 => 'app\\models\\attendancelog',
@@ -793,7 +805,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php' => 
     array (
-      0 => '9c58baca79abf41df4cdde0645fe1a35b19d8966a1eecbc7d7f3cd9c7341dfa6',
+      0 => '38e3fdde02224088204398dd76765e9b3580cba5c38b5d13247275bf8c065a23',
       1 => 
       array (
         0 => 'app\\models\\benefit',
@@ -869,7 +881,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php' => 
     array (
-      0 => '74c5a4481bb85c0b08989764d4c0cad34834a2ef1621490b4a372c6b661fe08a',
+      0 => 'b92c36a5dae8f3d2fdfd73fa52d782c7272e5c1b3798984bd147b66c36ae4849',
       1 => 
       array (
         0 => 'app\\models\\department',
@@ -877,7 +889,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'app\\models\\employees',
-        1 => 'app\\models\\head',
       ),
       3 => 
       array (
@@ -885,7 +896,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php' => 
     array (
-      0 => 'e5ae502006c6530d6e9d24a5f8c01dd3ebee875b1c65a3edd364c5a3a3c8161b',
+      0 => '3b269e4e8ad6327ad285ca15fec47c711b9682eff14e64b16ac936484ee9a242',
       1 => 
       array (
         0 => 'app\\models\\employee',
@@ -904,14 +915,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         9 => 'app\\models\\attendances',
         10 => 'app\\models\\makeupclasses',
         11 => 'app\\models\\clearances',
-        12 => 'app\\models\\requirements',
-        13 => 'app\\models\\benefits',
-        14 => 'app\\models\\loans',
-        15 => 'app\\models\\payrolls',
-        16 => 'app\\models\\payslips',
-        17 => 'app\\models\\payrollreceipts',
-        18 => 'app\\models\\hascompleteclearance',
-        19 => 'app\\models\\hascompleterequirements',
+        12 => 'app\\models\\benefits',
+        13 => 'app\\models\\loans',
+        14 => 'app\\models\\payrolls',
+        15 => 'app\\models\\payslips',
+        16 => 'app\\models\\payrollreceipts',
+        17 => 'app\\models\\hascompleteclearance',
       ),
       3 => 
       array (
@@ -951,27 +960,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
-    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeRequirement.php' => 
-    array (
-      0 => '2e64cd5a1483303e1080fd69a4171296e9e1ab9ea4dd3e4eed288ec88d625fa3',
-      1 => 
-      array (
-        0 => 'app\\models\\employeerequirement',
-      ),
-      2 => 
-      array (
-        0 => 'app\\models\\employee',
-        1 => 'app\\models\\requirement',
-        2 => 'app\\models\\verifier',
-        3 => 'app\\models\\getstatuscolorattribute',
-      ),
-      3 => 
-      array (
-      ),
-    ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php' => 
     array (
-      0 => '07922a8414aa105aa6079f6d58d7ab23a9685eeedc9bb4728b8a52a737a34970',
+      0 => '1190e3eb8cf8b6221d6a4269e4544e9edd9bbb7e9105ad6cc78d07d2a4157e82',
       1 => 
       array (
         0 => 'app\\models\\loan',
@@ -1060,7 +1051,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php' => 
     array (
-      0 => 'fb90c75abaf60dce4a2df304fc0e60e0cc83a0de15d068155ea04db6681b46d1',
+      0 => 'a831337a77fbb070a5c3a2ee0ca37b52e23d7893a48ee5fa17a75457a45a9538',
       1 => 
       array (
         0 => 'app\\models\\payrollperiod',
@@ -1117,21 +1108,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
         0 => 'app\\models\\department',
         1 => 'app\\models\\employees',
-      ),
-      3 => 
-      array (
-      ),
-    ),
-    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Requirement.php' => 
-    array (
-      0 => '5dccb016c1093ffb5dc70e83a0b0b2a34a2c0019bf3d18345ca2f4873ac96ea5',
-      1 => 
-      array (
-        0 => 'app\\models\\requirement',
-      ),
-      2 => 
-      array (
-        0 => 'app\\models\\employeerequirements',
       ),
       3 => 
       array (
@@ -1234,7 +1210,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php' => 
     array (
-      0 => '1fc6dea0154525744eb764d578c237170d2543e0c2e9921c9ad2279ff84ca12c',
+      0 => 'ff1dbf38bd5fa88a1d9610eaf9cc53711e358135c57808a2541dd66ca4ebbb52',
       1 => 
       array (
         0 => 'app\\models\\user',
@@ -1249,6 +1225,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         5 => 'app\\models\\ispayroll',
         6 => 'app\\models\\isdepartmenthead',
         7 => 'app\\models\\rolelabel',
+        8 => 'app\\models\\getemailforpasswordreset',
       ),
       3 => 
       array (
@@ -1288,7 +1265,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php' => 
     array (
-      0 => '6fec99b349e5636915ba71d938dec62b230b0445b96d4de9a156852855880686',
+      0 => '7cb3ccced0dec5d208cf963243b01bd0afa02d873ea261f2b1d76f96efd45fe2',
       1 => 
       array (
         0 => 'app\\services\\archivereportservice',
@@ -1307,6 +1284,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         9 => 'app\\services\\departmentstats',
         10 => 'app\\services\\reportdataset',
         11 => 'app\\services\\monthlyseries',
+        12 => 'app\\services\\scopebydepartment',
+        13 => 'app\\services\\scopebyemployeedepartment',
       ),
       3 => 
       array (
@@ -1330,20 +1309,24 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php' => 
     array (
-      0 => '99c1cb5e9cf3f4113ab13e4b2ef380f8986550cecfd399fdbf0192662f830e13',
+      0 => '8dde33fe1cc591a06e78ada34c6d718fc4d5c63d12b756755f7b47365d20a468',
       1 => 
       array (
         0 => 'app\\services\\attendanceservice',
       ),
       2 => 
       array (
-        0 => 'app\\services\\getschedulefor',
+        0 => 'app\\services\\getschedulesfor',
         1 => 'app\\services\\registerpunch',
         2 => 'app\\services\\processday',
-        3 => 'app\\services\\processdate',
-        4 => 'app\\services\\processrange',
-        5 => 'app\\services\\backfill',
-        6 => 'app\\services\\dailysummary',
+        3 => 'app\\services\\assignpunchestoschedules',
+        4 => 'app\\services\\processwindow',
+        5 => 'app\\services\\processdate',
+        6 => 'app\\services\\processrange',
+        7 => 'app\\services\\backfill',
+        8 => 'app\\services\\daystatusrows',
+        9 => 'app\\services\\bestdaystatus',
+        10 => 'app\\services\\dailysummary',
       ),
       3 => 
       array (
@@ -1351,7 +1334,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php' => 
     array (
-      0 => 'fd6e9b3c51339c2acb6c330dd059a05bae090a40532aea51469f5d9588a398d7',
+      0 => '6c26ba82697b37ca997f53e05cc811d16ffe51fee02a4737f4775ca32f3c6dcb',
       1 => 
       array (
         0 => 'app\\services\\biometricservice',
@@ -1361,12 +1344,13 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         0 => 'app\\services\\isconnected',
         1 => 'app\\services\\connect',
         2 => 'app\\services\\disconnect',
-        3 => 'app\\services\\buildframe',
-        4 => 'app\\services\\sendcommand',
-        5 => 'app\\services\\readresponse',
-        6 => 'app\\services\\parserecords',
-        7 => 'app\\services\\pullattendance',
-        8 => 'app\\services\\persistpunch',
+        3 => 'app\\services\\deletefingerprint',
+        4 => 'app\\services\\buildframe',
+        5 => 'app\\services\\sendcommand',
+        6 => 'app\\services\\readresponse',
+        7 => 'app\\services\\parserecords',
+        8 => 'app\\services\\pullattendance',
+        9 => 'app\\services\\persistpunch',
       ),
       3 => 
       array (
@@ -1374,7 +1358,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php' => 
     array (
-      0 => '1b5dcc9fd7ae3df63ffe20be058d42e16dff52a91168fde3b7419cec40fb6b8b',
+      0 => 'd320db43c33e3082de316b9cbcad91cc5abdcb537e5d9bb3cb3d186d2070d3db',
       1 => 
       array (
         0 => 'app\\services\\payrollservice',
@@ -1400,7 +1384,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php' => 
     array (
-      0 => '7642283c3c7809693a2afbfd0d90e245b6c94ff53dea0903762a0fdd79631942',
+      0 => '7452c744f49ddc7cd4730eb9a97ba40773f0e4c1f82af2bbdbcc2a738462c79f',
       1 => 
       array (
         0 => 'app\\services\\reportservice',
@@ -1455,6 +1439,115 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'app\\view\\components\\render',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\BackupData.php' => 
+    array (
+      0 => '66b438bf70647809c67fcb3ce2186cf78e9d3e0b31b9028dffdb1f1a5da583e2',
+      1 => 
+      array (
+        0 => 'app\\console\\commands\\backupdata',
+      ),
+      2 => 
+      array (
+        0 => 'app\\console\\commands\\handle',
+        1 => 'app\\console\\commands\\copydir',
+        2 => 'app\\console\\commands\\zipdir',
+        3 => 'app\\console\\commands\\deltree',
+        4 => 'app\\console\\commands\\prune',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreBenefitRequest.php' => 
+    array (
+      0 => '75662bf347d2177d0e7fd2d86ad4116ac1b7d9a64e8faf6528ce800e0ac9279b',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\storebenefitrequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\rules',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeBenefitRequest.php' => 
+    array (
+      0 => '6056e5f7de1200302a775b02198dc5cb3e87ef57140e33b50c75f675dc19ab45',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\storeemployeebenefitrequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\rules',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeRequest.php' => 
+    array (
+      0 => 'e10e2ede1bdb0bf0937b2de70d3cecd17754da0d3244f86ac3cad690ab04933b',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\storeemployeerequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\rules',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreLoanRequest.php' => 
+    array (
+      0 => '08720758fe07836cd316f26c8b85b75ad2ca78493a32ca1c84476fecb6693c18',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\storeloanrequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\rules',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\UpdateLoanRequest.php' => 
+    array (
+      0 => '25f151a018f28baa9fb57aefe6a29dfda7e2f1ea04773f5e597b19d9fb7b7c23',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\updateloanrequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\rules',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\UpdatePayrollSettingsRequest.php' => 
+    array (
+      0 => '7f2b416d33cda48c96dd6a46acc8c60e7171cbdf374084dfef7ab7d277f584e1',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\updatepayrollsettingsrequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\rules',
       ),
       3 => 
       array (

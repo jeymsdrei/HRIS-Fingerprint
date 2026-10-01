@@ -3,7 +3,9 @@
 namespace App\Services;
 
 use App\Models\Attendance;
+use App\Models\Benefit;
 use App\Models\Employee;
+use App\Models\Loan;
 use App\Models\Notification;
 use App\Models\Payroll;
 use App\Models\PayrollPeriod;
@@ -11,9 +13,9 @@ use App\Models\PayrollReceipt;
 use App\Models\Payslip;
 use App\Models\Setting;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Eloquent\Collection;
 
 class PayrollService
 {
@@ -71,11 +73,33 @@ class PayrollService
             ->whereBetween('date', [$p->start_date->toDateString(), $p->end_date->toDateString()])
             ->get();
 
+        // days_* are counted per distinct date so per-schedule teaching
+        // rows do not inflate the day counts; minutes/hours sum across all
+        // schedule rows (per-class attendance feeds teaching pay).
+        $daysPresent = 0;
+        $daysLate = 0;
+        $daysAbsent = 0;
+        foreach ($rows->groupBy('date') as $dateRows) {
+            $statuses = $dateRows->pluck('status');
+
+            if ($statuses->contains(Attendance::PRESENT)
+                || $statuses->contains(Attendance::LATE)
+                || $statuses->contains(Attendance::HALF_DAY)) {
+                $daysPresent++;
+            }
+            if ($statuses->contains(Attendance::LATE)) {
+                $daysLate++;
+            }
+            if ($statuses->isNotEmpty() && $statuses->every(fn ($s) => $s === Attendance::ABSENT)) {
+                $daysAbsent++;
+            }
+        }
+
         return [
             'rows' => $rows,
-            'days_present' => $rows->whereIn('status', [Attendance::PRESENT, Attendance::LATE, Attendance::HALF_DAY])->count(),
-            'days_late' => $rows->where('status', Attendance::LATE)->count(),
-            'days_absent' => $rows->where('status', Attendance::ABSENT)->count(),
+            'days_present' => $daysPresent,
+            'days_late' => $daysLate,
+            'days_absent' => $daysAbsent,
             'late_minutes' => (int) $rows->sum('late_minutes'),
             'undertime_minutes' => (int) $rows->sum('undertime_minutes'),
             'overtime_minutes' => (int) $rows->sum('overtime_minutes'),
@@ -116,7 +140,7 @@ class PayrollService
         $benefits = 0.0;
         foreach ($active as $eb) {
             $amount = (float) $eb->effective_amount;
-            if ($eb->benefit->type === 'allowance') {
+            if ($eb->benefit->type === Benefit::ALLOWANCE) {
                 $allowances += $amount;
             } else {
                 $benefits += $amount;
@@ -134,7 +158,7 @@ class PayrollService
         $cash = 0.0;
         foreach ($active as $loan) {
             $amort = (float) $loan->monthly_amortization;
-            if ($loan->loan_type === 'cash_advance') {
+            if ($loan->loan_type === Loan::TYPE_CASH_ADVANCE) {
                 $cash += $amort;
             } else {
                 $loans += $amort;
@@ -165,7 +189,7 @@ class PayrollService
         $undertimeRate = Setting::get('undertime_deduction_rate');
         $absentRate = Setting::get('absent_deduction_rate');
 
-        $isTeaching = $e->classification === 'teaching';
+        $isTeaching = $e->classification === Employee::CLASSIFICATION_TEACHING;
 
         $basic = 0.0;
         $teachingHours = (float) $summary['working_hours'];
@@ -289,7 +313,7 @@ class PayrollService
 
                     $status = Payroll::READY;
                     $holdReason = null;
-                    if ($e->classification === 'teaching') {
+                    if ($e->classification === Employee::CLASSIFICATION_TEACHING) {
                         if (! $e->hasCompleteClearance()) {
                             $status = Payroll::ON_HOLD;
                             $holdReason = 'Incomplete clearance';

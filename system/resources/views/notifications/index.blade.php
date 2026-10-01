@@ -8,7 +8,7 @@
                 <p class="mt-2 text-slate-600">Your recent system alerts and updates</p>
             </div>
             @if ($notifications->isNotEmpty())
-                <form method="POST" action="{{ route('notifications.readAll') }}">
+                <form method="POST" action="{{ route('notifications.markAll') }}">
                     @csrf
                     <button class="btn btn-secondary btn-sm">Mark all as read</button>
                 </form>
@@ -22,9 +22,6 @@
                 <div class="flex-1">
                     <p class="text-sm text-slate-800">{{ $n->message }}</p>
                     <p class="text-xs text-slate-400 mt-1">{{ $n->created_at->diffForHumans() }}</p>
-                    @if ($n->url)
-                        <a href="{{ $n->url }}" class="text-xs text-indigo-600 mt-1 inline-block font-medium">Open →</a>
-                    @endif
                 </div>
                 @unless ($n->read)
                     <form method="POST" action="{{ route('notifications.read', $n) }}">

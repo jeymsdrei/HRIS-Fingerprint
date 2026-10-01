@@ -7,6 +7,7 @@ use App\Models\Employee;
 use App\Models\MakeUpClass;
 use App\Models\Notification;
 use App\Models\Subject;
+use App\Services\AttendanceService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -42,7 +43,7 @@ class MakeUpClassController extends Controller
             'start_time' => 'required|date_format:H:i',
             'end_time' => 'required|date_format:H:i|after:start_time',
             'hourly_rate' => 'nullable|numeric|min:0',
-            'remarks' => 'nullable|string|max:500',
+            'reason' => 'nullable|string|max:1000',
         ]);
 
         $employee = Employee::findOrFail($request->employee_id);
@@ -61,19 +62,26 @@ class MakeUpClassController extends Controller
             'hourly_rate' => $rate,
             'additional_pay' => round($hours * $rate, 2),
             'approval_status' => 'pending',
-            'remarks' => $request->remarks,
+            'reason' => $request->reason,
         ]);
 
         return back()->with('success', 'Make-up class recorded (pending approval).');
     }
 
-    public function approve(MakeUpClass $makeUpClass)
+    public function approve(Request $request, MakeUpClass $makeUpClass, AttendanceService $attendanceService)
     {
+        abort_unless($makeUpClass->approval_status === 'pending', 409, 'Only pending requests can be approved.');
+        $validated = $request->validate(['remarks' => 'nullable|string|max:500']);
+
         $makeUpClass->update([
             'approval_status' => 'approved',
             'approved_by' => auth()->id(),
             'approved_at' => now(),
+            'remarks' => $validated['remarks'] ?? $makeUpClass->remarks,
         ]);
+
+        // Trigger attendance processing for the make-up class date so it connects to bioclock
+        $attendanceService->processDay($makeUpClass->employee, $makeUpClass->class_date, auth()->id());
 
         Notification::notify(
             $makeUpClass->employee->user,
@@ -82,17 +90,18 @@ class MakeUpClassController extends Controller
             route('employee.payslips')
         );
 
-        return back()->with('success', 'Make-up class approved. Payment will be added to payroll.');
+        return back()->with('success', 'Make-up class approved. Attendance processed and connected to bioclock.');
     }
 
     public function reject(Request $request, MakeUpClass $makeUpClass)
     {
-        $request->validate(['remarks' => 'nullable|string|max:500']);
+        abort_unless($makeUpClass->approval_status === 'pending', 409, 'Only pending requests can be denied.');
+        $validated = $request->validate(['remarks' => 'nullable|string|max:500']);
         $makeUpClass->update([
             'approval_status' => 'rejected',
             'approved_by' => auth()->id(),
             'approved_at' => now(),
-            'remarks' => $request->remarks ?: $makeUpClass->remarks,
+            'remarks' => $validated['remarks'] ?? $makeUpClass->remarks,
         ]);
 
         return back()->with('success', 'Make-up class rejected.');

@@ -376,7 +376,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php' => '9c58baca79abf41df4cdde0645fe1a35b19d8966a1eecbc7d7f3cd9c7341dfa6',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php' => '38e3fdde02224088204398dd76765e9b3580cba5c38b5d13247275bf8c065a23',
       'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\HasFactory.php' => 'b6cb2b164e90168e80963a5549541f5f3188a3ec8cfd368bf3611bd94fbd46a7',
     ),
   ),

@@ -52,6 +52,6 @@ class CourseSeeder extends Seeder
             );
         }
 
-        $this->command?->info('Courses seeded: ' . count($this->courses) . ' programs.');
+        $this->command?->info('Courses seeded: '.count($this->courses).' programs.');
     }
 }

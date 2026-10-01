@@ -11,42 +11,40 @@
         {{-- Search & Filters --}}
         <div class="mb-8 card">
             <div class="card-body">
-                <form method="GET" class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                         <div class="lg:col-span-2">
                             <label class="input-label">Search</label>
-                            <input type="text" name="search" value="{{ request('search') }}" placeholder="Search by name or employee ID..." class="input">
+                            <input type="text" name="search" id="employee-search" value="{{ request('search') }}" placeholder="Search by name or employee ID..." class="input" autocomplete="off">
                         </div>
                         <div>
                             <label class="input-label">Department</label>
-                            <select name="department" class="input">
+                            <select name="department_id" id="employee-department" class="input">
                                 <option value="">All Departments</option>
                                 @foreach ($departments ?? [] as $d)
-                                    <option value="{{ $d->id }}" {{ request('department') == $d->id ? 'selected' : '' }}>{{ $d->name }}</option>
+                                    <option value="{{ $d->id }}">{{ $d->name }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div>
-                            <label class="input-label">Status</label>
-                            <select name="status" class="input">
+                            <label class="input-label">Employment Status</label>
+                            <select name="employment_status" id="employee-employment-status" class="input">
                                 <option value="">All</option>
-                                <option value="active" {{ request('status') == 'active' ? 'selected' : '' }}>Active</option>
-                                <option value="inactive" {{ request('status') == 'inactive' ? 'selected' : '' }}>Inactive</option>
+                                <option value="permanent">Permanent</option>
+                                <option value="contractual">Contractual</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="input-label">Employee Type</label>
+                            <select name="classification" id="employee-classification" class="input">
+                                <option value="">All</option>
+                                <option value="teaching">Teaching</option>
+                                <option value="non_teaching">Non-Teaching</option>
                             </select>
                         </div>
                     </div>
-                    <div class="flex gap-3 pt-2">
-                        <button type="submit" class="btn btn-primary">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
-                            </svg>
-                            Filter
-                        </button>
-                        @if(request()->hasAny(['search', 'department', 'status']))
-                            <a href="{{ route('employees.index') }}" class="btn btn-secondary">Reset</a>
-                        @endif
-                    </div>
-                </form>
+                    <p id="employee-search-status" class="text-xs text-slate-500" aria-live="polite"></p>
+                </div>
             </div>
         </div>
 
@@ -77,31 +75,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- Data-driven skeleton rows while data renders --}}
-                        <tr x-show="!$store.table.loaded" x-cloak>
-                            <td colspan="8" class="table-body-cell p-6">
-                                <div class="space-y-3">
-                                    @for ($i = 0; $i < 6; $i++)
-                                        <div class="flex items-center gap-4">
-                                            <div class="skeleton-circle h-8 w-8"></div>
-                                            <div class="flex-1 skeleton-text"></div>
-                                            <div class="w-32 skeleton-text"></div>
-                                            <div class="w-24 skeleton-text"></div>
-                                        </div>
-                                    @endfor
-                                </div>
-                            </td>
-                        </tr>
-
                         @forelse ($employees as $e)
-                        <tr class="table-body-row" x-show="$store.table.loaded" x-cloak>
+                        <tr class="table-body-row employee-row" data-employee-id="{{ $e->id }}" data-employee-search="{{ strtolower($e->full_name.' '.$e->employee_id) }}" data-department-id="{{ $e->department_id }}" data-employment-status="{{ $e->employment_status }}" data-classification="{{ $e->classification }}">
                             <td class="table-body-cell">
                                 <span class="font-mono text-xs font-semibold text-indigo-600">{{ $e->employee_id }}</span>
                             </td>
                             <td class="table-body-cell">
                                 <div class="flex items-center gap-3">
-                                    <div class="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xs font-bold">
-                                        {{ mb_strtoupper(mb_substr($e->first_name, 0, 1) . mb_substr($e->last_name, 0, 1)) }}
+                                        @if ($e->photo_path)
+                                            <img src="{{ asset('storage/'.$e->photo_path) }}" alt="{{ $e->full_name }}" class="h-8 w-8 rounded-full object-cover cursor-pointer" data-avatar-preview>
+                                        @else
+                                            <div class="h-8 w-8 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xs font-bold">
+                                                {{ mb_strtoupper(mb_substr($e->first_name, 0, 1) . mb_substr($e->last_name, 0, 1)) }}
+                                            </div>
+                                        @endif
                                     </div>
                                     <div>
                                         <a href="{{ route('employees.show', $e) }}" class="text-sm font-medium text-indigo-600 hover:text-indigo-700">{{ $e->full_name }}</a>
@@ -124,7 +111,7 @@
                             </td>
                             <td class="table-body-cell font-medium text-slate-900">₱{{ number_format($e->monthly_salary, 2) }}</td>
                             <td class="table-body-cell text-right">
-                                <div class="flex justify-end gap-2" x-data="{ open: false }" @click.outside="open = false">
+                                <div class="flex justify-end gap-2 relative" x-data="{ open: false }" @click.outside="open = false">
                                     <a href="{{ route('employees.show', $e) }}" class="text-indigo-600 hover:text-indigo-700 text-xs font-medium">View</a>
                                     <button @click="open = !open" class="text-slate-400 hover:text-slate-600">
                                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -134,12 +121,13 @@
                                     <div x-show="open" x-cloak class="absolute right-0 mt-8 w-40 rounded-lg bg-white shadow-lg border border-slate-200 py-1">
                                         <a href="{{ route('employees.edit', $e) }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Edit</a>
                                         <a href="{{ route('employees.show', $e) }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Full Profile</a>
+                                        <button type="button" data-delete-employee data-url="{{ route('employees.destroy', $e) }}" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50">Deactivate</button>
                                     </div>
                                 </div>
                             </td>
                         </tr>
                         @empty
-                        <tr x-show="$store.table.loaded" x-cloak>
+                        <tr>
                             <td colspan="8" class="table-body-cell">
                                 <div class="empty-state py-12">
                                     <div class="empty-state-icon">👥</div>
@@ -150,17 +138,121 @@
                             </td>
                         </tr>
                         @endforelse
+                        @if ($employees->count())
+                            <tr id="employee-filter-empty" hidden>
+                                <td colspan="8" class="table-body-cell">
+                                    <div class="empty-state py-12">
+                                        <div class="empty-state-title">No Matching Employees</div>
+                                        <p class="empty-state-text">Try changing the search, department, or employment status.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endif
                     </tbody>
                 </table>
             </div>
 
-            {{-- Pagination --}}
-            @if ($employees->hasPages())
-                <div class="card-footer">
-                    {{ $employees->links() }}
-                </div>
-            @endif
         </div>
     </div>
 </x-app-layout>
+
+<script>
+    const employeeSearch = document.getElementById('employee-search');
+    const employeeDepartment = document.getElementById('employee-department');
+    const employeeEmploymentStatus = document.getElementById('employee-employment-status');
+    const employeeClassification = document.getElementById('employee-classification');
+    const employeeRows = document.querySelectorAll('.employee-row');
+    const employeeSearchStatus = document.getElementById('employee-search-status');
+    const employeeFilterEmpty = document.getElementById('employee-filter-empty');
+
+    function employeeMatches(employeeSearchText, term) {
+        const nameWords = employeeSearchText.trim().split(/\s+/);
+        const termWords = term.trim().split(/\s+/);
+
+        if (termWords.length === 1) {
+            return employeeSearchText.indexOf(termWords[0]) === 0
+                || nameWords.some((word) => word.indexOf(termWords[0]) === 0);
+        }
+
+        let wordIndex = 0;
+        return termWords.every((termWord) => {
+            while (wordIndex < nameWords.length) {
+                if (nameWords[wordIndex].indexOf(termWord) === 0) {
+                    wordIndex++;
+                    return true;
+                }
+                wordIndex++;
+            }
+            return false;
+        });
+    }
+
+    function filterEmployeeRows() {
+        if (!employeeSearch) return;
+
+        const searchTerm = employeeSearch.value.trim().toLowerCase();
+        const departmentId = employeeDepartment.value;
+        const employmentStatus = employeeEmploymentStatus.value;
+        const classification = employeeClassification.value;
+        let visibleCount = 0;
+
+        employeeRows.forEach((row) => {
+            const matchesSearch = searchTerm === '' || employeeMatches(row.dataset.employeeSearch || '', searchTerm);
+            const matchesDepartment = departmentId === '' || row.dataset.departmentId === departmentId;
+            const matchesEmploymentStatus = employmentStatus === '' || row.dataset.employmentStatus === employmentStatus;
+            const matchesClassification = classification === '' || row.dataset.classification === classification;
+            const isMatch = matchesSearch && matchesDepartment && matchesEmploymentStatus && matchesClassification;
+            row.hidden = !isMatch;
+            row.style.display = isMatch ? '' : 'none';
+            if (isMatch) visibleCount++;
+        });
+
+        const hasFilters = searchTerm !== '' || departmentId !== '' || employmentStatus !== '' || classification !== '';
+        employeeSearchStatus.textContent = hasFilters
+            ? `${visibleCount} employee${visibleCount === 1 ? '' : 's'} shown below`
+            : '';
+        if (employeeFilterEmpty) employeeFilterEmpty.hidden = !hasFilters || visibleCount > 0;
+    }
+
+    employeeSearch?.addEventListener('input', filterEmployeeRows);
+    employeeDepartment?.addEventListener('change', filterEmployeeRows);
+    employeeEmploymentStatus?.addEventListener('change', filterEmployeeRows);
+    employeeClassification?.addEventListener('change', filterEmployeeRows);
+    filterEmployeeRows();
+
+    document.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-delete-employee]');
+        if (!button) return;
+
+        const row = button.closest('[data-employee-id]');
+        const employeeName = row?.querySelector('a[href*="/employees/"]')?.textContent.trim() || 'this employee';
+
+        window.openConfirmDialog(
+            `Deactivate ${employeeName}? Their login and record are preserved.`,
+            'Deactivate',
+            'btn-danger',
+            async () => {
+                button.disabled = true;
+                button.textContent = 'Deactivating...';
+
+                try {
+                    const response = await fetch(button.dataset.url, {
+                        method: 'DELETE',
+                        headers: {
+                            'Accept': 'application/json',
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
+                        },
+                    });
+                    const result = await response.json();
+                    if (!response.ok || !result.ok) throw new Error(result.message || 'Deactivation failed.');
+                    window.location.reload();
+                } catch (error) {
+                    button.disabled = false;
+                    button.textContent = 'Deactivate';
+                    window.alert(error.message || 'Unable to deactivate the employee.');
+                }
+            }
+        );
+    });
+</script>
 

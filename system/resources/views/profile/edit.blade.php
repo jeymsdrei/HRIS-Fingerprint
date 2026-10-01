@@ -1,12 +1,13 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-slate-900 leading-tight">
-            {{ __('Profile') }}
-        </h2>
-    </x-slot>
+<x-app-layout hris>
+    <x-slot name="title">Profile</x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
+    <div class="page-container">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-slate-900">Profile</h1>
+            <p class="mt-2 text-slate-600">Manage your account information and password</p>
+        </div>
+
+        <div class="max-w-3xl space-y-6">
             <div class="card">
                 <div class="card-body max-w-xl">
                     @include('profile.partials.update-profile-information-form')

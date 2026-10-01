@@ -27,7 +27,9 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BiometricAgent whereApiBaseUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BiometricAgent whereComputerName($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BiometricAgent whereCreatedAt($value)
+ *
  * @param  int  $value
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BiometricAgent whereDeviceId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BiometricAgent whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|BiometricAgent whereIsActive($value)

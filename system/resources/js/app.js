@@ -216,15 +216,17 @@ async function loadAppRequest(request, url, pushState = false) {
         throw new Error(`Request failed with status ${response.status}`);
     }
 
-    if (!replaceAppContent(await response.text(), url, scrollPositions)) {
-        window.location.href = url.href;
+    const responseUrl = new URL(response.url, window.location.href);
+
+    if (!replaceAppContent(await response.text(), responseUrl, scrollPositions)) {
+        window.location.href = responseUrl.href;
         return;
     }
 
     if (pushState) {
-        history.pushState({}, '', url.href);
+        history.pushState({}, '', responseUrl.href);
     } else {
-        history.replaceState({}, '', url.href);
+        history.replaceState({}, '', responseUrl.href);
     }
 }
 
@@ -255,29 +257,6 @@ document.addEventListener('click', (event) => {
     });
 }, true);
 
-document.addEventListener('submit', (event) => {
-    const form = event.target;
-
-    if (!form.closest(appContentSelector) || form.method.toLowerCase() === 'get') {
-        return;
-    }
-
-    const url = new URL(form.action, window.location.href);
-
-    if (!isAppRequest(url)) {
-        return;
-    }
-
-    event.preventDefault();
-    loadAppRequest(new Request(url.href, {
-        method: form.method.toUpperCase(),
-        body: new FormData(form),
-        headers: { 'X-Requested-With': 'XMLHttpRequest' },
-    }), url).catch(() => {
-        HTMLFormElement.prototype.submit.call(form);
-    });
-}, true);
-
 window.addEventListener('popstate', () => {
     const url = new URL(window.location.href);
     loadAppRequest(url.href, url).catch(() => {
@@ -286,6 +265,133 @@ window.addEventListener('popstate', () => {
 });
 
 Alpine.start();
+
+// Profile picture hover/click preview — works for every avatar on the page,
+// including after SPA content swaps (uses event delegation on document).
+(function () {
+    let previewEl = null;
+    let currentAnchor = null;
+
+    const PREVIEW_SIZE = 160;
+
+    function ensurePreview() {
+        if (!previewEl) {
+            previewEl = document.createElement('img');
+            Object.assign(previewEl.style, {
+                position: 'fixed',
+                zIndex: '999',
+                width: `${PREVIEW_SIZE}px`,
+                height: `${PREVIEW_SIZE}px`,
+                objectFit: 'cover',
+                borderRadius: '12px',
+                border: '4px solid #ffffff',
+                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                pointerEvents: 'none',
+                display: 'none',
+            });
+            document.body.appendChild(previewEl);
+        }
+
+        return previewEl;
+    }
+
+    function layoutPreview() {
+        if (!currentAnchor) return;
+
+        const preview = ensurePreview();
+        const rect = currentAnchor.getBoundingClientRect();
+        const width = preview.offsetWidth || PREVIEW_SIZE;
+        const height = preview.offsetHeight || PREVIEW_SIZE;
+
+        let left = rect.right + 8;
+        if (left + width > window.innerWidth - 8) {
+            left = Math.max(8, rect.left - width - 8);
+        }
+
+        const top = Math.max(8, Math.min(window.innerHeight - height - 8, rect.top + rect.height / 2 - height / 2));
+
+        preview.style.left = `${left}px`;
+        preview.style.top = `${top}px`;
+        preview.style.display = 'block';
+    }
+
+    function showPreview(target) {
+        currentAnchor = target;
+        const preview = ensurePreview();
+        preview.src = target.currentSrc || target.src;
+        preview.alt = target.alt || '';
+        layoutPreview();
+    }
+
+    function hidePreview() {
+        currentAnchor = null;
+        if (previewEl) previewEl.style.display = 'none';
+    }
+
+    document.addEventListener('mouseover', (event) => {
+        const target = event.target.closest('[data-avatar-preview]');
+        if (target) showPreview(target);
+    });
+
+    document.addEventListener('mouseout', (event) => {
+        if (event.target.closest('[data-avatar-preview]')) hidePreview();
+    });
+
+    window.addEventListener('scroll', layoutPreview, { passive: true });
+    window.addEventListener('resize', layoutPreview);
+})();
+
+// Photo upload preview — delegated so it works after SPA swaps and full loads.
+document.addEventListener('change', (event) => {
+    const input = event.target.closest('[data-photo-input]');
+    if (!input) return;
+
+    const file = input.files?.[0];
+    const error = document.querySelector('#employee-photo-error');
+    const preview = document.querySelector('#employee-photo-preview');
+    const placeholder = document.querySelector('#employee-photo-placeholder');
+
+    if (error) {
+        error.classList.add('hidden');
+        error.textContent = '';
+    }
+
+    if (!file) return;
+
+    if (!['image/jpeg', 'image/png'].includes(file.type) || file.size > 2 * 1024 * 1024) {
+        input.value = '';
+        if (error) {
+            error.textContent = 'Choose a JPG or PNG image no larger than 2 MB.';
+            error.classList.remove('hidden');
+        }
+        return;
+    }
+
+    if (preview) {
+        preview.src = URL.createObjectURL(file);
+        preview.classList.remove('hidden');
+    }
+    if (placeholder) placeholder.classList.add('hidden');
+});
+
+// Prevent duplicate employee-form submissions — delegated for SPA safety.
+document.addEventListener('submit', (event) => {
+    const form = event.target.closest('[data-employee-form]');
+    if (!form) return;
+
+    const button = form.querySelector('[data-submit-once]');
+    if (!button) return;
+
+    if (form.dataset.submitting === 'true') {
+        event.preventDefault();
+        return;
+    }
+
+    form.dataset.submitting = 'true';
+    button.disabled = true;
+    button.classList.add('opacity-75', 'cursor-not-allowed');
+    button.querySelector('svg')?.classList.add('animate-spin');
+});
 
 document.addEventListener('DOMContentLoaded', restoreSidebarScroll, { once: true });
 window.addEventListener('pageshow', restoreSidebarScrollAfterRender);

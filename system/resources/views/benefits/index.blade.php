@@ -56,7 +56,7 @@
                                 <p class="font-medium text-slate-900 text-sm">{{ $b->name }}</p>
                                 <p class="text-xs text-slate-400">{{ $b->type }} · ₱{{ number_format($b->amount, 2) }} · {{ $b->frequency }}</p>
                             </div>
-                            <form method="POST" action="{{ route('benefits.destroy', $b) }}" onsubmit="return confirm('Remove benefit type?')">
+                            <form method="POST" action="{{ route('benefits.destroy', $b) }}" data-confirm="Remove benefit type?">
                                 @csrf @method('DELETE')
                                 <button type="submit" class="text-red-500 hover:text-red-700 text-sm" title="Delete benefit type" aria-label="Delete {{ $b->name }}">✕</button>
                             </form>
@@ -127,7 +127,7 @@
                                     <td class="table-body-cell text-right font-medium">₱{{ number_format($a->effective_amount, 2) }}</td>
                                     <td class="table-body-cell text-slate-500">{{ $a->effective_date?->format('M d, Y') }}</td>
                                     <td class="table-body-cell text-right">
-                                        <form method="POST" action="{{ route('benefits.revoke', $a) }}" onsubmit="return confirm('Revoke?')">
+                                        <form method="POST" action="{{ route('benefits.revoke', $a) }}" data-confirm="Revoke?">
                                             @csrf @method('DELETE')
                                             <button class="text-red-500 hover:text-red-700 text-sm">✕</button>
                                         </form>

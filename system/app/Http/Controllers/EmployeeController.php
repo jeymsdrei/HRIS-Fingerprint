@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreEmployeeRequest;
 use App\Models\Clearance;
 use App\Models\Course;
 use App\Models\Department;
@@ -10,6 +11,8 @@ use App\Models\EmployeeClearance;
 use App\Models\Position;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 
 class EmployeeController extends Controller
@@ -17,17 +20,8 @@ class EmployeeController extends Controller
     public function index(Request $request)
     {
         $employees = Employee::with(['department', 'position', 'course', 'user'])
-            ->when($request->search, fn ($q, $s) => $q->where(fn ($w) => $w
-                ->where('employee_id', 'like', "%{$s}%")
-                ->orWhere('first_name', 'like', "%{$s}%")
-                ->orWhere('last_name', 'like', "%{$s}%")
-                ->orWhere('email', 'like', "%{$s}%")))
-            ->when($request->department_id, fn ($q, $id) => $q->where('department_id', $id))
-            ->when($request->classification, fn ($q, $c) => $q->where('classification', $c))
-            ->when($request->employment_status, fn ($q, $s) => $q->where('employment_status', $s))
             ->orderBy('last_name')
-            ->paginate(15)
-            ->withQueryString();
+            ->get();
 
         $departments = Department::orderBy('name')->get();
 
@@ -39,22 +33,62 @@ class EmployeeController extends Controller
         $departments = Department::orderBy('name')->get();
         $positions = Position::orderBy('name')->get();
         $courses = Course::where('is_active', true)->orderBy('code')->get();
+        $nextTeachingId = $this->nextEmployeeId('teaching');
+        $nextNonTeachingId = $this->nextEmployeeId('non_teaching');
 
-        return view('employees.form', ['employee' => new Employee, 'departments' => $departments, 'positions' => $positions, 'courses' => $courses, 'users' => $this->unassignedUsers()]);
+        return view('employees.form', [
+            'employee' => new Employee,
+            'departments' => $departments,
+            'positions' => $positions,
+            'courses' => $courses,
+            'users' => $this->unassignedUsers(),
+            'nextTeachingId' => $nextTeachingId,
+            'nextNonTeachingId' => $nextNonTeachingId,
+        ]);
     }
 
-    public function store(Request $request)
+    public function store(StoreEmployeeRequest $request)
     {
-        $data = $this->validated($request);
+        $token = $request->string('registration_token')->toString();
+        $lock = Cache::lock("employee-registration:{$token}", 10);
 
-        $data['employee_id'] = $this->nextEmployeeId($request->classification);
+        if (! $lock->get()) {
+            return back()->withInput()->withErrors([
+                'registration' => 'This registration is already being processed. Please wait a moment.',
+            ]);
+        }
 
-        $employee = Employee::create($data);
+        try {
+            $processedKey = "employee-registration-processed:{$token}";
+            $processedEmployeeId = Cache::get($processedKey);
+            if ($processedEmployeeId) {
+                $processedEmployee = Employee::find($processedEmployeeId);
 
-        $this->initializeClearances($employee);
-        $this->syncLoginAccount($employee, $request);
+                if ($processedEmployee) {
+                    return redirect()->route('employees.show', $processedEmployee)
+                        ->with('success', 'Employee registration was already completed.');
+                }
+            }
 
-        return redirect()->route('employees.show', $employee)->with('success', 'Employee registered successfully.');
+            $data = $this->validated($request);
+            $photo = $data['photo'] ?? null;
+            unset($data['photo']);
+            unset($data['registration_token']);
+
+            $data['employee_id'] = $this->nextEmployeeId($request->classification);
+
+            $employee = Employee::create($data);
+
+            $this->storeEmployeePhoto($employee, $photo);
+
+            $this->initializeClearances($employee);
+            $this->syncLoginAccount($employee, $request);
+            Cache::put($processedKey, $employee->id, now()->addMinutes(10));
+
+            return redirect()->route('employees.show', $employee)->with('success', 'Employee registered successfully.');
+        } finally {
+            $lock->release();
+        }
     }
 
     public function show(Employee $employee)
@@ -90,10 +124,14 @@ class EmployeeController extends Controller
         return view('employees.form', compact('employee', 'departments', 'positions', 'courses', 'users'));
     }
 
-    public function update(Request $request, Employee $employee)
+    public function update(StoreEmployeeRequest $request, Employee $employee)
     {
         $data = $this->validated($request, $employee);
+        $photo = $data['photo'] ?? null;
+        unset($data['photo']);
         $employee->update($data);
+
+        $this->storeEmployeePhoto($employee, $photo);
 
         $this->syncLoginAccount($employee, $request);
 
@@ -105,7 +143,14 @@ class EmployeeController extends Controller
         $employee->update(['is_active' => false]);
         $employee->user?->update(['is_active' => false]);
 
-        return redirect()->route('employees.index')->with('success', 'Employee deactivated.');
+        if (request()->expectsJson()) {
+            return response()->json([
+                'ok' => true,
+                'message' => 'Employee deactivated. Their login and record are preserved.',
+            ]);
+        }
+
+        return redirect()->route('employees.index')->with('success', 'Employee deactivated. Their login and record are preserved.');
     }
 
     public function reactivate(Employee $employee)
@@ -116,42 +161,9 @@ class EmployeeController extends Controller
         return back()->with('success', 'Employee reactivated.');
     }
 
-    private function validated(Request $request, ?Employee $employee = null): array
+    private function validated(StoreEmployeeRequest $request, ?Employee $employee = null): array
     {
-        $data = $request->validate([
-            'department_id' => 'nullable|exists:departments,id',
-            'position_id' => 'nullable|exists:positions,id',
-            'course_id' => 'nullable|exists:courses,id',
-            'first_name' => 'required|string|max:255',
-            'middle_name' => 'nullable|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'suffix' => 'nullable|string|max:10',
-            'birth_date' => 'nullable|date',
-            'gender' => 'nullable|in:male,female',
-            'email' => 'nullable|email|max:255',
-            'phone' => 'nullable|string|max:30',
-            'address' => 'nullable|string|max:500',
-            'classification' => 'required|in:teaching,non_teaching',
-            'employment_status' => 'required|in:permanent,contractual',
-            'salary_type' => 'required|in:monthly,daily',
-            'monthly_salary' => 'nullable|numeric|min:0',
-            'semi_monthly_salary' => 'nullable|numeric|min:0',
-            'daily_rate' => 'nullable|numeric|min:0',
-            'hourly_rate' => 'nullable|numeric|min:0',
-            'teaching_load' => 'nullable|numeric|min:0',
-            'fingerprint_id' => 'nullable|integer',
-            'sss_no' => 'nullable|string|max:30',
-            'philhealth_no' => 'nullable|string|max:30',
-            'pagibig_no' => 'nullable|string|max:30',
-            'tin' => 'nullable|string|max:30',
-            'tax_status' => 'nullable|string|max:30',
-            'bank_name' => 'nullable|string|max:100',
-            'bank_account_no' => 'nullable|string|max:50',
-            'payment_method' => 'nullable|in:cash,bank_transfer,check',
-            'date_hired' => 'nullable|date',
-            'login_username' => 'nullable|string|lowercase|alpha_dash|max:255',
-            'login_password' => 'nullable|string|min:6',
-        ]);
+        $data = $request->validated();
 
         foreach (['monthly_salary', 'semi_monthly_salary', 'daily_rate', 'hourly_rate', 'teaching_load'] as $field) {
             if (array_key_exists($field, $data) && $data[$field] === null) {
@@ -160,6 +172,26 @@ class EmployeeController extends Controller
         }
 
         return $data;
+    }
+
+    /**
+     * Store the uploaded picture on the public disk and retain only its path
+     * in employees.photo_path. Device photo sync is intentionally not called
+     * here because the current ZKTeco TCP integration has no photo API.
+     */
+    private function storeEmployeePhoto(Employee $employee, mixed $photo): void
+    {
+        if (! $photo) {
+            return;
+        }
+
+        $oldPath = $employee->photo_path;
+        $path = $photo->store('employee-photos', 'public');
+        $employee->update(['photo_path' => $path]);
+
+        if ($oldPath && $oldPath !== $path) {
+            Storage::disk('public')->delete($oldPath);
+        }
     }
 
     private function initializeClearances(Employee $employee): void
@@ -175,12 +207,12 @@ class EmployeeController extends Controller
     private function nextEmployeeId(string $classification): string
     {
         $prefix = $classification === 'teaching' ? 'T' : 'N';
-        $max = Employee::where('employee_id', 'like', $prefix.'-%')
-            ->orderByDesc('employee_id')
-            ->value('employee_id');
-        $num = $max ? ((int) substr($max, 2)) + 1 : 1;
+        $max = (int) Employee::where('employee_id', 'like', $prefix.'-%')
+            ->get('employee_id')
+            ->map(fn ($e) => (int) substr($e->employee_id, 2))
+            ->max();
 
-        return $prefix.'-'.str_pad((string) $num, 4, '0', STR_PAD_LEFT);
+        return $prefix.'-'.str_pad((string) ($max + 1), 4, '0', STR_PAD_LEFT);
     }
 
     private function unassignedUsers()
@@ -194,10 +226,39 @@ class EmployeeController extends Controller
             return;
         }
 
+        $username = strtolower(trim((string) $request->login_username));
+
+        $existingByEmail = User::where('email', $employee->email)
+            ->where('employee_id', '!=', $employee->id)
+            ->first();
+
+        if ($existingByEmail) {
+            $existingByEmail->employee_id = $employee->id;
+            $existingByEmail->name = $employee->full_name;
+            $existingByEmail->username = $username;
+            $existingByEmail->role = 'employee';
+            if ($request->filled('login_password')) {
+                $existingByEmail->password = $request->login_password;
+            }
+            $existingByEmail->save();
+            return;
+        }
+
+        $existingByUsername = User::where('username', $username)
+            ->where('employee_id', '!=', $employee->id)
+            ->first();
+
+        if ($existingByUsername) {
+            throw ValidationException::withMessages([
+                'login_username' => 'This username is already taken.',
+            ]);
+        }
+
         $user = User::firstOrNew(['employee_id' => $employee->id]);
         $user->name = $employee->full_name;
-        $user->username = strtolower(trim((string) $request->login_username));
-        $user->role = $employee->classification === 'teaching' ? 'employee' : 'employee';
+        $user->email = $employee->email;
+        $user->username = $username;
+        $user->role = 'employee';
         $user->employee_id = $employee->id;
         if ($request->filled('login_password')) {
             $user->password = $request->login_password;

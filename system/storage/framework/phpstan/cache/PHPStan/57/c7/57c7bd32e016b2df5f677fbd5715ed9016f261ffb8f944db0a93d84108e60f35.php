@@ -15,11 +15,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'attendancelog' => 'App\\Models\\AttendanceLog',
           'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
           'setting' => 'App\\Models\\Setting',
           'teachingschedule' => 'App\\Models\\TeachingSchedule',
           'workschedule' => 'App\\Models\\WorkSchedule',
           'carbon' => 'Carbon\\Carbon',
-          'db' => 'Illuminate\\Support\\Facades\\DB',
+          'collection' => 'Illuminate\\Support\\Collection',
         ),
          'className' => 'App\\Services\\AttendanceService',
          'functionName' => NULL,
@@ -37,7 +38,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
-      '2a338e38eee8b728e41e1ab8926caa78' => 
+      'a5a0ae699b78febab85c7d30b3c9b408' => 
       \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
          'namespace' => 'App\\Services',
          'uses' => 
@@ -45,14 +46,15 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'attendancelog' => 'App\\Models\\AttendanceLog',
           'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
           'setting' => 'App\\Models\\Setting',
           'teachingschedule' => 'App\\Models\\TeachingSchedule',
           'workschedule' => 'App\\Models\\WorkSchedule',
           'carbon' => 'Carbon\\Carbon',
-          'db' => 'Illuminate\\Support\\Facades\\DB',
+          'collection' => 'Illuminate\\Support\\Collection',
         ),
          'className' => 'App\\Services\\AttendanceService',
-         'functionName' => 'getScheduleFor',
+         'functionName' => 'getSchedulesFor',
          'templatePhpDocNodes' => 
         array (
         ),
@@ -75,11 +77,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'attendancelog' => 'App\\Models\\AttendanceLog',
           'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
           'setting' => 'App\\Models\\Setting',
           'teachingschedule' => 'App\\Models\\TeachingSchedule',
           'workschedule' => 'App\\Models\\WorkSchedule',
           'carbon' => 'Carbon\\Carbon',
-          'db' => 'Illuminate\\Support\\Facades\\DB',
+          'collection' => 'Illuminate\\Support\\Collection',
         ),
          'className' => 'App\\Services\\AttendanceService',
          'functionName' => 'registerPunch',
@@ -105,14 +108,77 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'attendancelog' => 'App\\Models\\AttendanceLog',
           'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
           'setting' => 'App\\Models\\Setting',
           'teachingschedule' => 'App\\Models\\TeachingSchedule',
           'workschedule' => 'App\\Models\\WorkSchedule',
           'carbon' => 'Carbon\\Carbon',
-          'db' => 'Illuminate\\Support\\Facades\\DB',
+          'collection' => 'Illuminate\\Support\\Collection',
         ),
          'className' => 'App\\Services\\AttendanceService',
          'functionName' => 'processDay',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      '9f42e15d4b45714ae14fde700aebed97' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Services',
+         'uses' => 
+        array (
+          'attendance' => 'App\\Models\\Attendance',
+          'attendancelog' => 'App\\Models\\AttendanceLog',
+          'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
+          'setting' => 'App\\Models\\Setting',
+          'teachingschedule' => 'App\\Models\\TeachingSchedule',
+          'workschedule' => 'App\\Models\\WorkSchedule',
+          'carbon' => 'Carbon\\Carbon',
+          'collection' => 'Illuminate\\Support\\Collection',
+        ),
+         'className' => 'App\\Services\\AttendanceService',
+         'functionName' => 'assignPunchesToSchedules',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      '21f222e31beb06af66c7a859b2a5aa92' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Services',
+         'uses' => 
+        array (
+          'attendance' => 'App\\Models\\Attendance',
+          'attendancelog' => 'App\\Models\\AttendanceLog',
+          'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
+          'setting' => 'App\\Models\\Setting',
+          'teachingschedule' => 'App\\Models\\TeachingSchedule',
+          'workschedule' => 'App\\Models\\WorkSchedule',
+          'carbon' => 'Carbon\\Carbon',
+          'collection' => 'Illuminate\\Support\\Collection',
+        ),
+         'className' => 'App\\Services\\AttendanceService',
+         'functionName' => 'processWindow',
          'templatePhpDocNodes' => 
         array (
         ),
@@ -135,11 +201,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'attendancelog' => 'App\\Models\\AttendanceLog',
           'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
           'setting' => 'App\\Models\\Setting',
           'teachingschedule' => 'App\\Models\\TeachingSchedule',
           'workschedule' => 'App\\Models\\WorkSchedule',
           'carbon' => 'Carbon\\Carbon',
-          'db' => 'Illuminate\\Support\\Facades\\DB',
+          'collection' => 'Illuminate\\Support\\Collection',
         ),
          'className' => 'App\\Services\\AttendanceService',
          'functionName' => 'processDate',
@@ -165,11 +232,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'attendancelog' => 'App\\Models\\AttendanceLog',
           'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
           'setting' => 'App\\Models\\Setting',
           'teachingschedule' => 'App\\Models\\TeachingSchedule',
           'workschedule' => 'App\\Models\\WorkSchedule',
           'carbon' => 'Carbon\\Carbon',
-          'db' => 'Illuminate\\Support\\Facades\\DB',
+          'collection' => 'Illuminate\\Support\\Collection',
         ),
          'className' => 'App\\Services\\AttendanceService',
          'functionName' => 'processRange',
@@ -195,14 +263,77 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'attendancelog' => 'App\\Models\\AttendanceLog',
           'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
           'setting' => 'App\\Models\\Setting',
           'teachingschedule' => 'App\\Models\\TeachingSchedule',
           'workschedule' => 'App\\Models\\WorkSchedule',
           'carbon' => 'Carbon\\Carbon',
-          'db' => 'Illuminate\\Support\\Facades\\DB',
+          'collection' => 'Illuminate\\Support\\Collection',
         ),
          'className' => 'App\\Services\\AttendanceService',
          'functionName' => 'backfill',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      '4bfa5489d13fba015deffb8186bf21b9' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Services',
+         'uses' => 
+        array (
+          'attendance' => 'App\\Models\\Attendance',
+          'attendancelog' => 'App\\Models\\AttendanceLog',
+          'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
+          'setting' => 'App\\Models\\Setting',
+          'teachingschedule' => 'App\\Models\\TeachingSchedule',
+          'workschedule' => 'App\\Models\\WorkSchedule',
+          'carbon' => 'Carbon\\Carbon',
+          'collection' => 'Illuminate\\Support\\Collection',
+        ),
+         'className' => 'App\\Services\\AttendanceService',
+         'functionName' => 'dayStatusRows',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      'cde198d74bd2a540ba1fae94b98dabf6' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Services',
+         'uses' => 
+        array (
+          'attendance' => 'App\\Models\\Attendance',
+          'attendancelog' => 'App\\Models\\AttendanceLog',
+          'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
+          'setting' => 'App\\Models\\Setting',
+          'teachingschedule' => 'App\\Models\\TeachingSchedule',
+          'workschedule' => 'App\\Models\\WorkSchedule',
+          'carbon' => 'Carbon\\Carbon',
+          'collection' => 'Illuminate\\Support\\Collection',
+        ),
+         'className' => 'App\\Services\\AttendanceService',
+         'functionName' => 'bestDayStatus',
          'templatePhpDocNodes' => 
         array (
         ),
@@ -225,11 +356,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'attendancelog' => 'App\\Models\\AttendanceLog',
           'employee' => 'App\\Models\\Employee',
+          'makeupclass' => 'App\\Models\\MakeUpClass',
           'setting' => 'App\\Models\\Setting',
           'teachingschedule' => 'App\\Models\\TeachingSchedule',
           'workschedule' => 'App\\Models\\WorkSchedule',
           'carbon' => 'Carbon\\Carbon',
-          'db' => 'Illuminate\\Support\\Facades\\DB',
+          'collection' => 'Illuminate\\Support\\Collection',
         ),
          'className' => 'App\\Services\\AttendanceService',
          'functionName' => 'dailySummary',
@@ -250,7 +382,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php' => '99c1cb5e9cf3f4113ab13e4b2ef380f8986550cecfd399fdbf0192662f830e13',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php' => '8dde33fe1cc591a06e78ada34c6d718fc4d5c63d12b756755f7b47365d20a468',
     ),
   ),
 ));

@@ -20,7 +20,7 @@
                         Regenerate
                     </button>
                 </form>
-                <form method="POST" action="{{ route('payroll.destroy', $period) }}" onsubmit="return confirm('Delete this entire payroll period?')">
+                <form method="POST" action="{{ route('payroll.destroy', $period) }}" data-confirm="Delete this entire payroll period?">
                     @csrf @method('DELETE')
                     <button class="btn btn-danger">Delete Period</button>
                 </form>
@@ -63,9 +63,9 @@
                             @foreach (['draft','on_hold','ready','released'] as $s)<option value="{{ $s }}" @selected(request('status') == $s)>{{ ucwords(str_replace('_', ' ', $s)) }}</option>@endforeach
                         </select>
                     </div>
-                    <div>
+                    <div class="flex-1 min-w-0 sm:flex-none">
                         <label class="input-label">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-48">
+                        <input name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-full sm:w-48">
                     </div>
                     <button class="btn btn-primary">Filter</button>
                 </form>
@@ -93,6 +93,9 @@
                             <td class="table-body-cell">
                                 <a href="{{ route('payroll.line', $p) }}" class="font-medium text-indigo-600 hover:text-indigo-700">{{ $p->employee->full_name }}</a>
                                 <p class="text-xs text-slate-400">{{ $p->employee->employee_id }} · {{ $p->employee->department?->name }} · {{ $p->employee->classification }}</p>
+                                @if ($p->make_up_sessions > 0)
+                                    <p class="mt-1 text-xs text-slate-500">Approved Make-Up Classes: {{ $p->make_up_sessions }} {{ \Illuminate\Support\Str::plural('session', $p->make_up_sessions) }}, {{ number_format($p->make_up_hours, 2) }} hours · ₱{{ number_format($p->make_up_pay, 2) }}</p>
+                                @endif
                             </td>
                             <td class="table-body-cell text-right font-medium text-slate-900">₱{{ number_format($p->gross_pay, 2) }}</td>
                             <td class="table-body-cell text-right text-red-600">₱{{ number_format($p->total_deductions, 2) }}</td>
@@ -113,7 +116,7 @@
                             <td class="table-body-cell text-right whitespace-nowrap">
                                 <a href="{{ route('payroll.line', $p) }}" class="btn btn-secondary btn-sm">Details</a>
                                 @if ($p->status === 'ready')
-                                    <form method="POST" action="{{ route('payroll.release', $p) }}" class="inline ml-1" onsubmit="return confirm('Release salary + generate payslip/receipt?')">
+                                    <form method="POST" action="{{ route('payroll.release', $p) }}" class="inline ml-1" data-confirm="Release salary + generate payslip/receipt?">
                                         @csrf
                                         <button class="btn btn-success btn-sm">Release</button>
                                     </form>
@@ -122,7 +125,7 @@
                                     <a href="{{ route('payslips.download', $p->payslip) }}" class="ml-1 text-indigo-600 text-xs font-medium">Payslip</a>
                                 @endif
                                 @if ($p->receipt)
-                                    <a href="{{ route('receipts.print', $p->receipt) }}" class="ml-1 text-slate-600 text-xs font-medium">Receipt</a>
+                                    <a href="{{ route('receipts.print', $p->receipt) }}" onclick="window.__autoPrint = true;" class="ml-1 text-slate-600 text-xs font-medium">Print</a>
                                 @endif
                             </td>
                         </tr>

@@ -278,6 +278,33 @@
         @apply px-3 py-1.5 text-xs;
     }
 
+    .confirm-modal-backdrop {
+        @apply fixed inset-0 flex items-center justify-center p-4;
+        z-index: 100;
+        background: rgba(15, 23, 42, 0.48);
+        backdrop-filter: blur(3px);
+    }
+
+    .confirm-modal-card {
+        @apply w-full max-w-md rounded-xl border border-slate-200 bg-white shadow-2xl;
+        animation: confirm-modal-in 140ms ease-out;
+    }
+
+    .confirm-modal-actions {
+        @apply flex flex-col-reverse gap-2 border-t border-slate-100 bg-slate-50 px-6 py-4 sm:flex-row sm:justify-end;
+    }
+
+    @keyframes confirm-modal-in {
+        from {
+            opacity: 0;
+            transform: translateY(8px) scale(0.98);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
     /* Badge/Status styles */
     .badge {
         @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium;
@@ -314,15 +341,15 @@
 
     /* Table styles */
     .table-container {
-        @apply overflow-visible;
+        @apply overflow-x-auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .data-table {
         @apply w-full text-sm;
         width: 100%;
         max-width: 100%;
-        min-width: 0;
-        table-layout: fixed;
+        min-width: 640px;
     }
 
     .payroll-detail-table {
@@ -356,16 +383,6 @@
         box-sizing: border-box;
     }
 
-    .data-table td:first-child {
-        width: 62%;
-    }
-
-    .data-table td:last-child {
-        width: 38%;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-
     .payroll-detail-table td:last-child {
         overflow: hidden;
         white-space: nowrap;
@@ -384,7 +401,7 @@
         .table-head-cell,
         .table-body-cell {
             @apply px-2 py-3;
-            overflow-wrap: anywhere;
+            white-space: nowrap;
         }
 
         .data-table {
@@ -399,18 +416,6 @@
 
         .payroll-detail-table tr {
             grid-template-columns: minmax(0, 1fr) minmax(6.5rem, 7.5rem);
-        }
-
-        .data-table .text-right {
-            white-space: normal;
-        }
-
-        .data-table td:first-child {
-            width: 58%;
-        }
-
-        .data-table td:last-child {
-            width: 42%;
         }
 
         .data-table .btn {

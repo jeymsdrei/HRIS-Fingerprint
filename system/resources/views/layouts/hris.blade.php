@@ -53,14 +53,16 @@
                     </svg>
                     <span>My Attendance</span>
                 </a>
-                <a href="{{ route('employee.schedule') }}" 
-                   class="sidebar-link {{ $role == 'employee' && request()->routeIs('employee.schedule*') ? 'active' : '' }}">
-                    <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                    <span>My Schedule</span>
-                </a>
-                @if ($role === 'employee')
+                @if (auth()->user()->employee->is_teaching)
+                    <a href="{{ route('employee.schedule') }}" 
+                       class="sidebar-link {{ $role == 'employee' && request()->routeIs('employee.schedule*') ? 'active' : '' }}">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>My Schedule</span>
+                    </a>
+                @endif
+                @if ($role === 'employee' && auth()->user()->employee->is_teaching)
                     <a href="{{ route('employee.makeup.index') }}" 
                        class="sidebar-link {{ request()->routeIs('employee.makeup*') ? 'active' : '' }}">
                         <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -317,9 +319,16 @@
                     {{-- User Menu --}}
                     <div class="flex items-center gap-3" x-data="{ open: false }" @click.outside="open = false">
                         <button @click="open = !open" class="flex items-center gap-2 p-2 hover:bg-slate-100 rounded-lg transition-colors duration-fast">
-                            <span class="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xs font-bold shadow-sm">
-                                {{ mb_strtoupper(mb_substr(auth()->user()->name, 0, 1)) }}
-                            </span>
+                            <span class="relative">
+                            @php $authPhoto = auth()->user()->employee?->photo_path; @endphp
+                            @if ($authPhoto)
+                                <img src="{{ asset('storage/'.$authPhoto) }}" alt="{{ auth()->user()->name }}" class="h-8 w-8 rounded-lg object-cover shadow-sm cursor-pointer" data-avatar-preview>
+                            @else
+                                <span class="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xs font-bold shadow-sm">
+                                    {{ mb_strtoupper(mb_substr(auth()->user()->name, 0, 1)) }}
+                                </span>
+                            @endif
+                        </span>
                             <div class="hidden sm:block text-left">
                                 <span class="block text-sm font-medium text-slate-900 leading-tight">{{ auth()->user()->name }}</span>
                                 <span class="block text-xs text-slate-500">{{ auth()->user()->roleLabel() }}</span>
@@ -355,6 +364,8 @@
 
         {{-- Page Content --}}
         <main class="page-content relative" x-data="pageLoader()">
+            <x-flash />
+
             {{-- Global page-load skeleton overlay --}}
             <div x-show="loading" x-cloak
                  x-transition:leave="transition-opacity duration-300"
@@ -412,15 +423,41 @@
     </div>
 </div>
 
-<div id="action-loading-overlay" hidden style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(248,250,252,.78);backdrop-filter:blur(2px);">
+<div id="action-loading-overlay" hidden role="status" aria-live="polite" aria-label="Loading" style="position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(248,250,252,.78);backdrop-filter:blur(2px);">
     <div style="display:flex;align-items:center;gap:.75rem;border:1px solid #e2e8f0;border-radius:.75rem;background:#fff;padding:.75rem 1rem;box-shadow:0 10px 25px rgba(15,23,42,.12);font-size:.875rem;font-weight:600;color:#334155;">
-        <span style="height:1rem;width:1rem;border:2px solid #cbd5e1;border-top-color:#4f46e5;border-radius:9999px;animation:action-loading-spin .7s linear infinite;"></span>
+        <span class="action-loading-spinner" aria-hidden="true"></span>
         Loading...
     </div>
 </div>
 
+<div id="confirm-popup" hidden role="dialog" aria-modal="true" aria-labelledby="confirm-popup-title">
+    <div class="confirm-popup-backdrop" data-confirm-cancel></div>
+    <div class="confirm-popup-card">
+        <div class="confirm-popup-header">
+            <span class="confirm-popup-icon" aria-hidden="true">!</span>
+            <h2 class="confirm-popup-title" id="confirm-popup-title">Please confirm</h2>
+        </div>
+        <p class="confirm-popup-message"></p>
+        <div class="confirm-popup-actions">
+            <button type="button" class="btn btn-secondary" data-confirm-cancel>Cancel</button>
+            <button type="button" class="btn btn-danger" id="confirm-popup-ok">Continue</button>
+        </div>
+    </div>
+</div>
+
 <style>
+    .action-loading-spinner { display:inline-block; height:1rem; width:1rem; flex:none; border:2px solid #cbd5e1; border-top-color:#4f46e5; border-radius:9999px; animation:action-loading-spin .7s linear infinite; }
     @keyframes action-loading-spin { to { transform: rotate(360deg); } }
+    #confirm-popup { position:fixed; inset:0; z-index:10000; display:flex; align-items:center; justify-content:center; padding:1rem; }
+    #confirm-popup[hidden] { display:none; }
+    .confirm-popup-backdrop { position:absolute; inset:0; background:rgba(15,23,42,.5); }
+    .confirm-popup-card { position:relative; width:100%; max-width:28rem; background:#fff; border-radius:1rem; box-shadow:0 25px 50px rgba(15,23,42,.25); overflow:hidden; animation:confirm-popup-in 140ms ease-out; }
+    @keyframes confirm-popup-in { from { opacity:0; transform:scale(.95); } to { opacity:1; transform:scale(1); } }
+    .confirm-popup-header { display:flex; align-items:center; gap:.75rem; padding:1.25rem 1.5rem 0; }
+    .confirm-popup-icon { display:flex; height:2.5rem; width:2.5rem; flex:none; align-items:center; justify-content:center; border-radius:9999px; background:#fef2f2; color:#dc2626; font-weight:700; font-size:1.125rem; }
+    .confirm-popup-title { font-size:1.125rem; font-weight:700; color:#0f172a; margin:0; }
+    .confirm-popup-message { padding:.5rem 1.5rem 0; color:#475569; font-size:.875rem; line-height:1.5; }
+    .confirm-popup-actions { margin-top:1.5rem; display:flex; justify-content:flex-end; gap:.75rem; padding:1.25rem 1.5rem; background:#fafafa; border-top:1px solid #e2e8f0; }
 </style>
 
 <script>
@@ -458,24 +495,145 @@
     })();
 
     var actionLoadingOverlay = document.getElementById('action-loading-overlay');
+    var actionLoadingTimer = null;
+    var actionLoadingDuration = 650;
+    var actionLoadingHandoffDelay = 150;
 
     function showActionLoading() {
         if (actionLoadingOverlay) {
             actionLoadingOverlay.hidden = false;
             actionLoadingOverlay.style.display = 'flex';
-            window.setTimeout(function () {
+            window.clearTimeout(actionLoadingTimer);
+            actionLoadingTimer = window.setTimeout(function () {
                 actionLoadingOverlay.hidden = true;
                 actionLoadingOverlay.style.display = 'none';
-            }, 500);
+            }, actionLoadingDuration);
         }
     }
+
+    function setLoadingButton(button) {
+        button.disabled = true;
+        button.setAttribute('aria-busy', 'true');
+        button.innerHTML = '<span class="action-loading-spinner" aria-hidden="true"></span><span>Loading...</span>';
+    }
+
+    function brieflyLockButton(button) {
+        if (button.disabled || button.dataset.loadingLocked === 'true') {
+            return;
+        }
+
+        button.dataset.loadingLocked = 'true';
+        button.dataset.originalContent = button.innerHTML;
+        setLoadingButton(button);
+        showActionLoading();
+
+        window.setTimeout(function () {
+            if (!button.isConnected) {
+                return;
+            }
+
+            button.disabled = false;
+            button.removeAttribute('aria-busy');
+            button.innerHTML = button.dataset.originalContent;
+            delete button.dataset.originalContent;
+            delete button.dataset.loadingLocked;
+        }, actionLoadingDuration);
+    }
+
+    var confirmPopup = document.getElementById('confirm-popup');
+    var confirmPopupMessage = confirmPopup.querySelector('.confirm-popup-message');
+    var confirmPopupOk = document.getElementById('confirm-popup-ok');
+    var pendingConfirmAction = null;
+
+    function showConfirmCard(message, okLabel, okClass) {
+        confirmPopupMessage.textContent = message;
+        confirmPopupOk.textContent = okLabel || 'Continue';
+        confirmPopupOk.className = 'btn ' + okClass;
+        confirmPopup.hidden = false;
+        confirmPopupOk.focus();
+    }
+
+    function hideConfirmCard() {
+        pendingConfirmAction = null;
+        confirmPopup.hidden = true;
+    }
+
+    document.querySelectorAll('[data-confirm-cancel]').forEach(function (el) {
+        el.addEventListener('click', hideConfirmCard);
+    });
+
+    confirmPopupOk.addEventListener('click', function () {
+        var action = pendingConfirmAction;
+        hideConfirmCard();
+
+        if (!action) {
+            return;
+        }
+
+        if (action.form) {
+            var form = action.form;
+            var button = form.querySelector('button[type="submit"], button');
+
+            form.dataset.submitting = 'true';
+            showActionLoading();
+
+            if (button && !button.disabled) {
+                setLoadingButton(button);
+            }
+
+            HTMLFormElement.prototype.submit.call(form);
+            return;
+        }
+
+        action();
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && pendingConfirmAction) {
+            hideConfirmCard();
+        }
+    });
+
+    function openConfirmPopup(form, submitter) {
+        pendingConfirmAction = { form: form };
+        var okClass = /reactivat|restore|release/i.test(form.dataset.confirm) ? 'btn-success'
+            : (/deactivat|delet|remov|revok/i.test(form.dataset.confirm) ? 'btn-danger' : 'btn-primary');
+        var label = submitter && submitter.textContent ? submitter.textContent.trim() : 'Continue';
+
+        showConfirmCard(form.dataset.confirm, label || 'Continue', okClass);
+    }
+
+    function openConfirmDialog(message, okLabel, okClass, action) {
+        pendingConfirmAction = typeof action === 'function' ? action : null;
+        showConfirmCard(message, okLabel || 'Continue', okClass || 'btn-primary');
+    }
+
+    window.openConfirmDialog = openConfirmDialog;
 
     document.addEventListener('submit', function (event) {
         var form = event.target;
         var button = event.submitter;
 
-        if (!form || form.dataset.submitting === 'true') {
-            event.preventDefault();
+        if (!form) {
+            return;
+        }
+
+        // Export/download forms submit natively so the file downloads normally —
+        // no loading lock, no "Loading..." button, no overlay.
+        if (form.hasAttribute('data-export')) {
+            return;
+        }
+
+        // This layout owns every in-app form submission.
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        if (form.dataset.confirm) {
+            openConfirmPopup(form, button);
+            return;
+        }
+
+        if (form.dataset.submitting === 'true') {
             return;
         }
 
@@ -483,42 +641,85 @@
         showActionLoading();
 
         if (button && !button.disabled) {
-            button.disabled = true;
-            button.setAttribute('aria-busy', 'true');
-            button.innerHTML = 'Loading...';
+            setLoadingButton(button);
         }
-    });
+
+        window.setTimeout(function () {
+            HTMLFormElement.prototype.submit.call(form);
+        }, actionLoadingHandoffDelay);
+    }, true);
 
     document.addEventListener('click', function (event) {
         var button = event.target.closest('button');
         var link = event.target.closest('a[href]');
 
-        if (button && !button.type.match(/submit|reset/i) && !button.hasAttribute('aria-expanded') && button.dataset.loading !== 'false') {
-            if (button.dataset.loading === 'true' || button.disabled) {
+        // Menus and explicit cancel controls are local UI actions, not requests.
+        // Other buttons get a short lock to prevent repeated clicks.
+        if (button && !button.type.match(/submit|reset/i)) {
+            if (button.hasAttribute('aria-expanded')
+                || button.dataset.noLoading === 'true'
+                || button.hasAttribute('data-confirm-cancel')) {
+                return;
+            }
+
+            if (button.dataset.loadingLocked === 'true') {
                 event.preventDefault();
                 return;
             }
 
-            button.dataset.loading = 'true';
-            button.disabled = true;
-            button.setAttribute('aria-busy', 'true');
-            button.innerHTML = 'Loading...';
-            showActionLoading();
+            brieflyLockButton(button);
             return;
         }
 
-        if (!link || link.target === '_blank' || link.getAttribute('href').startsWith('#') || link.dataset.loading === 'false') {
+        if (!link || link.target === '_blank' || link.getAttribute('href').startsWith('#')) {
             return;
         }
 
-        if (link.dataset.loading === 'true') {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+            return;
+        }
+
+        if (event.defaultPrevented || link.hasAttribute('download') || link.dataset.noLoading === 'true') {
+            return;
+        }
+
+        var linkUrl = new URL(link.href, window.location.href);
+
+        if (linkUrl.origin !== window.location.origin) {
+            return;
+        }
+
+        if (link.dataset.loadingLocked === 'true') {
             event.preventDefault();
             return;
         }
 
-        link.dataset.loading = 'true';
+        link.dataset.loadingLocked = 'true';
+        link.setAttribute('aria-busy', 'true');
+        link.style.pointerEvents = 'none';
         showActionLoading();
+        event.preventDefault();
+        window.setTimeout(function () {
+            window.location.assign(link.href);
+        }, actionLoadingHandoffDelay);
     });
+
+    // A missing/broken photo must never render as a blank box — swap every
+    // avatar that fails to load for a gradient initials placeholder.
+    document.addEventListener('error', function (event) {
+        var img = event.target;
+        if (!img || img.tagName !== 'IMG' || !img.hasAttribute('data-avatar-preview')) {
+            return;
+        }
+
+        var words = (img.getAttribute('alt') || '').trim().split(/\s+/).filter(Boolean);
+        var initials = words.slice(0, 2).map(function (w) { return w.charAt(0).toUpperCase(); }).join('') || '?';
+        var box = document.createElement('div');
+        box.className = img.className.replace(/\bobject-cover\b/, '')
+            + ' bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xs font-bold';
+        box.textContent = initials;
+        img.replaceWith(box);
+    }, true);
 
     </script>
 </body>

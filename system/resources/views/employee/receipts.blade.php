@@ -29,7 +29,7 @@
                                 @endif
                             </td>
                             <td class="table-body-cell text-right whitespace-nowrap">
-                                <a href="{{ route('employee.receipts.download', $r) }}" class="btn btn-outline btn-sm">PDF</a>
+                                <a href="{{ route('employee.receipts.view', $r) }}" class="btn btn-outline btn-sm">View Receipt</a>
                                 @unless ($r->signed_at)
                                     <button class="btn btn-success btn-sm" onclick="document.getElementById('sign-receipt-{{ $r->id }}').showModal()">Sign</button>
                                     <dialog id="sign-receipt-{{ $r->id }}" class="rounded-xl border border-slate-200 p-0 backdrop:bg-slate-900/40">

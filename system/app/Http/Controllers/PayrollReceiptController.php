@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use App\Models\PayrollReceipt;
 use App\Models\Setting;
-use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class PayrollReceiptController extends Controller
@@ -61,9 +60,6 @@ class PayrollReceiptController extends Controller
             'address' => Setting::get('company_address', ''),
         ];
 
-        $pdf = Pdf::loadView('pdf.receipt', compact('receipt', 'company'))
-            ->setPaper('a4');
-
-        return $pdf->download('Receipt-'.$receipt->receipt_no.'.pdf');
+        return view('receipts.show', compact('receipt', 'company'));
     }
 }

@@ -28,7 +28,7 @@
                     <p class="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wide">Filtered Records</p>
                     <div class="grid grid-cols-1 px-2 pb-1 gap-0.5">
                         @foreach (['print' => 'Print', 'pdf' => 'PDF Document', 'excel' => 'Excel (.xlsx)', 'csv' => 'CSV'] as $fmt => $label)
-                        <form method="POST" action="{{ route('archives.export') }}" target="_blank" class="contents">
+                        <form method="POST" action="{{ route('archives.export') }}" target="_blank" data-export class="contents">
                             @csrf
                             <input type="hidden" name="format" value="{{ $fmt }}">
                             <input type="hidden" name="year" value="{{ $year }}">
@@ -57,7 +57,7 @@
                     <p class="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wide">Entire Archive</p>
                     <div class="grid grid-cols-1 px-2 gap-0.5">
                         @foreach (['print' => 'Print', 'pdf' => 'PDF Document', 'excel' => 'Excel (.xlsx)', 'csv' => 'CSV'] as $fmt => $label)
-                        <form method="POST" action="{{ route('archives.export') }}" target="_blank" class="contents">
+                        <form method="POST" action="{{ route('archives.export') }}" target="_blank" data-export class="contents">
                             @csrf
                             <input type="hidden" name="format" value="{{ $fmt }}">
                             <input type="hidden" name="export_all" value="1">
@@ -164,9 +164,6 @@
             </div>
         </div>
 
-            </div>
-        </div>
-
         {{-- ===== KPI Cards ===== --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
             @php
@@ -182,13 +179,13 @@
             @foreach ($kpiCards as $k)
             <div class="kpi-card">
                 <div class="flex items-start justify-between">
-                    <div>
+                    <div class="min-w-0">
                         <p class="kpi-label">{{ $k['label'] }}</p>
-                        <p class="kpi-value">{{ $k['value'] }}</p>
+                        <p class="kpi-value text-2xl tabular-nums">{{ $k['value'] }}</p>
                         <p class="kpi-subtitle">{{ $k['subtitle'] }}</p>
                     </div>
-                    <div class="p-3 rounded-xl {{ $k['color'] }}">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="p-3 rounded-xl {{ $k['color'] }} flex items-center justify-center">
+                        <svg class="w-5 h-5" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             @if ($k['icon'] == 'users')
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M17 20h5v-2a3 3 0 00-5.856-1.487M15 10a3 3 0 11-6 0 3 3 0 016 0zM6 20h12a6 6 0 016-6H0a6 6 0 016 6z"></path>
                             @elseif ($k['icon'] == 'calendar')
@@ -196,7 +193,7 @@
                             @elseif ($k['icon'] == 'credit')
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3 10h18M7 15h3m-6 3h12a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                             @elseif ($k['icon'] == 'bank')
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3 21h18M4 18h16M6 18V8m4 10V8m4 10V8m4 10V8M3 21V5l9-3 9 3v16"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" transform="translate(1.8 1.8) scale(0.85)" d="M3 21h18M4 18h16M6 18V8m4 10V8m4 10V8m4 10V8M3 21V5l9-3 9 3v16"></path>
                             @elseif ($k['icon'] == 'minus')
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20 12H4"></path>
                             @else
@@ -461,22 +458,22 @@
         @endif
 
         {{-- ===== Archived Records Table ===== --}}
-        <div class="card">
+        <div class="card" id = "archived-records">
             <div class="card-header flex flex-wrap items-center justify-between gap-3">
                 <div>
                     <h2 class="font-semibold text-slate-900">Archived Records</h2>
                     <p class="text-xs text-slate-500 mt-1">Searchable snapshots of historical records</p>
                 </div>
-                <form method="GET" action="{{ route('archives.index') }}" class="flex gap-2 items-center">
+                <form method="GET" action="{{ route('archives.index') }}#archived-records" class="flex flex-wrap gap-2 items-center">
                     <input type="hidden" name="year" value="{{ $year }}">
                     <input type="hidden" name="month" value="{{ $month }}">
                     <input type="hidden" name="department_id" value="{{ $departmentId }}">
                     <input type="hidden" name="classification" value="{{ $classification }}">
                     <input type="hidden" name="employment_status" value="{{ $employmentStatus }}">
                     <input type="hidden" name="record_type" value="{{ $recordType }}">
-                    <div>
+                    <div class="flex-1 min-w-0 sm:flex-none">
                         <label class="input-label sr-only">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Search archived data..." class="input w-56">
+                        <input name="search" value="{{ request('search') }}" placeholder="Search archived data..." class="input w-full sm:w-56">
                     </div>
                     <button class="btn btn-primary btn-sm">Search</button>
                 </form>
@@ -524,7 +521,7 @@
                             <td class="table-body-cell text-right font-medium text-slate-900">{{ $amount !== null ? '₱'.number_format((float) $amount, 2) : '—' }}</td>
                             <td class="table-body-cell text-slate-500">{{ $a->archived_at?->format('M d, Y h:i A') }}</td>
                             <td class="table-body-cell text-right">
-                                <form method="POST" action="{{ route('archives.destroy', $a) }}" onsubmit="return confirm('Delete archive entry?')">
+                                <form method="POST" action="{{ route('archives.destroy', $a) }}" data-confirm="Delete archive entry?">
                                     @csrf @method('DELETE')
                                     <button class="btn btn-danger btn-sm">Delete</button>
                                 </form>
@@ -864,6 +861,16 @@
         if (typeof window.Alpine !== 'undefined') {
             setTimeout(() => { window.Alpine.store('dash').chartsLoaded = true; }, 50);
         }
+
+        // Dont go back to the top in search bar button of archived
+       window.addEventListener('load', () => {
+            const params = new URLSearchParams(window.location.search);
+            if (params.has('search')) {
+                setTimeout(() => {
+                document.getElementById('archived-records')?.scrollIntoView();
+            }, 300);
+        }   
+        });
     });
     </script>
 </x-app-layout>

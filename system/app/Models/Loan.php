@@ -52,6 +52,16 @@ class Loan extends Model
 {
     use HasFactory;
 
+    public const TYPE_SSS = 'sss';
+
+    public const TYPE_PAGIBIG = 'pagibig';
+
+    public const TYPE_COMPANY = 'company';
+
+    public const TYPE_CASH_ADVANCE = 'cash_advance';
+
+    public const TYPE_OTHER = 'other';
+
     protected $fillable = [
         'employee_id', 'loan_type', 'reference_no', 'amount', 'interest_rate',
         'monthly_amortization', 'balance', 'start_date', 'end_date', 'status', 'remarks',

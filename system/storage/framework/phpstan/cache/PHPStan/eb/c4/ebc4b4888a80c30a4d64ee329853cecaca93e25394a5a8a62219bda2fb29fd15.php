@@ -15,7 +15,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
           'model' => 'Illuminate\\Database\\Eloquent\\Model',
-          'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
           'hasmany' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
           'carbon' => 'Illuminate\\Support\\Carbon',
         ),
@@ -329,7 +328,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
           'model' => 'Illuminate\\Database\\Eloquent\\Model',
-          'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
           'hasmany' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
           'carbon' => 'Illuminate\\Support\\Carbon',
         ),
@@ -346,62 +344,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
             'model' => 'Illuminate\\Database\\Eloquent\\Model',
-            'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
-            'hasmany' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
-            'carbon' => 'Illuminate\\Support\\Carbon',
-          ),
-           'className' => 'App\\Models\\Department',
-           'functionName' => NULL,
-           'templatePhpDocNodes' => 
-          array (
-          ),
-           'parent' => NULL,
-           'typeAliasesMap' => 
-          array (
-          ),
-           'bypassTypeAliases' => false,
-           'constUses' => 
-          array (
-          ),
-           'typeAliasClassName' => NULL,
-           'traitData' => NULL,
-        )),
-         'typeAliasesMap' => 
-        array (
-        ),
-         'bypassTypeAliases' => false,
-         'constUses' => 
-        array (
-        ),
-         'typeAliasClassName' => NULL,
-         'traitData' => NULL,
-      )),
-      'a983d806d7512481ec86e5f507fe685b' => 
-      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-         'namespace' => 'App\\Models',
-         'uses' => 
-        array (
-          'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
-          'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
-          'model' => 'Illuminate\\Database\\Eloquent\\Model',
-          'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
-          'hasmany' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
-          'carbon' => 'Illuminate\\Support\\Carbon',
-        ),
-         'className' => 'App\\Models\\Department',
-         'functionName' => 'head',
-         'templatePhpDocNodes' => 
-        array (
-        ),
-         'parent' => 
-        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
-           'namespace' => 'App\\Models',
-           'uses' => 
-          array (
-            'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
-            'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
-            'model' => 'Illuminate\\Database\\Eloquent\\Model',
-            'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
             'hasmany' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
             'carbon' => 'Illuminate\\Support\\Carbon',
           ),
@@ -434,7 +376,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php' => '74c5a4481bb85c0b08989764d4c0cad34834a2ef1621490b4a372c6b661fe08a',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php' => 'b92c36a5dae8f3d2fdfd73fa52d782c7272e5c1b3798984bd147b66c36ae4849',
       'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\HasFactory.php' => 'b6cb2b164e90168e80963a5549541f5f3188a3ec8cfd368bf3611bd94fbd46a7',
     ),
   ),

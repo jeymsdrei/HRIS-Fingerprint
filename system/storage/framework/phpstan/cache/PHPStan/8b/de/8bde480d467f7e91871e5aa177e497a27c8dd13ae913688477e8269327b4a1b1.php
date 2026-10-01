@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\Department.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\Department
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-74c5a4481bb85c0b08989764d4c0cad34834a2ef1621490b4a372c6b661fe08a',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-b92c36a5dae8f3d2fdfd73fa52d782c7272e5c1b3798984bd147b66c36ae4849',
    'data' => 
   array (
     'locatedSource' => 
@@ -32,7 +32,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @property Carbon|null $updated_at
  * @property-read Collection<int, Employee> $employees
  * @property-read int|null $employees_count
- * @property-read User|null $head
  *
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Department newModelQuery()
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Department newQuery()
@@ -50,8 +49,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 37,
-    'endLine' => 54,
+    'startLine' => 35,
+    'endLine' => 47,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -79,20 +78,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'name\', \'code\', \'description\', \'is_active\']',
           'attributes' => 
           array (
-            'startLine' => 41,
-            'endLine' => 41,
-            'startTokenPos' => 60,
-            'startFilePos' => 1704,
-            'endTokenPos' => 71,
-            'endFilePos' => 1747,
+            'startLine' => 39,
+            'endLine' => 39,
+            'startTokenPos' => 55,
+            'startFilePos' => 1616,
+            'endTokenPos' => 66,
+            'endFilePos' => 1659,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 41,
-        'endLine' => 41,
+        'startLine' => 39,
+        'endLine' => 39,
         'startColumn' => 5,
         'endColumn' => 71,
         'isPromoted' => false,
@@ -114,20 +113,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'is_active\' => \'boolean\']',
           'attributes' => 
           array (
-            'startLine' => 43,
-            'endLine' => 43,
-            'startTokenPos' => 80,
-            'startFilePos' => 1774,
-            'endTokenPos' => 86,
-            'endFilePos' => 1799,
+            'startLine' => 41,
+            'endLine' => 41,
+            'startTokenPos' => 75,
+            'startFilePos' => 1686,
+            'endTokenPos' => 81,
+            'endFilePos' => 1711,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 43,
-        'endLine' => 43,
+        'startLine' => 41,
+        'endLine' => 41,
         'startColumn' => 5,
         'endColumn' => 50,
         'isPromoted' => false,
@@ -160,43 +159,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 45,
-        'endLine' => 48,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\Department',
-        'implementingClassName' => 'App\\Models\\Department',
-        'currentClassName' => 'App\\Models\\Department',
-        'aliasName' => NULL,
-      ),
-      'head' => 
-      array (
-        'name' => 'head',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => 
-        array (
-          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-          'data' => 
-          array (
-            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
-            'isIdentifier' => false,
-          ),
-        ),
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 50,
-        'endLine' => 53,
+        'startLine' => 43,
+        'endLine' => 46,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

@@ -48,9 +48,9 @@
                         <input type="number" step="0.01" name="hourly_rate" class="input" placeholder="Blank = emp. rate">
                     </div>
                     <div class="col-span-2 md:col-span-6">
-                        <label class="input-label">Remarks</label>
+                        <label class="input-label">Reason</label>
                         <div class="flex gap-2">
-                            <input name="remarks" placeholder="e.g. Replacement class for holiday" class="input flex-1">
+                            <input name="reason" placeholder="e.g. Replacement class for holiday" class="input flex-1">
                             <button class="btn btn-primary whitespace-nowrap">Record (Pending)</button>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         @include('partials.employee-filters')
                         <select name="approval_status" class="input">
                             <option value="">All Status</option>
-                            @foreach (['pending','approved','rejected'] as $s)<option value="{{ $s }}" @selected(request('approval_status') == $s)>{{ ucfirst($s) }}</option>@endforeach
+                                    @foreach (['pending','approved','rejected'] as $s)<option value="{{ $s }}" @selected(request('approval_status') == $s)>{{ $s === 'rejected' ? 'Denied' : ucfirst($s) }}</option>@endforeach
                         </select>
                         <input type="date" name="from" value="{{ request('from') }}" class="input">
                         <input type="date" name="to" value="{{ request('to') }}" class="input">
@@ -81,6 +81,7 @@
                         <tr>
                             <th class="table-head-cell">Employee</th>
                             <th class="table-head-cell">Subject</th>
+                            <th class="table-head-cell">Reason</th>
                             <th class="table-head-cell">Date</th>
                             <th class="table-head-cell">Time</th>
                             <th class="table-head-cell">Hours</th>
@@ -95,6 +96,7 @@
                         <tr class="table-body-row">
                             <td class="table-body-cell font-medium text-slate-900">{{ $m->employee->full_name }}</td>
                             <td class="table-body-cell">{{ $m->subject?->name ?? '—' }}</td>
+                            <td class="table-body-cell">{{ $m->reason ?: '—' }}@if ($m->remarks)<p class="mt-1 text-xs text-slate-500">Reviewer: {{ $m->remarks }}</p>@endif</td>
                             <td class="table-body-cell">{{ $m->class_date->format('M d, Y') }}</td>
                             <td class="table-body-cell text-slate-500">{{ $m->start_time->format('h:i A') }} – {{ $m->end_time->format('h:i A') }}</td>
                             <td class="table-body-cell">{{ $m->hours_rendered }}h</td>
@@ -104,24 +106,26 @@
                                 <span class="badge
                                     {{ $m->approval_status === 'approved' ? 'badge-success' : '' }}
                                     {{ $m->approval_status === 'pending' ? 'badge-warning' : '' }}
-                                    {{ $m->approval_status === 'rejected' ? 'badge-danger' : '' }}">{{ ucfirst($m->approval_status) }}</span>
+                                    {{ $m->approval_status === 'rejected' ? 'badge-danger' : '' }}">{{ $m->status_label }}</span>
                             </td>
-                            <td class="table-body-cell text-right whitespace-nowrap">
+                            <td class="table-body-cell text-right">
                                 @if ($m->approval_status === 'pending')
-                                    <form method="POST" action="{{ route('makeup.approve', $m) }}" class="inline">
-                                        @csrf
-                                        <button class="btn btn-success btn-sm">Approve</button>
-                                    </form>
-                                    <form method="POST" action="{{ route('makeup.reject', $m) }}" class="inline">
-                                        @csrf
-                                        <button class="btn btn-danger btn-sm ml-1" onclick="return confirm('Reject?')">Reject</button>
-                                    </form>
+                                    <div class="flex flex-col gap-1 items-end">
+                                        <form method="POST" action="{{ route('makeup.approve', $m) }}" class="w-full">
+                                            @csrf
+                                            <button class="btn btn-success btn-sm w-full">Approve</button>
+                                        </form>
+                                        <form method="POST" action="{{ route('makeup.reject', $m) }}" class="w-full">
+                                            @csrf
+                                            <button class="btn btn-danger btn-sm w-full" onclick="return confirm('Deny this request?')">Deny</button>
+                                        </form>
+                                    </div>
                                 @endif
                             </td>
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="9" class="table-body-cell">
+                            <td colspan="10" class="table-body-cell">
                                 <div class="empty-state py-12">
                                     <div class="empty-state-icon">📚</div>
                                     <div class="empty-state-title">No Make-Up Classes</div>

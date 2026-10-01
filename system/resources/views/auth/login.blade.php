@@ -14,9 +14,6 @@
     $demoAccounts = [
         'Teaching Personnel'    => ['jane.santos', 'password'],
         'Non-Teaching Personnel' => ['carlos.garcia', 'password'],
-        'HR Officer'            => ['hr', 'password'],
-        'Payroll Officer'       => ['payroll', 'password'],
-        'Department Head'       => ['depthead', 'password'],
         'Administrative'        => ['admin', 'password'],
     ];
     $preselectedRole = session('preselected_role');
@@ -61,8 +58,8 @@
         </div>
 
         <div class="card-content">
-            <h2>Administrative</h2>
-            <p>For school administrators, principals, HR, payroll &amp; management staff.</p>
+            <h2>Administrator</h2>
+            <p>Access for the school administrator only.</p>
             <button class="card-btn" onclick="openForm('Administrative')">Select Role</button>
         </div>
     </div>
@@ -96,7 +93,21 @@
 
         <div class="form-group">
             <label for="passwordInput">Password</label>
-            <input type="password" name="password" id="passwordInput" placeholder="Your password" required>
+            <div class="password-input-wrap">
+                <input type="password" name="password" id="passwordInput" placeholder="Your password" required>
+                <button type="button" class="password-toggle" id="passwordToggle" data-no-loading="true" aria-label="Show password" title="Show password">
+                    <svg class="password-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    <svg class="password-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 3l18 18"></path>
+                        <path d="M10.6 5.1A10.7 10.7 0 0 1 12 5c6.5 0 10 7 10 7a18.3 18.3 0 0 1-3.2 4.2"></path>
+                        <path d="M6.7 6.7C3.7 8.5 2 12 2 12s3.5 7 10 7a9.8 9.8 0 0 0 3.1-.5"></path>
+                        <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
 
         <label class="form-check">
@@ -118,12 +129,59 @@
 
     <div class="demo-hint">
         Demo logins (password: <code>password</code>)<br>
-        <code>admin</code> · <code>hr</code> · <code>payroll</code> · <code>depthead</code> · any employee seeded account
+        <code>admin</code> · teaching personnel · non-teaching personnel
     </div>
 </div>
 
+<div class="login-loading-overlay" id="loginLoadingOverlay" hidden role="status" aria-live="polite" aria-label="Loading">
+    <span class="login-loading-spinner" aria-hidden="true"></span>
+    <span>Loading...</span>
+</div>
+
 <script>
-    const demoAccounts = @json($demoAccounts);
+    const demoAccounts = @json ($demoAccounts);
+    const loginLoadingOverlay = document.getElementById('loginLoadingOverlay');
+    const loginLoadingDuration = 650;
+    let loginLoadingTimer;
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordToggle = document.getElementById('passwordToggle');
+
+    function showLoginLoading() {
+        loginLoadingOverlay.hidden = false;
+        window.clearTimeout(loginLoadingTimer);
+        loginLoadingTimer = window.setTimeout(function () {
+            loginLoadingOverlay.hidden = true;
+        }, loginLoadingDuration);
+    }
+
+    function brieflyLockLoginButton(button) {
+        if (button.disabled || button.dataset.loadingLocked === 'true') {
+            return;
+        }
+
+        button.dataset.loadingLocked = 'true';
+        button.dataset.originalContent = button.innerHTML;
+        button.disabled = true;
+        button.setAttribute('aria-busy', 'true');
+        button.innerHTML = '<span class="login-loading-spinner" aria-hidden="true"></span><span>Loading...</span>';
+        showLoginLoading();
+
+        window.setTimeout(function () {
+            button.disabled = false;
+            button.removeAttribute('aria-busy');
+            button.innerHTML = button.dataset.originalContent;
+            delete button.dataset.originalContent;
+            delete button.dataset.loadingLocked;
+        }, loginLoadingDuration);
+    }
+
+    passwordToggle.addEventListener('click', function () {
+        const isVisible = passwordInput.type === 'text';
+        passwordInput.type = isVisible ? 'password' : 'text';
+        passwordToggle.setAttribute('aria-label', isVisible ? 'Show password' : 'Hide password');
+        passwordToggle.setAttribute('title', isVisible ? 'Show password' : 'Hide password');
+        passwordToggle.classList.toggle('is-visible', !isVisible);
+    });
 
     function showEmployeeOptions() {
         document.getElementById('employeeOptions').classList.toggle('active');
@@ -153,8 +211,34 @@
         document.getElementById('employeeOptions').classList.remove('active');
     }
 
-    document.getElementById('loginForm').addEventListener('submit', function () {
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        if (this.dataset.submitting === 'true') {
+            event.preventDefault();
+            return;
+        }
+
+        this.dataset.submitting = 'true';
         document.getElementById('formSection').classList.add('is-submitting');
+        brieflyLockLoginButton(this.querySelector('button[type="submit"]'));
+    });
+
+    document.addEventListener('click', function (event) {
+        const button = event.target.closest('button');
+
+        if (!button || button.type.match(/submit|reset/i)) {
+            return;
+        }
+
+        if (button.dataset.noLoading === 'true') {
+            return;
+        }
+
+        if (button.dataset.loadingLocked === 'true') {
+            event.preventDefault();
+            return;
+        }
+
+        brieflyLockLoginButton(button);
     });
 
     // If the session forced a preselected role (e.g. validation error), auto-open it.

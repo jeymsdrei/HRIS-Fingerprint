@@ -8,3 +8,5 @@ Route::post('/device/register', [BiometricController::class, 'register'])->name(
 Route::post('/device/heartbeat', [BiometricController::class, 'heartbeat'])->name('device.heartbeat');
 Route::get('/device/employees', [BiometricController::class, 'employees'])->name('device.employees');
 Route::post('/device/assign-fingerprint', [BiometricController::class, 'assignFingerprint'])->name('device.assign-fingerprint');
+Route::post('/device/photo', [BiometricController::class, 'photo'])->name('device.photo');
+Route::post('/device/template', [BiometricController::class, 'saveTemplate'])->name('device.template');

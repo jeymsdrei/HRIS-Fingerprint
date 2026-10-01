@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\BiometricAgent.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\BiometricAgent
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-e4befb0be5b52d7ea2752d4358668a02fb91a2eb7a519d78fe371165cfe4bc55',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-07f00c58c2587b7d092f498fca3adfd1bb5742e5ae6364c80366c305e7e18ecb',
    'data' => 
   array (
     'locatedSource' => 
@@ -25,6 +25,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'docComment' => '/**
  * @property int $id
  * @property string $agent_id
+ * @property int|null $device_id
  * @property string|null $name
  * @property string|null $computer_name
  * @property string|null $api_base_url
@@ -41,6 +42,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereApiBaseUrl($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereComputerName($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereCreatedAt($value)
+ * @param  int  $value
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereDeviceId($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereId($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereIsActive($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereLastSeenAt($value)
@@ -53,8 +56,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 37,
-    'endLine' => 50,
+    'startLine' => 41,
+    'endLine' => 59,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -79,23 +82,23 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'type' => NULL,
         'default' => 
         array (
-          'code' => '[\'agent_id\', \'name\', \'computer_name\', \'api_base_url\', \'status\', \'last_seen_at\', \'is_active\']',
+          'code' => '[\'agent_id\', \'device_id\', \'name\', \'computer_name\', \'api_base_url\', \'status\', \'last_seen_at\', \'is_active\']',
           'attributes' => 
           array (
-            'startLine' => 41,
-            'endLine' => 44,
-            'startTokenPos' => 45,
-            'startFilePos' => 1885,
-            'endTokenPos' => 68,
-            'endFilePos' => 1999,
+            'startLine' => 45,
+            'endLine' => 48,
+            'startTokenPos' => 50,
+            'startFilePos' => 2096,
+            'endTokenPos' => 76,
+            'endFilePos' => 2223,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 41,
-        'endLine' => 44,
+        'startLine' => 45,
+        'endLine' => 48,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -117,20 +120,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'last_seen_at\' => \'datetime\', \'is_active\' => \'boolean\']',
           'attributes' => 
           array (
-            'startLine' => 46,
-            'endLine' => 49,
-            'startTokenPos' => 77,
-            'startFilePos' => 2026,
-            'endTokenPos' => 93,
-            'endFilePos' => 2104,
+            'startLine' => 50,
+            'endLine' => 53,
+            'startTokenPos' => 85,
+            'startFilePos' => 2250,
+            'endTokenPos' => 101,
+            'endFilePos' => 2328,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 46,
-        'endLine' => 49,
+        'startLine' => 50,
+        'endLine' => 53,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -143,6 +146,41 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateMethods' => 
     array (
+      'device' => 
+      array (
+        'name' => 'device',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+            'isIdentifier' => false,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 55,
+        'endLine' => 58,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\BiometricAgent',
+        'implementingClassName' => 'App\\Models\\BiometricAgent',
+        'currentClassName' => 'App\\Models\\BiometricAgent',
+        'aliasName' => NULL,
+      ),
     ),
     'traitsData' => 
     array (

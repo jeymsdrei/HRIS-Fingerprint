@@ -18,9 +18,9 @@
         <div class="card">
             <div class="card-body">
                 <form method="GET" class="flex flex-wrap gap-3 items-end">
-                    <div>
+                    <div class="flex-1 min-w-0 sm:flex-none">
                         <label class="input-label">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Search user..." class="input w-56">
+                        <input name="search" value="{{ request('search') }}" placeholder="Search user..." class="input w-full sm:w-56">
                     </div>
                     <div>
                         <label class="input-label">Role</label>
@@ -65,14 +65,10 @@
                             </td>
                             <td class="table-body-cell text-right space-x-2 whitespace-nowrap">
                                 <a href="{{ route('users.edit', $u) }}" class="btn btn-secondary btn-sm">Edit</a>
-                                <form method="POST" action="{{ route('users.toggle', $u) }}" class="inline">
-                                    @csrf @method('PATCH')
-                                    <button class="btn btn-outline btn-sm">{{ $u->is_active ? 'Disable' : 'Enable' }}</button>
-                                </form>
                                 @if ($u->id !== auth()->id())
-                                <form method="POST" action="{{ route('users.destroy', $u) }}" class="inline" onsubmit="return confirm('Delete this user?')">
+                                <form method="POST" action="{{ route('users.destroy', $u) }}" class="inline" data-confirm="{{ $u->is_active ? 'Deactivate this user? Their records are preserved.' : 'Reactivate this user?' }}">
                                     @csrf @method('DELETE')
-                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-sm {{ $u->is_active ? 'btn-danger' : 'btn-success' }}">{{ $u->is_active ? 'Deactivate' : 'Reactivate' }}</button>
                                 </form>
                                 @endif
                             </td>

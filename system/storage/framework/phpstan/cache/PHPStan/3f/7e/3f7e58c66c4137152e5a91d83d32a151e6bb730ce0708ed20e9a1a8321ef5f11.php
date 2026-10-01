@@ -19,6 +19,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => NULL,
@@ -48,6 +50,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'index',
@@ -77,6 +81,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'store',
@@ -106,6 +112,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'sync',
@@ -135,6 +143,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'testConnection',
@@ -164,6 +174,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'destroy',
@@ -193,6 +205,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'punches',
@@ -222,6 +236,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'storePunch',
@@ -251,6 +267,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'apiPush',
@@ -280,6 +298,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'register',
@@ -309,6 +329,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'heartbeat',
@@ -338,9 +360,73 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'employees',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      '27a95672ca7d9f6732411e87c27af6dc' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Http\\Controllers',
+         'uses' => 
+        array (
+          'biometricagent' => 'App\\Models\\BiometricAgent',
+          'biometricdevice' => 'App\\Models\\BiometricDevice',
+          'employee' => 'App\\Models\\Employee',
+          'attendanceservice' => 'App\\Services\\AttendanceService',
+          'biometricservice' => 'App\\Services\\BiometricService',
+          'carbon' => 'Carbon\\Carbon',
+          'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
+        ),
+         'className' => 'App\\Http\\Controllers\\BiometricController',
+         'functionName' => 'photoData',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      'df46e57c8360bfaa042483b3051cfc46' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Http\\Controllers',
+         'uses' => 
+        array (
+          'biometricagent' => 'App\\Models\\BiometricAgent',
+          'biometricdevice' => 'App\\Models\\BiometricDevice',
+          'employee' => 'App\\Models\\Employee',
+          'attendanceservice' => 'App\\Services\\AttendanceService',
+          'biometricservice' => 'App\\Services\\BiometricService',
+          'carbon' => 'Carbon\\Carbon',
+          'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
+        ),
+         'className' => 'App\\Http\\Controllers\\BiometricController',
+         'functionName' => 'buildThumbnail',
          'templatePhpDocNodes' => 
         array (
         ),
@@ -367,6 +453,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'biometricservice' => 'App\\Services\\BiometricService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
         ),
          'className' => 'App\\Http\\Controllers\\BiometricController',
          'functionName' => 'assignFingerprint',
@@ -384,10 +472,72 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
+      '9f5e9344e4e0cc14158452413bb8933f' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Http\\Controllers',
+         'uses' => 
+        array (
+          'biometricagent' => 'App\\Models\\BiometricAgent',
+          'biometricdevice' => 'App\\Models\\BiometricDevice',
+          'employee' => 'App\\Models\\Employee',
+          'attendanceservice' => 'App\\Services\\AttendanceService',
+          'biometricservice' => 'App\\Services\\BiometricService',
+          'carbon' => 'Carbon\\Carbon',
+          'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
+        ),
+         'className' => 'App\\Http\\Controllers\\BiometricController',
+         'functionName' => 'saveTemplate',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      '24ff5191577d2b61b053e29ae89da873' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Http\\Controllers',
+         'uses' => 
+        array (
+          'biometricagent' => 'App\\Models\\BiometricAgent',
+          'biometricdevice' => 'App\\Models\\BiometricDevice',
+          'employee' => 'App\\Models\\Employee',
+          'attendanceservice' => 'App\\Services\\AttendanceService',
+          'biometricservice' => 'App\\Services\\BiometricService',
+          'carbon' => 'Carbon\\Carbon',
+          'request' => 'Illuminate\\Http\\Request',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+          'storage' => 'Illuminate\\Support\\Facades\\Storage',
+        ),
+         'className' => 'App\\Http\\Controllers\\BiometricController',
+         'functionName' => 'photo',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php' => '2e6da05385c61f1a5d5ddb4f31495dbd7540da6d196c41fb50510e8a150521b6',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php' => '13eec7b819aec68b2f691e523c6745f2f1ca83c2aefd687c03d1460a34e07c76',
     ),
   ),
 ));

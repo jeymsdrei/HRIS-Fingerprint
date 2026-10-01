@@ -5,7 +5,7 @@
         {{-- Page Header --}}
         <div class="mb-8">
             <h1 class="text-3xl font-bold text-slate-900">My Payslips</h1>
-            <p class="mt-2 text-slate-600">Download your payslips</p>
+            <p class="mt-2 text-slate-600">View your payslips</p>
         </div>
 
         <div class="card">
@@ -22,7 +22,7 @@
                             <td class="table-body-cell">{{ $p->pay_date?->format('M d, Y') ?? '—' }}</td>
                             <td class="table-body-cell font-semibold text-green-600">₱{{ number_format($p->net_pay, 2) }}</td>
                             <td class="table-body-cell text-right">
-                                <a href="{{ route('employee.payslips.download', $p) }}" class="btn btn-outline btn-sm">Download PDF</a>
+                                <a href="{{ route('employee.payslips.view', $p) }}" class="btn btn-outline btn-sm">View Payslip</a>
                             </td>
                         </tr>
                         @empty

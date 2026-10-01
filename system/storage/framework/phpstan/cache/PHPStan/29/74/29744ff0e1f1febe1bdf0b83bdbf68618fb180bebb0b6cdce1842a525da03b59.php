@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\Benefit.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\Benefit
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-9c58baca79abf41df4cdde0645fe1a35b19d8966a1eecbc7d7f3cd9c7341dfa6',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-38e3fdde02224088204398dd76765e9b3580cba5c38b5d13247275bf8c065a23',
    'data' => 
   array (
     'locatedSource' => 
@@ -54,7 +54,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 39,
-    'endLine' => 51,
+    'endLine' => 53,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -67,6 +67,35 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateConstants' => 
     array (
+      'ALLOWANCE' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Benefit',
+        'implementingClassName' => 'App\\Models\\Benefit',
+        'name' => 'ALLOWANCE',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'allowance\'',
+          'attributes' => 
+          array (
+            'startLine' => 43,
+            'endLine' => 43,
+            'startTokenPos' => 57,
+            'startFilePos' => 1840,
+            'endTokenPos' => 57,
+            'endFilePos' => 1850,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 43,
+        'endLine' => 43,
+        'startColumn' => 5,
+        'endColumn' => 41,
+      ),
     ),
     'immediateProperties' => 
     array (
@@ -82,20 +111,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'name\', \'type\', \'amount\', \'frequency\', \'is_taxable\', \'is_active\']',
           'attributes' => 
           array (
-            'startLine' => 43,
-            'endLine' => 43,
-            'startTokenPos' => 55,
-            'startFilePos' => 1837,
-            'endTokenPos' => 72,
-            'endFilePos' => 1902,
+            'startLine' => 45,
+            'endLine' => 45,
+            'startTokenPos' => 66,
+            'startFilePos' => 1880,
+            'endTokenPos' => 83,
+            'endFilePos' => 1945,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 43,
-        'endLine' => 43,
+        'startLine' => 45,
+        'endLine' => 45,
         'startColumn' => 5,
         'endColumn' => 93,
         'isPromoted' => false,
@@ -117,20 +146,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'is_taxable\' => \'boolean\', \'is_active\' => \'boolean\']',
           'attributes' => 
           array (
-            'startLine' => 45,
-            'endLine' => 45,
-            'startTokenPos' => 81,
-            'startFilePos' => 1929,
-            'endTokenPos' => 94,
-            'endFilePos' => 1981,
+            'startLine' => 47,
+            'endLine' => 47,
+            'startTokenPos' => 92,
+            'startFilePos' => 1972,
+            'endTokenPos' => 105,
+            'endFilePos' => 2024,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 45,
-        'endLine' => 45,
+        'startLine' => 47,
+        'endLine' => 47,
         'startColumn' => 5,
         'endColumn' => 77,
         'isPromoted' => false,
@@ -163,8 +192,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 47,
-        'endLine' => 50,
+        'startLine' => 49,
+        'endLine' => 52,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

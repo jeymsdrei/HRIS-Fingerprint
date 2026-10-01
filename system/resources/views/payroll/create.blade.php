@@ -24,7 +24,7 @@
                                 <option value="daily">Daily (Contractual / Non-regular)</option>
                             </select>
                         </div>
-                        <div class="grid grid-cols-2 gap-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div>
                                 <label class="input-label">Start Date</label>
                                 <input type="date" name="start_date" value="{{ now()->startOfMonth()->format('Y-m-d') }}" class="input" required>

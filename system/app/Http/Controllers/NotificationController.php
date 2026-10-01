@@ -22,7 +22,7 @@ class NotificationController extends Controller
         }
         $notification->update(['read' => true, 'read_at' => now()]);
 
-        return $notification->url ? redirect($notification->url) : back();
+        return back();
     }
 
     public function markAll()

@@ -73,13 +73,13 @@
 
         <tr class="h"><td colspan="2">DEDUCTIONS</td></tr>
         @if ($pay->deduction_late > 0)
-            <tr><td>Late Deduction ({{ $pay->late_minutes_total }} min)</td><td class="right">{{ number_format($pay->deduction_late, 2) }}</td></tr>
+            <tr><td>Late Deduction ({{ hm($pay->late_minutes_total) }})</td><td class="right">{{ number_format($pay->deduction_late, 2) }}</td></tr>
         @endif
         @if ($pay->deduction_absent > 0)
             <tr><td>Absence Deduction ({{ $pay->days_absent }} day(s))</td><td class="right">{{ number_format($pay->deduction_absent, 2) }}</td></tr>
         @endif
         @if ($pay->deduction_undertime > 0)
-            <tr><td>Undertime Deduction ({{ $pay->undertime_minutes_total }} min)</td><td class="right">{{ number_format($pay->deduction_undertime, 2) }}</td></tr>
+            <tr><td>Undertime Deduction ({{ hm($pay->undertime_minutes_total) }})</td><td class="right">{{ number_format($pay->deduction_undertime, 2) }}</td></tr>
         @endif
         <tr><td>Withholding Tax</td><td class="right">{{ number_format($pay->deduction_tax, 2) }}</td></tr>
         <tr><td>SSS</td><td class="right">{{ number_format($pay->deduction_sss, 2) }}</td></tr>

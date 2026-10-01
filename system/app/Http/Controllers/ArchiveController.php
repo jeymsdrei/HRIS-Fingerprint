@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ArchiveExport;
 use App\Models\Archive;
 use App\Models\Attendance;
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\MakeUpClass;
 use App\Models\Payroll;
-use App\Models\PayrollPeriod;
 use App\Services\ArchiveReportService;
 use App\Services\ArchiveService;
+use App\Services\AttendanceService;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ArchiveController extends Controller
@@ -47,12 +48,13 @@ class ArchiveController extends Controller
                 ->when($employmentStatus, fn ($q, $s) => $q->where('employment_status', $s));
         };
 
-        // ---- KPI Cards ----
+        // ---- KPIs & attendance aggregates (per employee-day so per-schedule
+        // teaching rows collapse into a single day status) ----
+        $dayStatuses = app(AttendanceService::class)->dayStatusRows($startDate, $endDate, $departmentId ?: null);
+
         $kpis = [
             'archived_employees' => Archive::where('archive_type', 'employee')->count(),
-            'attendance_records' => Attendance::whereBetween('date', [$startDate->toDateString(), $endDate->toDateString()])
-                ->when($departmentId, fn ($q, $id) => $q->where('department_id', $id))
-                ->count(),
+            'attendance_records' => $dayStatuses->count(),
             'payroll_records' => Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$startDate->toDateString(), $endDate->toDateString()]))
                 ->when($departmentId, fn ($q, $id) => $q->whereHas('employee', fn ($eq) => $eq->where('department_id', $id)))
                 ->count(),
@@ -68,29 +70,27 @@ class ArchiveController extends Controller
         ];
 
         // ---- Attendance Trend (per month) ----
-        $attendanceTrend = Attendance::whereBetween('date', [$startDate->toDateString(), $endDate->toDateString()])
-            ->when($departmentId, fn ($q, $id) => $q->where('department_id', $id))
-            ->selectRaw('strftime("%m", date) as m,
-                SUM(CASE WHEN status = "present" THEN 1 ELSE 0 END) as present,
-                SUM(CASE WHEN status = "late" THEN 1 ELSE 0 END) as late,
-                SUM(CASE WHEN status = "half_day" THEN 1 ELSE 0 END) as half_day,
-                SUM(CASE WHEN status = "absent" THEN 1 ELSE 0 END) as absent')
-            ->groupBy('m')
-            ->orderBy('m')
-            ->get()
+        $attendanceTrend = $dayStatuses
+            ->groupBy('month')
+            ->map(fn ($rows) => [
+                'm' => $rows->first()['month'],
+                'present' => $rows->where('status', 'present')->count(),
+                'late' => $rows->where('status', 'late')->count(),
+                'half_day' => $rows->where('status', 'half_day')->count(),
+                'absent' => $rows->where('status', 'absent')->count(),
+            ])
             ->keyBy('m');
 
         // ---- Attendance Rate (per month) ----
-        $attendanceRate = Attendance::whereBetween('date', [$startDate->toDateString(), $endDate->toDateString()])
-            ->when($departmentId, fn ($q, $id) => $q->where('department_id', $id))
-            ->selectRaw('strftime("%m", date) as m,
-                SUM(CASE WHEN status IN ("present","late","half_day") THEN 1 ELSE 0 END) as present,
-                SUM(CASE WHEN status = "late" THEN 1 ELSE 0 END) as late,
-                SUM(CASE WHEN status = "absent" THEN 1 ELSE 0 END) as absent,
-                COUNT(*) as total')
-            ->groupBy('m')
-            ->orderBy('m')
-            ->get()
+        $attendanceRate = $dayStatuses
+            ->groupBy('month')
+            ->map(fn ($rows) => [
+                'm' => $rows->first()['month'],
+                'present' => $rows->whereIn('status', ['present', 'late', 'half_day'])->count(),
+                'late' => $rows->where('status', 'late')->count(),
+                'absent' => $rows->where('status', 'absent')->count(),
+                'total' => $rows->count(),
+            ])
             ->keyBy('m');
 
         // ---- Payroll History (per month) ----
@@ -135,14 +135,13 @@ class ArchiveController extends Controller
 
         // ---- Department Analytics ----
         $deptEmployees = Department::withCount('employees')->orderBy('employees_count', 'desc')->get(['id', 'name', 'employees_count']);
-        $deptAttendanceRate = Department::get(['id', 'name'])->map(function ($d) use ($startDate, $endDate) {
-            $total = Attendance::where('department_id', $d->id)
-                ->whereBetween('date', [$startDate->toDateString(), $endDate->toDateString()])
-                ->count();
-            $present = Attendance::where('department_id', $d->id)
-                ->whereBetween('date', [$startDate->toDateString(), $endDate->toDateString()])
-                ->whereIn('status', ['present', 'late', 'half_day'])
-                ->count();
+        $deptDayStats = $dayStatuses->groupBy('department_id')->map(fn ($rows) => [
+            'total' => $rows->count(),
+            'present' => $rows->whereIn('status', ['present', 'late', 'half_day'])->count(),
+        ]);
+        $deptAttendanceRate = Department::get(['id', 'name'])->map(function ($d) use ($deptDayStats) {
+            $total = (int) ($deptDayStats->get($d->id)['total'] ?? 0);
+            $present = (int) ($deptDayStats->get($d->id)['present'] ?? 0);
 
             return [
                 'name' => $d->name,
@@ -191,10 +190,13 @@ class ArchiveController extends Controller
             ->pluck('y');
 
         if ($availableYears->count() > 1) {
-            $yearlyComparison = $availableYears->map(function ($y) {
-                $att = Attendance::whereYear('date', $y);
-                $total = (clone $att)->count();
-                $present = (clone $att)->whereIn('status', ['present', 'late', 'half_day'])->count();
+            $yearDayStats = $dayStatuses->groupBy('year')->map(fn ($rows) => [
+                'total' => $rows->count(),
+                'present' => $rows->whereIn('status', ['present', 'late', 'half_day'])->count(),
+            ]);
+            $yearlyComparison = $availableYears->map(function ($y) use ($yearDayStats) {
+                $total = (int) ($yearDayStats->get($y)['total'] ?? 0);
+                $present = (int) ($yearDayStats->get($y)['present'] ?? 0);
 
                 return [
                     'year' => $y,
@@ -281,7 +283,7 @@ class ArchiveController extends Controller
 
                 return $pdf->download($filename.'.pdf');
             case 'excel':
-                return Excel::download(new \App\Exports\ArchiveExport($dataset), $filename.'.xlsx');
+                return Excel::download(new ArchiveExport($dataset), $filename.'.xlsx');
             case 'csv':
                 return $this->streamArchiveCsv($filename.'.csv', $dataset);
             case 'print':
@@ -306,10 +308,10 @@ class ArchiveController extends Controller
             $parts[] = $service->year;
         }
         if ($service->exportAll) {
-            $parts[] = str_replace('_', '', \Illuminate\Support\Str::slug(now()->format('Y-m-d')));
+            $parts[] = str_replace('_', '', Str::slug(now()->format('Y-m-d')));
         }
 
-        return implode('_', array_map(fn ($p) => \Illuminate\Support\Str::slug($p), $parts));
+        return implode('_', array_map(fn ($p) => Str::slug($p), $parts));
     }
 
     private function streamArchiveCsv(string $filename, array $dataset)
@@ -348,4 +350,3 @@ class ArchiveController extends Controller
         return response()->streamDownload($callback, $filename, ['Content-Type' => 'text/csv; charset=UTF-8']);
     }
 }
-

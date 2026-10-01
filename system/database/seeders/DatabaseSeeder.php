@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
         'archives',
     ];
 
-    protected string $dataPath = __DIR__ . '/data';
+    protected string $dataPath = __DIR__.'/data';
 
     public function run(): void
     {
@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
             $total = array_sum($counts);
 
             $this->command?->info('Database already contains data — nothing was modified.');
-            $this->command?->info("Snapshot updated: {$total} rows across " . count($counts) . " tables -> database/seeders/data.");
+            $this->command?->info("Snapshot updated: {$total} rows across ".count($counts).' tables -> database/seeders/data.');
             $this->command?->warn('These snapshots are what migrate:fresh --seed will restore.');
 
             return;
@@ -78,7 +78,7 @@ class DatabaseSeeder extends Seeder
 
         if ($this->snapshotExists()) {
             $total = $this->importSnapshot();
-            $this->command?->info("Database restored from snapshot: {$total} rows across " . count($this->tables) . ' tables.');
+            $this->command?->info("Database restored from snapshot: {$total} rows across ".count($this->tables).' tables.');
 
             return;
         }
@@ -108,7 +108,7 @@ class DatabaseSeeder extends Seeder
 
     protected function snapshotExists(): bool
     {
-        return File::exists($this->dataPath . '/subjects.json');
+        return File::exists($this->dataPath.'/subjects.json');
     }
 
     /**
@@ -128,14 +128,14 @@ class DatabaseSeeder extends Seeder
             $rows = DB::table($table)->get()->map(fn ($row) => (array) $row)->all();
 
             File::put(
-                $this->dataPath . "/{$table}.json",
+                $this->dataPath."/{$table}.json",
                 json_encode($rows, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)
             );
 
             $meta['tables'][$table] = count($rows);
         }
 
-        File::put($this->dataPath . '/_meta.json', json_encode($meta, JSON_PRETTY_PRINT));
+        File::put($this->dataPath.'/_meta.json', json_encode($meta, JSON_PRETTY_PRINT));
 
         return $meta['tables'];
     }
@@ -151,13 +151,22 @@ class DatabaseSeeder extends Seeder
 
         try {
             foreach ($this->tables as $table) {
-                $file = $this->dataPath . "/{$table}.json";
+                $file = $this->dataPath."/{$table}.json";
 
                 if (! Schema::hasTable($table) || ! File::exists($file)) {
                     continue;
                 }
 
                 $rows = json_decode(File::get($file), true) ?: [];
+
+                // Remove user_id from employees if it exists in snapshot but not in current schema
+                if ($table === 'employees') {
+                    $rows = array_map(function ($row) {
+                        unset($row['user_id']);
+
+                        return $row;
+                    }, $rows);
+                }
 
                 DB::table($table)->delete();
 

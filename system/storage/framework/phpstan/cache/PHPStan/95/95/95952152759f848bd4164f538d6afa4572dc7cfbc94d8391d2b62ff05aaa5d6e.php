@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\Attendance.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\Attendance
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-cbef35cd6f5491e4a024180cde062cba79044f91c6d99d3f81d01b64ef04bd1f',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-d59e24300b6adf5046d8ddb00a28ffe294b1aba9c9f70c3763560fcefdf45f30',
    'data' => 
   array (
     'locatedSource' => 
@@ -29,6 +29,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @property int $day
  * @property int|null $department_id
  * @property int|null $device_id
+ * @property int|null $teaching_schedule_id
+ * @property int|null $work_schedule_id
  * @property Carbon|null $schedule_start
  * @property Carbon|null $schedule_end
  * @property Carbon|null $time_in
@@ -46,6 +48,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @property Carbon|null $updated_at
  * @property-read Department|null $department
  * @property-read BiometricDevice|null $device
+ * @property-read TeachingSchedule|null $teachingSchedule
+ * @property-read WorkSchedule|null $workSchedule
  * @property-read Employee $employee
  * @property-read string $status_color
  * @property-read string $status_label
@@ -69,6 +73,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereScheduleStart($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereSource($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereStatus($value)
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereTeachingScheduleId($value)
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereWorkScheduleId($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereTimeIn($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereTimeOut($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereUndertimeMinutes($value)
@@ -80,8 +86,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 65,
-    'endLine' => 134,
+    'startLine' => 71,
+    'endLine' => 155,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -106,20 +112,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'present\'',
           'attributes' => 
           array (
-            'startLine' => 86,
-            'endLine' => 86,
-            'startTokenPos' => 177,
-            'startFilePos' => 4160,
-            'endTokenPos' => 177,
-            'endFilePos' => 4168,
+            'startLine' => 92,
+            'endLine' => 92,
+            'startTokenPos' => 186,
+            'startFilePos' => 4626,
+            'endTokenPos' => 186,
+            'endFilePos' => 4634,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 86,
-        'endLine' => 86,
+        'startLine' => 92,
+        'endLine' => 92,
         'startColumn' => 5,
         'endColumn' => 37,
       ),
@@ -135,20 +141,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'late\'',
           'attributes' => 
           array (
-            'startLine' => 88,
-            'endLine' => 88,
-            'startTokenPos' => 188,
-            'startFilePos' => 4196,
-            'endTokenPos' => 188,
-            'endFilePos' => 4201,
+            'startLine' => 94,
+            'endLine' => 94,
+            'startTokenPos' => 197,
+            'startFilePos' => 4662,
+            'endTokenPos' => 197,
+            'endFilePos' => 4667,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 88,
-        'endLine' => 88,
+        'startLine' => 94,
+        'endLine' => 94,
         'startColumn' => 5,
         'endColumn' => 31,
       ),
@@ -164,20 +170,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'half_day\'',
           'attributes' => 
           array (
-            'startLine' => 90,
-            'endLine' => 90,
-            'startTokenPos' => 199,
-            'startFilePos' => 4233,
-            'endTokenPos' => 199,
-            'endFilePos' => 4242,
+            'startLine' => 96,
+            'endLine' => 96,
+            'startTokenPos' => 208,
+            'startFilePos' => 4699,
+            'endTokenPos' => 208,
+            'endFilePos' => 4708,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 90,
-        'endLine' => 90,
+        'startLine' => 96,
+        'endLine' => 96,
         'startColumn' => 5,
         'endColumn' => 39,
       ),
@@ -193,20 +199,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'absent\'',
           'attributes' => 
           array (
-            'startLine' => 92,
-            'endLine' => 92,
-            'startTokenPos' => 210,
-            'startFilePos' => 4272,
-            'endTokenPos' => 210,
-            'endFilePos' => 4279,
+            'startLine' => 98,
+            'endLine' => 98,
+            'startTokenPos' => 219,
+            'startFilePos' => 4738,
+            'endTokenPos' => 219,
+            'endFilePos' => 4745,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 92,
-        'endLine' => 92,
+        'startLine' => 98,
+        'endLine' => 98,
         'startColumn' => 5,
         'endColumn' => 35,
       ),
@@ -222,20 +228,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'rest_day\'',
           'attributes' => 
           array (
-            'startLine' => 94,
-            'endLine' => 94,
-            'startTokenPos' => 221,
-            'startFilePos' => 4311,
-            'endTokenPos' => 221,
-            'endFilePos' => 4320,
+            'startLine' => 100,
+            'endLine' => 100,
+            'startTokenPos' => 230,
+            'startFilePos' => 4777,
+            'endTokenPos' => 230,
+            'endFilePos' => 4786,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 94,
-        'endLine' => 94,
+        'startLine' => 100,
+        'endLine' => 100,
         'startColumn' => 5,
         'endColumn' => 39,
       ),
@@ -251,23 +257,23 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'type' => NULL,
         'default' => 
         array (
-          'code' => '[\'employee_id\', \'date\', \'day\', \'department_id\', \'device_id\', \'schedule_start\', \'schedule_end\', \'time_in\', \'time_out\', \'working_hours\', \'late_minutes\', \'undertime_minutes\', \'overtime_minutes\', \'is_half_day\', \'status\', \'source\', \'remarks\', \'processed_by\']',
+          'code' => '[\'employee_id\', \'date\', \'day\', \'department_id\', \'device_id\', \'teaching_schedule_id\', \'work_schedule_id\', \'make_up_class_id\', \'schedule_start\', \'schedule_end\', \'time_in\', \'time_out\', \'working_hours\', \'late_minutes\', \'undertime_minutes\', \'overtime_minutes\', \'is_half_day\', \'status\', \'source\', \'remarks\', \'processed_by\']',
           'attributes' => 
           array (
-            'startLine' => 69,
-            'endLine' => 74,
+            'startLine' => 75,
+            'endLine' => 80,
             'startTokenPos' => 50,
-            'startFilePos' => 3536,
-            'endTokenPos' => 106,
-            'endFilePos' => 3827,
+            'startFilePos' => 3938,
+            'endTokenPos' => 115,
+            'endFilePos' => 4293,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 69,
-        'endLine' => 74,
+        'startLine' => 75,
+        'endLine' => 80,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -289,20 +295,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'date\' => \'date:Y-m-d\', \'time_in\' => \'datetime:H:i\', \'time_out\' => \'datetime:H:i\', \'schedule_start\' => \'datetime:H:i\', \'schedule_end\' => \'datetime:H:i\', \'working_hours\' => \'decimal:2\', \'is_half_day\' => \'boolean\']',
           'attributes' => 
           array (
-            'startLine' => 76,
-            'endLine' => 84,
-            'startTokenPos' => 115,
-            'startFilePos' => 3854,
-            'endTokenPos' => 166,
-            'endFilePos' => 4129,
+            'startLine' => 82,
+            'endLine' => 90,
+            'startTokenPos' => 124,
+            'startFilePos' => 4320,
+            'endTokenPos' => 175,
+            'endFilePos' => 4595,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 76,
-        'endLine' => 84,
+        'startLine' => 82,
+        'endLine' => 90,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -335,8 +341,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 96,
-        'endLine' => 99,
+        'startLine' => 102,
+        'endLine' => 105,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -370,8 +376,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 101,
-        'endLine' => 104,
+        'startLine' => 107,
+        'endLine' => 110,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -405,8 +411,113 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 106,
-        'endLine' => 109,
+        'startLine' => 112,
+        'endLine' => 115,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\Attendance',
+        'implementingClassName' => 'App\\Models\\Attendance',
+        'currentClassName' => 'App\\Models\\Attendance',
+        'aliasName' => NULL,
+      ),
+      'teachingSchedule' => 
+      array (
+        'name' => 'teachingSchedule',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+            'isIdentifier' => false,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 117,
+        'endLine' => 120,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\Attendance',
+        'implementingClassName' => 'App\\Models\\Attendance',
+        'currentClassName' => 'App\\Models\\Attendance',
+        'aliasName' => NULL,
+      ),
+      'workSchedule' => 
+      array (
+        'name' => 'workSchedule',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+            'isIdentifier' => false,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 122,
+        'endLine' => 125,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\Attendance',
+        'implementingClassName' => 'App\\Models\\Attendance',
+        'currentClassName' => 'App\\Models\\Attendance',
+        'aliasName' => NULL,
+      ),
+      'makeUpClass' => 
+      array (
+        'name' => 'makeUpClass',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+            'isIdentifier' => false,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 127,
+        'endLine' => 130,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -440,8 +551,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 111,
-        'endLine' => 121,
+        'startLine' => 132,
+        'endLine' => 142,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -475,8 +586,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 123,
-        'endLine' => 133,
+        'startLine' => 144,
+        'endLine' => 154,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

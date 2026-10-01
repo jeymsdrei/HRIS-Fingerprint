@@ -193,6 +193,59 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'typeAliasClassName' => NULL,
          'traitData' => NULL,
       )),
+      '09e7dc8ef9c09e445c71787651c1dd3f' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Services',
+         'uses' => 
+        array (
+          'attendancelog' => 'App\\Models\\AttendanceLog',
+          'biometricdevice' => 'App\\Models\\BiometricDevice',
+          'employee' => 'App\\Models\\Employee',
+          'carbon' => 'Carbon\\Carbon',
+          'log' => 'Illuminate\\Support\\Facades\\Log',
+        ),
+         'className' => 'App\\Services\\BiometricService',
+         'functionName' => 'deleteFingerprint',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Services',
+           'uses' => 
+          array (
+            'attendancelog' => 'App\\Models\\AttendanceLog',
+            'biometricdevice' => 'App\\Models\\BiometricDevice',
+            'employee' => 'App\\Models\\Employee',
+            'carbon' => 'Carbon\\Carbon',
+            'log' => 'Illuminate\\Support\\Facades\\Log',
+          ),
+           'className' => 'App\\Services\\BiometricService',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
       'b75c4d1be26373ee1eb2ae3a6ade9fb8' => 
       \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
          'namespace' => 'App\\Services',
@@ -514,7 +567,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php' => 'fd6e9b3c51339c2acb6c330dd059a05bae090a40532aea51469f5d9588a398d7',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php' => '6c26ba82697b37ca997f53e05cc811d16ffe51fee02a4737f4775ca32f3c6dcb',
     ),
   ),
 ));

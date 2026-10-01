@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreBenefitRequest;
+use App\Http\Requests\StoreEmployeeBenefitRequest;
+use App\Http\Requests\StoreLoanRequest;
+use App\Http\Requests\UpdateLoanRequest;
 use App\Models\Benefit;
 use App\Models\Department;
 use App\Models\EmployeeBenefit;
@@ -26,16 +30,9 @@ class BenefitLoanController extends Controller
         return view('benefits.index', compact('benefits', 'assignments', 'departments'));
     }
 
-    public function storeBenefit(Request $request)
+    public function storeBenefit(StoreBenefitRequest $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'type' => 'required|in:allowance,incentive,bonus',
-            'amount' => 'required|numeric|min:0',
-            'frequency' => 'required|in:monthly,yearly,one_time',
-            'is_taxable' => 'nullable|boolean',
-        ]);
-        Benefit::create($request->all());
+        Benefit::create($request->validated());
 
         return back()->with('success', 'Benefit added.');
     }
@@ -47,15 +44,9 @@ class BenefitLoanController extends Controller
         return back()->with('success', 'Benefit removed.');
     }
 
-    public function assignBenefit(Request $request)
+    public function assignBenefit(StoreEmployeeBenefitRequest $request)
     {
-        $request->validate([
-            'employee_id' => 'required|exists:employees,id',
-            'benefit_id' => 'required|exists:benefits,id',
-            'amount' => 'nullable|numeric|min:0',
-            'effective_date' => 'required|date',
-        ]);
-        EmployeeBenefit::create($request->all());
+        EmployeeBenefit::create($request->validated());
 
         return back()->with('success', 'Benefit assigned to employee.');
     }
@@ -84,19 +75,10 @@ class BenefitLoanController extends Controller
         return view('loans.index', compact('loans', 'departments'));
     }
 
-    public function storeLoan(Request $request)
+    public function storeLoan(StoreLoanRequest $request)
     {
-        $request->validate([
-            'employee_id' => 'required|exists:employees,id',
-            'loan_type' => 'required|in:sss,pagibig,company,cash_advance,other',
-            'reference_no' => 'nullable|string|max:100',
-            'amount' => 'required|numeric|min:1',
-            'interest_rate' => 'nullable|numeric|min:0|max:100',
-            'monthly_amortization' => 'required|numeric|min:0',
-            'start_date' => 'required|date',
-        ]);
-
-        $data = $request->all();
+        $data = $request->validated();
+        $data['interest_rate'] = $request->filled('interest_rate') ? $request->input('interest_rate') : 0;
         $data['balance'] = $request->amount;
         $data['status'] = 'active';
         if ($request->loan_type === 'cash_advance') {
@@ -107,13 +89,9 @@ class BenefitLoanController extends Controller
         return back()->with('success', 'Loan recorded.');
     }
 
-    public function updateLoan(Request $request, Loan $loan)
+    public function updateLoan(UpdateLoanRequest $request, Loan $loan)
     {
-        $request->validate([
-            'balance' => 'required|numeric|min:0',
-            'status' => 'required|in:active,paid,closed',
-        ]);
-        $loan->update($request->only(['balance', 'status']));
+        $loan->update($request->validated());
 
         return back()->with('success', 'Loan updated.');
     }

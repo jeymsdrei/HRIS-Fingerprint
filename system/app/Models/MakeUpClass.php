@@ -21,6 +21,7 @@ use Illuminate\Support\Carbon;
  * @property int|null $approved_by
  * @property Carbon|null $approved_at
  * @property string|null $remarks
+ * @property string|null $reason
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property-read User|null $approver
@@ -55,7 +56,7 @@ class MakeUpClass extends Model
     protected $fillable = [
         'employee_id', 'subject_id', 'class_date', 'start_time', 'end_time',
         'hours_rendered', 'hourly_rate', 'additional_pay',
-        'approval_status', 'approved_by', 'approved_at', 'remarks',
+        'approval_status', 'approved_by', 'approved_at', 'remarks', 'reason',
     ];
 
     protected $casts = [
@@ -86,5 +87,15 @@ class MakeUpClass extends Model
     public function computeAdditionalPay(): float
     {
         return round($this->hours_rendered * $this->hourly_rate, 2);
+    }
+
+    public function getStatusLabelAttribute(): string
+    {
+        return match ($this->approval_status) {
+            'pending' => 'Pending',
+            'approved' => 'Approved',
+            'rejected', 'denied' => 'Denied',
+            default => ucfirst($this->approval_status),
+        };
     }
 }

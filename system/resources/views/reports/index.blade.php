@@ -92,28 +92,10 @@
             <div class="card p-5 flex flex-col">
                 <h4 class="font-semibold text-slate-900 text-sm">{{ $name }}</h4>
                 <p class="text-xs text-slate-500 mt-1 mb-4 flex-1">{{ $desc }}</p>
-                <div class="flex flex-wrap gap-2">
-                    <form method="GET" action="{{ route('reports.show') }}">
+                <div class="flex flex-wrap gap-2 w-full">
+                    <form method="GET" action="{{ route('reports.show') }}" class="w-full">
                         <input type="hidden" name="type" value="{{ $key }}">
-                        <button class="btn btn-outline btn-sm">View</button>
-                    </form>
-                    <form method="POST" action="{{ route('reports.export') }}">
-                        @csrf
-                        <input type="hidden" name="type" value="{{ $key }}">
-                        <input type="hidden" name="format" value="pdf">
-                        <button class="btn btn-secondary btn-sm">PDF</button>
-                    </form>
-                    <form method="POST" action="{{ route('reports.export') }}">
-                        @csrf
-                        <input type="hidden" name="type" value="{{ $key }}">
-                        <input type="hidden" name="format" value="excel">
-                        <button class="btn btn-secondary btn-sm">Excel</button>
-                    </form>
-                    <form method="POST" action="{{ route('reports.export') }}">
-                        @csrf
-                        <input type="hidden" name="type" value="{{ $key }}">
-                        <input type="hidden" name="format" value="csv">
-                        <button class="btn btn-secondary btn-sm">CSV</button>
+                        <button class="btn btn-primary w-full">View</button>
                     </form>
                 </div>
             </div>

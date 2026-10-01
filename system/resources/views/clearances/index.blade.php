@@ -28,9 +28,9 @@
                             <option value="pending" @selected(request('status') == 'pending')>Pending</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="flex-1 min-w-0 sm:flex-none">
                         <label class="input-label">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Employee name / ID" class="input w-48">
+                        <input name="search" value="{{ request('search') }}" placeholder="Employee name / ID" class="input w-full sm:w-48">
                     </div>
                     <button class="btn btn-primary">Filter</button>
                 </form>

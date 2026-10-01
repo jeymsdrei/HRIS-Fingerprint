@@ -4,8 +4,21 @@
     <div class="page-container">
         <div class="max-w-lg">
             <div class="mb-8">
-                <h1 class="text-3xl font-bold text-slate-900">Correct Attendance</h1>
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <h1 class="text-3xl font-bold text-slate-900">Correct Attendance</h1>
+                    <a href="{{ route('attendance.index', ['date' => $attendance->date->format('Y-m-d')]) }}" class="btn btn-secondary btn-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        Back
+                    </a>
+                </div>
                 <p class="mt-2 text-slate-600">{{ $attendance->employee->full_name }} · {{ $attendance->date->format('l, F d, Y') }} · Status: <span class="badge badge-info">{{ $attendance->status_label }}</span></p>
+                @if ($attendance->teachingSchedule)
+                    <p class="mt-1 text-sm text-slate-500">
+                        {{ $attendance->teachingSchedule->subject?->name ?? 'Class' }}
+                        @if ($attendance->teachingSchedule->room?->name)· {{ $attendance->teachingSchedule->room->name }}@endif
+                        · {{ $attendance->schedule_start?->format('h:i A') }} – {{ $attendance->schedule_end?->format('h:i A') }}
+                    </p>
+                @endif
             </div>
 
 <form method="POST" action="{{ route('attendance.update', $attendance) }}" class="card">

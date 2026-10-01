@@ -13,7 +13,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -47,7 +49,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -81,7 +85,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -115,7 +121,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -149,7 +157,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -183,7 +193,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -217,7 +229,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -251,7 +265,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -285,7 +301,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -319,7 +337,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -353,7 +373,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -387,7 +409,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -421,7 +445,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'attendance' => 'App\\Models\\Attendance',
+          'benefit' => 'App\\Models\\Benefit',
           'employee' => 'App\\Models\\Employee',
+          'loan' => 'App\\Models\\Loan',
           'notification' => 'App\\Models\\Notification',
           'payroll' => 'App\\Models\\Payroll',
           'payrollperiod' => 'App\\Models\\PayrollPeriod',
@@ -452,7 +478,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php' => '1b5dcc9fd7ae3df63ffe20be058d42e16dff52a91168fde3b7419cec40fb6b8b',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php' => '72e8371ffe064b326667c2dc6ff75ce86a5d3bc82e8473448335b22df7941edf',
     ),
   ),
 ));

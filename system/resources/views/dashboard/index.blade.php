@@ -5,17 +5,17 @@
 <div class="page-container">
         {{-- Filter Controls --}}
         <div class="mb-8 card">
-            <div class="card-body">
+            <div class="card-body px-7 py-5">
                 <form method="GET" class="flex flex-col sm:flex-row gap-4 items-end">
                     <div class="flex-1">
-                        <label class="input-label">From Date</label>
+                        <label class="input-label text-base">From Date</label>
                         <input type="date" name="from" value="{{ $from->format('Y-m-d') }}" class="input">
                     </div>
                     <div class="flex-1">
-                        <label class="input-label">To Date</label>
+                        <label class="input-label text-base">To Date</label>
                         <input type="date" name="to" value="{{ $to->format('Y-m-d') }}" class="input">
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary text-base px-5 py-3">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
                         </svg>
@@ -28,12 +28,12 @@
         {{-- KPI Cards Grid --}}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {{-- Active Employees --}}
-            <div class="kpi-card group hover:shadow-hover transition-all duration-fast">
+            <div class="kpi-card p-7 group hover:shadow-hover transition-all duration-fast">
                 <div class="flex items-start justify-between">
                     <div>
-                        <p class="kpi-label">Active Employees</p>
+                        <p class="kpi-label text-base">Active Employees</p>
                         <p class="kpi-value">{{ $stats['employees'] }}</p>
-                        <p class="kpi-subtitle">{{ $stats['teaching'] }} teaching staff</p>
+                        <p class="kpi-subtitle text-sm">{{ $stats['teaching'] }} teaching staff</p>
                     </div>
                     <div class="p-3 rounded-lg bg-indigo-50 text-indigo-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,12 +44,12 @@
             </div>
 
             {{-- Today Present --}}
-            <div class="kpi-card group hover:shadow-hover transition-all duration-fast">
+            <div class="kpi-card p-7 group hover:shadow-hover transition-all duration-fast">
                 <div class="flex items-start justify-between">
                     <div>
-                        <p class="kpi-label">Present Today</p>
+                        <p class="kpi-label text-base">Present Today</p>
                         <p class="kpi-value text-green-600">{{ $stats['today']['present'] }}</p>
-                        <p class="kpi-subtitle">{{ $stats['today']['present_pct'] }}% of {{ $stats['today']['expected'] }} expected</p>
+                        <p class="kpi-subtitle text-sm">{{ $stats['today']['present_pct'] }}% of {{ $stats['today']['expected'] }} expected</p>
                     </div>
                     <div class="p-3 rounded-lg bg-green-50 text-green-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,16 +60,16 @@
             </div>
 
             {{-- Late / Absent --}}
-            <div class="kpi-card group hover:shadow-hover transition-all duration-fast">
+            <div class="kpi-card p-7 group hover:shadow-hover transition-all duration-fast">
                 <div class="flex items-start justify-between">
                     <div>
-                        <p class="kpi-label">Late / Absent</p>
+                        <p class="kpi-label text-base">Late / Absent</p>
                         <div class="mt-4 flex items-baseline gap-2">
                             <p class="text-3xl font-bold text-amber-600">{{ $stats['today']['late'] }}</p>
                             <p class="text-sm text-slate-600">/</p>
                             <p class="text-3xl font-bold text-red-600">{{ $stats['today']['absent'] }}</p>
                         </div>
-                        <p class="kpi-subtitle">{{ $stats['today']['late_pct'] }}% late · {{ $stats['today']['absent_pct'] }}% absent</p>
+                        <p class="kpi-subtitle text-sm">{{ $stats['today']['late_pct'] }}% late · {{ $stats['today']['absent_pct'] }}% absent</p>
                     </div>
                     <div class="p-3 rounded-lg bg-amber-50 text-amber-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,12 +80,12 @@
             </div>
 
             {{-- Payroll Released --}}
-            <div class="kpi-card group hover:shadow-hover transition-all duration-fast">
+            <div class="kpi-card p-7 group hover:shadow-hover transition-all duration-fast">
                 <div class="flex items-start justify-between">
                     <div>
-                        <p class="kpi-label">Payroll Released</p>
+                        <p class="kpi-label text-base">Payroll Released</p>
                         <p class="kpi-value text-indigo-600">₱{{ number_format($stats['net_total'], 0) }}</p>
-                        <p class="kpi-subtitle">{{ $stats['released_this_month'] }} salaries · {{ $stats['on_hold'] }} on hold</p>
+                        <p class="kpi-subtitle text-sm">{{ $stats['released_this_month'] }} salaries · {{ $stats['on_hold'] }} on hold</p>
                     </div>
                     <div class="p-3 rounded-lg bg-indigo-50 text-indigo-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,13 +102,13 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="font-semibold text-slate-900">Attendance Trend</h2>
-                    <p class="text-xs text-slate-500 mt-1">Daily attendance over the selected period</p>
+                    <p class="text-sm text-slate-500 mt-1">Daily attendance over the selected period</p>
                 </div>
-                <div class="card-body">
-                    <div class="h-80 relative" x-show="!$store.dash.chartsLoaded" x-cloak>
+                <div class="card-body px-7 py-5">
+                    <div class="h-80 sm:h-[21rem] relative" x-show="!$store.dash.chartsLoaded" x-cloak>
                         <div class="skeleton-chart"></div>
                     </div>
-                    <div class="h-80" x-show="$store.dash.chartsLoaded" x-cloak>
+                    <div class="h-80 sm:h-[21rem]" x-show="$store.dash.chartsLoaded" x-cloak>
                         <canvas id="attendanceChart"></canvas>
                     </div>
                 </div>
@@ -118,13 +118,13 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="font-semibold text-slate-900">Payroll Expense by Month</h2>
-                    <p class="text-xs text-slate-500 mt-1">Monthly gross payroll distribution</p>
+                    <p class="text-sm text-slate-500 mt-1">Monthly gross payroll distribution</p>
                 </div>
-                <div class="card-body">
-                    <div class="h-80 relative" x-show="!$store.dash.chartsLoaded" x-cloak>
+                <div class="card-body px-7 py-5">
+                    <div class="h-80 sm:h-[21rem] relative" x-show="!$store.dash.chartsLoaded" x-cloak>
                         <div class="skeleton-chart"></div>
                     </div>
-                    <div class="h-80" x-show="$store.dash.chartsLoaded" x-cloak>
+                    <div class="h-80 sm:h-[21rem]" x-show="$store.dash.chartsLoaded" x-cloak>
                         <canvas id="payrollChart"></canvas>
                     </div>
                 </div>
@@ -137,17 +137,17 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="font-semibold text-slate-900">Today's Attendance</h2>
-                    <p class="text-xs text-slate-500 mt-1">Breakdown of attendance status</p>
+                    <p class="text-sm text-slate-500 mt-1">Breakdown of attendance status</p>
                 </div>
-                <div class="card-body">
+                <div class="card-body px-7 py-5">
                     @php
                         $total = $stats['today']['present'] + $stats['today']['late'] + $stats['today']['half_day'] + $stats['today']['absent'] + $stats['today']['rest_day'];
                     @endphp
                     @if($total > 0)
-                        <div class="h-80 relative" x-show="!$store.dash.chartsLoaded" x-cloak>
+                        <div class="h-80 sm:h-[21rem] relative" x-show="!$store.dash.chartsLoaded" x-cloak>
                             <div class="skeleton-chart"></div>
                         </div>
-                        <div class="h-80" x-show="$store.dash.chartsLoaded" x-cloak>
+                        <div class="h-80 sm:h-[21rem]" x-show="$store.dash.chartsLoaded" x-cloak>
                             <canvas id="pieChart"></canvas>
                         </div>
                     @else
@@ -171,16 +171,16 @@
                         @forelse ($departmentStats as $d)
                             <div class="space-y-2">
                                 <div class="flex items-center justify-between">
-                                    <span class="text-sm font-medium text-slate-900">{{ $d['name'] }}</span>
-                                    <span class="text-xs text-slate-500">{{ $d['count'] }} employees</span>
+                                    <span class="text-base font-medium text-slate-900">{{ $d['name'] }}</span>
+                                    <span class="text-sm text-slate-500">{{ $d['count'] }} employees</span>
                                 </div>
                                 <div class="flex items-center gap-3">
-                                    <div class="flex-1 h-2 bg-slate-100 rounded-full overflow-hidden">
+                                    <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
                                         <div class="h-full bg-indigo-600 rounded-full" style="width: {{ $d['rate'] }}%"></div>
                                     </div>
                                     <span class="text-sm font-medium text-slate-700 w-12 text-right">{{ $d['rate'] }}%</span>
                                 </div>
-                                <div class="text-xs text-slate-500">Payroll: ₱{{ number_format($d['payroll']) }}</div>
+                                <div class="text-sm text-slate-500">Payroll: ₱{{ number_format($d['payroll']) }}</div>
                             </div>
                         @empty
                             <div class="empty-state py-8">
@@ -210,15 +210,15 @@
             plugins: {
                 legend: {
                     labels: {
-                        font: { family: "'Inter', sans-serif", size: 12, weight: 500 },
+                        font: { family: "'Inter', sans-serif", size: 13, weight: 500 },
                         color: '#6b7280',
                         padding: 16,
                         usePointStyle: true,
                     }
                 },
                 tooltip: {
-                    titleFont: { family: "'Inter', sans-serif", size: 13, weight: 600 },
-                    bodyFont: { family: "'Inter', sans-serif", size: 12 },
+                    titleFont: { family: "'Inter', sans-serif", size: 14, weight: 600 },
+                    bodyFont: { family: "'Inter', sans-serif", size: 13 },
                     backgroundColor: 'rgba(30, 41, 59, 0.9)',
                     padding: 12,
                     displayColors: false,
@@ -227,11 +227,11 @@
             scales: {
                 y: {
                     grid: { color: '#e5e7eb', drawBorder: false },
-                    ticks: { font: { family: "'Inter', sans-serif", size: 12 }, color: '#9ca3af' },
+                    ticks: { font: { family: "'Inter', sans-serif", size: 13 }, color: '#9ca3af' },
                 },
                 x: {
                     grid: { display: false },
-                    ticks: { font: { family: "'Inter', sans-serif", size: 12 }, color: '#9ca3af' },
+                    ticks: { font: { family: "'Inter', sans-serif", size: 13 }, color: '#9ca3af' },
                 }
             }
         };

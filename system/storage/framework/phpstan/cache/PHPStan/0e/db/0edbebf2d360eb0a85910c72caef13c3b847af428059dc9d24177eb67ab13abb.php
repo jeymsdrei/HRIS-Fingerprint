@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\PayrollPeriod.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\PayrollPeriod
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-fb90c75abaf60dce4a2df304fc0e60e0cc83a0de15d068155ea04db6681b46d1',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-ef0bcc71c9b62aa2ce9e3c29cd39401653a5edb2c90844d08af93ea4dc0b23db',
    'data' => 
   array (
     'locatedSource' => 
@@ -59,7 +59,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 45,
-    'endLine' => 70,
+    'endLine' => 75,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -72,6 +72,122 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateConstants' => 
     array (
+      'DRAFT' => 
+      array (
+        'declaringClassName' => 'App\\Models\\PayrollPeriod',
+        'implementingClassName' => 'App\\Models\\PayrollPeriod',
+        'name' => 'DRAFT',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'draft\'',
+          'attributes' => 
+          array (
+            'startLine' => 49,
+            'endLine' => 49,
+            'startTokenPos' => 62,
+            'startFilePos' => 2261,
+            'endTokenPos' => 62,
+            'endFilePos' => 2267,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 49,
+        'endLine' => 49,
+        'startColumn' => 5,
+        'endColumn' => 33,
+      ),
+      'PROCESSING' => 
+      array (
+        'declaringClassName' => 'App\\Models\\PayrollPeriod',
+        'implementingClassName' => 'App\\Models\\PayrollPeriod',
+        'name' => 'PROCESSING',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'processing\'',
+          'attributes' => 
+          array (
+            'startLine' => 50,
+            'endLine' => 50,
+            'startTokenPos' => 73,
+            'startFilePos' => 2300,
+            'endTokenPos' => 73,
+            'endFilePos' => 2311,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 50,
+        'endLine' => 50,
+        'startColumn' => 5,
+        'endColumn' => 43,
+      ),
+      'RELEASED' => 
+      array (
+        'declaringClassName' => 'App\\Models\\PayrollPeriod',
+        'implementingClassName' => 'App\\Models\\PayrollPeriod',
+        'name' => 'RELEASED',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'released\'',
+          'attributes' => 
+          array (
+            'startLine' => 51,
+            'endLine' => 51,
+            'startTokenPos' => 84,
+            'startFilePos' => 2342,
+            'endTokenPos' => 84,
+            'endFilePos' => 2351,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 51,
+        'endLine' => 51,
+        'startColumn' => 5,
+        'endColumn' => 39,
+      ),
+      'CLOSED' => 
+      array (
+        'declaringClassName' => 'App\\Models\\PayrollPeriod',
+        'implementingClassName' => 'App\\Models\\PayrollPeriod',
+        'name' => 'CLOSED',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'closed\'',
+          'attributes' => 
+          array (
+            'startLine' => 52,
+            'endLine' => 52,
+            'startTokenPos' => 95,
+            'startFilePos' => 2380,
+            'endTokenPos' => 95,
+            'endFilePos' => 2387,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 52,
+        'endLine' => 52,
+        'startColumn' => 5,
+        'endColumn' => 35,
+      ),
     ),
     'immediateProperties' => 
     array (
@@ -87,20 +203,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'name\', \'type\', \'start_date\', \'end_date\', \'pay_date\', \'status\', \'generated_by\', \'generated_at\']',
           'attributes' => 
           array (
-            'startLine' => 49,
-            'endLine' => 52,
-            'startTokenPos' => 60,
-            'startFilePos' => 2262,
-            'endTokenPos' => 86,
-            'endFilePos' => 2380,
+            'startLine' => 54,
+            'endLine' => 57,
+            'startTokenPos' => 104,
+            'startFilePos' => 2417,
+            'endTokenPos' => 130,
+            'endFilePos' => 2535,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 49,
-        'endLine' => 52,
+        'startLine' => 54,
+        'endLine' => 57,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -122,20 +238,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'start_date\' => \'date\', \'end_date\' => \'date\', \'pay_date\' => \'date\', \'generated_at\' => \'datetime\']',
           'attributes' => 
           array (
-            'startLine' => 54,
-            'endLine' => 59,
-            'startTokenPos' => 95,
-            'startFilePos' => 2407,
-            'endTokenPos' => 125,
-            'endFilePos' => 2543,
+            'startLine' => 59,
+            'endLine' => 64,
+            'startTokenPos' => 139,
+            'startFilePos' => 2562,
+            'endTokenPos' => 169,
+            'endFilePos' => 2698,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 54,
-        'endLine' => 59,
+        'startLine' => 59,
+        'endLine' => 64,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -168,8 +284,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 61,
-        'endLine' => 64,
+        'startLine' => 66,
+        'endLine' => 69,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -203,8 +319,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 66,
-        'endLine' => 69,
+        'startLine' => 71,
+        'endLine' => 74,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

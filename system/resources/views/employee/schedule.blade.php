@@ -1,6 +1,7 @@
 <x-app-layout hris>
-    <x-slot name="title">My Schedule</x-slot>
+    <x-slot name="title">{{ $employee->is_teaching ? 'My Schedule' : '' }}</x-slot>
 
+    @if ($employee->is_teaching)
     <div class="page-container space-y-6">
         {{-- Page Header --}}
         <div class="mb-8">
@@ -74,4 +75,5 @@
         </div>
         @endif
     </div>
+    @endif
 </x-app-layout>

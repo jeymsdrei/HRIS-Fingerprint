@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Carbon;
 
 /**
  * @property int $id
  * @property string $employee_id
- * @property int|null $user_id
  * @property int|null $department_id
  * @property int|null $position_id
  * @property int|null $course_id
@@ -117,7 +117,6 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Employee whereTeachingLoad($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Employee whereTin($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Employee whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Employee whereUserId($value)
  *
  * @mixin \Eloquent
  */
@@ -125,8 +124,22 @@ class Employee extends Model
 {
     use HasFactory;
 
+    public const CLASSIFICATION_TEACHING = 'teaching';
+
+    public const CLASSIFICATION_NON_TEACHING = 'non_teaching';
+
+    public const EMPLOYMENT_PERMANENT = 'permanent';
+
+    public const EMPLOYMENT_CONTRACTUAL = 'contractual';
+
+    public const SALARY_MONTHLY = 'monthly';
+
+    public const SALARY_DAILY = 'daily';
+
+    public const SALARY_SEMI_MONTHLY = 'semi_monthly';
+
     protected $fillable = [
-        'employee_id', 'user_id', 'department_id', 'position_id', 'course_id',
+        'employee_id', 'department_id', 'position_id', 'course_id',
         'first_name', 'middle_name', 'last_name', 'suffix', 'birth_date',
         'gender', 'email', 'phone', 'address', 'photo_path',
         'classification', 'employment_status', 'salary_type',
@@ -164,9 +177,9 @@ class Employee extends Model
         return $this->employment_status === 'permanent';
     }
 
-    public function user(): BelongsTo
+    public function user(): HasOne
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->hasOne(User::class, 'employee_id');
     }
 
     public function department(): BelongsTo

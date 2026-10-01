@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Attendance;
 use App\Models\Department;
 use App\Models\Employee;
 use App\Models\MakeUpClass;
@@ -28,15 +27,22 @@ class DashboardController extends Controller
 
         $today = $attendanceService->dailySummary();
 
-        // Monthly attendance trend (line chart)
-        $attendanceTrend = Attendance::whereBetween('date', [$from->copy()->startOfMonth()->toDateString(), $to->toDateString()])
-            ->selectRaw('DATE(date) as d,
-                SUM(CASE WHEN status IN ("present","late","half_day") THEN 1 ELSE 0 END) as present,
-                SUM(CASE WHEN status = "late" THEN 1 ELSE 0 END) as late,
-                SUM(CASE WHEN status = "absent" THEN 1 ELSE 0 END) as absent')
-            ->groupBy('d')
-            ->orderBy('d')
-            ->get();
+        $dayStatuses = $attendanceService->dayStatusRows($from->copy()->startOfMonth(), $to);
+
+        // Monthly attendance trend (line chart) — per employee-day so
+        // per-schedule teaching rows collapse into a single day status.
+        $attendanceTrend = $dayStatuses
+            ->groupBy(fn ($r) => $r['date']->toDateString())
+            ->map(function ($rows, $day) {
+                return [
+                    'd' => $day,
+                    'present' => $rows->whereIn('status', ['present', 'late', 'half_day'])->count(),
+                    'late' => $rows->where('status', 'late')->count(),
+                    'absent' => $rows->where('status', 'absent')->count(),
+                ];
+            })
+            ->sortKeys()
+            ->values();
 
         // Payroll expense trend
         $payrollTrend = Payroll::query()
@@ -50,10 +56,26 @@ class DashboardController extends Controller
 
         $currentPeriod = PayrollPeriod::latest('pay_date')->first();
 
-        $departmentStats = Department::withCount('employees')->get()->map(function ($d) {
-            $present = Attendance::where('department_id', $d->id)->whereIn('status', ['present', 'late', 'half_day'])->count();
-            $total = Attendance::where('department_id', $d->id)->count();
-            $payroll = Payroll::where('status', 'released')->whereHas('employee', fn ($q) => $q->where('department_id', $d->id))->sum('gross_pay');
+        $attendanceByDept = $dayStatuses
+            ->groupBy('department_id')
+            ->map(fn ($rows) => [
+                'department_id' => $rows->first()['department_id'],
+                'total' => $rows->count(),
+                'present' => $rows->whereIn('status', ['present', 'late', 'half_day'])->count(),
+            ])
+            ->keyBy('department_id');
+
+        $payrollByDept = Payroll::where('status', 'released')
+            ->join('employees', 'employees.id', '=', 'payrolls.employee_id')
+            ->selectRaw('employees.department_id, SUM(payrolls.gross_pay) as gross')
+            ->groupBy('employees.department_id')
+            ->get()
+            ->keyBy('department_id');
+
+        $departmentStats = Department::withCount('employees')->get()->map(function ($d) use ($attendanceByDept, $payrollByDept) {
+            $total = (int) ($attendanceByDept->get($d->id)?->total ?? 0);
+            $present = (int) ($attendanceByDept->get($d->id)?->present ?? 0);
+            $payroll = (float) ($payrollByDept->get($d->id)?->gross ?? 0);
 
             return [
                 'name' => $d->name,

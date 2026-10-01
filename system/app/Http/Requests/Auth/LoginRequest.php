@@ -25,6 +25,7 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'role' => ['required', 'string', 'in:Administrative,Teaching Personnel,Non-Teaching Personnel'],
             'username' => ['required', 'string'],
             'password' => ['required', 'string'],
         ];
@@ -37,10 +38,21 @@ class LoginRequest extends FormRequest
      */
     public function authenticate(): void
     {
+        $role = $this->input('role');
         $credentials = [
             'username' => strtolower(trim((string) $this->input('username'))),
             'password' => $this->input('password'),
         ];
+
+        $credentials['role'] = match ($role) {
+            'Administrative' => fn ($query) => $query->whereIn('role', ['admin', 'hr', 'payroll_officer', 'department_head']),
+            'Teaching Personnel' => fn ($query) => $query
+                ->where('role', 'employee')
+                ->whereHas('employee', fn ($employeeQuery) => $employeeQuery->where('classification', 'teaching')),
+            'Non-Teaching Personnel' => fn ($query) => $query
+                ->where('role', 'employee')
+                ->whereHas('employee', fn ($employeeQuery) => $employeeQuery->where('classification', 'non_teaching')),
+        };
 
         // Always use "remember me" so the login never expires.
         if (! Auth::attempt($credentials, true)) {

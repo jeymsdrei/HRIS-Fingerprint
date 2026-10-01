@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\AttendanceLog.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\AttendanceLog
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-70a18d38b2fd8ae2943e07216c037bc69c8ca1ba3646fa3e3ea1ed3f65b06bf8',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-5948ada2c86363a5e14809ee45470f32fb5c98d246c2bbb0d95328d952d07690',
    'data' => 
   array (
     'locatedSource' => 
@@ -81,15 +81,15 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'type' => NULL,
         'default' => 
         array (
-          'code' => '[\'employee_id\', \'fingerprint_id\', \'device_id\', \'punch_time\', \'source_key\', \'action\', \'source\', \'processed\']',
+          'code' => '[\'employee_id\', \'fingerprint_id\', \'device_id\', \'punch_time\', \'source_key\', \'action\', \'score\', \'source\', \'processed\']',
           'attributes' => 
           array (
             'startLine' => 44,
             'endLine' => 46,
             'startTokenPos' => 50,
             'startFilePos' => 1949,
-            'endTokenPos' => 76,
-            'endFilePos' => 2070,
+            'endTokenPos' => 79,
+            'endFilePos' => 2079,
           ),
         ),
         'docComment' => NULL,
@@ -121,10 +121,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           array (
             'startLine' => 48,
             'endLine' => 51,
-            'startTokenPos' => 85,
-            'startFilePos' => 2097,
-            'endTokenPos' => 101,
-            'endFilePos' => 2173,
+            'startTokenPos' => 88,
+            'startFilePos' => 2106,
+            'endTokenPos' => 104,
+            'endFilePos' => 2182,
           ),
         ),
         'docComment' => NULL,

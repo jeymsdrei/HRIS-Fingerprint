@@ -64,7 +64,7 @@ class ScheduleController extends Controller
             'school_year_id.*' => 'nullable|exists:school_years,id',
         ]);
 
-        $created = 0;
+        $pendingSchedules = [];
         foreach ($request->input('day', []) as $i => $day) {
             if ($day === null || $day === '') {
                 continue;
@@ -75,7 +75,7 @@ class ScheduleController extends Controller
                 continue;
             }
 
-            TeachingSchedule::create([
+            $newSchedule = [
                 'employee_id' => $request->employee_id,
                 'subject_id' => $request->input("subject_id.$i") ?: null,
                 'room_id' => $request->input("room_id.$i") ?: null,
@@ -84,9 +84,46 @@ class ScheduleController extends Controller
                 'end_time' => $end,
                 'semester_id' => $request->input("semester_id.$i") ?: null,
                 'school_year_id' => $request->input("school_year_id.$i") ?: null,
-            ]);
-            $created++;
+            ];
+
+            $existingConflict = TeachingSchedule::query()
+                ->where('employee_id', $newSchedule['employee_id'])
+                ->where('day', $newSchedule['day'])
+                ->where('start_time', '<', $newSchedule['end_time'])
+                ->where('end_time', '>', $newSchedule['start_time'])
+                ->first();
+
+            $pendingConflict = collect($pendingSchedules)->first(function (array $pendingSchedule) use ($newSchedule) {
+                return $pendingSchedule['employee_id'] === $newSchedule['employee_id']
+                    && $pendingSchedule['day'] === $newSchedule['day']
+                    && $pendingSchedule['start_time'] < $newSchedule['end_time']
+                    && $pendingSchedule['end_time'] > $newSchedule['start_time'];
+            });
+
+            if ($existingConflict || $pendingConflict) {
+                $conflict = $existingConflict ?? (object) $pendingConflict;
+                $dayName = TeachingSchedule::$dayNames[$newSchedule['day']] ?? 'selected day';
+                $conflictStart = is_object($conflict->start_time)
+                    ? $conflict->start_time->format('H:i')
+                    : $conflict->start_time;
+                $conflictEnd = is_object($conflict->end_time)
+                    ? $conflict->end_time->format('H:i')
+                    : $conflict->end_time;
+
+                return back()->withInput()->with(
+                    'error',
+                    "This employee already has a class on {$dayName} from {$conflictStart} to {$conflictEnd} that overlaps {$start} to {$end}. Please reschedule this class to avoid a double class."
+                );
+            }
+
+            $pendingSchedules[] = $newSchedule;
         }
+
+        foreach ($pendingSchedules as $pendingSchedule) {
+            TeachingSchedule::create($pendingSchedule);
+        }
+
+        $created = count($pendingSchedules);
 
         if ($created > 0) {
             return back()->with('success', "{$created} teaching schedule(s) added.");
@@ -97,9 +134,11 @@ class ScheduleController extends Controller
 
     public function destroyTeaching(TeachingSchedule $schedule)
     {
+        $employeeId = $schedule->employee_id;
         $schedule->delete();
 
-        return back()->with('success', 'Teaching schedule removed.');
+        return redirect()->route('schedules.index', ['employee_id' => $employeeId])
+            ->with('success', 'Teaching schedule removed.');
     }
 
     public function storeWork(Request $request)

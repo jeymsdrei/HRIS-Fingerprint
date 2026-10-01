@@ -18,11 +18,18 @@
                         @csrf
                         <div>
                             <label class="input-label">Employee</label>
-                            <select name="employee_id" class="input" required>
-                                @foreach ($employees as $e)
-                                    <option value="{{ $e->id }}">{{ $e->employee_id }} — {{ $e->full_name }} ({{ $e->classification }})</option>
-                                @endforeach
-                            </select>
+                            <div class="flex items-center gap-3">
+                                <img src="" alt="" class="h-14 w-14 rounded-full object-cover shadow-sm cursor-pointer" id="punch-photo" data-avatar-preview style="display:none">
+                                <div id="punch-photo-initials" class="h-14 w-14 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-700 text-white items-center justify-center text-lg font-bold" style="display:none"></div>
+                                <select name="employee_id" class="input flex-1" required data-punch-employee>
+                                    <option value="">Select employee…</option>
+                                    @foreach ($employees as $e)
+                                        <option value="{{ $e->id }}"
+                                            data-photo="{{ $e->photo_path ? asset('storage/'.$e->photo_path) : '' }}"
+                                            data-initials="{{ mb_strtoupper(mb_substr($e->first_name, 0, 1) . mb_substr($e->last_name, 0, 1)) }}">{{ $e->employee_id }} — {{ $e->full_name }} ({{ $e->classification }})</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                         <div>
                             <label class="input-label">Punch Date & Time</label>
@@ -37,6 +44,33 @@
                         </div>
                         <button class="btn btn-success">Register Punch</button>
                     </form>
+
+                    <script>
+                        const punchSelect = document.querySelector('[data-punch-employee]');
+                        const punchPhoto = document.getElementById('punch-photo');
+                        const punchInitials = document.getElementById('punch-photo-initials');
+
+                        if (punchSelect) {
+                            punchSelect.addEventListener('change', () => {
+                                const option = punchSelect.options[punchSelect.selectedIndex];
+                                const photo = option?.dataset.photo || '';
+                                const initials = option?.dataset.initials || '?';
+
+                                if (photo) {
+                                    punchPhoto.src = photo;
+                                    punchPhoto.alt = (option?.textContent || '').trim();
+                                    punchPhoto.style.display = '';
+                                    punchInitials.style.display = 'none';
+                                } else {
+                                    punchInitials.textContent = initials;
+                                    punchInitials.style.display = 'flex';
+                                    punchPhoto.style.display = 'none';
+                                    punchPhoto.src = '';
+                                }
+                            });
+                            punchSelect.dispatchEvent(new Event('change'));
+                        }
+                    </script>
                 </div>
             </div>
         </div>

@@ -88,7 +88,10 @@
         {{-- Table --}}
         <div class="card">
             <div class="table-container">
-                <table class="data-table">
+                <table class="data-table"
+                    x-data="loansTable()"
+                    x-init="init()"
+                    @click.outside="closeEditor()">
                     <thead class="table-head">
                         <tr>
                             <th class="table-head-cell">Employee</th>
@@ -102,11 +105,11 @@
                     </thead>
                     <tbody>
                         @forelse ($loans as $l)
-                        <tr class="table-body-row">
-                            <td class="table-body-cell">
-                                <span class="font-medium text-slate-900">{{ $l->employee->full_name }}</span>
-                                <p class="text-xs text-slate-400">{{ $l->employee->employee_id }} · {{ $l->reference_no }}</p>
-                            </td>
+                        <tr class="table-body-row" :class="{ 'bg-slate-50': editingId === {{ $l->id }} }" data-loan-id="{{ $l->id }}">
+<td class="table-body-cell">
+                                 <span id="loan-employee-name-{{ $l->id }}" class="font-medium text-slate-900">{{ $l->employee->full_name }}</span>
+                                 <p class="text-xs text-slate-400">{{ $l->employee->employee_id }} · {{ $l->reference_no }}</p>
+                             </td>
                             <td class="table-body-cell">
                                 <span class="badge {{ $l->loan_type === 'cash_advance' ? 'badge-warning' : 'badge-info' }}">{{ ucwords(str_replace('_', ' ', $l->loan_type)) }}</span>
                             </td>
@@ -117,17 +120,39 @@
                                 <span class="badge {{ $l->status === 'active' ? 'badge-warning' : 'badge-success' }}">{{ ucfirst($l->status) }}</span>
                             </td>
                             <td class="table-body-cell text-right">
-                                <details class="inline-block relative">
-                                    <summary class="btn btn-secondary btn-sm">Update</summary>
-                                    <form method="POST" action="{{ route('loans.update', $l) }}" class="absolute z-10 mt-1 right-0 bg-white border border-slate-200 rounded-lg shadow-lg p-3 w-48 space-y-2">
-                                        @csrf @method('PUT')
-                                        <input type="number" step="0.01" name="balance" value="{{ $l->balance }}" class="input" placeholder="Balance">
-                                        <select name="status" class="input">
-                                            @foreach (['active','paid','closed'] as $s)<option value="{{ $s }}" @selected($l->status == $s)>{{ ucfirst($s) }}</option>@endforeach
-                                        </select>
-                                        <button class="btn btn-primary btn-sm w-full">Save</button>
-                                    </form>
-                                </details>
+                                <button @click="openEditor({{ $l->id }})" class="btn btn-secondary btn-sm">Update</button>
+                            </td>
+                        </tr>
+                        <tr x-show="editingId === {{ $l->id }}"
+                            x-effect="editingId === {{ $l->id }} && setTimeout(() => { const inp = $el.querySelector('input'); if (inp) inp.focus(); }, 100)"
+                            class="editor-row"
+                            data-loan-id="{{ $l->id }}">
+                            <td colspan="7">
+                                <form action="{{ route('loans.update', $l) }}" method="POST"
+                                    @submit.prevent="submitEditor({{ $l->id }}, $event)"
+                                    class="editor-form">
+                                    @csrf @method('PUT')
+                                    <div class="editor-fields">
+                                        <div class="editor-field">
+                                            <label class="input-label">Balance</label>
+                                            <input type="number" step="0.01" name="balance" value="{{ $l->balance }}" class="input" placeholder="Balance" required>
+                                        </div>
+                                        <div class="editor-field">
+                                            <label class="input-label">Status</label>
+                                            <select name="status" class="input">
+                                                @foreach (['active','paid','closed'] as $s)
+                                                    <option value="{{ $s }}" @selected($l->status == $s)>{{ ucfirst($s) }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="editor-field">
+                                            <div class="flex gap-2">
+                                                <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                                                <button type="button" @click="closeEditor()" class="btn btn-secondary btn-sm">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </td>
                         </tr>
                         @empty
@@ -150,3 +175,160 @@
         </div>
     </div>
 </x-app-layout>
+
+<script>
+document.addEventListener('alpine:init', () => {
+    Alpine.data('loansTable', () => ({
+        editingId: null,
+
+        openEditor(id) {
+            this.editingId = id;
+            localStorage.setItem('lastEditedLoan', id);
+        },
+
+        closeEditor() {
+            this.editingId = null;
+        },
+
+        async submitEditor(id, event) {
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                    },
+                    body: formData,
+                });
+
+                if (response.ok || response.status === 302) {
+                    // Highlight employee name
+                    const nameEl = document.getElementById('loan-employee-name-' + id);
+                    if (nameEl) {
+                        nameEl.classList.add('bg-red-100', 'text-red-900', 'px-2', 'rounded', 'animate-pulse');
+                        setTimeout(() => {
+                            nameEl.classList.remove('bg-red-100', 'text-red-900', 'px-2', 'rounded', 'animate-pulse');
+                        }, 2000);
+                    }
+
+                    this.closeEditor();
+                    setTimeout(() => {
+                        this.sortRows();
+                        const el = document.querySelector(`tr[data-loan-id="${id}"]`);
+                        if (el) {
+                            el.classList.add('highlight-row');
+                            setTimeout(() => el.classList.remove('highlight-row'), 2000);
+                        }
+                    }, 50);
+                    return;
+                }
+            } catch (e) {
+                // Fallback through to traditional submit
+            }
+            form.submit();
+        },
+
+        sortRows() {
+            const tbody = document.querySelector('.data-table tbody');
+            if (!tbody) return;
+            const dataRows = Array.from(tbody.querySelectorAll('tr.table-body-row'));
+
+            dataRows.sort((a, b) => {
+                const statusElA = a.querySelectorAll('td.table-body-cell')[5]?.querySelector('.badge');
+                const statusElB = b.querySelectorAll('td.table-body-cell')[5]?.querySelector('.badge');
+                const statusA = statusElA ? statusElA.textContent.trim().toLowerCase() : '';
+                const statusB = statusElB ? statusElB.textContent.trim().toLowerCase() : '';
+
+                const balA = a.querySelectorAll('td.table-body-cell.text-right')[2]?.textContent || '0';
+                const balB = b.querySelectorAll('td.table-body-cell.text-right')[2]?.textContent || '0';
+                const balanceA = parseFloat(balA.replace(/[^0-9.]/g, '')) || 0;
+                const balanceB = parseFloat(balB.replace(/[^0-9.]/g, '')) || 0;
+
+                if (statusA === 'active' && statusB !== 'active') return -1;
+                if (statusA !== 'active' && statusB === 'active') return 1;
+                return balanceB - balanceA;
+            });
+
+            dataRows.forEach(row => tbody.appendChild(row));
+        },
+
+        init() {
+            const self = this;
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') self.closeEditor();
+            });
+            setTimeout(() => self.sortRows(), 150);
+        },
+    }));
+});
+</script>
+
+<style>
+.editor-row td {
+    padding: 0 !important;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.editor-form {
+    padding: 16px 24px;
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.editor-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    align-items: end;
+}
+
+.editor-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.editor-field .flex {
+    display: flex;
+    gap: 8px;
+}
+
+.editor-field .flex .btn {
+    flex: 1;
+}
+
+@media (max-width: 640px) {
+    .editor-fields {
+        grid-template-columns: 1fr !important;
+    }
+    .editor-field .flex {
+        flex-direction: column;
+    }
+    .editor-field .flex .btn {
+        width: 100%;
+    }
+}
+
+tr.table-body-row.highlight-row {
+    animation: highlightPulse 1.8s ease-out forwards;
+}
+
+@keyframes highlightPulse {
+    0% { background-color: #c7d2fe; }
+    40% { background-color: #a5b4fc; }
+    100% { background-color: transparent; }
+}
+
+@media (max-width: 767px) {
+    .editor-row td {
+        padding: 0 !important;
+    }
+    .editor-form {
+        padding: 12px 14px;
+    }
+}
+</style>

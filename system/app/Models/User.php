@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\ResetPasswordCode;
 use Database\Factories\UserFactory;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,6 +12,7 @@ use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @property int $id
@@ -116,5 +118,30 @@ class User extends Authenticatable implements MustVerifyEmail
             'department_head' => 'Department Head',
             default => 'Employee',
         };
+    }
+
+    public function approvedMakeUpClasses()
+    {
+        return $this->hasMany(MakeUpClass::class, 'approved_by');
+    }
+
+    public function getEmailForPasswordReset(): string
+    {
+        return $this->email ?? $this->employee->email ?? '';
+    }
+
+    public function sendPasswordResetNotification($token): void
+    {
+        $code = (string) random_int(100000, 999999);
+
+        DB::table('password_reset_codes')->updateOrInsert(
+            ['email' => $this->getEmailForPasswordReset()],
+            [
+                'code' => $code,
+                'created_at' => now(),
+            ]
+        );
+
+        $this->notify(new ResetPasswordCode($code, config('auth.passwords.users.expire', 60)));
     }
 }

@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\Loan.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\Loan
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-07922a8414aa105aa6079f6d58d7ab23a9685eeedc9bb4728b8a52a737a34970',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-1190e3eb8cf8b6221d6a4269e4544e9edd9bbb7e9105ad6cc78d07d2a4157e82',
    'data' => 
   array (
     'locatedSource' => 
@@ -65,7 +65,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 51,
-    'endLine' => 81,
+    'endLine' => 91,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -78,6 +78,151 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateConstants' => 
     array (
+      'TYPE_SSS' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Loan',
+        'implementingClassName' => 'App\\Models\\Loan',
+        'name' => 'TYPE_SSS',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'sss\'',
+          'attributes' => 
+          array (
+            'startLine' => 55,
+            'endLine' => 55,
+            'startTokenPos' => 62,
+            'startFilePos' => 2548,
+            'endTokenPos' => 62,
+            'endFilePos' => 2552,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 55,
+        'endLine' => 55,
+        'startColumn' => 5,
+        'endColumn' => 34,
+      ),
+      'TYPE_PAGIBIG' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Loan',
+        'implementingClassName' => 'App\\Models\\Loan',
+        'name' => 'TYPE_PAGIBIG',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'pagibig\'',
+          'attributes' => 
+          array (
+            'startLine' => 57,
+            'endLine' => 57,
+            'startTokenPos' => 73,
+            'startFilePos' => 2588,
+            'endTokenPos' => 73,
+            'endFilePos' => 2596,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 57,
+        'endLine' => 57,
+        'startColumn' => 5,
+        'endColumn' => 42,
+      ),
+      'TYPE_COMPANY' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Loan',
+        'implementingClassName' => 'App\\Models\\Loan',
+        'name' => 'TYPE_COMPANY',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'company\'',
+          'attributes' => 
+          array (
+            'startLine' => 59,
+            'endLine' => 59,
+            'startTokenPos' => 84,
+            'startFilePos' => 2632,
+            'endTokenPos' => 84,
+            'endFilePos' => 2640,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 59,
+        'endLine' => 59,
+        'startColumn' => 5,
+        'endColumn' => 42,
+      ),
+      'TYPE_CASH_ADVANCE' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Loan',
+        'implementingClassName' => 'App\\Models\\Loan',
+        'name' => 'TYPE_CASH_ADVANCE',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'cash_advance\'',
+          'attributes' => 
+          array (
+            'startLine' => 61,
+            'endLine' => 61,
+            'startTokenPos' => 95,
+            'startFilePos' => 2681,
+            'endTokenPos' => 95,
+            'endFilePos' => 2694,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 61,
+        'endLine' => 61,
+        'startColumn' => 5,
+        'endColumn' => 52,
+      ),
+      'TYPE_OTHER' => 
+      array (
+        'declaringClassName' => 'App\\Models\\Loan',
+        'implementingClassName' => 'App\\Models\\Loan',
+        'name' => 'TYPE_OTHER',
+        'modifiers' => 1,
+        'type' => NULL,
+        'value' => 
+        array (
+          'code' => '\'other\'',
+          'attributes' => 
+          array (
+            'startLine' => 63,
+            'endLine' => 63,
+            'startTokenPos' => 106,
+            'startFilePos' => 2728,
+            'endTokenPos' => 106,
+            'endFilePos' => 2734,
+          ),
+        ),
+        'docComment' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'startLine' => 63,
+        'endLine' => 63,
+        'startColumn' => 5,
+        'endColumn' => 38,
+      ),
     ),
     'immediateProperties' => 
     array (
@@ -93,20 +238,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'employee_id\', \'loan_type\', \'reference_no\', \'amount\', \'interest_rate\', \'monthly_amortization\', \'balance\', \'start_date\', \'end_date\', \'status\', \'remarks\']',
           'attributes' => 
           array (
-            'startLine' => 55,
-            'endLine' => 58,
-            'startTokenPos' => 60,
-            'startFilePos' => 2546,
-            'endTokenPos' => 95,
-            'endFilePos' => 2721,
+            'startLine' => 65,
+            'endLine' => 68,
+            'startTokenPos' => 115,
+            'startFilePos' => 2764,
+            'endTokenPos' => 150,
+            'endFilePos' => 2939,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 55,
-        'endLine' => 58,
+        'startLine' => 65,
+        'endLine' => 68,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -128,20 +273,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'amount\' => \'decimal:2\', \'interest_rate\' => \'decimal:2\', \'monthly_amortization\' => \'decimal:2\', \'balance\' => \'decimal:2\', \'start_date\' => \'date\', \'end_date\' => \'date\']',
           'attributes' => 
           array (
-            'startLine' => 60,
-            'endLine' => 67,
-            'startTokenPos' => 104,
-            'startFilePos' => 2748,
-            'endTokenPos' => 148,
-            'endFilePos' => 2970,
+            'startLine' => 70,
+            'endLine' => 77,
+            'startTokenPos' => 159,
+            'startFilePos' => 2966,
+            'endTokenPos' => 203,
+            'endFilePos' => 3188,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 60,
-        'endLine' => 67,
+        'startLine' => 70,
+        'endLine' => 77,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -174,8 +319,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 69,
-        'endLine' => 72,
+        'startLine' => 79,
+        'endLine' => 82,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -211,8 +356,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @return HasMany<LoanPayment, $this>
  */',
-        'startLine' => 77,
-        'endLine' => 80,
+        'startLine' => 87,
+        'endLine' => 90,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

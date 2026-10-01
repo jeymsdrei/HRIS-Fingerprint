@@ -40,6 +40,8 @@ class Benefit extends Model
 {
     use HasFactory;
 
+    public const ALLOWANCE = 'allowance';
+
     protected $fillable = ['name', 'type', 'amount', 'frequency', 'is_taxable', 'is_active'];
 
     protected $casts = ['is_taxable' => 'boolean', 'is_active' => 'boolean'];

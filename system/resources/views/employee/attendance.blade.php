@@ -50,9 +50,9 @@
                             <td class="table-body-cell">{{ $a->time_in?->format('h:i A') ?? '—' }}</td>
                             <td class="table-body-cell">{{ $a->time_out?->format('h:i A') ?? '—' }}</td>
                             <td class="table-body-cell">{{ $a->working_hours ? number_format($a->working_hours, 2) . ' h' : '—' }}</td>
-                            <td class="table-body-cell">{{ $a->late_minutes ? $a->late_minutes . ' min' : '—' }}</td>
-                            <td class="table-body-cell">{{ $a->undertime_minutes ? $a->undertime_minutes . ' min' : '—' }}</td>
-                            <td class="table-body-cell">{{ $a->overtime_minutes ? $a->overtime_minutes . ' min' : '—' }}</td>
+                            <td class="table-body-cell">{{ $a->late_minutes ? hm($a->late_minutes) : '—' }}</td>
+                            <td class="table-body-cell">{{ $a->undertime_minutes ? hm($a->undertime_minutes) : '—' }}</td>
+                            <td class="table-body-cell">{{ $a->overtime_minutes ? hm($a->overtime_minutes) : '—' }}</td>
                         </tr>
                         @empty
                         <tr>

@@ -1,0 +1,321 @@
+/* ===== RECOVERY FLOW STYLES ===== */
+
+.step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    gap: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--line);
+    color: var(--muted-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--line);
+}
+
+.step-label {
+    margin-top: 6px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--muted-ink);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.step.active .step-number {
+    background: var(--maroon);
+    border-color: var(--maroon);
+    color: #fff;
+}
+
+.step.active .step-label {
+    color: var(--maroon);
+}
+
+.step.completed .step-number {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+}
+
+.step.completed .step-number::after {
+    content: '✓';
+    font-size: 0.7rem;
+}
+
+.step-connector {
+    width: 60px;
+    height: 2px;
+    background: var(--line);
+    margin: 16px 0 0;
+    position: relative;
+}
+
+.step-connector::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--maroon);
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+.step.active ~ .step-connector::before,
+.step.completed ~ .step-connector::before {
+    width: 100%;
+}
+
+.recovery-copy {
+    margin-bottom: 28px;
+    color: var(--muted-ink);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.step-form {
+    animation: contentRise 0.4s ease both;
+}
+
+.step-form.hidden {
+    display: none;
+}
+
+/* Email Confirmation Card */
+.email-confirmation-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: #fbf5f0;
+    border: 1px solid rgba(195, 149, 69, 0.45);
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.card-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(195, 149, 69, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8c6726;
+    flex-shrink: 0;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-message {
+    margin: 0 0 6px;
+    color: var(--muted-ink);
+    font-size: 0.88rem;
+}
+
+.masked-email {
+    font-family: 'Monospace', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--maroon);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    word-break: break-all;
+}
+
+.card-hint {
+    margin: 0;
+    color: var(--muted-ink);
+    font-size: 0.82rem;
+}
+
+/* Code Input */
+.code-input-wrapper input {
+    text-align: center;
+    letter-spacing: 6px;
+    font-family: 'Monospace', monospace;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Field Hints */
+.field-hint {
+    margin-top: 6px;
+    font-size: 0.78rem;
+    color: var(--muted-ink);
+}
+
+.field-hint.match-success {
+    color: #15803d;
+}
+
+.field-hint.match-error {
+    color: #b91c1c;
+}
+
+/* Password Strength */
+.password-strength {
+    margin-top: 10px;
+}
+
+.strength-bar {
+    height: 4px;
+    background: var(--line);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.strength-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 2px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-fill.strength-weak { background: #ef4444; }
+.strength-fill.strength-fair { background: #f97316; }
+.strength-fill.strength-good { background: #eab308; }
+.strength-fill.strength-strong { background: #22c55e; }
+
+.strength-text {
+    font-size: 0.75rem;
+    color: var(--muted-ink);
+}
+
+/* Resend Code */
+.resend-code {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.resend-code p {
+    margin: 0;
+    color: var(--muted-ink);
+    font-size: 0.88rem;
+}
+
+.resend-code a {
+    color: var(--maroon);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.resend-code a:hover {
+    text-decoration: underline;
+}
+
+/* Recovery Footer */
+.recovery-footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.recovery-footer .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted-ink);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.recovery-footer .back-link:hover {
+    color: var(--maroon);
+}
+
+.recovery-footer .back-link svg {
+    flex-shrink: 0;
+}
+
+/* Button Loader */
+.btn-loader {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+.btn-primary .btn-text.hidden {
+    display: none;
+}
+
+.btn-primary .btn-loader.hidden {
+    display: none;
+}
+
+.btn-primary.is-submitting .btn-text {
+    display: none;
+}
+
+.btn-primary.is-submitting .btn-loader {
+    display: inline-block;
+}
+
+/* Form Section submitting state */
+.form-section.is-submitting .btn-primary {
+    color: transparent;
+    pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 520px) {
+    .step-indicator {
+        margin-bottom: 24px;
+    }
+
+    .step-label {
+        font-size: 0.6rem;
+    }
+
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem;
+    }
+
+    .step-connector {
+        width: 36px;
+    }
+
+    .email-confirmation-card {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .card-icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+}

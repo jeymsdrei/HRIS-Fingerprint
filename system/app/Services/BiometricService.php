@@ -28,6 +28,8 @@ class BiometricService
 
     public const CMD_DISABLE_DEVICE = 1002;
 
+    public const CMD_DELETE_USER = 18;
+
     private const HEADER = 0x504830;
 
     private const COMM_BYTE = 49;
@@ -86,6 +88,22 @@ class BiometricService
     }
 
     /**
+     * Remove a user's fingerprint record from a ZKTeco device.
+     */
+    public function deleteFingerprint(BiometricDevice $device, int $fingerprintId): bool
+    {
+        if (! $this->connect($device)) {
+            return false;
+        }
+
+        $sent = $this->sendCommand(self::CMD_DELETE_USER, pack('V', $fingerprintId));
+        $response = $sent ? $this->readResponse() : null;
+        $this->disconnect();
+
+        return $response !== null;
+    }
+
+    /**
      * ZK protocol command frame: 8-byte header + session id + payload.
      */
     private function buildFrame(int $command, string $payload = ''): string
@@ -102,12 +120,12 @@ class BiometricService
         return $frame;
     }
 
-    private function sendCommand(int $command): bool
+    private function sendCommand(int $command, string $payload = ''): bool
     {
         if (! $this->socket) {
             return false;
         }
-        $frame = $this->buildFrame($command);
+        $frame = $this->buildFrame($command, $payload);
         $result = @fwrite($this->socket, $frame);
         if ($result === false) {
             Log::warning("ZKTeco: failed sending command {$command}");
@@ -149,6 +167,14 @@ class BiometricService
     /**
      * Parse raw attendance data frames (12-byte records):
      * user_id(4) + state(1) + timestamp(7, YYMMDDhhmmss packed).
+     *
+     * State values (ZKTeco standard):
+     * 0 = Check In (time_in)
+     * 1 = Check Out (time_out)
+     * 2 = Break Out
+     * 3 = Break In
+     * 4 = Overtime In
+     * 5 = Overtime Out
      */
     private function parseRecords(string $buffer): array
     {
@@ -158,6 +184,7 @@ class BiometricService
         $i = 0;
         while ($i + 12 <= $len) {
             $userId = unpack('V', substr($data, $i, 4))[1] ?? 0;
+            $state = ord($data[$i + 4] ?? chr(0));
             $tsBytes = substr($data, $i + 5, 7);
             if (strlen($tsBytes) < 7) {
                 break;
@@ -172,11 +199,20 @@ class BiometricService
             $minute = ($dec >> 40) & 0xFF;
             $second = ($dec >> 48) & 0xFF;
 
+            $action = match ($state) {
+                0 => 'time_in',
+                1 => 'time_out',
+                4 => 'time_in',
+                5 => 'time_out',
+                default => null,
+            };
+
             if ($month >= 1 && $month <= 12 && $day >= 1 && $day <= 31) {
                 try {
                     $records[] = [
                         'fingerprint_id' => $userId,
                         'punch_time' => Carbon::create($year, $month, $day, $hour, $minute, $second),
+                        'action' => $action,
                     ];
                 } catch (\Throwable) {
                     // skip malformed timestamp
@@ -228,7 +264,7 @@ class BiometricService
      * the SDK/agent log). Otherwise the legacy (employee_id, punch_time) pair
      * is used so re-syncs of the same log never double-insert.
      *
-     * @param  array{fingerprint_id: int, punch_time: mixed, source_key?: string, action?: string|null}  $record
+     * @param  array{fingerprint_id: int, punch_time: mixed, source_key?: string, action?: string|null, score?: int|null}  $record
      * @param  int|null  $deviceId  Must reference a biometric_devices row. Agent
      *                              pushes (USB readers) don't own a network device,
      *                              so they pass null — never an agent id.
@@ -237,6 +273,10 @@ class BiometricService
     {
         $employee = Employee::where('fingerprint_id', $record['fingerprint_id'])->first();
         if (! $employee) {
+            return false;
+        }
+
+        if (! $employee->is_active) {
             return false;
         }
 
@@ -262,6 +302,8 @@ class BiometricService
             $action = strtolower((string) $record['action']) === 'time_out' ? 'time_out' : 'time_in';
         }
 
+        $score = isset($record['score']) ? (int) $record['score'] : null;
+
         // device_id must reference a biometric_devices row (or NULL). Never a
         // biometric_agent id — those live in a separate table.
         $resolvedDeviceId = null;
@@ -275,14 +317,27 @@ class BiometricService
             'punch_time' => $punchTime,
             'source_key' => $sourceKey,
             'action' => $action,
+            'score' => $score,
             'device_id' => $resolvedDeviceId,
             'source' => $source,
         ]);
 
         try {
             app(AttendanceService::class)->processDay($employee, $punchTime->copy());
+            Log::info('ZKTeco: processDay completed', [
+                'employee_id' => $employee->id,
+                'date' => $punchTime->toDateString(),
+                'fingerprint_id' => $record['fingerprint_id'],
+            ]);
         } catch (\Throwable $e) {
-            Log::error('ZKTeco: processDay error: '.$e->getMessage());
+            Log::error('ZKTeco: processDay error', [
+                'employee_id' => $employee->id,
+                'date' => $punchTime->toDateString(),
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+            ]);
+            // Re-throw so caller knows it failed
+            throw $e;
         }
 
         return true;

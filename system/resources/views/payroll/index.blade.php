@@ -35,7 +35,7 @@
                     </div>
                     <div>
                         <p class="kpi-label">Net Total</p>
-                        <p class="font-semibold text-indigo-600">₱{{ number_format($p->payrolls()->sum('net_pay'), 0) }}</p>
+                        <p class="font-semibold text-indigo-600">₱{{ number_format($p->payrolls_sum_net_pay, 0) }}</p>
                     </div>
                 </div>
             </a>

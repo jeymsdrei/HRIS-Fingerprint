@@ -12,9 +12,9 @@
         <div class="card">
             <div class="card-body">
                 <form method="GET" class="flex flex-wrap gap-3 items-end">
-                    <div>
+                    <div class="flex-1 min-w-0 sm:flex-none">
                         <label class="input-label">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-56">
+                        <input name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-full sm:w-56">
                     </div>
                     @include('partials.employee-filters')
                     <button class="btn btn-primary">Filter</button>
@@ -58,9 +58,9 @@
                                     {{ $r->signed_at ? 'Signed' : 'Awaiting signature' }}
                                 </span>
                             </td>
-                            <td class="table-body-cell text-right">
-                                <a href="{{ route('receipts.print', $r) }}" class="btn btn-outline btn-sm">PDF</a>
-                            </td>
+<td class="table-body-cell text-right">
+<a href="{{ route('receipts.print', $r) }}" onclick="window.__autoPrint = true;" class="btn btn-outline btn-sm">Print</a>
+</td>
                         </tr>
                         @empty
                         <tr>

@@ -10,6 +10,7 @@ use App\Models\MakeUpClass;
 use App\Models\Payroll;
 use App\Models\Setting;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 
@@ -122,21 +123,11 @@ class ArchiveReportService
 
         return [
             'archived_employees' => Archive::where('archive_type', 'employee')->count(),
-            'attendance_records' => Attendance::whereBetween('date', [$start, $end])
-                ->when($this->departmentId, fn ($q, $id) => $q->where('department_id', $id))
-                ->count(),
-            'payroll_records' => Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end]))
-                ->when($this->departmentId, fn ($q, $id) => $q->whereHas('employee', fn ($eq) => $eq->where('department_id', $id)))
-                ->count(),
-            'payroll_amount' => round(Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end]))
-                ->when($this->departmentId, fn ($q, $id) => $q->whereHas('employee', fn ($eq) => $eq->where('department_id', $id)))
-                ->sum('gross_pay'), 2),
-            'total_deductions' => round(Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end]))
-                ->when($this->departmentId, fn ($q, $id) => $q->whereHas('employee', fn ($eq) => $eq->where('department_id', $id)))
-                ->sum('total_deductions'), 2),
-            'makeup_records' => MakeUpClass::whereBetween('class_date', [$start, $end])
-                ->when($this->departmentId, fn ($q, $id) => $q->whereHas('employee', fn ($eq) => $eq->where('department_id', $id)))
-                ->count(),
+            'attendance_records' => $this->scopeByDepartment(Attendance::whereBetween('date', [$start, $end]))->count(),
+            'payroll_records' => $this->scopeByEmployeeDepartment(Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end])))->count(),
+            'payroll_amount' => round($this->scopeByEmployeeDepartment(Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end])))->sum('gross_pay'), 2),
+            'total_deductions' => round($this->scopeByEmployeeDepartment(Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end])))->sum('total_deductions'), 2),
+            'makeup_records' => $this->scopeByEmployeeDepartment(MakeUpClass::whereBetween('class_date', [$start, $end]))->count(),
         ];
     }
 
@@ -148,8 +139,7 @@ class ArchiveReportService
         $start = $this->startDate()->toDateString();
         $end = $this->endDate()->toDateString();
 
-        return Attendance::whereBetween('date', [$start, $end])
-            ->when($this->departmentId, fn ($q, $id) => $q->where('department_id', $id))
+        return $this->scopeByDepartment(Attendance::whereBetween('date', [$start, $end]))
             ->selectRaw('strftime("%m", date) as m,
                 SUM(CASE WHEN status = "present" THEN 1 ELSE 0 END) as present,
                 SUM(CASE WHEN status = "late" THEN 1 ELSE 0 END) as late,
@@ -169,8 +159,7 @@ class ArchiveReportService
         $start = $this->startDate()->toDateString();
         $end = $this->endDate()->toDateString();
 
-        return Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end]))
-            ->when($this->departmentId, fn ($q, $id) => $q->whereHas('employee', fn ($eq) => $eq->where('department_id', $id)))
+        return $this->scopeByEmployeeDepartment(Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end])))
             ->join('payroll_periods as period', 'period.id', '=', 'payrolls.payroll_period_id')
             ->selectRaw('strftime("%m", period.pay_date) as m,
                 SUM(payrolls.gross_pay) as gross,
@@ -191,17 +180,35 @@ class ArchiveReportService
         $start = $this->startDate()->toDateString();
         $end = $this->endDate()->toDateString();
 
-        return Department::get(['id', 'name'])->map(function ($d) use ($start, $end) {
-            $total = Attendance::where('department_id', $d->id)->whereBetween('date', [$start, $end])->count();
-            $present = Attendance::where('department_id', $d->id)->whereBetween('date', [$start, $end])
-                ->whereIn('status', ['present', 'late', 'half_day'])->count();
-            $payroll = Payroll::whereHas('employee', fn ($q) => $q->where('department_id', $d->id))
-                ->whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end]))
-                ->sum('gross_pay');
+        $attendanceByDept = Attendance::selectRaw('department_id,
+                COUNT(*) as total,
+                SUM(CASE WHEN status IN ("present","late","half_day") THEN 1 ELSE 0 END) as present')
+            ->whereBetween('date', [$start, $end])
+            ->groupBy('department_id')
+            ->get()
+            ->keyBy('department_id');
+
+        $payrollByDept = Payroll::whereHas('period', fn ($q) => $q->whereBetween('pay_date', [$start, $end]))
+            ->join('employees', 'employees.id', '=', 'payrolls.employee_id')
+            ->selectRaw('employees.department_id, SUM(payrolls.gross_pay) as gross')
+            ->groupBy('employees.department_id')
+            ->get()
+            ->keyBy('department_id');
+
+        $employeeCounts = Employee::selectRaw('department_id, COUNT(*) as employees')
+            ->groupBy('department_id')
+            ->get()
+            ->keyBy('department_id');
+
+        return Department::get(['id', 'name'])->map(function ($d) use ($attendanceByDept, $payrollByDept, $employeeCounts) {
+            $total = (int) ($attendanceByDept->get($d->id)?->total ?? 0);
+            $present = (int) ($attendanceByDept->get($d->id)?->present ?? 0);
+            $payroll = (float) ($payrollByDept->get($d->id)?->gross ?? 0);
+            $employees = (int) ($employeeCounts->get($d->id)?->employees ?? 0);
 
             return [
                 'name' => $d->name,
-                'employees' => $d->employees()->count(),
+                'employees' => $employees,
                 'attendance_rate' => $total > 0 ? round($present / $total * 100, 1) : 0,
                 'payroll' => round($payroll, 2),
             ];
@@ -257,5 +264,15 @@ class ArchiveReportService
         }
 
         return $data;
+    }
+
+    protected function scopeByDepartment($q): Builder|\Illuminate\Database\Query\Builder
+    {
+        return $q->when($this->departmentId, fn ($q, $id) => $q->where('department_id', $id));
+    }
+
+    protected function scopeByEmployeeDepartment($q): Builder|\Illuminate\Database\Query\Builder
+    {
+        return $q->when($this->departmentId, fn ($q, $id) => $q->whereHas('employee', fn ($eq) => $eq->where('department_id', $id)));
     }
 }
