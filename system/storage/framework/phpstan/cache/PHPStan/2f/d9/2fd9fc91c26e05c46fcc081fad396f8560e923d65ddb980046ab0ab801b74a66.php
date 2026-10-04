@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\User.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\User
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-1fc6dea0154525744eb764d578c237170d2543e0c2e9921c9ad2279ff84ca12c',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-8f8dd7e1c9c97aaba6101c5135fc5ef95093580420ad47a9cd2094c32ff98357',
    'data' => 
   array (
     'locatedSource' => 
@@ -59,8 +59,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 49,
-    'endLine' => 120,
+    'startLine' => 51,
+    'endLine' => 147,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Foundation\\Auth\\User',
@@ -87,20 +87,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'admin\', \'hr\', \'payroll_officer\', \'department_head\', \'employee\']',
           'attributes' => 
           array (
-            'startLine' => 54,
-            'endLine' => 54,
-            'startTokenPos' => 90,
-            'startFilePos' => 2521,
-            'endTokenPos' => 104,
-            'endFilePos' => 2585,
+            'startLine' => 56,
+            'endLine' => 56,
+            'startTokenPos' => 100,
+            'startFilePos' => 2597,
+            'endTokenPos' => 114,
+            'endFilePos' => 2661,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 54,
-        'endLine' => 54,
+        'startLine' => 56,
+        'endLine' => 56,
         'startColumn' => 5,
         'endColumn' => 91,
       ),
@@ -119,20 +119,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'name\', \'email\', \'username\', \'password\', \'role\', \'employee_id\', \'is_active\']',
           'attributes' => 
           array (
-            'startLine' => 56,
-            'endLine' => 64,
-            'startTokenPos' => 113,
-            'startFilePos' => 2615,
-            'endTokenPos' => 136,
-            'endFilePos' => 2754,
+            'startLine' => 58,
+            'endLine' => 66,
+            'startTokenPos' => 123,
+            'startFilePos' => 2691,
+            'endTokenPos' => 146,
+            'endFilePos' => 2830,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 56,
-        'endLine' => 64,
+        'startLine' => 58,
+        'endLine' => 66,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -154,20 +154,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'password\', \'remember_token\']',
           'attributes' => 
           array (
-            'startLine' => 66,
-            'endLine' => 69,
-            'startTokenPos' => 145,
-            'startFilePos' => 2782,
-            'endTokenPos' => 153,
-            'endFilePos' => 2834,
+            'startLine' => 68,
+            'endLine' => 71,
+            'startTokenPos' => 155,
+            'startFilePos' => 2858,
+            'endTokenPos' => 163,
+            'endFilePos' => 2910,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 66,
-        'endLine' => 69,
+        'startLine' => 68,
+        'endLine' => 71,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -200,8 +200,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 71,
-        'endLine' => 78,
+        'startLine' => 73,
+        'endLine' => 80,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -235,8 +235,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 80,
-        'endLine' => 83,
+        'startLine' => 82,
+        'endLine' => 85,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -293,8 +293,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 85,
-            'endLine' => 85,
+            'startLine' => 87,
+            'endLine' => 87,
             'startColumn' => 29,
             'endColumn' => 47,
             'parameterIndex' => 0,
@@ -315,8 +315,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 85,
-        'endLine' => 88,
+        'startLine' => 87,
+        'endLine' => 90,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -350,8 +350,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 90,
-        'endLine' => 93,
+        'startLine' => 92,
+        'endLine' => 95,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -385,8 +385,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 95,
-        'endLine' => 98,
+        'startLine' => 97,
+        'endLine' => 100,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -420,8 +420,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 100,
-        'endLine' => 103,
+        'startLine' => 102,
+        'endLine' => 105,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -455,8 +455,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 105,
-        'endLine' => 108,
+        'startLine' => 107,
+        'endLine' => 110,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -490,8 +490,123 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 110,
-        'endLine' => 119,
+        'startLine' => 112,
+        'endLine' => 121,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\User',
+        'implementingClassName' => 'App\\Models\\User',
+        'currentClassName' => 'App\\Models\\User',
+        'aliasName' => NULL,
+      ),
+      'approvedMakeUpClasses' => 
+      array (
+        'name' => 'approvedMakeUpClasses',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => NULL,
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 123,
+        'endLine' => 126,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\User',
+        'implementingClassName' => 'App\\Models\\User',
+        'currentClassName' => 'App\\Models\\User',
+        'aliasName' => NULL,
+      ),
+      'getEmailForPasswordReset' => 
+      array (
+        'name' => 'getEmailForPasswordReset',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'string',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 128,
+        'endLine' => 131,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\User',
+        'implementingClassName' => 'App\\Models\\User',
+        'currentClassName' => 'App\\Models\\User',
+        'aliasName' => NULL,
+      ),
+      'sendPasswordResetNotification' => 
+      array (
+        'name' => 'sendPasswordResetNotification',
+        'parameters' => 
+        array (
+          'token' => 
+          array (
+            'name' => 'token',
+            'default' => NULL,
+            'type' => NULL,
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 133,
+            'endLine' => 133,
+            'startColumn' => 51,
+            'endColumn' => 56,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'void',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 133,
+        'endLine' => 146,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

@@ -5,9 +5,13 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Employee;
 use App\Models\User;
+use App\Services\EmailMask;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
@@ -39,23 +43,37 @@ class PasswordResetLinkController extends Controller
 
         if ($action === 'lookup_username') {
             $request->validate(['username' => ['required', 'string', 'max:255']]);
-            $user = $this->personnelUserByUsername($data['username']);
+            $result = $this->findUserByUsernameOrName($data['username']);
 
-            if (! $user?->employee?->email) {
+            if (! $result) {
                 return back()->withInput()->withErrors([
-                    'username' => 'We could not find a staff account with an email address. Please use email recovery or contact your administrator.',
+                    'username' => 'No account found with that username or name. Try using your email instead.',
                 ]);
             }
 
-            return back()->with('recovery_username', $user->username)
-                ->with('matched_email', $this->maskEmail($user->employee->email));
+            [$user, $email] = $result;
+
+            return back()->with('recovery_username', $user?->username ?? '')
+                ->with('matched_email', $this->maskEmail($email))
+                ->with('matched_email_full', $email)
+                ->with('has_user_account', (bool) $user);
         }
 
         if ($action === 'send_username') {
             $request->validate(['username' => ['required', 'string', 'max:255']]);
-            $user = $this->personnelUserByUsername($data['username']);
+            $result = $this->findUserByUsernameOrName($data['username']);
 
-            if (! $user?->employee?->email || ! $this->syncRecoveryEmail($user, $user->employee->email)) {
+            if (! $result) {
+                return back()->withInput()->withErrors([
+                    'username' => 'No account found with that username or name.',
+                ]);
+            }
+
+            [$user, $email] = $result;
+
+            $user = $user ?? $this->createUserForEmployee($result[1] ?? null, $email);
+
+            if (! $user || ! $this->syncRecoveryEmail($user, $email)) {
                 return back()->withInput()->withErrors([
                     'username' => 'We could not send a reset code for this account. Please use email recovery or contact your administrator.',
                 ]);
@@ -65,42 +83,148 @@ class PasswordResetLinkController extends Controller
         }
 
         $request->validate(['email' => ['required', 'email']]);
-        $users = User::query()
-            ->where('role', 'employee')
-            ->whereHas('employee', fn ($query) => $query->whereIn('classification', [
-                Employee::CLASSIFICATION_TEACHING,
-                Employee::CLASSIFICATION_NON_TEACHING,
-            ]))
-            ->where(function ($query) use ($data) {
-                $query->whereHas('employee', fn ($employeeQuery) => $employeeQuery->where('email', $data['email']));
-            })
-            ->limit(2)
-            ->get();
+        $result = $this->findUserByEmail($data['email']);
 
-        if ($users->count() !== 1) {
+        if (! $result) {
             return back()->withInput()->with('status', 'If the email exists in our system, a password reset code has been sent.');
         }
 
-        $user = $users->first();
+        [$user, $email] = $result;
 
-        if (! $user || ! $this->syncRecoveryEmail($user, $data['email'])) {
+        $user = $user ?? $this->createUserForEmployee($email, $email);
+
+        if (! $user || ! $this->syncRecoveryEmail($user, $email)) {
             return back()->withInput()->with('status', 'If the email exists in our system, a password reset code has been sent.');
         }
 
         return $this->sendResetCode($user, $request);
     }
 
-    private function personnelUserByUsername(string $username): ?User
+    /**
+     * Find user by username, or by employee name/email if no user account exists.
+     */
+    private function findUserByUsernameOrName(string $input): ?array
     {
-        return User::query()
+        $input = trim($input);
+
+        // 1. Try exact username match in users table
+        $user = User::query()
             ->with('employee')
-            ->where('username', $username)
+            ->where('username', $input)
             ->where('role', 'employee')
             ->whereHas('employee', fn ($query) => $query->whereIn('classification', [
                 Employee::CLASSIFICATION_TEACHING,
                 Employee::CLASSIFICATION_NON_TEACHING,
             ]))
             ->first();
+
+        if ($user && $user->employee?->email) {
+            return [$user, $user->employee->email];
+        }
+
+        // 2. Try to find employee by name (first + last) or email
+        $employee = Employee::query()
+            ->whereIn('classification', [
+                Employee::CLASSIFICATION_TEACHING,
+                Employee::CLASSIFICATION_NON_TEACHING,
+            ])
+            ->where(function ($query) use ($input) {
+                // Match by full name (case insensitive) - use || for SQLite compatibility
+                $query->whereRaw("first_name || ' ' || last_name LIKE ?", [$input])
+                    ->orWhereRaw("first_name || ' ' || COALESCE(middle_name, '') || ' ' || last_name LIKE ?", [$input])
+                    // Match by email
+                    ->orWhere('email', $input);
+            })
+            ->first();
+
+        if ($employee && $employee->email) {
+            $user = $employee->user; // may be null if no user account
+            return [$user, $employee->email];
+        }
+
+        return null;
+    }
+
+    /**
+     * Find user by email (checks users table first, then employees table).
+     */
+    private function findUserByEmail(string $email): ?array
+    {
+        // 1. Check users table (email or employee->email)
+        $user = User::query()
+            ->with('employee')
+            ->where('role', 'employee')
+            ->where(function ($query) use ($email) {
+                $query->where('email', $email)
+                    ->orWhereHas('employee', fn ($q) => $q->where('email', $email));
+            })
+            ->whereHas('employee', fn ($query) => $query->whereIn('classification', [
+                Employee::CLASSIFICATION_TEACHING,
+                Employee::CLASSIFICATION_NON_TEACHING,
+            ]))
+            ->first();
+
+        if ($user) {
+            $email = $user->employee?->email ?? $user->email;
+            return [$user, $email];
+        }
+
+        // 2. Check employees table directly
+        $employee = Employee::query()
+            ->whereIn('classification', [
+                Employee::CLASSIFICATION_TEACHING,
+                Employee::CLASSIFICATION_NON_TEACHING,
+            ])
+            ->where('email', $email)
+            ->first();
+
+        if ($employee) {
+            return [$employee->user, $employee->email];
+        }
+
+        return null;
+    }
+
+    /**
+     * Create a user account for an employee who doesn't have one.
+     */
+    private function createUserForEmployee(?string $identifier, string $email): ?User
+    {
+        $employee = Employee::where('email', $email)
+            ->whereIn('classification', [
+                Employee::CLASSIFICATION_TEACHING,
+                Employee::CLASSIFICATION_NON_TEACHING,
+            ])
+            ->first();
+
+        if (! $employee) {
+            return null;
+        }
+
+        if ($employee->user) {
+            return $employee->user;
+        }
+
+        // Generate username from email or employee_id
+        $baseUsername = strtolower(str_replace([' ', '.', '@'], ['', '_', '_'], explode('@', $email)[0]));
+        $username = $baseUsername;
+        $counter = 1;
+        while (User::where('username', $username)->exists()) {
+            $username = $baseUsername . $counter;
+            $counter++;
+        }
+
+        $user = User::create([
+            'name' => $employee->full_name,
+            'email' => $email,
+            'username' => $username,
+            'password' => Hash::make(Str::random(16)), // random temporary password
+            'role' => 'employee',
+            'employee_id' => $employee->id,
+            'is_active' => true,
+        ]);
+
+        return $user;
     }
 
     private function syncRecoveryEmail(User $user, string $email): bool
@@ -133,14 +257,12 @@ class PasswordResetLinkController extends Controller
         return redirect()->route('password.code.verify')
             ->with('status', 'A password reset code has been sent to your email address. Please check your inbox.')
             ->with('matched_email', $this->maskEmail($user->getEmailForPasswordReset()))
+            ->with('matched_email_full', $user->getEmailForPasswordReset())
             ->with('recovery_username', $user->username);
     }
 
     private function maskEmail(string $email): string
     {
-        [$name, $domain] = explode('@', $email, 2);
-        $visible = mb_substr($name, 0, 1);
-
-        return $visible.'***@'.$domain;
+        return EmailMask::mask($email);
     }
 }

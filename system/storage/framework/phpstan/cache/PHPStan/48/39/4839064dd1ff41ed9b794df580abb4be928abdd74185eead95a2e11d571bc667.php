@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Requests\StoreBenefitRequest.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Requests\StoreBenefitRequest
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-d0a0b9c86fe8c8ab18bbc2557628229bae1b86f9190c116f09b3b74f89972f02',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-75662bf347d2177d0e7fd2d86ad4116ac1b7d9a64e8faf6528ce800e0ac9279b',
    'data' => 
   array (
     'locatedSource' => 

@@ -6,7 +6,7 @@
             <div class="mb-8">
                 <div class="flex flex-wrap items-center justify-between gap-3">
                     <h1 class="text-3xl font-bold text-slate-900">Correct Attendance</h1>
-                    <a href="{{ route('attendance.index', ['date' => $attendance->date->format('Y-m-d')]) }}" class="btn btn-secondary btn-sm">
+                    <a href="{{ route('attendance.index', array_merge(request()->except(['page', 'date']), ['date' => $attendance->date->format('Y-m-d')])) }}" class="btn btn-secondary btn-sm">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                         Back
                     </a>
@@ -23,6 +23,12 @@
 
 <form method="POST" action="{{ route('attendance.update', $attendance) }}" class="card">
             @csrf @method('PUT')
+            {{-- Carry the list filters through the save so the redirect returns to the same view --}}
+            @foreach (request()->except(['page', 'date']) as $filterKey => $filterValue)
+                @if (is_scalar($filterValue) && $filterValue !== '')
+                    <input type="hidden" name="{{ $filterKey }}" value="{{ $filterValue }}">
+                @endif
+            @endforeach
             <div class="card-body space-y-4">
                 <div class="grid grid-cols-2 gap-3">
                     <div>
@@ -55,7 +61,7 @@
                 <p class="text-xs text-slate-400">Saving recomputes working hours, late, undertime and overtime against the assigned schedule.</p>
                 <div class="flex gap-3">
                     <button class="btn btn-primary">Save & Recompute</button>
-                    <a href="{{ route('attendance.index', ['date' => $attendance->date->format('Y-m-d')]) }}" class="btn btn-secondary">Cancel</a>
+                    <a href="{{ route('attendance.index', array_merge(request()->except(['page', 'date']), ['date' => $attendance->date->format('Y-m-d')])) }}" class="btn btn-secondary">Cancel</a>
                 </div>
             </div>
         </form>

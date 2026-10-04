@@ -36,64 +36,62 @@
             </div>
         </div>
 
-        {{-- Controls --}}
+        {{-- Filters --}}
         <div class="card">
-            <div class="card-body flex flex-wrap gap-3 items-center justify-between">
-                <form method="GET" class="flex flex-wrap gap-2 items-end">
-                    <div>
-                        <label class="input-label">Date</label>
-                        <input type="date" name="date" value="{{ $date->format('Y-m-d') }}" class="input">
+            <div class="card-body px-4 py-3">
+                <form method="GET" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[0.8fr_1.2fr_1.1fr_1.1fr_0.9fr_1.6fr_auto]">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="attendance-date">Date</label>
+                        <input id="attendance-date" type="date" name="date" value="{{ $date->format('Y-m-d') }}" class="input w-full min-w-0">
                     </div>
                     @include('partials.employee-filters')
-                    <div>
-                        <label class="input-label">Status</label>
-                        <select name="status" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="attendance-status">Status</label>
+                        <select id="attendance-status" name="status" class="input w-full min-w-0">
                             <option value="">All Status</option>
                             @foreach (['present','late','half_day','absent','rest_day'] as $s)<option value="{{ $s }}" @selected(request('status') == $s)>{{ ucwords(str_replace('_', ' ', $s)) }}</option>@endforeach
                         </select>
                     </div>
-                    <div>
-                        <label for="attendance-search" class="input-label">Search employee name or ID</label>
-                        <input id="attendance-search" name="search" value="{{ request('search') }}" placeholder="Type a name or ID..." class="input" autocomplete="off" data-client-search>
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="attendance-search">Search employee name or ID</label>
+                        <input id="attendance-search" name="search" value="{{ request('search') }}" placeholder="Name or ID..." class="input w-full min-w-0" autocomplete="off" data-client-search>
                     </div>
-                    <button type="submit" class="btn btn-primary">Go</button>
+                    <button class="btn btn-primary w-full sm:w-auto">Filter</button>
                 </form>
-
-                <div class="flex gap-2">
-                    <a href="{{ route('attendance.index', ['date' => $date->copy()->subDay()->format('Y-m-d')]) }}" class="btn btn-outline btn-sm">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        Prev
-                    </a>
-                    <a href="{{ route('attendance.index', ['date' => now()->format('Y-m-d')]) }}" class="btn btn-secondary btn-sm">Today</a>
-                    <a href="{{ route('attendance.index', ['date' => $date->copy()->addDay()->format('Y-m-d')]) }}" class="btn btn-outline btn-sm">
-                        Next
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
+            </div>
+            <div class="card-footer flex flex-wrap items-center justify-end gap-2">
+                <a href="{{ route('attendance.index', array_merge(request()->except(['page', 'date']), ['date' => $date->copy()->subDay()->format('Y-m-d')])) }}" class="btn btn-outline btn-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    Prev
+                </a>
+                <a href="{{ route('attendance.index', array_merge(request()->except(['page', 'date']), ['date' => now()->format('Y-m-d')])) }}" class="btn btn-secondary btn-sm">Today</a>
+                <a href="{{ route('attendance.index', array_merge(request()->except(['page', 'date']), ['date' => $date->copy()->addDay()->format('Y-m-d')])) }}" class="btn btn-outline btn-sm">
+                    Next
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
             </div>
         </div>
 
         {{-- Recompute range --}}
         <form method="POST" action="{{ route('attendance.process') }}" class="card">
-                <div class="card-header">
-                    <h2 class="font-semibold text-slate-900">Recompute Range</h2>
-                </div>
-                <div class="card-body flex flex-wrap gap-3 items-end">
+            <div class="card-body px-4 py-3">
+                <div class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 lg:grid-cols-4">
                     @csrf
-                    <div>
-                        <label class="input-label">From</label>
-                        <input type="date" name="from" value="{{ now()->subDays(6)->format('Y-m-d') }}" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="attendance-recompute-from">Recompute From</label>
+                        <input id="attendance-recompute-from" type="date" name="from" value="{{ now()->subDays(6)->format('Y-m-d') }}" class="input w-full min-w-0">
                     </div>
-                    <div>
-                        <label class="input-label">To</label>
-                        <input type="date" name="to" value="{{ now()->format('Y-m-d') }}" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="attendance-recompute-to">Recompute To</label>
+                        <input id="attendance-recompute-to" type="date" name="to" value="{{ now()->format('Y-m-d') }}" class="input w-full min-w-0">
                     </div>
-                    <button class="btn btn-info">
+                    <button class="btn btn-info w-full sm:w-auto">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                         Recompute Range
                     </button>
                 </div>
-            </form>
+            </div>
+        </form>
 
         {{-- Table --}}
         <div class="card">
@@ -175,7 +173,7 @@
                                     {{ $a->status === 'rest_day' ? 'badge-neutral' : '' }}">{{ $a->status_label }}</span>
                             </td>
                             <td class="table-body-cell text-right">
-                                <a href="{{ route('attendance.edit', $a) }}" class="btn btn-secondary btn-sm">Correct</a>
+                                <a href="{{ route('attendance.edit', $a) }}{{ request()->getQueryString() ? '?'.request()->getQueryString() : '' }}" class="btn btn-secondary btn-sm">Correct</a>
                             </td>
                         </tr>
                         @empty
@@ -257,52 +255,5 @@
 
         // Initial filter (for page load with existing search value)
         filterAttendanceRows();
-
-        //search bar button, not going back to the top
-        (function () {
-    const KEY = 'attScroll';
-    history.scrollRestoration = 'manual';
-
-    function scrollers() {
-        const list = [document.scrollingElement];
-        document.querySelectorAll('*').forEach(el => {
-            if (/(auto|scroll)/.test(getComputedStyle(el).overflowY)) list.push(el);
-        });
-        return list;
-    }
-
-    function save() {
-        sessionStorage.setItem(KEY, JSON.stringify({
-            path: location.pathname,
-            time: Date.now(),
-            tops: scrollers().map(el => el.scrollTop)
-        }));
-    }
-
-    function restore() {
-        const raw = sessionStorage.getItem(KEY);
-        if (!raw) return;
-        const data = JSON.parse(raw);
-        // only restore on the same page, and only if saved in the last 10 seconds
-        if (data.path !== location.pathname || Date.now() - data.time > 10000) return;
-        const list = scrollers();
-        data.tops.forEach((t, i) => { if (list[i]) list[i].scrollTop = t; });
-    }
-
-    // save on ANY link click, form submit, or page unload
-    document.addEventListener('click', e => {
-        if (e.target.closest('a[href]')) save();
-    }, true);
-    document.addEventListener('submit', save, true);
-    window.addEventListener('pagehide', save);
-    window.addEventListener('beforeunload', save);
-
-    document.addEventListener('DOMContentLoaded', restore);
-    window.addEventListener('load', () => {
-        restore();
-        setTimeout(restore, 150);
-        setTimeout(restore, 500);
-    });
-})();
     </script>
 </x-app-layout>

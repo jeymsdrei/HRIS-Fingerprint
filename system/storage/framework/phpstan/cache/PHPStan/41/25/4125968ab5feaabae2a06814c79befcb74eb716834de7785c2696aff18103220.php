@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Controllers\NotificationController.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Controllers\NotificationController
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-4481a82b924775c1bd9154ddc9d3dc95658ad0a3e5275ad8d27f61a4ed63dbad',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-b1816c260813bcfa2841df44ae42f785fd739b66f865e76102d104506f782c76',
    'data' => 
   array (
     'locatedSource' => 

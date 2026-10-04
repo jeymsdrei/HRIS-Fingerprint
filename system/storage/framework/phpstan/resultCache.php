@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1790020067,
+	'lastFullAnalysisTime' => 1791133801,
 	'meta' => array (
   'cacheVersion' => 'v13-packageDependencies',
   'phpstanVersion' => '2.2.8',
@@ -2046,7 +2046,7 @@ return [
   ),
   'executedFilesHashes' => 
   array (
-    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\phpstan-bootstrap.php' => '9187894c4e04a60b9dd7878716fedeb01946f730ef3c6ac06b59cd3042b39e23',
+    'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\phpstan-bootstrap.php' => '97ae7aa2544aaa66ab5a91ecc4ebc276845eea1949dbd416268ff761e6693b3b',
     'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\larastan\\larastan\\bootstrap.php' => '5a3eacbf63b3e41659adfee92facededf8e020a932800f93c9a8b0e67f235805',
     'phar://C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\phpstan\\phpstan\\phpstan.phar\\stubs\\runtime\\Attribute85.php' => 'cb8b31e82c61ce197871c9e8a6f122256751f2ab606dd2be90846d4fa5f8933e',
     'phar://C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\phpstan\\phpstan\\phpstan.phar\\stubs\\runtime\\ReflectionAttribute.php' => 'c0068e383717870a304781d462f7e2afe1c6f24e9133851852a2aca96b4fa26f',
@@ -2179,12 +2179,86 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-       'line' => 305,
+       'line' => 308,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 305,
+       'nodeLine' => 308,
+       'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
+       'identifier' => 'nullsafe.neverNull',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Method App\\Http\\Controllers\\Auth\\CodeVerificationController::showResetForm() should return Illuminate\\View\\View but returns Illuminate\\Http\\RedirectResponse.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php',
+       'line' => 84,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 84,
+       'nodeType' => 'PhpParser\\Node\\Stmt\\Return_',
+       'identifier' => 'return.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Method App\\Http\\Controllers\\Auth\\CodeVerificationController::showResetForm() should return Illuminate\\View\\View but returns Illuminate\\Http\\RedirectResponse.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php',
+       'line' => 94,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 94,
+       'nodeType' => 'PhpParser\\Node\\Stmt\\Return_',
+       'identifier' => 'return.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Using nullsafe property access "?->username" on left side of ?? is unnecessary. Use -> instead.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+       'line' => 56,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 56,
+       'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
+       'identifier' => 'nullsafe.neverNull',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Using nullsafe property access "?->email" on left side of ?? is unnecessary. Use -> instead.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+       'line' => 168,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 168,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2199,14 +2273,31 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to an undefined method Illuminate\\Http\\Request::validated().',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-       'line' => 51,
+       'line' => 57,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 51,
+       'nodeLine' => 57,
        'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
        'identifier' => 'method.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Comparison operation "<=" between int<1, 6> and 6 is always true.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+       'line' => 303,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 303,
+       'nodeType' => 'PhpParser\\Node\\Expr\\BinaryOp\\SmallerOrEqual',
+       'identifier' => 'smallerOrEqual.alwaysTrue',
        'metadata' => 
       array (
       ),
@@ -2324,12 +2415,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to an undefined property Illuminate\\Database\\Eloquent\\Model::$employee.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-       'line' => 41,
+       'line' => 50,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 41,
+       'nodeLine' => 50,
        'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
        'identifier' => 'property.notFound',
        'metadata' => 
@@ -2341,14 +2432,99 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Access to an undefined property Illuminate\\Database\\Eloquent\\Model::$employee.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-       'line' => 44,
+       'line' => 53,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 44,
+       'nodeLine' => 53,
        'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
        'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    2 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property Illuminate\\Database\\Eloquent\\Model::$employee_id.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'line' => 57,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 57,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    3 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Models\\MakeUpClass::$sessions.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'line' => 58,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 58,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    4 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Using nullsafe property access "?->sessions" on left side of ?? is unnecessary. Use -> instead.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'line' => 58,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 58,
+       'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
+       'identifier' => 'nullsafe.neverNull',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    5 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property App\\Models\\MakeUpClass::$hours.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'line' => 59,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 59,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    6 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Using nullsafe property access "?->hours" on left side of ?? is unnecessary. Use -> instead.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'line' => 59,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 59,
+       'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
+       'identifier' => 'nullsafe.neverNull',
        'metadata' => 
       array (
       ),
@@ -2361,12 +2537,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-       'line' => 464,
+       'line' => 467,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 464,
+       'nodeLine' => 467,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2378,12 +2554,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-       'line' => 482,
+       'line' => 485,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 482,
+       'nodeLine' => 485,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2395,12 +2571,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-       'line' => 501,
+       'line' => 504,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 501,
+       'nodeLine' => 504,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2412,12 +2588,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-       'line' => 515,
+       'line' => 518,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 515,
+       'nodeLine' => 518,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2429,12 +2605,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-       'line' => 540,
+       'line' => 543,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 540,
+       'nodeLine' => 543,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2446,12 +2622,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-       'line' => 554,
+       'line' => 557,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 554,
+       'nodeLine' => 557,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2460,23 +2636,6 @@ return [
        'fixedErrorDiff' => NULL,
     )),
     6 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
-       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-       'line' => 605,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 605,
-       'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
-       'identifier' => 'nullsafe.neverNull',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    7 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
@@ -2493,21 +2652,78 @@ return [
       ),
        'fixedErrorDiff' => NULL,
     )),
+    7 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+       'line' => 611,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 611,
+       'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
+       'identifier' => 'nullsafe.neverNull',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\Auth\\LoginRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Match expression does not handle remaining value: mixed',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\Auth\\LoginRequest.php',
+       'line' => 47,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\Auth\\LoginRequest.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 47,
+       'nodeType' => 'PHPStan\\Node\\MatchExpressionNode',
+       'identifier' => 'match.unhandled',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Method App\\Http\\Requests\\StoreEmployeeRequest::rules() should return array<string, string> but returns array<string, list<Illuminate\\Validation\\Rules\\RequiredIf|string>|string>.',
+       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeRequest.php',
+       'line' => 15,
+       'canBeIgnored' => true,
+       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeRequest.php',
+       'traitFilePath' => NULL,
+       'tip' => NULL,
+       'nodeLine' => 15,
+       'nodeType' => 'PhpParser\\Node\\Stmt\\Return_',
+       'identifier' => 'return.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php' => 
   array (
     0 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Anonymous function has an unused use $end.',
+       'message' => 'Access to an undefined property App\\Models\\Attendance::$total.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 202,
+       'line' => 207,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 202,
-       'nodeType' => 'PhpParser\\Node\\Expr\\Closure',
-       'identifier' => 'closure.unusedUse',
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 207,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
        'metadata' => 
       array (
       ),
@@ -2515,16 +2731,16 @@ return [
     )),
     1 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Anonymous function has an unused use $start.',
+       'message' => 'Using nullsafe property access "?->total" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 202,
+       'line' => 207,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 202,
-       'nodeType' => 'PhpParser\\Node\\Expr\\Closure',
-       'identifier' => 'closure.unusedUse',
+       'nodeLine' => 207,
+       'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
+       'identifier' => 'nullsafe.neverNull',
        'metadata' => 
       array (
       ),
@@ -2532,14 +2748,14 @@ return [
     )),
     2 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Attendance::$total.',
+       'message' => 'Access to an undefined property App\\Models\\Attendance::$present.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 203,
+       'line' => 208,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 203,
+       'nodeLine' => 208,
        'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
        'identifier' => 'property.notFound',
        'metadata' => 
@@ -2549,14 +2765,14 @@ return [
     )),
     3 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Using nullsafe property access "?->total" on left side of ?? is unnecessary. Use -> instead.',
+       'message' => 'Using nullsafe property access "?->present" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 203,
+       'line' => 208,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 203,
+       'nodeLine' => 208,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2566,14 +2782,14 @@ return [
     )),
     4 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Attendance::$present.',
+       'message' => 'Access to an undefined property App\\Models\\Payroll::$gross.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 204,
+       'line' => 209,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 204,
+       'nodeLine' => 209,
        'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
        'identifier' => 'property.notFound',
        'metadata' => 
@@ -2583,14 +2799,14 @@ return [
     )),
     5 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Using nullsafe property access "?->present" on left side of ?? is unnecessary. Use -> instead.',
+       'message' => 'Using nullsafe property access "?->gross" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 204,
+       'line' => 209,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 204,
+       'nodeLine' => 209,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2600,14 +2816,14 @@ return [
     )),
     6 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Payroll::$gross.',
+       'message' => 'Access to an undefined property App\\Models\\Employee::$employees.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 205,
+       'line' => 210,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
        'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 205,
+       'nodeLine' => 210,
        'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
        'identifier' => 'property.notFound',
        'metadata' => 
@@ -2617,14 +2833,14 @@ return [
     )),
     7 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Using nullsafe property access "?->gross" on left side of ?? is unnecessary. Use -> instead.',
+       'message' => 'Using nullsafe property access "?->employees" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 205,
+       'line' => 210,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 205,
+       'nodeLine' => 210,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2634,48 +2850,14 @@ return [
     )),
     8 => 
     \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property App\\Models\\Employee::$employees.',
-       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 206,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 206,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    9 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Using nullsafe property access "?->employees" on left side of ?? is unnecessary. Use -> instead.',
-       'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 206,
-       'canBeIgnored' => true,
-       'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 206,
-       'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
-       'identifier' => 'nullsafe.neverNull',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    10 => 
-    \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Using nullsafe property access "?->name" on left side of ?? is unnecessary. Use -> instead.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-       'line' => 250,
+       'line' => 254,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 250,
+       'nodeLine' => 254,
        'nodeType' => 'PHPStan\\Node\\CoalesceExpressionNode',
        'identifier' => 'nullsafe.neverNull',
        'metadata' => 
@@ -2690,12 +2872,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Method App\\Services\\AttendanceService::dayStatusRows() should return Illuminate\\Support\\Collection<int, array{date: Carbon\\Carbon, year: string, month: string, department_id: int|null, status: string}> but returns Illuminate\\Support\\Collection<int, array{date: mixed, year: mixed, month: mixed, department_id: mixed, status: string}>.',
        'file' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-       'line' => 406,
+       'line' => 461,
        'canBeIgnored' => true,
        'filePath' => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 406,
+       'nodeLine' => 461,
        'nodeType' => 'PhpParser\\Node\\Stmt\\Return_',
        'identifier' => 'return.type',
        'metadata' => 
@@ -3251,21 +3433,21 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => 'in_array($format, [\'print\', \'pdf\', \'excel\', \'csv\']):265',
+        2 => 'in_array($format, [\'print\', \'pdf\', \'excel\', \'csv\']):268',
         3 => NULL,
       ),
       3 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$dataset[\'archives\']->isEmpty():273',
+        2 => '$dataset[\'archives\']->isEmpty():276',
         3 => NULL,
       ),
       4 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => 'is_array($a->data):333',
+        2 => 'is_array($a->data):336',
         3 => NULL,
       ),
     ),
@@ -3274,12 +3456,12 @@ return [
       0 => 
       array (
         0 => 'abort',
-        1 => 266,
+        1 => 269,
       ),
       1 => 
       array (
         0 => 'abort',
-        1 => 293,
+        1 => 296,
       ),
     ),
   ),
@@ -3308,6 +3490,38 @@ return [
         array (
           0 => 'f' . "\0" . 'view',
         ),
+      ),
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php' => 
+  array (
+    'Larastan\\Larastan\\Collectors\\UsedViewFunctionCollector' => 
+    array (
+      0 => 'auth.verify-code',
+      1 => 'auth.reset-password-code',
+    ),
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Controllers\\Auth\\CodeVerificationController',
+        1 => 'create',
+        2 => 'App\\Http\\Controllers\\Auth\\CodeVerificationController',
+        3 => 
+        array (
+          0 => 'f' . "\0" . 'session',
+          1 => 'f' . "\0" . 'old',
+          2 => 'm' . "\0" . 'app\\services\\emailmask' . "\0" . 'mask',
+          3 => 'f' . "\0" . 'view',
+        ),
+      ),
+    ),
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'event',
+        1 => 152,
       ),
     ),
   ),
@@ -3413,6 +3627,44 @@ return [
     array (
       0 => 'auth.forgot-password',
     ),
+    'PHPStan\\Rules\\Comparison\\FunctionCallConstantConditionCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => '$this->syncRecoveryEmail($user, $email):76',
+        3 => NULL,
+      ),
+      1 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => '$this->syncRecoveryEmail($user, $email):96',
+        3 => NULL,
+      ),
+      2 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\WhileLoopAlwaysFalseConditionRule',
+        1 => NULL,
+        2 => '\\App\\Models\\User::where(\'username\', $username)->exists():212',
+        3 => NULL,
+      ),
+      3 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\WhileLoopAlwaysTrueConditionRule',
+        1 => NULL,
+        2 => '\\App\\Models\\User::where(\'username\', $username)->exists():212',
+        3 => NULL,
+      ),
+      4 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
+        1 => NULL,
+        2 => '\\App\\Models\\User::query()->where(\'email\', $email)->whereKeyNot($user->getKey())->exists():232',
+        3 => NULL,
+      ),
+    ),
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
       0 => 
@@ -3423,6 +3675,16 @@ return [
         3 => 
         array (
           0 => 'f' . "\0" . 'view',
+        ),
+      ),
+      1 => 
+      array (
+        0 => 'App\\Http\\Controllers\\Auth\\PasswordResetLinkController',
+        1 => 'maskEmail',
+        2 => 'App\\Http\\Controllers\\Auth\\PasswordResetLinkController',
+        3 => 
+        array (
+          0 => 'm' . "\0" . 'app\\services\\emailmask' . "\0" . 'mask',
         ),
       ),
     ),
@@ -3496,7 +3758,7 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => '$request->filled(\'interest_rate\'):81',
+        2 => '$request->filled(\'interest_rate\'):84',
         3 => NULL,
       ),
     ),
@@ -3506,19 +3768,19 @@ return [
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 35,
+        2 => 37,
       ),
       1 => 
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 49,
+        2 => 51,
       ),
       2 => 
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 87,
+        2 => 90,
       ),
     ),
   ),
@@ -3535,56 +3797,91 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => 'hash_equals($token, $request->token):121',
+        2 => 'hash_equals($token, $request->token):128',
         3 => NULL,
       ),
       1 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => '$service->persistPunch($record, $agentId, null, \'api\'):129',
+        2 => '$service->persistPunch($record, $agentId, null, \'api\'):136',
         3 => NULL,
       ),
       2 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => 'hash_equals($token, $request->token):165',
+        2 => 'hash_equals($token, $request->token):172',
         3 => NULL,
       ),
       3 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$request->filled(\'device_id\'):176',
+        2 => '$request->filled(\'device_id\'):183',
         3 => NULL,
       ),
       4 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanAndConstantConditionRule',
         1 => NULL,
-        2 => '\\App\\Models\\BiometricDevice::whereKey($agent->device_id)->update([\'status\' => \'online\', \'last_sync_at\' => now()]):189',
+        2 => '\\App\\Models\\BiometricDevice::whereKey($agent->device_id)->update([\'status\' => \'online\', \'last_sync_at\' => now()]):196',
         3 => NULL,
       ),
       5 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => 'hash_equals($token, $request->token):207',
+        2 => 'hash_equals($token, $request->token):214',
         3 => NULL,
       ),
       6 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => 'hash_equals($token, $request->token):235',
+        2 => 'hash_equals($token, $request->token):356',
         3 => NULL,
       ),
       7 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => 'hash_equals($token, $request->token):277',
+        2 => '$disk->exists($photoPath):402',
+        3 => NULL,
+      ),
+      8 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => '$disk->exists($thumbPath):409',
+        3 => NULL,
+      ),
+      9 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => '$disk->exists($thumbPath):413',
+        3 => NULL,
+      ),
+      10 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => 'hash_equals($token, $request->token):488',
+        3 => NULL,
+      ),
+      11 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => 'hash_equals($token, $request->token):539',
+        3 => NULL,
+      ),
+      12 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => 'hash_equals($token, $request->token):571',
         3 => NULL,
       ),
     ),
@@ -3593,27 +3890,77 @@ return [
       0 => 
       array (
         0 => 'abort',
-        1 => 122,
+        1 => 129,
       ),
       1 => 
       array (
         0 => 'abort',
-        1 => 166,
+        1 => 173,
       ),
       2 => 
       array (
         0 => 'abort',
-        1 => 208,
+        1 => 215,
       ),
       3 => 
       array (
         0 => 'abort',
-        1 => 236,
+        1 => 357,
       ),
       4 => 
       array (
+        0 => 'imagecopyresampled',
+        1 => 446,
+      ),
+      5 => 
+      array (
+        0 => 'imagedestroy',
+        1 => 447,
+      ),
+      6 => 
+      array (
+        0 => 'imagefill',
+        1 => 452,
+      ),
+      7 => 
+      array (
+        0 => 'imagecopy',
+        1 => 453,
+      ),
+      8 => 
+      array (
+        0 => 'imagedestroy',
+        1 => 454,
+      ),
+      9 => 
+      array (
+        0 => 'ob_start',
+        1 => 456,
+      ),
+      10 => 
+      array (
+        0 => 'imagejpeg',
+        1 => 457,
+      ),
+      11 => 
+      array (
+        0 => 'imagedestroy',
+        1 => 459,
+      ),
+      12 => 
+      array (
         0 => 'abort',
-        1 => 278,
+        1 => 489,
+      ),
+      13 => 
+      array (
+        0 => 'abort',
+        1 => 540,
+      ),
+      14 => 
+      array (
+        0 => 'abort',
+        1 => 572,
       ),
     ),
     'PHPStan\\Rules\\DeadCode\\PossiblyPureStaticCallCollector' => 
@@ -3622,7 +3969,7 @@ return [
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 51,
+        2 => 57,
       ),
     ),
   ),
@@ -3719,37 +4066,44 @@ return [
       ),
       1 => 
       array (
-        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$biometricService->deleteFingerprint($device, (int) $fingerprintId):162',
+        2 => 'request()->expectsJson():159',
         3 => NULL,
       ),
       2 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => 'request()->expectsJson():185',
+        2 => 'request()->expectsJson():207',
         3 => NULL,
       ),
       3 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanAndConstantConditionRule',
         1 => NULL,
-        2 => 'array_key_exists($field, $data):217',
+        2 => 'array_key_exists($field, $data):222',
         3 => NULL,
       ),
       4 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => '$request->filled(\'login_username\'):273',
+        2 => '$request->filled(\'login_username\'):278',
         3 => NULL,
       ),
       5 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$request->filled(\'login_password\'):282',
+        2 => '$request->filled(\'login_password\'):293',
+        3 => NULL,
+      ),
+      6 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
+        1 => NULL,
+        2 => '$request->filled(\'login_password\'):316',
         3 => NULL,
       ),
     ),
@@ -3765,13 +4119,13 @@ return [
       array (
         0 => 'Illuminate\\Database\\Connection',
         1 => 'transaction',
-        2 => 176,
+        2 => 188,
       ),
       2 => 
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'firstOrCreate',
-        2 => 248,
+        2 => 253,
       ),
     ),
   ),
@@ -3784,8 +4138,10 @@ return [
       2 => 'employee.schedule',
       3 => 'employee.makeup',
       4 => 'employee.payslips',
-      5 => 'employee.receipts',
-      6 => 'employee.history',
+      5 => 'payslips.show',
+      6 => 'employee.receipts',
+      7 => 'receipts.show',
+      8 => 'employee.history',
     ),
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
@@ -3798,6 +4154,15 @@ return [
         array (
           0 => 'f' . "\0" . 'view',
         ),
+      ),
+    ),
+    'PHPStan\\Rules\\DeadCode\\PossiblyPureStaticCallCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'Illuminate\\Database\\Eloquent\\Builder',
+        1 => 'create',
+        2 => 114,
       ),
     ),
   ),
@@ -3813,7 +4178,7 @@ return [
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 54,
+        2 => 55,
       ),
     ),
   ),
@@ -3887,14 +4252,14 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => '$requiredClearanceIds->diff($clearedIds)->isEmpty():46',
+        2 => '$requiredClearanceIds->diff($clearedIds)->isEmpty():55',
         3 => NULL,
       ),
       1 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$period->payrolls()->where(\'status\', \'released\')->exists():147',
+        2 => '$period->payrolls()->where(\'status\', \'released\')->exists():166',
         3 => NULL,
       ),
     ),
@@ -3959,21 +4324,21 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\ElseIfConstantConditionRule',
         1 => NULL,
-        2 => 'is_object($value):43',
+        2 => 'is_object($value):45',
         3 => NULL,
       ),
       1 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => 'method_exists($value, \'__toString\'):44',
+        2 => 'method_exists($value, \'__toString\'):46',
         3 => NULL,
       ),
       2 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanAndConstantConditionRule',
         1 => NULL,
-        2 => 'is_scalar($value):46',
+        2 => 'is_scalar($value):48',
         3 => NULL,
       ),
     ),
@@ -4123,8 +4488,13 @@ return [
     array (
       0 => 
       array (
+        0 => 'ini_set',
+        1 => 128,
+      ),
+      1 => 
+      array (
         0 => 'abort',
-        1 => 132,
+        1 => 135,
       ),
     ),
   ),
@@ -4164,6 +4534,20 @@ return [
         2 => '$request->input("school_year_id.{$i}"):86',
         3 => NULL,
       ),
+      4 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
+        1 => NULL,
+        2 => 'is_object($conflict->start_time):106',
+        3 => NULL,
+      ),
+      5 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
+        1 => NULL,
+        2 => 'is_object($conflict->end_time):109',
+        3 => NULL,
+      ),
     ),
     'PHPStan\\Rules\\DeadCode\\PossiblyPureStaticCallCollector' => 
     array (
@@ -4171,13 +4555,13 @@ return [
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 78,
+        2 => 123,
       ),
       1 => 
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 113,
+        2 => 152,
       ),
     ),
   ),
@@ -4227,7 +4611,7 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => '$request->filled(\'password\'):59',
+        2 => '$request->filled(\'password\'):60',
         3 => NULL,
       ),
     ),
@@ -4260,7 +4644,7 @@ return [
       0 => 
       array (
         0 => 'auth.failed',
-        1 => 48,
+        1 => 60,
       ),
     ),
     'PHPStan\\Rules\\Comparison\\FunctionCallConstantConditionCollector' => 
@@ -4269,7 +4653,7 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => '\\Illuminate\\Support\\Facades\\Auth::attempt($credentials, true):46',
+        2 => '\\Illuminate\\Support\\Facades\\Auth::attempt($credentials, true):58',
         3 => NULL,
       ),
     ),
@@ -4327,6 +4711,23 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeRequest.php' => 
   array (
+    'PHPStan\\Rules\\Comparison\\FunctionCallConstantConditionCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => '$this->route(\'employee\'):48',
+        3 => NULL,
+      ),
+      1 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => '$this->route(\'employee\'):52',
+        3 => NULL,
+      ),
+    ),
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
     array (
       0 => 
@@ -4336,6 +4737,7 @@ return [
         2 => 'App\\Http\\Requests\\StoreEmployeeRequest',
         3 => 
         array (
+          0 => 'm' . "\0" . 'illuminate\\validation\\rule' . "\0" . 'requiredif',
         ),
       ),
     ),
@@ -4504,7 +4906,7 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$required->isEmpty():264',
+        2 => '$required->isEmpty():268',
         3 => NULL,
       ),
     ),
@@ -4606,6 +5008,15 @@ return [
       array (
         0 => 'App\\Models\\MakeUpClass',
         1 => 'computeAdditionalPay',
+        2 => 'App\\Models\\MakeUpClass',
+        3 => 
+        array (
+        ),
+      ),
+      1 => 
+      array (
+        0 => 'App\\Models\\MakeUpClass',
+        1 => 'getStatusLabelAttribute',
         2 => 'App\\Models\\MakeUpClass',
         3 => 
         array (
@@ -4856,6 +5267,15 @@ return [
         array (
         ),
       ),
+      7 => 
+      array (
+        0 => 'App\\Models\\User',
+        1 => 'getEmailForPasswordReset',
+        2 => 'App\\Models\\User',
+        3 => 
+        array (
+        ),
+      ),
     ),
     'PHPStan\\Rules\\Traits\\TraitUseCollector' => 
     array (
@@ -4876,6 +5296,53 @@ return [
       ),
     ),
   ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Notifications\\ResetPasswordCode.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Notifications\\ResetPasswordCode',
+        1 => 
+        array (
+        ),
+      ),
+    ),
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Notifications\\ResetPasswordCode',
+        1 => 'via',
+        2 => 'App\\Notifications\\ResetPasswordCode',
+        3 => 
+        array (
+        ),
+      ),
+      1 => 
+      array (
+        0 => 'App\\Notifications\\ResetPasswordCode',
+        1 => 'toMail',
+        2 => 'App\\Notifications\\ResetPasswordCode',
+        3 => 
+        array (
+          0 => 'm' . "\0" . 'illuminate\\notifications\\messages\\simplemessage' . "\0" . 'subject',
+          1 => 'm' . "\0" . 'illuminate\\notifications\\messages\\simplemessage' . "\0" . 'greeting',
+          2 => 'm' . "\0" . 'illuminate\\notifications\\messages\\simplemessage' . "\0" . 'line',
+          3 => 'm' . "\0" . 'illuminate\\notifications\\messages\\simplemessage' . "\0" . 'salutation',
+        ),
+      ),
+      2 => 
+      array (
+        0 => 'App\\Notifications\\ResetPasswordCode',
+        1 => 'toArray',
+        2 => 'App\\Notifications\\ResetPasswordCode',
+        3 => 
+        array (
+        ),
+      ),
+    ),
+  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php' => 
   array (
     'PHPStan\\Rules\\Comparison\\FunctionCallConstantConditionCollector' => 
@@ -4884,21 +5351,21 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => 'ucwords(str_replace(\'_\', \' \', $this->classification)):87',
+        2 => 'ucwords(str_replace(\'_\', \' \', $this->classification)):88',
         3 => NULL,
       ),
       1 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => 'ucwords(str_replace(\'_\', \' \', $this->employmentStatus)):88',
+        2 => 'ucwords(str_replace(\'_\', \' \', $this->employmentStatus)):89',
         3 => NULL,
       ),
       2 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => 'ucwords(str_replace(\'_\', \' \', $this->recordType)):89',
+        2 => 'ucwords(str_replace(\'_\', \' \', $this->recordType)):90',
         3 => NULL,
       ),
     ),
@@ -4945,70 +5412,77 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$t->equalTo($window[\'start\']):200',
+        2 => '$schedules->isNotEmpty():62',
         3 => NULL,
       ),
       1 => 
       array (
-        0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanOrConstantConditionRule',
         1 => NULL,
-        2 => '$t->between($window[\'start\'], $window[\'end\'], true):209',
+        2 => '$t->equalTo($window[\'start\']):252',
         3 => NULL,
       ),
       2 => 
       array (
-        0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanOrConstantConditionRule',
         1 => NULL,
-        2 => '$windowLogs->isEmpty():265',
+        2 => '$t->between($windowStart, $windowEnd, true):252',
         3 => NULL,
       ),
       3 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$timeOut->lt($timeIn):291',
+        2 => '$windowLogs->isEmpty():311',
         3 => NULL,
       ),
       4 => 
       array (
-        0 => 'PHPStan\\Rules\\Comparison\\WhileLoopAlwaysFalseConditionRule',
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanAndConstantConditionRule',
         1 => NULL,
-        2 => '$cursor->lte($to):368',
+        2 => '$timeOut->lt($timeIn):337',
         3 => NULL,
       ),
       5 => 
       array (
-        0 => 'PHPStan\\Rules\\Comparison\\WhileLoopAlwaysTrueConditionRule',
+        0 => 'PHPStan\\Rules\\Comparison\\WhileLoopAlwaysFalseConditionRule',
         1 => NULL,
-        2 => '$cursor->lte($to):368',
+        2 => '$cursor->lte($to):423',
         3 => NULL,
       ),
       6 => 
       array (
-        0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
+        0 => 'PHPStan\\Rules\\Comparison\\WhileLoopAlwaysTrueConditionRule',
         1 => NULL,
-        2 => '$statuses->contains(\\App\\Models\\Attendance::PRESENT):425',
+        2 => '$cursor->lte($to):423',
         3 => NULL,
       ),
       7 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$statuses->contains(\\App\\Models\\Attendance::LATE):428',
+        2 => '$statuses->contains(\\App\\Models\\Attendance::PRESENT):480',
         3 => NULL,
       ),
       8 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$statuses->contains(\\App\\Models\\Attendance::HALF_DAY):431',
+        2 => '$statuses->contains(\\App\\Models\\Attendance::LATE):483',
         3 => NULL,
       ),
       9 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
         1 => NULL,
-        2 => '$statuses->contains(\\App\\Models\\Attendance::ABSENT):434',
+        2 => '$statuses->contains(\\App\\Models\\Attendance::HALF_DAY):486',
+        3 => NULL,
+      ),
+      10 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\IfConstantConditionRule',
+        1 => NULL,
+        2 => '$statuses->contains(\\App\\Models\\Attendance::ABSENT):489',
         3 => NULL,
       ),
     ),
@@ -5018,7 +5492,7 @@ return [
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 87,
+        2 => 131,
       ),
     ),
   ),
@@ -5037,14 +5511,14 @@ return [
       array (
         0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
         1 => NULL,
-        2 => '$this->connect($device):214',
+        2 => '$this->connect($device):232',
         3 => NULL,
       ),
       2 => 
       array (
         0 => 'PHPStan\\Rules\\Comparison\\TernaryOperatorConstantConditionRule',
         1 => NULL,
-        2 => '$this->persistPunch($record, deviceId: $device->id):235',
+        2 => '$this->persistPunch($record, deviceId: $device->id):253',
         3 => NULL,
       ),
     ),
@@ -5127,7 +5601,7 @@ return [
           0 => 'App\\Services\\BiometricService',
         ),
         1 => 'sendCommand',
-        2 => 218,
+        2 => 236,
       ),
     ),
     'PHPStan\\Rules\\DeadCode\\PossiblyPureStaticCallCollector' => 
@@ -5136,7 +5610,7 @@ return [
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 290,
+        2 => 314,
       ),
     ),
     'PHPStan\\Rules\\Methods\\NamedArgumentParameterMethodCallsCollector' => 
@@ -5146,7 +5620,32 @@ return [
         0 => 'App\\Services\\BiometricService',
         1 => 'persistPunch',
         2 => 'deviceId',
-        3 => 235,
+        3 => 253,
+      ),
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\EmailMask.php' => 
+  array (
+    'PHPStan\\Rules\\Comparison\\FunctionCallConstantConditionCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'PHPStan\\Rules\\Comparison\\BooleanNotConstantConditionRule',
+        1 => NULL,
+        2 => 'str_contains($email, \'@\'):29',
+        3 => NULL,
+      ),
+    ),
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Services\\EmailMask',
+        1 => 'mask',
+        2 => 'App\\Services\\EmailMask',
+        3 => 
+        array (
+        ),
       ),
     ),
   ),
@@ -5381,7 +5880,7 @@ return [
 	'dependencies' => array (
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\BackupData.php' => 
   array (
-    'fileHash' => '302ff8819b2212572c86458ed0d274afde26fcb38b3fbc4fc8611ebbd6f97bad',
+    'fileHash' => '66b438bf70647809c67fcb3ce2186cf78e9d3e0b31b9028dffdb1f1a5da583e2',
     'dependentFiles' => 
     array (
     ),
@@ -5402,7 +5901,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveExport.php' => 
   array (
-    'fileHash' => 'c59f1ef4dbbaca7b2a98b7d23c374e83d9f775132c0f7c3d6c43e51d77b73679',
+    'fileHash' => '2f748c81b2f254cc689aed5e2f8568584c7ca12de152bf883a6ed4e43c5fea7d',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
@@ -5410,7 +5909,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveSheet.php' => 
   array (
-    'fileHash' => 'd8d9f7fdf960c0167201c5f64d10892f3f30b180a1929c474386e090ca47d0aa',
+    'fileHash' => 'd18b9d683e14fecc30884fe782f84d704c51d7bcbb082b6195b3ba3913f00bd2',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveExport.php',
@@ -5426,14 +5925,14 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php' => 
   array (
-    'fileHash' => '671321908c3f8fe006e3f6584a998f5f71cf30997ec265d36ff376f8abb403ea',
+    'fileHash' => 'd2f65ff149adeae13f7eef9db97af6164492fdb45f7b725937f00d8f0586d6a2',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php' => 
   array (
-    'fileHash' => '463c98a240dd3997680a6302018a39c56fe97ec24dabc1730d674e406a06c012',
+    'fileHash' => '903afad416687f00f42a91e78dcdb2cafd0dec034777802f5d6088546c076f08',
     'dependentFiles' => 
     array (
     ),
@@ -5441,6 +5940,13 @@ return [
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php' => 
   array (
     'fileHash' => '7abca3bbac59a74848386606a67694f3de4b3b5e1e8ff5eaae8a30c2da3f8592',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php' => 
+  array (
+    'fileHash' => '9bf818c68833318d7242047d1577b93508d0fc9dee8f2f0d0fd3c25ca3b50d16',
     'dependentFiles' => 
     array (
     ),
@@ -5482,14 +5988,14 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php' => 
   array (
-    'fileHash' => '82a07fee8b04223bf3587e5d3458de77275335104efa304aaf9e4a2dad1dea8c',
+    'fileHash' => '6dd868f368dbc4d195605f160725a4d4eeb57404c0769bf18559426afe9747c6',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php' => 
   array (
-    'fileHash' => '7825074066b56aa032829bb0b31c518f8b35e86ffa2a4427a97171a88b8aef7d',
+    'fileHash' => 'a77a0510739e34aa72f1bd065bb7ac1e14600d6aef8fb23e857aa65e6b503ddf',
     'dependentFiles' => 
     array (
     ),
@@ -5503,14 +6009,14 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php' => 
   array (
-    'fileHash' => '657034939a09a1576ea4b542a2019d16aa78e8a2d9266d5b092fe227e79b2368',
+    'fileHash' => '110462bdbb1644d6341f218dd26e192a63a5af6631c8cb0f06bbe3b02ed03acb',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php' => 
   array (
-    'fileHash' => 'b4f1a953e50b840297f8eeaa7f904c37363ca569fca1e8ac8769b4c6061fc23b',
+    'fileHash' => '3531519cd91b6555c05e90f1893885a0376ba1d9e289dbbc43182fd1714694a4',
     'dependentFiles' => 
     array (
     ),
@@ -5530,32 +6036,33 @@ return [
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
       2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\NewPasswordController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\NotificationController.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ProfileController.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\SettingsController.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\NewPasswordController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\NotificationController.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ProfileController.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\SettingsController.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php' => 
@@ -5574,21 +6081,21 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php' => 
   array (
-    'fileHash' => '44623ca7ef97b8a15f3c2a389c9a888a5dbfd3be43afb8ec1991b852b98a5a36',
+    'fileHash' => 'fc7059e7d051d55a9b2e72fcc4097910d1aa755761c12e54b68e62e229e897f3',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php' => 
   array (
-    'fileHash' => 'f6e54dead875c8cc4819f9ad15ab4a1aff0d414324aafd688e6dd23228590962',
+    'fileHash' => '7227f542177190cb7dcb45b47bca1a5b3ecb99720b6922282857287279a907c9',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php' => 
   array (
-    'fileHash' => '4d2df8a338760b49ecdb20e8d525a8d0c99ec96ba2d909e1fe3ccd46849b0a8d',
+    'fileHash' => '4e3ebe2fc8d433ecb4859a57a6c32eb6c8ca2e6cc722f3b8f054ede803a5b112',
     'dependentFiles' => 
     array (
     ),
@@ -5602,14 +6109,14 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\NotificationController.php' => 
   array (
-    'fileHash' => '4481a82b924775c1bd9154ddc9d3dc95658ad0a3e5275ad8d27f61a4ed63dbad',
+    'fileHash' => 'b1816c260813bcfa2841df44ae42f785fd739b66f865e76102d104506f782c76',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php' => 
   array (
-    'fileHash' => '8ea56df71a9184dfc590ab322eeffea1427d0f88bc74593f6947940c2bf820e3',
+    'fileHash' => 'fddecb3cb9aa61eb6696571e6ae367eed8369aa8adf803689e5e473a07cd3e10',
     'dependentFiles' => 
     array (
     ),
@@ -5637,14 +6144,14 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php' => 
   array (
-    'fileHash' => '8c51533e0f2050f02175d9a9d914e41e82ea2a5d0ab83aa2edbbc708495aab22',
+    'fileHash' => 'd7c04cf6a7aafe6262e0a11b300ee81a7b6341adddaee70fa27840ccb5474c6a',
     'dependentFiles' => 
     array (
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php' => 
   array (
-    'fileHash' => '2fd68824da448cd98d70b1eb83e2d067c79e2d06cb90329114f2106ca54a2931',
+    'fileHash' => 'f66198356f04855a4270a716ae2d099e649a5e0af12359ad69295e03a03e45d9',
     'dependentFiles' => 
     array (
     ),
@@ -5658,7 +6165,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php' => 
   array (
-    'fileHash' => '724dc8fe3d83947caf8b787cbadca155400217bd88b6f5294abd16c62e508725',
+    'fileHash' => 'e80d7410d7d2b613deac8c96e518c0b6659e2f6aa527dbec9a55e0f3a6300a9c',
     'dependentFiles' => 
     array (
     ),
@@ -5672,7 +6179,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\Auth\\LoginRequest.php' => 
   array (
-    'fileHash' => 'a63878fe6288d4baa1f3cfa290a7ac085c6ab671f8c79b98265251ff6fc386a7',
+    'fileHash' => 'e2eab3ec849f03f7a6d4380d5a0bbdf10e160dd14af0eba5291207fbdfae3fc8',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php',
@@ -5688,7 +6195,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreBenefitRequest.php' => 
   array (
-    'fileHash' => 'd0a0b9c86fe8c8ab18bbc2557628229bae1b86f9190c116f09b3b74f89972f02',
+    'fileHash' => '75662bf347d2177d0e7fd2d86ad4116ac1b7d9a64e8faf6528ce800e0ac9279b',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
@@ -5696,7 +6203,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeBenefitRequest.php' => 
   array (
-    'fileHash' => 'ee0bfb4aa7e3364b8737636a856b382538530573c0b5fea941f18e51cbaf39d7',
+    'fileHash' => '6056e5f7de1200302a775b02198dc5cb3e87ef57140e33b50c75f675dc19ab45',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
@@ -5704,7 +6211,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeRequest.php' => 
   array (
-    'fileHash' => '6b571da60fa67cc7ecb80c638d97bc366d79cf757c58b2a5b5f6475614ad4ce2',
+    'fileHash' => 'a1676368cd9ea3dbcd3392b20b221b140566a1788a479cd37611a4ac4bcbd96e',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
@@ -5712,7 +6219,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreLoanRequest.php' => 
   array (
-    'fileHash' => '6ebb8ad4f326df4d0fd1d9e6a4f2dd4ac18816848ca9512545711f475be454c3',
+    'fileHash' => '08720758fe07836cd316f26c8b85b75ad2ca78493a32ca1c84476fecb6693c18',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
@@ -5720,7 +6227,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\UpdateLoanRequest.php' => 
   array (
-    'fileHash' => '712f0e5c250b3a47534ae26981b8af8e12a7240233c06849f6ca9867b8c01537',
+    'fileHash' => '25f151a018f28baa9fb57aefe6a29dfda7e2f1ea04773f5e597b19d9fb7b7c23',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
@@ -5728,7 +6235,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\UpdatePayrollSettingsRequest.php' => 
   array (
-    'fileHash' => '5f9afd4e131b1af2b4cc395efa6d62f0d643cc66b94aaa4faf725dfe69db3945',
+    'fileHash' => '7f2b416d33cda48c96dd6a46acc8c60e7171cbdf374084dfef7ab7d277f584e1',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\SettingsController.php',
@@ -5746,47 +6253,49 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php' => 
   array (
-    'fileHash' => '8757e53991ed7936d1da748f20fb4efa21bf204f389908178b66f8b2091706b0',
+    'fileHash' => 'd59e24300b6adf5046d8ddb00a28ffe294b1aba9c9f70c3763560fcefdf45f30',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php' => 
   array (
-    'fileHash' => '70a18d38b2fd8ae2943e07216c037bc69c8ca1ba3646fa3e3ea1ed3f65b06bf8',
+    'fileHash' => '5948ada2c86363a5e14809ee45470f32fb5c98d246c2bbb0d95328d952d07690',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\SyncBiometricCommand.php',
@@ -5806,15 +6315,16 @@ return [
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricAgent.php' => 
   array (
-    'fileHash' => '07f00c58c2587b7d092f498fca3adfd1bb5742e5ae6364c80366c305e7e18ecb',
+    'fileHash' => 'ce359e24d6e7706fe5fd5d8e7d997af1506e513985b67538bc105f02855d78c8',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
@@ -5831,17 +6341,18 @@ return [
       2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
       3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
       4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricAgent.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricAgent.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php' => 
@@ -5863,37 +6374,39 @@ return [
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php' => 
@@ -5903,26 +6416,178 @@ return [
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      37 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php' => 
+  array (
+    'fileHash' => '3b269e4e8ad6327ad285ca15fec47c711b9682eff14e64b16ac936484ee9a242',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\NewPasswordController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ProfileController.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Middleware\\RoleMiddleware.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\ProfileUpdateRequest.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Archive.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricDevice.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      37 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      38 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      39 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      40 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
+      41 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      42 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Notification.php',
+      43 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      44 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
+      45 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      46 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      47 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      48 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
+      49 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      50 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      51 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      52 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      53 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      54 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      55 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      56 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      57 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php' => 
+  array (
+    'fileHash' => '8bd0f28179ca5a63d5f787bb20d872426c6a84743645300b293b2a94a3ecaa41',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php' => 
+  array (
+    'fileHash' => '44ed2fb44096b8ebcc0eb5db5d35d21d77dba1b9379c92c2781071d51e9ccb97',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
       7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
       8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
       9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
       10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php',
       18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
       22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
       23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
       24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
@@ -5933,197 +6598,52 @@ return [
       29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
       30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
       31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php' => 
-  array (
-    'fileHash' => '50fcc26b67229f5b0e8d31a8d399327fddbcc10be7c220c9aaf3dc9b9c2388ac',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\NewPasswordController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ProfileController.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Middleware\\RoleMiddleware.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\ProfileUpdateRequest.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Archive.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricDevice.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      37 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      38 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
-      39 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      40 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Notification.php',
-      41 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      42 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
-      43 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      44 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      45 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      46 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
-      47 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      48 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      49 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      50 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      51 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      52 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      53 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      54 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      55 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php' => 
-  array (
-    'fileHash' => '8bd0f28179ca5a63d5f787bb20d872426c6a84743645300b293b2a94a3ecaa41',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php' => 
-  array (
-    'fileHash' => '44ed2fb44096b8ebcc0eb5db5d35d21d77dba1b9379c92c2781071d51e9ccb97',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php' => 
   array (
-    'fileHash' => '17b5b649b65b199b17dd0a119079090250040a2d2ce6f99a996e37642c84a640',
+    'fileHash' => '1190e3eb8cf8b6221d6a4269e4544e9edd9bbb7e9105ad6cc78d07d2a4157e82',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php' => 
@@ -6135,58 +6655,62 @@ return [
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
       2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
       3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php' => 
   array (
-    'fileHash' => 'dff5d4eef4c18a42491fd6271236d8d2646408c4b34731d5459617952f87a01f',
+    'fileHash' => 'b38566a8ec13f0bbd02d8fd469aa8907a77bdc53fa97ba4db5af77326aeec479',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Notification.php' => 
@@ -6206,46 +6730,48 @@ return [
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      37 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      38 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php' => 
   array (
-    'fileHash' => 'ef0bcc71c9b62aa2ce9e3c29cd39401653a5edb2c90844d08af93ea4dc0b23db',
+    'fileHash' => 'a831337a77fbb070a5c3a2ee0ca37b52e23d7893a48ee5fa17a75457a45a9538',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
@@ -6272,14 +6798,354 @@ return [
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
       1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      37 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      38 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php' => 
+  array (
+    'fileHash' => 'ef76e70b4445c8cb0f88d2ef4d222ebc74742fe232962c1d74cfd01bcfa82b27',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      37 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php' => 
+  array (
+    'fileHash' => 'd0aa17423f96cd25bed30fa380ffc581810ccfba2358be500ed05f9c111d2c88',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Room.php' => 
+  array (
+    'fileHash' => '8484a5d4db7b18441deebe19d4e17caef1739d3b25e7be0c812e3fc9eb7540c2',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\SchoolYear.php' => 
+  array (
+    'fileHash' => '25c6c540afecf18b917d3bfebb18a8cae2aadbf411ae190318dada2480bc2e8c',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Semester.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Semester.php' => 
+  array (
+    'fileHash' => 'e2027b9d528a968567bffbe202976bffcc47da9f9b9ea35e64e0938fb4dbd6fe',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\SchoolYear.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Setting.php' => 
+  array (
+    'fileHash' => 'b0038e28a85ab22c91139b6659b154167b3c92226925ca2626d64dcd663f0a41',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\SettingsController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php' => 
+  array (
+    'fileHash' => 'e67e7e09338319400e5ba498cf774585e9d71c79c8924ee38d588d19b99a537f',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php' => 
+  array (
+    'fileHash' => '8dac10ac221d8df242c6d6b6a16bb4db055af848d3602a16682f7ecb6879f344',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php' => 
+  array (
+    'fileHash' => '8f8dd7e1c9c97aaba6101c5135fc5ef95093580420ad47a9cd2094c32ff98357',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\NewPasswordController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php',
+      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
+      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\NotificationController.php',
+      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
+      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
+      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ProfileController.php',
+      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
+      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Middleware\\RoleMiddleware.php',
+      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\ProfileUpdateRequest.php',
+      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Archive.php',
+      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
+      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
+      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php',
+      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
+      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
+      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
+      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
+      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
+      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
+      37 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
+      38 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
+      39 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Notification.php',
+      40 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
+      41 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
+      42 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      43 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
+      44 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
+      45 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
+      46 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
+      47 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
+      48 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
+      49 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
+      50 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      51 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
+      52 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+    ),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php' => 
+  array (
+    'fileHash' => '26832de9df0a7db429e9b16e94a253610d2bd8e2069d4f31f9d0b6798ddb03fc',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
+      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php',
+      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
+      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
+      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
+      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
       10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
       11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
       12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
@@ -6292,232 +7158,13 @@ return [
       19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
       20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
       21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php' => 
-  array (
-    'fileHash' => 'ef76e70b4445c8cb0f88d2ef4d222ebc74742fe232962c1d74cfd01bcfa82b27',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
       22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
       23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
+      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
       26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
       27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
       28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php' => 
-  array (
-    'fileHash' => 'd0aa17423f96cd25bed30fa380ffc581810ccfba2358be500ed05f9c111d2c88',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Room.php' => 
-  array (
-    'fileHash' => '8484a5d4db7b18441deebe19d4e17caef1739d3b25e7be0c812e3fc9eb7540c2',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\SchoolYear.php' => 
-  array (
-    'fileHash' => '25c6c540afecf18b917d3bfebb18a8cae2aadbf411ae190318dada2480bc2e8c',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Semester.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Semester.php' => 
-  array (
-    'fileHash' => 'e2027b9d528a968567bffbe202976bffcc47da9f9b9ea35e64e0938fb4dbd6fe',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\SchoolYear.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Setting.php' => 
-  array (
-    'fileHash' => 'b0038e28a85ab22c91139b6659b154167b3c92226925ca2626d64dcd663f0a41',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\SettingsController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php' => 
-  array (
-    'fileHash' => 'e67e7e09338319400e5ba498cf774585e9d71c79c8924ee38d588d19b99a537f',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php' => 
-  array (
-    'fileHash' => '8dac10ac221d8df242c6d6b6a16bb4db055af848d3602a16682f7ecb6879f344',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MasterDataController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
       29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
       30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
       31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
@@ -6526,100 +7173,12 @@ return [
       34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
     ),
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Notifications\\ResetPasswordCode.php' => 
   array (
-    'fileHash' => '1fc6dea0154525744eb764d578c237170d2543e0c2e9921c9ad2279ff84ca12c',
+    'fileHash' => '89f50becb308f684ed15332090c00cfee75a3f9387c1fff2333352701127d0f5',
     'dependentFiles' => 
     array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\NewPasswordController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\NotificationController.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ProfileController.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Middleware\\RoleMiddleware.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\ProfileUpdateRequest.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Archive.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      32 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      33 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      34 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php',
-      35 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      36 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Notification.php',
-      37 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      38 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php',
-      39 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      40 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      41 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      42 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      43 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php',
-      44 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      45 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php',
-      46 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      47 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      48 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      49 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
-    ),
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php' => 
-  array (
-    'fileHash' => '26832de9df0a7db429e9b16e94a253610d2bd8e2069d4f31f9d0b6798ddb03fc',
-    'dependentFiles' => 
-    array (
-      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
-      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
-      2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
-      3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php',
-      4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
-      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php',
-      7 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
-      8 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php',
-      9 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php',
-      10 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php',
-      11 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php',
-      12 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php',
-      13 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php',
-      14 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php',
-      15 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php',
-      16 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php',
-      17 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php',
-      18 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php',
-      19 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php',
-      20 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php',
-      21 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php',
-      22 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php',
-      23 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php',
-      24 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php',
-      25 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php',
-      26 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
-      27 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php',
-      28 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php',
-      29 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
-      30 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php',
-      31 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php',
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Providers\\AppServiceProvider.php' => 
@@ -6631,7 +7190,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php' => 
   array (
-    'fileHash' => '69bfbdf432e0cde04fc5adf408192ae97dcaece599c261ea58c2f3771843260d',
+    'fileHash' => 'f227dfe52ace34884d89b10f061d983d949ecf4c17e5812544a3da43b06717dc',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php',
@@ -6647,7 +7206,7 @@ return [
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php' => 
   array (
-    'fileHash' => 'bc70102ff9c0de819b740b39277d78f03cbb33ca921be4eee6f505c60b202f84',
+    'fileHash' => 'd7e1059b71fd1f3c6f688926ee00cd72624d3996a0e8cfbe87b473032b91f9fe',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\ProcessAttendanceCommand.php',
@@ -6655,12 +7214,13 @@ return [
       2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php',
       3 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php',
       4 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php',
-      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
+      5 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php',
+      6 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php',
     ),
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php' => 
   array (
-    'fileHash' => 'f8b70df28d07bafddc82147d3987fed7ad9c2fec0f2c9931843f7286a85ab591',
+    'fileHash' => '2b3768c272d981e6a56bcb129efb85392a681ff95832f7a708eca2b3e60a4bf3',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\SyncBiometricCommand.php',
@@ -6668,9 +7228,18 @@ return [
       2 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php',
     ),
   ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\EmailMask.php' => 
+  array (
+    'fileHash' => 'ca4db5717fb481a503daa2cb8488a51aa826eef8a1a71eff490020ba17e40284',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php',
+      1 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php',
+    ),
+  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php' => 
   array (
-    'fileHash' => '72e8371ffe064b326667c2dc6ff75ce86a5d3bc82e8473448335b22df7941edf',
+    'fileHash' => 'd320db43c33e3082de316b9cbcad91cc5abdcb537e5d9bb3cb3d186d2070d3db',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php',
@@ -6700,11 +7269,28 @@ return [
   ),
 ),
 	'packageDependencies' => array (
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveSheet.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveExport.php' => 
   array (
     0 => 'maatwebsite/excel',
+    1 => 'laravel/framework',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'symfony/mailer',
+    3 => 'psr/log',
+    4 => 'monolog/monolog',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Controller.php' => 
+  array (
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php' => 
   array (
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
@@ -6720,18 +7306,122 @@ return [
     1 => 'nesbot/carbon',
     2 => 'symfony/http-foundation',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ProfileController.php' => 
   array (
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
     2 => 'nesbot/carbon',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+    3 => 'maatwebsite/excel',
+    4 => 'barryvdh/laravel-dompdf',
+    5 => 'dompdf/dompdf',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeBenefitRequest.php' => 
   array (
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\SettingsController.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Archive.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Notification.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Setting.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'nesbot/carbon',
+    2 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php' => 
+  array (
+    0 => 'nesbot/carbon',
+    1 => 'laravel/framework',
+    2 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\EmailMask.php' => 
+  array (
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\GenericExport.php' => 
+  array (
+    0 => 'maatwebsite/excel',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'nesbot/carbon',
+    2 => 'symfony/http-foundation',
+    3 => 'league/flysystem',
+    4 => 'psr/http-message',
+    5 => 'psr/log',
+    6 => 'monolog/monolog',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'psr/simple-cache',
+    3 => 'nesbot/carbon',
+    4 => 'league/flysystem',
+    5 => 'psr/http-message',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+    3 => 'barryvdh/laravel-dompdf',
+    4 => 'dompdf/dompdf',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Middleware\\RoleMiddleware.php' => 
   array (
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
@@ -6746,175 +7436,16 @@ return [
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreLoanRequest.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\SchoolYear.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\View\\Components\\AppLayout.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveExport.php' => 
-  array (
-    0 => 'maatwebsite/excel',
-    1 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\NewPasswordController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordResetLinkController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ReportController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-    3 => 'maatwebsite/excel',
-    4 => 'barryvdh/laravel-dompdf',
-    5 => 'dompdf/dompdf',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\ProfileUpdateRequest.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreBenefitRequest.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricDevice.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveReportService.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'nesbot/carbon',
-    2 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\View\\Components\\GuestLayout.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\BackupData.php' => 
-  array (
-    0 => 'symfony/console',
-    1 => 'laravel/framework',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\GenericExport.php' => 
-  array (
-    0 => 'maatwebsite/excel',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\VerifyEmailController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ClearanceController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollReceiptController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Middleware\\RoleMiddleware.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\UpdateLoanRequest.php' => 
   array (
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Archive.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Department.php' => 
   array (
     0 => 'laravel/framework',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Notification.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php' => 
   array (
     0 => 'laravel/framework',
   ),
@@ -6926,114 +7457,11 @@ return [
   array (
     0 => 'laravel/framework',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ArchiveService.php' => 
-  array (
-    0 => 'nesbot/carbon',
-    1 => 'laravel/framework',
-    2 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'psr/log',
-    2 => 'monolog/monolog',
-    3 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'nesbot/carbon',
-    2 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\ProcessAttendanceCommand.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\BackupData.php' => 
   array (
     0 => 'symfony/console',
     1 => 'laravel/framework',
     2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-    3 => 'barryvdh/laravel-dompdf',
-    4 => 'dompdf/dompdf',
-    5 => 'maatwebsite/excel',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationNotificationController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Controller.php' => 
-  array (
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DepartmentController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'psr/simple-cache',
-    3 => 'nesbot/carbon',
-    4 => 'psr/log',
-    5 => 'monolog/monolog',
-    6 => 'league/flysystem',
-    7 => 'psr/http-message',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ProfileController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeBenefitRequest.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\UpdatePayrollSettingsRequest.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Attendance.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Position.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Setting.php' => 
-  array (
-    0 => 'laravel/framework',
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\SyncBiometricCommand.php' => 
   array (
@@ -7055,25 +7483,11 @@ return [
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php' => 
   array (
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
     2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BiometricController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'nesbot/carbon',
-    2 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\EmployeeSelfServiceController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'barryvdh/laravel-dompdf',
-    3 => 'dompdf/dompdf',
-    4 => 'nesbot/carbon',
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php' => 
   array (
@@ -7086,6 +7500,10 @@ return [
   array (
     0 => 'laravel/framework',
   ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricDevice.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php' => 
   array (
     0 => 'laravel/framework',
@@ -7094,15 +7512,19 @@ return [
   array (
     0 => 'laravel/framework',
   ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php' => 
   array (
     0 => 'laravel/framework',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollPeriod.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php' => 
   array (
     0 => 'laravel/framework',
   ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php' => 
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php' => 
   array (
     0 => 'laravel/framework',
   ),
@@ -7110,10 +7532,176 @@ return [
   array (
     0 => 'laravel/framework',
   ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveSheet.php' => 
+  array (
+    0 => 'maatwebsite/excel',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\BenefitLoanController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\MakeUpClassController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ScheduleController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreLoanRequest.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\UpdatePayrollSettingsRequest.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\AttendanceLog.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Benefit.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\PayrollReceipt.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\SchoolYear.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\TeachingSchedule.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\WorkSchedule.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Notifications\\ResetPasswordCode.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'nesbot/carbon',
+    2 => 'symfony/http-foundation',
+  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\ReportService.php' => 
   array (
     0 => 'nesbot/carbon',
     1 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\View\\Components\\AppLayout.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\ProcessAttendanceCommand.php' => 
+  array (
+    0 => 'symfony/console',
+    1 => 'laravel/framework',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\ArchiveController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+    3 => 'barryvdh/laravel-dompdf',
+    4 => 'dompdf/dompdf',
+    5 => 'maatwebsite/excel',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\ConfirmablePasswordController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\NewPasswordController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayrollController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\SettingsController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\UserController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\ProfileUpdateRequest.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreBenefitRequest.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeClearance.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\LoanPayment.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\MakeUpClass.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payslip.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Subject.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'psr/log',
+    2 => 'monolog/monolog',
+    3 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\View\\Components\\GuestLayout.php' => 
+  array (
+    0 => 'laravel/framework',
   ),
 ),
 	'exportedNodesCallback' => static function (): array { return array (
@@ -8077,20 +8665,20 @@ return [
              'namespace' => 'App\\Http\\Controllers',
              'uses' => 
             array (
+              'archiveexport' => 'App\\Exports\\ArchiveExport',
               'archive' => 'App\\Models\\Archive',
               'attendance' => 'App\\Models\\Attendance',
               'department' => 'App\\Models\\Department',
               'employee' => 'App\\Models\\Employee',
               'makeupclass' => 'App\\Models\\MakeUpClass',
               'payroll' => 'App\\Models\\Payroll',
-              'payrollperiod' => 'App\\Models\\PayrollPeriod',
               'archivereportservice' => 'App\\Services\\ArchiveReportService',
               'archiveservice' => 'App\\Services\\ArchiveService',
               'attendanceservice' => 'App\\Services\\AttendanceService',
               'pdf' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
               'carbon' => 'Carbon\\Carbon',
               'request' => 'Illuminate\\Http\\Request',
-              'collection' => 'Illuminate\\Support\\Collection',
+              'str' => 'Illuminate\\Support\\Str',
               'excel' => 'Maatwebsite\\Excel\\Facades\\Excel',
             ),
              'constUses' => 
@@ -8283,7 +8871,6 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'biometricdevice' => 'App\\Models\\BiometricDevice',
               'department' => 'App\\Models\\Department',
-              'employee' => 'App\\Models\\Employee',
               'attendanceservice' => 'App\\Services\\AttendanceService',
               'carbon' => 'Carbon\\Carbon',
               'request' => 'Illuminate\\Http\\Request',
@@ -8459,6 +9046,260 @@ return [
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
+              'view' => 'Illuminate\\View\\View',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\RedirectResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\CodeVerificationController.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Controllers\\Auth\\CodeVerificationController',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'App\\Http\\Controllers\\Controller',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'create',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Display the password reset code verification view.
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'user' => 'App\\Models\\User',
+              'emailmask' => 'App\\Services\\EmailMask',
+              'passwordreset' => 'Illuminate\\Auth\\Events\\PasswordReset',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'carbon' => 'Illuminate\\Support\\Carbon',
+              'db' => 'Illuminate\\Support\\Facades\\DB',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+              'str' => 'Illuminate\\Support\\Str',
+              'password' => 'Illuminate\\Validation\\Rules\\Password',
+              'validationexception' => 'Illuminate\\Validation\\ValidationException',
+              'view' => 'Illuminate\\View\\View',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\View\\View',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'verify',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle the code verification and display the reset password form.
+     *
+     * @throws ValidationException
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'user' => 'App\\Models\\User',
+              'emailmask' => 'App\\Services\\EmailMask',
+              'passwordreset' => 'Illuminate\\Auth\\Events\\PasswordReset',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'carbon' => 'Illuminate\\Support\\Carbon',
+              'db' => 'Illuminate\\Support\\Facades\\DB',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+              'str' => 'Illuminate\\Support\\Str',
+              'password' => 'Illuminate\\Validation\\Rules\\Password',
+              'validationexception' => 'Illuminate\\Validation\\ValidationException',
+              'view' => 'Illuminate\\View\\View',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\RedirectResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'showResetForm',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Display the password reset form after code verification.
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'user' => 'App\\Models\\User',
+              'emailmask' => 'App\\Services\\EmailMask',
+              'passwordreset' => 'Illuminate\\Auth\\Events\\PasswordReset',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'carbon' => 'Illuminate\\Support\\Carbon',
+              'db' => 'Illuminate\\Support\\Facades\\DB',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+              'str' => 'Illuminate\\Support\\Str',
+              'password' => 'Illuminate\\Validation\\Rules\\Password',
+              'validationexception' => 'Illuminate\\Validation\\ValidationException',
+              'view' => 'Illuminate\\View\\View',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\View\\View',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'reset',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Handle the password reset after code verification.
+     *
+     * @throws ValidationException
+     */',
+             'namespace' => 'App\\Http\\Controllers\\Auth',
+             'uses' => 
+            array (
+              'controller' => 'App\\Http\\Controllers\\Controller',
+              'user' => 'App\\Models\\User',
+              'emailmask' => 'App\\Services\\EmailMask',
+              'passwordreset' => 'Illuminate\\Auth\\Events\\PasswordReset',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
+              'request' => 'Illuminate\\Http\\Request',
+              'carbon' => 'Illuminate\\Support\\Carbon',
+              'db' => 'Illuminate\\Support\\Facades\\DB',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+              'str' => 'Illuminate\\Support\\Str',
+              'password' => 'Illuminate\\Validation\\Rules\\Password',
+              'validationexception' => 'Illuminate\\Validation\\ValidationException',
               'view' => 'Illuminate\\View\\View',
             ),
              'constUses' => 
@@ -8990,17 +9831,24 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Display the password reset link request view.
+     * Display the password reset request view (Step 1: Username).
      */',
              'namespace' => 'App\\Http\\Controllers\\Auth',
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'employee' => 'App\\Models\\Employee',
+              'user' => 'App\\Models\\User',
+              'emailmask' => 'App\\Services\\EmailMask',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
-              'password' => 'Illuminate\\Support\\Facades\\Password',
+              'db' => 'Illuminate\\Support\\Facades\\DB',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'str' => 'Illuminate\\Support\\Str',
               'validationexception' => 'Illuminate\\Validation\\ValidationException',
               'view' => 'Illuminate\\View\\View',
+              'transportexceptioninterface' => 'Symfony\\Component\\Mailer\\Exception\\TransportExceptionInterface',
             ),
              'constUses' => 
             array (
@@ -9026,7 +9874,7 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Handle an incoming password reset link request.
+     * Handle an incoming password reset request.
      *
      * @throws ValidationException
      */',
@@ -9034,11 +9882,18 @@ return [
              'uses' => 
             array (
               'controller' => 'App\\Http\\Controllers\\Controller',
+              'employee' => 'App\\Models\\Employee',
+              'user' => 'App\\Models\\User',
+              'emailmask' => 'App\\Services\\EmailMask',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
-              'password' => 'Illuminate\\Support\\Facades\\Password',
+              'db' => 'Illuminate\\Support\\Facades\\DB',
+              'hash' => 'Illuminate\\Support\\Facades\\Hash',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'str' => 'Illuminate\\Support\\Str',
               'validationexception' => 'Illuminate\\Validation\\ValidationException',
               'view' => 'Illuminate\\View\\View',
+              'transportexceptioninterface' => 'Symfony\\Component\\Mailer\\Exception\\TransportExceptionInterface',
             ),
              'constUses' => 
             array (
@@ -9760,10 +10615,16 @@ return [
               'biometricagent' => 'App\\Models\\BiometricAgent',
               'biometricdevice' => 'App\\Models\\BiometricDevice',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
+              'setting' => 'App\\Models\\Setting',
+              'teachingschedule' => 'App\\Models\\TeachingSchedule',
+              'workschedule' => 'App\\Models\\WorkSchedule',
               'attendanceservice' => 'App\\Services\\AttendanceService',
               'biometricservice' => 'App\\Services\\BiometricService',
               'carbon' => 'Carbon\\Carbon',
               'request' => 'Illuminate\\Http\\Request',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'storage' => 'Illuminate\\Support\\Facades\\Storage',
             ),
              'constUses' => 
             array (
@@ -9841,10 +10702,16 @@ return [
               'biometricagent' => 'App\\Models\\BiometricAgent',
               'biometricdevice' => 'App\\Models\\BiometricDevice',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
+              'setting' => 'App\\Models\\Setting',
+              'teachingschedule' => 'App\\Models\\TeachingSchedule',
+              'workschedule' => 'App\\Models\\WorkSchedule',
               'attendanceservice' => 'App\\Services\\AttendanceService',
               'biometricservice' => 'App\\Services\\BiometricService',
               'carbon' => 'Carbon\\Carbon',
               'request' => 'Illuminate\\Http\\Request',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'storage' => 'Illuminate\\Support\\Facades\\Storage',
             ),
              'constUses' => 
             array (
@@ -9892,10 +10759,16 @@ return [
               'biometricagent' => 'App\\Models\\BiometricAgent',
               'biometricdevice' => 'App\\Models\\BiometricDevice',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
+              'setting' => 'App\\Models\\Setting',
+              'teachingschedule' => 'App\\Models\\TeachingSchedule',
+              'workschedule' => 'App\\Models\\WorkSchedule',
               'attendanceservice' => 'App\\Services\\AttendanceService',
               'biometricservice' => 'App\\Services\\BiometricService',
               'carbon' => 'Carbon\\Carbon',
               'request' => 'Illuminate\\Http\\Request',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'storage' => 'Illuminate\\Support\\Facades\\Storage',
             ),
              'constUses' => 
             array (
@@ -9943,10 +10816,16 @@ return [
               'biometricagent' => 'App\\Models\\BiometricAgent',
               'biometricdevice' => 'App\\Models\\BiometricDevice',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
+              'setting' => 'App\\Models\\Setting',
+              'teachingschedule' => 'App\\Models\\TeachingSchedule',
+              'workschedule' => 'App\\Models\\WorkSchedule',
               'attendanceservice' => 'App\\Services\\AttendanceService',
               'biometricservice' => 'App\\Services\\BiometricService',
               'carbon' => 'Carbon\\Carbon',
               'request' => 'Illuminate\\Http\\Request',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'storage' => 'Illuminate\\Support\\Facades\\Storage',
             ),
              'constUses' => 
             array (
@@ -9994,10 +10873,16 @@ return [
               'biometricagent' => 'App\\Models\\BiometricAgent',
               'biometricdevice' => 'App\\Models\\BiometricDevice',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
+              'setting' => 'App\\Models\\Setting',
+              'teachingschedule' => 'App\\Models\\TeachingSchedule',
+              'workschedule' => 'App\\Models\\WorkSchedule',
               'attendanceservice' => 'App\\Services\\AttendanceService',
               'biometricservice' => 'App\\Services\\BiometricService',
               'carbon' => 'Carbon\\Carbon',
               'request' => 'Illuminate\\Http\\Request',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'storage' => 'Illuminate\\Support\\Facades\\Storage',
             ),
              'constUses' => 
             array (
@@ -10047,10 +10932,133 @@ return [
               'biometricagent' => 'App\\Models\\BiometricAgent',
               'biometricdevice' => 'App\\Models\\BiometricDevice',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
+              'setting' => 'App\\Models\\Setting',
+              'teachingschedule' => 'App\\Models\\TeachingSchedule',
+              'workschedule' => 'App\\Models\\WorkSchedule',
               'attendanceservice' => 'App\\Services\\AttendanceService',
               'biometricservice' => 'App\\Services\\BiometricService',
               'carbon' => 'Carbon\\Carbon',
               'request' => 'Illuminate\\Http\\Request',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'storage' => 'Illuminate\\Support\\Facades\\Storage',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'saveTemplate',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Integration endpoint: store the enrolled fingerprint template for an
+     * employee. The server keeps it as the source of truth so the BioClock
+     * agent can re-provision the reader after a device wipe or a lost local
+     * copy without re-enrolling the employee.
+     */',
+             'namespace' => 'App\\Http\\Controllers',
+             'uses' => 
+            array (
+              'biometricagent' => 'App\\Models\\BiometricAgent',
+              'biometricdevice' => 'App\\Models\\BiometricDevice',
+              'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
+              'setting' => 'App\\Models\\Setting',
+              'teachingschedule' => 'App\\Models\\TeachingSchedule',
+              'workschedule' => 'App\\Models\\WorkSchedule',
+              'attendanceservice' => 'App\\Services\\AttendanceService',
+              'biometricservice' => 'App\\Services\\BiometricService',
+              'carbon' => 'Carbon\\Carbon',
+              'request' => 'Illuminate\\Http\\Request',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'storage' => 'Illuminate\\Support\\Facades\\Storage',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'photo',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Integration endpoint: upload an employee photo captured at enrollment
+     * (or from a device/vendor export). Token-guarded. Replaces any existing
+     * photo so enrollment updates stay the single source of truth.
+     */',
+             'namespace' => 'App\\Http\\Controllers',
+             'uses' => 
+            array (
+              'biometricagent' => 'App\\Models\\BiometricAgent',
+              'biometricdevice' => 'App\\Models\\BiometricDevice',
+              'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
+              'setting' => 'App\\Models\\Setting',
+              'teachingschedule' => 'App\\Models\\TeachingSchedule',
+              'workschedule' => 'App\\Models\\WorkSchedule',
+              'attendanceservice' => 'App\\Services\\AttendanceService',
+              'biometricservice' => 'App\\Services\\BiometricService',
+              'carbon' => 'Carbon\\Carbon',
+              'request' => 'Illuminate\\Http\\Request',
+              'log' => 'Illuminate\\Support\\Facades\\Log',
+              'storage' => 'Illuminate\\Support\\Facades\\Storage',
             ),
              'constUses' => 
             array (
@@ -10792,10 +11800,28 @@ return [
                'phpDoc' => NULL,
                'flags' => 0,
             )),
-            1 => 
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'reactivate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'biometricService',
-               'type' => 'App\\Services\\BiometricService',
+               'name' => 'employee',
+               'type' => 'App\\Models\\Employee',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -10810,9 +11836,9 @@ return [
           array (
           ),
         )),
-        7 => 
+        8 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'reactivate',
+           'name' => 'delete',
            'phpDoc' => NULL,
            'byRef' => false,
            'public' => true,
@@ -10936,6 +11962,37 @@ return [
         )),
         3 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'storeMakeupClass',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'payslips',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -10952,7 +12009,7 @@ return [
           array (
           ),
         )),
-        4 => 
+        5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'payslipDownload',
            'phpDoc' => NULL,
@@ -10983,7 +12040,38 @@ return [
           array (
           ),
         )),
-        5 => 
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'payslipView',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'payslip',
+               'type' => 'App\\Models\\Payslip',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'receipts',
            'phpDoc' => NULL,
@@ -11001,7 +12089,7 @@ return [
           array (
           ),
         )),
-        6 => 
+        8 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'receiptDownload',
            'phpDoc' => NULL,
@@ -11032,7 +12120,38 @@ return [
           array (
           ),
         )),
-        7 => 
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'receiptView',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'receipt',
+               'type' => 'App\\Models\\PayrollReceipt',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        10 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'receiptSign',
            'phpDoc' => NULL,
@@ -11076,7 +12195,7 @@ return [
           array (
           ),
         )),
-        8 => 
+        11 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'history',
            'phpDoc' => NULL,
@@ -11197,8 +12316,34 @@ return [
           array (
             0 => 
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'makeUpClass',
                'type' => 'App\\Models\\MakeUpClass',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            2 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'attendanceService',
+               'type' => 'App\\Services\\AttendanceService',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,
@@ -13036,19 +14181,6 @@ return [
            'returnType' => NULL,
            'parameters' => 
           array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'request',
-               'type' => 'Illuminate\\Http\\Request',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-               'phpDoc' => NULL,
-               'flags' => 0,
-            )),
           ),
            'attributes' => 
           array (
@@ -13180,37 +14312,6 @@ return [
         )),
         5 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
-           'name' => 'toggle',
-           'phpDoc' => NULL,
-           'byRef' => false,
-           'public' => true,
-           'private' => false,
-           'abstract' => false,
-           'final' => false,
-           'static' => false,
-           'returnType' => NULL,
-           'parameters' => 
-          array (
-            0 => 
-            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
-               'name' => 'user',
-               'type' => 'App\\Models\\User',
-               'byRef' => false,
-               'variadic' => false,
-               'hasDefault' => false,
-               'attributes' => 
-              array (
-              ),
-               'phpDoc' => NULL,
-               'flags' => 0,
-            )),
-          ),
-           'attributes' => 
-          array (
-          ),
-        )),
-        6 => 
-        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'destroy',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -13240,7 +14341,7 @@ return [
           array (
           ),
         )),
-        7 => 
+        6 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'employees',
            'phpDoc' => NULL,
@@ -13687,6 +14788,7 @@ return [
              'uses' => 
             array (
               'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+              'rule' => 'Illuminate\\Validation\\Rule',
             ),
              'constUses' => 
             array (
@@ -14058,6 +15160,7 @@ return [
  * @property int|null $department_id
  * @property int|null $device_id
  * @property int|null $teaching_schedule_id
+ * @property int|null $work_schedule_id
  * @property Carbon|null $schedule_start
  * @property Carbon|null $schedule_end
  * @property Carbon|null $time_in
@@ -14076,6 +15179,7 @@ return [
  * @property-read Department|null $department
  * @property-read BiometricDevice|null $device
  * @property-read TeachingSchedule|null $teachingSchedule
+ * @property-read WorkSchedule|null $workSchedule
  * @property-read Employee $employee
  * @property-read string $status_color
  * @property-read string $status_label
@@ -14100,6 +15204,7 @@ return [
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereSource($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereStatus($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereTeachingScheduleId($value)
+ * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereWorkScheduleId($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereTimeIn($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereTimeOut($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|Attendance whereUndertimeMinutes($value)
@@ -14349,6 +15454,42 @@ return [
         )),
         11 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'workSchedule',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'makeUpClass',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getStatusLabelAttribute',
            'phpDoc' => NULL,
            'byRef' => false,
@@ -14365,7 +15506,7 @@ return [
           array (
           ),
         )),
-        12 => 
+        14 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getStatusColorAttribute',
            'phpDoc' => NULL,
@@ -14727,7 +15868,9 @@ return [
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereApiBaseUrl($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereComputerName($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereCreatedAt($value)
+ *
  * @param  int  $value
+ *
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereDeviceId($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereId($value)
  * @method static \\Illuminate\\Database\\Eloquent\\Builder<static>|BiometricAgent whereIsActive($value)
@@ -16932,6 +18075,7 @@ return [
  * @property int|null $approved_by
  * @property Carbon|null $approved_at
  * @property string|null $remarks
+ * @property string|null $reason
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property-read User|null $approver
@@ -17101,6 +18245,24 @@ return [
            'final' => false,
            'static' => false,
            'returnType' => 'float',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getStatusLabelAttribute',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
            'parameters' => 
           array (
           ),
@@ -19393,6 +20555,7 @@ return [
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -19402,6 +20565,7 @@ return [
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'constUses' => 
         array (
@@ -19649,6 +20813,73 @@ return [
           array (
           ),
         )),
+        11 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'approvedMakeUpClasses',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        12 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getEmailForPasswordReset',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        13 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'sendPasswordResetNotification',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'token',
+               'type' => NULL,
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
       ),
        'attributes' => 
       array (
@@ -19805,6 +21036,169 @@ return [
       ),
     )),
   ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Notifications\\ResetPasswordCode.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Notifications\\ResetPasswordCode',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Notifications\\Notification',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'code',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 1,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'expireMinutes',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 1,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'via',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'notifiable',
+               'type' => 'object',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'toMail',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Notifications\\Messages\\MailMessage',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'notifiable',
+               'type' => 'object',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'toArray',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'notifiable',
+               'type' => 'object',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Providers\\AppServiceProvider.php' => 
   array (
     0 => 
@@ -19916,6 +21310,7 @@ return [
           'payroll' => 'App\\Models\\Payroll',
           'setting' => 'App\\Models\\Setting',
           'carbon' => 'Carbon\\Carbon',
+          'builder' => 'Illuminate\\Database\\Eloquent\\Builder',
           'collection' => 'Illuminate\\Support\\Collection',
           'auth' => 'Illuminate\\Support\\Facades\\Auth',
         ),
@@ -20291,6 +21686,7 @@ return [
               'payroll' => 'App\\Models\\Payroll',
               'setting' => 'App\\Models\\Setting',
               'carbon' => 'Carbon\\Carbon',
+              'builder' => 'Illuminate\\Database\\Eloquent\\Builder',
               'collection' => 'Illuminate\\Support\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
             ),
@@ -20331,6 +21727,7 @@ return [
               'payroll' => 'App\\Models\\Payroll',
               'setting' => 'App\\Models\\Setting',
               'carbon' => 'Carbon\\Carbon',
+              'builder' => 'Illuminate\\Database\\Eloquent\\Builder',
               'collection' => 'Illuminate\\Support\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
             ),
@@ -20371,6 +21768,7 @@ return [
               'payroll' => 'App\\Models\\Payroll',
               'setting' => 'App\\Models\\Setting',
               'carbon' => 'Carbon\\Carbon',
+              'builder' => 'Illuminate\\Database\\Eloquent\\Builder',
               'collection' => 'Illuminate\\Support\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
             ),
@@ -20411,6 +21809,7 @@ return [
               'payroll' => 'App\\Models\\Payroll',
               'setting' => 'App\\Models\\Setting',
               'carbon' => 'Carbon\\Carbon',
+              'builder' => 'Illuminate\\Database\\Eloquent\\Builder',
               'collection' => 'Illuminate\\Support\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
             ),
@@ -20451,6 +21850,7 @@ return [
               'payroll' => 'App\\Models\\Payroll',
               'setting' => 'App\\Models\\Setting',
               'carbon' => 'Carbon\\Carbon',
+              'builder' => 'Illuminate\\Database\\Eloquent\\Builder',
               'collection' => 'Illuminate\\Support\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
             ),
@@ -20491,6 +21891,7 @@ return [
               'payroll' => 'App\\Models\\Payroll',
               'setting' => 'App\\Models\\Setting',
               'carbon' => 'Carbon\\Carbon',
+              'builder' => 'Illuminate\\Database\\Eloquent\\Builder',
               'collection' => 'Illuminate\\Support\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
             ),
@@ -20531,6 +21932,7 @@ return [
               'payroll' => 'App\\Models\\Payroll',
               'setting' => 'App\\Models\\Setting',
               'carbon' => 'Carbon\\Carbon',
+              'builder' => 'Illuminate\\Database\\Eloquent\\Builder',
               'collection' => 'Illuminate\\Support\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
             ),
@@ -20889,11 +22291,11 @@ return [
      *
      * Teaching personnel are validated against ALL of their assigned class
      * schedules for the day (per-day, per-semester) so each class gets its
-     * own time in / time out. Non-teaching personnel use their fixed work
-     * schedule, falling back to the company default Monday-Friday shift
-     * defined in settings.
+     * own time in / time out. Non-teaching personnel use ALL of their fixed
+     * work schedules for the day, falling back to the company default
+     * Monday-Friday shift defined in settings when none are assigned.
      *
-     * @return array<int, array{start: Carbon, end: Carbon, schedule: TeachingSchedule|WorkSchedule|null, teaching_schedule_id: int|null, type: string}>
+     * @return array<int, array{start: Carbon, end: Carbon, schedule: TeachingSchedule|WorkSchedule|null, teaching_schedule_id: int|null, work_schedule_id: int|null, type: string}>
      */',
              'namespace' => 'App\\Services',
              'uses' => 
@@ -20901,10 +22303,12 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'attendancelog' => 'App\\Models\\AttendanceLog',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
               'setting' => 'App\\Models\\Setting',
               'teachingschedule' => 'App\\Models\\TeachingSchedule',
               'workschedule' => 'App\\Models\\WorkSchedule',
               'carbon' => 'Carbon\\Carbon',
+              'collection' => 'Illuminate\\Support\\Collection',
             ),
              'constUses' => 
             array (
@@ -20965,10 +22369,12 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'attendancelog' => 'App\\Models\\AttendanceLog',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
               'setting' => 'App\\Models\\Setting',
               'teachingschedule' => 'App\\Models\\TeachingSchedule',
               'workschedule' => 'App\\Models\\WorkSchedule',
               'carbon' => 'Carbon\\Carbon',
+              'collection' => 'Illuminate\\Support\\Collection',
             ),
              'constUses' => 
             array (
@@ -21051,8 +22457,8 @@ return [
      *
      * Teaching personnel produce one attendance row per class schedule
      * (per-schedule time in/out, per-schedule absent). Non-teaching
-     * personnel keep a single daily row. Rest days (no schedule) still
-     * produce a single daily row.
+     * personnel produce one row per work schedule assigned for the day.
+     * Rest days (no schedule) still produce a single daily row.
      */',
              'namespace' => 'App\\Services',
              'uses' => 
@@ -21060,10 +22466,12 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'attendancelog' => 'App\\Models\\AttendanceLog',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
               'setting' => 'App\\Models\\Setting',
               'teachingschedule' => 'App\\Models\\TeachingSchedule',
               'workschedule' => 'App\\Models\\WorkSchedule',
               'carbon' => 'Carbon\\Carbon',
+              'collection' => 'Illuminate\\Support\\Collection',
             ),
              'constUses' => 
             array (
@@ -21136,10 +22544,12 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'attendancelog' => 'App\\Models\\AttendanceLog',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
               'setting' => 'App\\Models\\Setting',
               'teachingschedule' => 'App\\Models\\TeachingSchedule',
               'workschedule' => 'App\\Models\\WorkSchedule',
               'carbon' => 'Carbon\\Carbon',
+              'collection' => 'Illuminate\\Support\\Collection',
             ),
              'constUses' => 
             array (
@@ -21199,10 +22609,12 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'attendancelog' => 'App\\Models\\AttendanceLog',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
               'setting' => 'App\\Models\\Setting',
               'teachingschedule' => 'App\\Models\\TeachingSchedule',
               'workschedule' => 'App\\Models\\WorkSchedule',
               'carbon' => 'Carbon\\Carbon',
+              'collection' => 'Illuminate\\Support\\Collection',
             ),
              'constUses' => 
             array (
@@ -21288,10 +22700,12 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'attendancelog' => 'App\\Models\\AttendanceLog',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
               'setting' => 'App\\Models\\Setting',
               'teachingschedule' => 'App\\Models\\TeachingSchedule',
               'workschedule' => 'App\\Models\\WorkSchedule',
               'carbon' => 'Carbon\\Carbon',
+              'collection' => 'Illuminate\\Support\\Collection',
             ),
              'constUses' => 
             array (
@@ -21361,7 +22775,7 @@ return [
      * Per-schedule teaching rows are collapsed into a single day status
      * (best status wins) so aggregates stay comparable to the headcount.
      *
-     * @return \\Illuminate\\Support\\Collection<int, array{date: Carbon, year: string, month: string, department_id: int|null, status: string}>
+     * @return Collection<int, array{date: Carbon, year: string, month: string, department_id: int|null, status: string}>
      */',
              'namespace' => 'App\\Services',
              'uses' => 
@@ -21369,10 +22783,12 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'attendancelog' => 'App\\Models\\AttendanceLog',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
               'setting' => 'App\\Models\\Setting',
               'teachingschedule' => 'App\\Models\\TeachingSchedule',
               'workschedule' => 'App\\Models\\WorkSchedule',
               'carbon' => 'Carbon\\Carbon',
+              'collection' => 'Illuminate\\Support\\Collection',
             ),
              'constUses' => 
             array (
@@ -21449,10 +22865,12 @@ return [
               'attendance' => 'App\\Models\\Attendance',
               'attendancelog' => 'App\\Models\\AttendanceLog',
               'employee' => 'App\\Models\\Employee',
+              'makeupclass' => 'App\\Models\\MakeUpClass',
               'setting' => 'App\\Models\\Setting',
               'teachingschedule' => 'App\\Models\\TeachingSchedule',
               'workschedule' => 'App\\Models\\WorkSchedule',
               'carbon' => 'Carbon\\Carbon',
+              'collection' => 'Illuminate\\Support\\Collection',
             ),
              'constUses' => 
             array (
@@ -21841,7 +23259,7 @@ return [
      * the SDK/agent log). Otherwise the legacy (employee_id, punch_time) pair
      * is used so re-syncs of the same log never double-insert.
      *
-     * @param  array{fingerprint_id: int, punch_time: mixed, source_key?: string, action?: string|null}  $record
+     * @param  array{fingerprint_id: int, punch_time: mixed, source_key?: string, action?: string|null, score?: int|null}  $record
      * @param  int|null  $deviceId  Must reference a biometric_devices row. Agent
      *                              pushes (USB readers) don\'t own a network device,
      *                              so they pass null — never an agent id.
@@ -21931,6 +23349,122 @@ return [
       ),
     )),
   ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\EmailMask.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Services\\EmailMask',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * Masks an email address for display on the password recovery screens.
+ *
+ * The first character of the local part and the domain stay visible so staff can
+ * still recognise which address a code was sent to. The number of mask
+ * characters always matches the real local-part length, so the displayed width
+ * stays consistent per account without revealing the address itself.
+ */',
+         'namespace' => 'App\\Services',
+         'uses' => 
+        array (
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedClassConstantsNode::__set_state(array(
+           'constants' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedClassConstantNode::__set_state(array(
+               'name' => 'MASK_CHARACTER',
+               'value' => '\'*\'',
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'public' => true,
+           'private' => false,
+           'final' => false,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Character used to hide the hidden part of the local part.
+     */',
+             'namespace' => 'App\\Services',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'mask',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Mask an email address, keeping the display length of the local part intact.
+     */',
+             'namespace' => 'App\\Services',
+             'uses' => 
+            array (
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => true,
+           'returnType' => '?string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'email',
+               'type' => '?string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\PayrollService.php' => 
   array (
     0 => 
@@ -21973,9 +23507,9 @@ return [
               'payslip' => 'App\\Models\\Payslip',
               'setting' => 'App\\Models\\Setting',
               'user' => 'App\\Models\\User',
+              'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'db' => 'Illuminate\\Support\\Facades\\DB',
-              'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
             ),
              'constUses' => 
             array (
@@ -22030,9 +23564,9 @@ return [
               'payslip' => 'App\\Models\\Payslip',
               'setting' => 'App\\Models\\Setting',
               'user' => 'App\\Models\\User',
+              'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'db' => 'Illuminate\\Support\\Facades\\DB',
-              'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
             ),
              'constUses' => 
             array (
@@ -22132,9 +23666,9 @@ return [
               'payslip' => 'App\\Models\\Payslip',
               'setting' => 'App\\Models\\Setting',
               'user' => 'App\\Models\\User',
+              'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'db' => 'Illuminate\\Support\\Facades\\DB',
-              'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
             ),
              'constUses' => 
             array (
@@ -22203,9 +23737,9 @@ return [
               'payslip' => 'App\\Models\\Payslip',
               'setting' => 'App\\Models\\Setting',
               'user' => 'App\\Models\\User',
+              'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'db' => 'Illuminate\\Support\\Facades\\DB',
-              'collection' => 'Illuminate\\Database\\Eloquent\\Collection',
             ),
              'constUses' => 
             array (

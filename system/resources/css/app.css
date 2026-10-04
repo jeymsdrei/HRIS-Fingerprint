@@ -114,6 +114,30 @@
         @apply bg-maroon-700 text-white shadow-sm;
     }
 
+    .sidebar-link.is-loading {
+        position: relative;
+    }
+
+    .sidebar-link.is-loading::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        width: 16px;
+        height: 16px;
+        border: 2px solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: sidebar-nav-spin 700ms linear infinite;
+    }
+
+    .sidebar-link.is-loading > svg {
+        visibility: hidden;
+    }
+
+    @keyframes sidebar-nav-spin {
+        to { transform: rotate(360deg); }
+    }
+
     /* Sidebar — compact on small screens so page content keeps room */
     @media (max-width: 767px) {
         .sidebar-logo {
@@ -141,6 +165,10 @@
             padding-left: 6px;
             padding-right: 6px;
             gap: 8px;
+        }
+
+        .sidebar-link.is-loading::before {
+            left: 6px;
         }
     }
 
@@ -333,6 +361,14 @@
     /* Input styles */
     .input {
         @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 transition-colors duration-fast focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-10 disabled:bg-slate-50 disabled:text-slate-500;
+    }
+
+    select.input {
+        @apply min-w-0 appearance-none pr-10;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+        background-position: right 0.75rem center;
+        background-repeat: no-repeat;
+        background-size: 1rem;
     }
 
     .input-label {

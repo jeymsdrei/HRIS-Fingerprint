@@ -105,19 +105,19 @@
 /* Email Confirmation Card */
 .email-confirmation-card {
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 20px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
     background: #fbf5f0;
-    border: 1px solid rgba(195, 149, 69, 0.45);
+    border: 1px solid rgba(195, 149, 69, 0.35);
     border-radius: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .card-icon-wrapper {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     background: rgba(195, 149, 69, 0.15);
     display: flex;
     align-items: center;
@@ -126,30 +126,46 @@
     flex-shrink: 0;
 }
 
-.card-content {
+.card-icon-wrapper svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* Named with an "email-" prefix so it cannot inherit the wide padding that
+   login.css applies to its own .card-content element. */
+.email-card-content {
     flex: 1;
+    min-width: 0;
 }
 
 .card-message {
     margin: 0 0 6px;
     color: var(--muted-ink);
-    font-size: 0.88rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
 .masked-email {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0;
+    padding: 3px 10px;
     font-family: 'Monospace', monospace;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--maroon);
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-    word-break: break-all;
+    letter-spacing: 0.5px;
+    background: rgba(101, 21, 29, 0.05);
+    border: 1px solid rgba(101, 21, 29, 0.12);
+    border-radius: 999px;
+    overflow-wrap: anywhere;
 }
 
 .card-hint {
-    margin: 0;
+    margin: 6px 0 0;
     color: var(--muted-ink);
-    font-size: 0.82rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
 }
 
 /* Code Input */
@@ -159,6 +175,88 @@
     font-family: 'Monospace', monospace;
     font-size: 1.3rem;
     font-weight: 600;
+}
+
+/* Square Code Inputs */
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 4px 0 6px;
+}
+
+.otp-box {
+    width: 46px;
+    height: 56px;
+    padding: 0;
+    text-align: center;
+    font-family: 'Inter', Tahoma, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid #d9cdc3;
+    border-radius: 10px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    -moz-appearance: textfield;
+}
+
+.otp-box:focus {
+    outline: none;
+    border-color: var(--maroon);
+    box-shadow: 0 0 0 4px var(--focus);
+    transform: translateY(-2px);
+}
+
+.otp-box.is-filled {
+    border-color: var(--gold);
+    background: #fffdf8;
+}
+
+.otp-box::-webkit-outer-spin-button,
+.otp-box::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.otp-fallback {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 16px;
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid #d9cdc3;
+    border-radius: 9px;
+}
+
+/* Input Icon */
+.field-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    color: #9a8f8b;
+    pointer-events: none;
+}
+
+.field-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.password-input-wrap input[name="username"] {
+    padding-right: 48px;
+}
+
+/* Completed Step Connector */
+.step-connector.is-complete::before {
+    width: 100%;
 }
 
 /* Field Hints */
@@ -310,12 +408,22 @@
     }
 
     .email-confirmation-card {
-        padding: 16px;
-        gap: 12px;
+        padding: 11px 12px;
+        gap: 10px;
     }
 
     .card-icon-wrapper {
-        width: 40px;
-        height: 40px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .card-icon-wrapper svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .masked-email {
+        font-size: 0.75rem;
+        padding: 3px 8px;
     }
 }

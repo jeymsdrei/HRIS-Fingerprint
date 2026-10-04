@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Services\AttendanceService.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Services\AttendanceService
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-1799e2cf7e74ea57df9de3afd22e219f9d1dc808de94f6b280976f75453c9de6',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-d7e1059b71fd1f3c6f688926ee00cd72624d3996a0e8cfbe87b473032b91f9fe',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 15,
-    'endLine' => 512,
+    'endLine' => 534,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => NULL,
@@ -128,7 +128,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @return array<int, array{start: Carbon, end: Carbon, schedule: TeachingSchedule|WorkSchedule|null, teaching_schedule_id: int|null, work_schedule_id: int|null, type: string}>
  */',
         'startLine' => 28,
-        'endLine' => 107,
+        'endLine' => 123,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -166,8 +166,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 113,
-            'endLine' => 113,
+            'startLine' => 129,
+            'endLine' => 129,
             'startColumn' => 35,
             'endColumn' => 52,
             'parameterIndex' => 0,
@@ -192,8 +192,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 113,
-            'endLine' => 113,
+            'startLine' => 129,
+            'endLine' => 129,
             'startColumn' => 55,
             'endColumn' => 71,
             'parameterIndex' => 1,
@@ -207,12 +207,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 113,
-                'endLine' => 113,
-                'startTokenPos' => 886,
-                'startFilePos' => 4732,
-                'endTokenPos' => 886,
-                'endFilePos' => 4735,
+                'startLine' => 129,
+                'endLine' => 129,
+                'startTokenPos' => 1034,
+                'startFilePos' => 5516,
+                'endTokenPos' => 1034,
+                'endFilePos' => 5519,
               ),
             ),
             'type' => 
@@ -249,8 +249,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 113,
-            'endLine' => 113,
+            'startLine' => 129,
+            'endLine' => 129,
             'startColumn' => 74,
             'endColumn' => 94,
             'parameterIndex' => 2,
@@ -264,12 +264,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '\'device\'',
               'attributes' => 
               array (
-                'startLine' => 113,
-                'endLine' => 113,
-                'startTokenPos' => 895,
-                'startFilePos' => 4755,
-                'endTokenPos' => 895,
-                'endFilePos' => 4762,
+                'startLine' => 129,
+                'endLine' => 129,
+                'startTokenPos' => 1043,
+                'startFilePos' => 5539,
+                'endTokenPos' => 1043,
+                'endFilePos' => 5546,
               ),
             ),
             'type' => 
@@ -287,8 +287,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 113,
-            'endLine' => 113,
+            'startLine' => 129,
+            'endLine' => 129,
             'startColumn' => 97,
             'endColumn' => 121,
             'parameterIndex' => 3,
@@ -312,8 +312,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * Register a raw fingerprint punch (from device sync / API / manual).
  * Returns the processed attendance.
  */',
-        'startLine' => 113,
-        'endLine' => 124,
+        'startLine' => 129,
+        'endLine' => 140,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -351,8 +351,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 135,
-            'endLine' => 135,
+            'startLine' => 151,
+            'endLine' => 151,
             'startColumn' => 32,
             'endColumn' => 49,
             'parameterIndex' => 0,
@@ -377,8 +377,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 135,
-            'endLine' => 135,
+            'startLine' => 151,
+            'endLine' => 151,
             'startColumn' => 52,
             'endColumn' => 63,
             'parameterIndex' => 1,
@@ -392,12 +392,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 135,
-                'endLine' => 135,
-                'startTokenPos' => 996,
-                'startFilePos' => 5627,
-                'endTokenPos' => 996,
-                'endFilePos' => 5630,
+                'startLine' => 151,
+                'endLine' => 151,
+                'startTokenPos' => 1144,
+                'startFilePos' => 6411,
+                'endTokenPos' => 1144,
+                'endFilePos' => 6414,
               ),
             ),
             'type' => 
@@ -434,8 +434,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 135,
-            'endLine' => 135,
+            'startLine' => 151,
+            'endLine' => 151,
             'startColumn' => 66,
             'endColumn' => 89,
             'parameterIndex' => 2,
@@ -483,8 +483,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * personnel produce one row per work schedule assigned for the day.
  * Rest days (no schedule) still produce a single daily row.
  */',
-        'startLine' => 135,
-        'endLine' => 200,
+        'startLine' => 151,
+        'endLine' => 216,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -522,8 +522,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 214,
-            'endLine' => 214,
+            'startLine' => 230,
+            'endLine' => 230,
             'startColumn' => 47,
             'endColumn' => 62,
             'parameterIndex' => 0,
@@ -540,8 +540,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 214,
-            'endLine' => 214,
+            'startLine' => 230,
+            'endLine' => 230,
             'startColumn' => 65,
             'endColumn' => 69,
             'parameterIndex' => 1,
@@ -573,8 +573,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @param  array<int, array>  $schedules
  * @return array<int, Collection<int, AttendanceLog>>
  */',
-        'startLine' => 214,
-        'endLine' => 271,
+        'startLine' => 230,
+        'endLine' => 284,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -612,8 +612,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 276,
-            'endLine' => 276,
+            'startLine' => 289,
+            'endLine' => 289,
             'startColumn' => 36,
             'endColumn' => 53,
             'parameterIndex' => 0,
@@ -638,8 +638,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 276,
-            'endLine' => 276,
+            'startLine' => 289,
+            'endLine' => 289,
             'startColumn' => 56,
             'endColumn' => 67,
             'parameterIndex' => 1,
@@ -664,8 +664,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 276,
-            'endLine' => 276,
+            'startLine' => 289,
+            'endLine' => 289,
             'startColumn' => 70,
             'endColumn' => 77,
             'parameterIndex' => 2,
@@ -709,8 +709,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 276,
-            'endLine' => 276,
+            'startLine' => 289,
+            'endLine' => 289,
             'startColumn' => 80,
             'endColumn' => 93,
             'parameterIndex' => 3,
@@ -735,8 +735,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 276,
-            'endLine' => 276,
+            'startLine' => 289,
+            'endLine' => 289,
             'startColumn' => 96,
             'endColumn' => 108,
             'parameterIndex' => 4,
@@ -753,8 +753,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 276,
-            'endLine' => 276,
+            'startLine' => 289,
+            'endLine' => 289,
             'startColumn' => 111,
             'endColumn' => 121,
             'parameterIndex' => 5,
@@ -798,8 +798,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 276,
-            'endLine' => 276,
+            'startLine' => 289,
+            'endLine' => 289,
             'startColumn' => 124,
             'endColumn' => 140,
             'parameterIndex' => 6,
@@ -822,8 +822,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Compute and persist one attendance record for a single schedule window.
  */',
-        'startLine' => 276,
-        'endLine' => 376,
+        'startLine' => 289,
+        'endLine' => 398,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -861,8 +861,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 381,
-            'endLine' => 381,
+            'startLine' => 403,
+            'endLine' => 403,
             'startColumn' => 33,
             'endColumn' => 44,
             'parameterIndex' => 0,
@@ -876,12 +876,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 381,
-                'endLine' => 381,
-                'startTokenPos' => 2971,
-                'startFilePos' => 15710,
-                'endTokenPos' => 2971,
-                'endFilePos' => 15713,
+                'startLine' => 403,
+                'endLine' => 403,
+                'startTokenPos' => 3185,
+                'startFilePos' => 16931,
+                'endTokenPos' => 3185,
+                'endFilePos' => 16934,
               ),
             ),
             'type' => 
@@ -918,8 +918,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 381,
-            'endLine' => 381,
+            'startLine' => 403,
+            'endLine' => 403,
             'startColumn' => 47,
             'endColumn' => 70,
             'parameterIndex' => 1,
@@ -942,8 +942,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Process all active employees for a given date.
  */',
-        'startLine' => 381,
-        'endLine' => 392,
+        'startLine' => 403,
+        'endLine' => 414,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -981,8 +981,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 397,
-            'endLine' => 397,
+            'startLine' => 419,
+            'endLine' => 419,
             'startColumn' => 34,
             'endColumn' => 51,
             'parameterIndex' => 0,
@@ -1007,8 +1007,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 397,
-            'endLine' => 397,
+            'startLine' => 419,
+            'endLine' => 419,
             'startColumn' => 54,
             'endColumn' => 65,
             'parameterIndex' => 1,
@@ -1033,8 +1033,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 397,
-            'endLine' => 397,
+            'startLine' => 419,
+            'endLine' => 419,
             'startColumn' => 68,
             'endColumn' => 77,
             'parameterIndex' => 2,
@@ -1048,12 +1048,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 397,
-                'endLine' => 397,
-                'startTokenPos' => 3095,
-                'startFilePos' => 16249,
-                'endTokenPos' => 3095,
-                'endFilePos' => 16252,
+                'startLine' => 419,
+                'endLine' => 419,
+                'startTokenPos' => 3309,
+                'startFilePos' => 17470,
+                'endTokenPos' => 3309,
+                'endFilePos' => 17473,
               ),
             ),
             'type' => 
@@ -1090,8 +1090,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 397,
-            'endLine' => 397,
+            'startLine' => 419,
+            'endLine' => 419,
             'startColumn' => 80,
             'endColumn' => 103,
             'parameterIndex' => 3,
@@ -1114,8 +1114,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Process a date range for one employee (used after bulk import).
  */',
-        'startLine' => 397,
-        'endLine' => 408,
+        'startLine' => 419,
+        'endLine' => 430,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -1153,8 +1153,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 413,
-            'endLine' => 413,
+            'startLine' => 435,
+            'endLine' => 435,
             'startColumn' => 30,
             'endColumn' => 41,
             'parameterIndex' => 0,
@@ -1179,8 +1179,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 413,
-            'endLine' => 413,
+            'startLine' => 435,
+            'endLine' => 435,
             'startColumn' => 44,
             'endColumn' => 53,
             'parameterIndex' => 1,
@@ -1194,12 +1194,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 413,
-                'endLine' => 413,
-                'startTokenPos' => 3197,
-                'startFilePos' => 16681,
-                'endTokenPos' => 3197,
-                'endFilePos' => 16684,
+                'startLine' => 435,
+                'endLine' => 435,
+                'startTokenPos' => 3411,
+                'startFilePos' => 17902,
+                'endTokenPos' => 3411,
+                'endFilePos' => 17905,
               ),
             ),
             'type' => 
@@ -1236,8 +1236,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 413,
-            'endLine' => 413,
+            'startLine' => 435,
+            'endLine' => 435,
             'startColumn' => 56,
             'endColumn' => 79,
             'parameterIndex' => 2,
@@ -1260,8 +1260,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Backfill attendance for all employees in a date range.
  */',
-        'startLine' => 413,
-        'endLine' => 423,
+        'startLine' => 435,
+        'endLine' => 445,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -1299,8 +1299,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 433,
-            'endLine' => 433,
+            'startLine' => 455,
+            'endLine' => 455,
             'startColumn' => 35,
             'endColumn' => 46,
             'parameterIndex' => 0,
@@ -1325,8 +1325,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 433,
-            'endLine' => 433,
+            'startLine' => 455,
+            'endLine' => 455,
             'startColumn' => 49,
             'endColumn' => 58,
             'parameterIndex' => 1,
@@ -1340,12 +1340,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 433,
-                'endLine' => 433,
-                'startTokenPos' => 3322,
-                'startFilePos' => 17490,
-                'endTokenPos' => 3322,
-                'endFilePos' => 17493,
+                'startLine' => 455,
+                'endLine' => 455,
+                'startTokenPos' => 3536,
+                'startFilePos' => 18711,
+                'endTokenPos' => 3536,
+                'endFilePos' => 18714,
               ),
             ),
             'type' => 
@@ -1382,8 +1382,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 433,
-            'endLine' => 433,
+            'startLine' => 455,
+            'endLine' => 455,
             'startColumn' => 61,
             'endColumn' => 85,
             'parameterIndex' => 2,
@@ -1411,8 +1411,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @return Collection<int, array{date: Carbon, year: string, month: string, department_id: int|null, status: string}>
  */',
-        'startLine' => 433,
-        'endLine' => 449,
+        'startLine' => 455,
+        'endLine' => 471,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -1450,8 +1450,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 456,
-            'endLine' => 456,
+            'startLine' => 478,
+            'endLine' => 478,
             'startColumn' => 36,
             'endColumn' => 55,
             'parameterIndex' => 0,
@@ -1476,8 +1476,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * Best status wins: present over late over half_day over absent; all
  * rest-day rows collapse to a single rest day.
  */',
-        'startLine' => 456,
-        'endLine' => 472,
+        'startLine' => 478,
+        'endLine' => 494,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -1504,12 +1504,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 481,
-                'endLine' => 481,
-                'startTokenPos' => 3679,
-                'startFilePos' => 19377,
-                'endTokenPos' => 3679,
-                'endFilePos' => 19380,
+                'startLine' => 503,
+                'endLine' => 503,
+                'startTokenPos' => 3893,
+                'startFilePos' => 20598,
+                'endTokenPos' => 3893,
+                'endFilePos' => 20601,
               ),
             ),
             'type' => 
@@ -1546,8 +1546,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 481,
-            'endLine' => 481,
+            'startLine' => 503,
+            'endLine' => 503,
             'startColumn' => 34,
             'endColumn' => 53,
             'parameterIndex' => 0,
@@ -1574,8 +1574,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * teaching personnel collapse into a single day-level status (best
  * status wins), keeping the KPIs comparable to the headcount.
  */',
-        'startLine' => 481,
-        'endLine' => 511,
+        'startLine' => 503,
+        'endLine' => 533,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

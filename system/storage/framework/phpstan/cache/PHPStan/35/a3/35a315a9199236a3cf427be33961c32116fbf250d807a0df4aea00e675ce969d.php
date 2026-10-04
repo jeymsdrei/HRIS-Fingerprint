@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Controllers\MakeUpClassController.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Controllers\MakeUpClassController
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-4d2df8a338760b49ecdb20e8d525a8d0c99ec96ba2d909e1fe3ccd46849b0a8d',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-4e3ebe2fc8d433ecb4859a57a6c32eb6c8ca2e6cc722f3b8f054ede803a5b112',
    'data' => 
   array (
     'locatedSource' => 
@@ -26,8 +26,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 13,
-    'endLine' => 100,
+    'startLine' => 14,
+    'endLine' => 109,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'App\\Http\\Controllers\\Controller',
@@ -69,8 +69,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 15,
-            'endLine' => 15,
+            'startLine' => 16,
+            'endLine' => 16,
             'startColumn' => 27,
             'endColumn' => 42,
             'parameterIndex' => 0,
@@ -83,8 +83,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 15,
-        'endLine' => 34,
+        'startLine' => 16,
+        'endLine' => 35,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -122,8 +122,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 36,
-            'endLine' => 36,
+            'startLine' => 37,
+            'endLine' => 37,
             'startColumn' => 27,
             'endColumn' => 42,
             'parameterIndex' => 0,
@@ -136,8 +136,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 36,
-        'endLine' => 68,
+        'startLine' => 37,
+        'endLine' => 69,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -156,6 +156,32 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'name' => 'approve',
         'parameters' => 
         array (
+          'request' => 
+          array (
+            'name' => 'request',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'Illuminate\\Http\\Request',
+                'isIdentifier' => false,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 71,
+            'endLine' => 71,
+            'startColumn' => 29,
+            'endColumn' => 44,
+            'parameterIndex' => 0,
+            'isOptional' => false,
+          ),
           'makeUpClass' => 
           array (
             'name' => 'makeUpClass',
@@ -175,11 +201,37 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 70,
-            'endLine' => 70,
-            'startColumn' => 29,
-            'endColumn' => 52,
-            'parameterIndex' => 0,
+            'startLine' => 71,
+            'endLine' => 71,
+            'startColumn' => 47,
+            'endColumn' => 70,
+            'parameterIndex' => 1,
+            'isOptional' => false,
+          ),
+          'attendanceService' => 
+          array (
+            'name' => 'attendanceService',
+            'default' => NULL,
+            'type' => 
+            array (
+              'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+              'data' => 
+              array (
+                'name' => 'App\\Services\\AttendanceService',
+                'isIdentifier' => false,
+              ),
+            ),
+            'isVariadic' => false,
+            'byRef' => false,
+            'isPromoted' => false,
+            'attributes' => 
+            array (
+            ),
+            'startLine' => 71,
+            'endLine' => 71,
+            'startColumn' => 73,
+            'endColumn' => 108,
+            'parameterIndex' => 2,
             'isOptional' => false,
           ),
         ),
@@ -189,8 +241,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 70,
-        'endLine' => 86,
+        'startLine' => 71,
+        'endLine' => 94,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -228,8 +280,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 88,
-            'endLine' => 88,
+            'startLine' => 96,
+            'endLine' => 96,
             'startColumn' => 28,
             'endColumn' => 43,
             'parameterIndex' => 0,
@@ -254,8 +306,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 88,
-            'endLine' => 88,
+            'startLine' => 96,
+            'endLine' => 96,
             'startColumn' => 46,
             'endColumn' => 69,
             'parameterIndex' => 1,
@@ -268,8 +320,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 88,
-        'endLine' => 99,
+        'startLine' => 96,
+        'endLine' => 108,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

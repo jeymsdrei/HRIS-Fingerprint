@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
+class Container_836fc1dfcf extends _PHPStan_b3f880679\Nette\DI\Container
 {
 	protected $tags = [
 		'phpstan.broker.dynamicMethodReturnTypeExtension' => [
@@ -6213,7 +6213,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -6233,7 +6233,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -6253,7 +6253,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -6278,7 +6278,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -6326,7 +6326,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -6395,7 +6395,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -6455,7 +6455,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -6495,7 +6495,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -6515,7 +6515,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_b58952af73 $container)
+			public function __construct(Container_836fc1dfcf $container)
 			{
 				$this->container = $container;
 			}
@@ -9985,7 +9985,7 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 	}
 
 
-	public function createServiceContainer(): Container_b58952af73
+	public function createServiceContainer(): Container_836fc1dfcf
 	{
 		return $this;
 	}
@@ -11039,26 +11039,8 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 				'AGENT' => '1',
 				'ALLUSERSPROFILE' => 'C:\ProgramData',
 				'APPDATA' => 'C:\Users\Ryzen\AppData\Roaming',
-				'APP_DEBUG' => 'true',
-				'APP_ENV' => 'local',
-				'APP_FAKER_LOCALE' => 'en_US',
-				'APP_FALLBACK_LOCALE' => 'en',
-				'APP_KEY' => 'base64:OF8We6++1WBiS8ZDgoonH7j4Up7BLqv2jvVqiNFzRqE=',
-				'APP_LOCALE' => 'en',
-				'APP_MAINTENANCE_DRIVER' => 'file',
-				'APP_NAME' => 'HRIS - Human Resource Information System',
-				'APP_URL' => 'http://localhost:8080',
-				'AUTH_PASSWORD_TIMEOUT' => '5256000',
-				'AWS_ACCESS_KEY_ID' => '',
-				'AWS_BUCKET' => '',
-				'AWS_DEFAULT_REGION' => 'us-east-1',
-				'AWS_SECRET_ACCESS_KEY' => '',
-				'AWS_USE_PATH_STYLE_ENDPOINT' => 'false',
-				'BCRYPT_ROUNDS' => '12',
 				'BIN_TARGET' => 'C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\vendor\bin\/phpstan',
-				'BROADCAST_CONNECTION' => 'log',
-				'CACHE_STORE' => 'database',
-				'CHROME_CRASHPAD_PIPE_NAME' => '\\\.\pipe\crashpad_9040_LEXBMCIBLHGGAYNG',
+				'CHROME_CRASHPAD_PIPE_NAME' => '\\\.\pipe\crashpad_15372_GTLWQPEWYPKGGKDR',
 				'COLORTERM' => 'truecolor',
 				'COLUMNS' => '120',
 				'CommonProgramFiles' => 'C:\Program Files\Common Files',
@@ -11068,16 +11050,8 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 				'COMPUTERNAME' => 'DESKTOP-5C9P26G',
 				'ComSpec' => 'C:\Windows\system32\cmd.exe',
 				'COPILOT_DEBUG_NONCE' => 'e22b38561de99243c4106c1bf40cce80',
-				'DB_CHARSET' => 'utf8mb4',
-				'DB_CONNECTION' => 'sqlite',
-				'DB_DATABASE' => 'database/database.sqlite',
-				'DB_HOST' => '',
-				'DB_PASSWORD' => '',
-				'DB_PORT' => '',
-				'DB_USERNAME' => '',
 				'DriverData' => 'C:\Windows\System32\Drivers\DriverData',
-				'EFC_5416' => '1',
-				'FILESYSTEM_DISK' => 'local',
+				'EFC_5660' => '1',
 				'GIT_ASKPASS' => 'c:\Users\Ryzen\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass.sh',
 				'GLOG_logbufsecs' => '0',
 				'HERMES_GIT_BASH_PATH' => 'D:\Git\bin\bash.exe',
@@ -11088,19 +11062,6 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 				'LINES' => '9001',
 				'LOCALAPPDATA' => 'C:\Users\Ryzen\AppData\Local',
 				'LOGONSERVER' => '\\\DESKTOP-5C9P26G',
-				'LOG_CHANNEL' => 'stack',
-				'LOG_DEPRECATIONS_CHANNEL' => 'null',
-				'LOG_LEVEL' => 'debug',
-				'LOG_STACK' => 'single',
-				'MAIL_FROM_ADDRESS' => 'hello@example.com',
-				'MAIL_FROM_NAME' => 'HRIS - Human Resource Information System',
-				'MAIL_HOST' => '127.0.0.1',
-				'MAIL_MAILER' => 'log',
-				'MAIL_PASSWORD' => 'null',
-				'MAIL_PORT' => '2525',
-				'MAIL_SCHEME' => 'null',
-				'MAIL_USERNAME' => 'null',
-				'MEMCACHED_HOST' => '127.0.0.1',
 				'npm_config_user_agent' => 'npm/undefined node/v24.3.0 win32 x64 workspaces/false',
 				'NUMBER_OF_PROCESSORS' => '8',
 				'NVM_HOME' => 'C:\Users\Ryzen\.config\herd\bin\nvm',
@@ -11108,12 +11069,11 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 				'OneDrive' => 'C:\Users\Ryzen\OneDrive',
 				'OneDriveConsumer' => 'C:\Users\Ryzen\OneDrive',
 				'OPENCODE' => '1',
-				'OPENCODE_PID' => '23528',
+				'OPENCODE_PID' => '12760',
 				'OS' => 'Windows_NT',
-				'Path' => 'C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe;c:\Users\Ryzen\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\Ryzen\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.502.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;D:\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\Users\Ryzen\.config\herd\bin\nvm;C:\Program Files\nodejs;C:\Users\Ryzen\.config\herd\bin;C:\Users\Ryzen\AppData\Local\hermes\bin;C:\Users\Ryzen\AppData\Local\Microsoft\WindowsApps;C:\Users\Ryzen\AppData\Local\Programs\Windsurf\bin;C:\Users\Ryzen\AppData\Roaming\Composer\vendor\bin;C:\Users\Ryzen\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ryzen\.bun\bin;C:\Users\Ryzen\AppData\Local\GitHubDesktop\bin;C:\Users\Ryzen\.dotnet\tools;C:\Users\Ryzen\AppData\Local\Kingsoft\WPS Office\12.1.0.27458\clitool;C:\Users\Ryzen\AppData\Local\Programs\Ollama;C:\Users\Ryzen\AppData\Local\Microsoft\WinGet\Packages\BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe\ripgrep-15.2.0-x86_64-pc-windows-msvc;C:\Users\Ryzen\AppData\Roaming\npm;C:\Users\Ryzen\AppData\Local\Programs\DockerDesktop\resources\bin',
+				'Path' => 'C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.6.0_x64__8wekyb3d8bbwe;c:\Users\Ryzen\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\Ryzen\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.502.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;D:\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\Users\Ryzen\.config\herd\bin\nvm;C:\Program Files\nodejs;C:\Program Files\WSL\;C:\Users\Ryzen\AppData\Local\hermes\bin;C:\Users\Ryzen\AppData\Local\Microsoft\WindowsApps;C:\Users\Ryzen\AppData\Local\Programs\Windsurf\bin;C:\Users\Ryzen\AppData\Roaming\Composer\vendor\bin;C:\Users\Ryzen\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ryzen\.bun\bin;C:\Users\Ryzen\AppData\Local\GitHubDesktop\bin;C:\Users\Ryzen\.dotnet\tools;C:\Users\Ryzen\AppData\Local\Kingsoft\WPS Office\12.1.0.27458\clitool;C:\Users\Ryzen\AppData\Local\Programs\Ollama;C:\Users\Ryzen\AppData\Local\Microsoft\WinGet\Packages\BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe\ripgrep-15.2.0-x86_64-pc-windows-msvc;C:\Users\Ryzen\AppData\Roaming\npm;C:\Users\Ryzen\AppData\Local\Programs\DockerDesktop\resources\bin;C:\Users\Ryzen\AppData\Local\Microsoft\WinGet\Packages\PHP.PHP.8.4_Microsoft.Winget.Source_8wekyb3d8bbwe;',
 				'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL',
 				'php' => 'D:\xampp\php\php',
-				'PHP_CLI_SERVER_WORKERS' => '4',
 				'PROCESSOR_ARCHITECTURE' => 'AMD64',
 				'PROCESSOR_IDENTIFIER' => 'AMD64 Family 23 Model 17 Stepping 0, AuthenticAMD',
 				'PROCESSOR_LEVEL' => '23',
@@ -11125,31 +11085,19 @@ class Container_b58952af73 extends _PHPStan_b3f880679\Nette\DI\Container
 				'PROMPT' => '$P$G',
 				'PSModulePath' => 'C:\Users\Ryzen\Documents\PowerShell\Modules;C:\Program Files\PowerShell\Modules;c:\program files\windowsapps\microsoft.powershell_7.6.6.0_x64__8wekyb3d8bbwe\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules',
 				'PUBLIC' => 'C:\Users\Public',
-				'QUEUE_CONNECTION' => 'database',
-				'REDIS_CLIENT' => 'phpredis',
-				'REDIS_HOST' => '127.0.0.1',
-				'REDIS_PASSWORD' => 'null',
-				'REDIS_PORT' => '6379',
 				'SESSIONNAME' => 'Console',
-				'SESSION_DOMAIN' => 'null',
-				'SESSION_DRIVER' => 'database',
-				'SESSION_ENCRYPT' => 'false',
-				'SESSION_EXPIRE_ON_CLOSE' => 'false',
-				'SESSION_LIFETIME' => '5256000',
-				'SESSION_PATH' => '/',
 				'SHELL_VERBOSITY' => '0',
 				'SystemDrive' => 'C:',
 				'SystemRoot' => 'C:\Windows',
 				'TEMP' => 'C:\Users\Ryzen\AppData\Local\Temp',
 				'TERM_PROGRAM' => 'vscode',
-				'TERM_PROGRAM_VERSION' => '1.139.1',
+				'TERM_PROGRAM_VERSION' => '1.140.0',
 				'TMP' => 'C:\Users\Ryzen\AppData\Local\Temp',
 				'USERDOMAIN' => 'DESKTOP-5C9P26G',
 				'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-5C9P26G',
 				'USERNAME' => 'Ryzen',
 				'USERPROFILE' => 'C:\Users\Ryzen',
 				'VBOX_MSI_INSTALL_PATH' => 'C:\Program Files\Oracle\VirtualBox\\',
-				'VITE_APP_NAME' => 'HRIS - Human Resource Information System',
 				'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '',
 				'VSCODE_GIT_ASKPASS_MAIN' => 'c:\Users\Ryzen\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass-main.js',
 				'VSCODE_GIT_ASKPASS_NODE' => 'C:\Users\Ryzen\AppData\Local\Programs\Microsoft VS Code\Code.exe',

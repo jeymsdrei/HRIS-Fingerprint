@@ -15,7 +15,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'biometricdevice' => 'App\\Models\\BiometricDevice',
           'department' => 'App\\Models\\Department',
-          'employee' => 'App\\Models\\Employee',
           'attendanceservice' => 'App\\Services\\AttendanceService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
@@ -44,7 +43,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'biometricdevice' => 'App\\Models\\BiometricDevice',
           'department' => 'App\\Models\\Department',
-          'employee' => 'App\\Models\\Employee',
           'attendanceservice' => 'App\\Services\\AttendanceService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
@@ -73,7 +71,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'biometricdevice' => 'App\\Models\\BiometricDevice',
           'department' => 'App\\Models\\Department',
-          'employee' => 'App\\Models\\Employee',
           'attendanceservice' => 'App\\Services\\AttendanceService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
@@ -102,7 +99,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'biometricdevice' => 'App\\Models\\BiometricDevice',
           'department' => 'App\\Models\\Department',
-          'employee' => 'App\\Models\\Employee',
           'attendanceservice' => 'App\\Services\\AttendanceService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
@@ -131,7 +127,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'attendance' => 'App\\Models\\Attendance',
           'biometricdevice' => 'App\\Models\\BiometricDevice',
           'department' => 'App\\Models\\Department',
-          'employee' => 'App\\Models\\Employee',
           'attendanceservice' => 'App\\Services\\AttendanceService',
           'carbon' => 'Carbon\\Carbon',
           'request' => 'Illuminate\\Http\\Request',
@@ -155,7 +150,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php' => 'b406e6c9e24e9a050bf49baab3e5bf2c63e6ca8560fda12f38b3cbe0e84e04d2',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\AttendanceController.php' => '903afad416687f00f42a91e78dcdb2cafd0dec034777802f5d6088546c076f08',
     ),
   ),
 ));

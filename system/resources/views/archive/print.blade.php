@@ -40,8 +40,10 @@
         .b-green { background: #dcfce7; color: #15803d; } .b-amber { background: #fef3c7; color: #b45309; }
         .b-red { background: #fee2e2; color: #b91c1c; } .b-gray { background: #f3f4f6; color: #6b7280; }
         .report-footer { margin-top: 28px; border-top: 1px solid #e5e7eb; padding-top: 8px; color: #6b7280; font-size: 11px; }
-        .print-btn { position: fixed; top: 12px; right: 12px; z-index: 50; }
+        .print-btn { position: fixed; top: 12px; right: 12px; z-index: 50; display: flex; gap: 8px; align-items: center; }
         .print-btn button { padding: 8px 16px; border: none; border-radius: 6px; background: #4f46e5; color: #fff; font-weight: 600; cursor: pointer; font-size: 12px; }
+        .print-btn .btn-back { padding: 8px 16px; border-radius: 6px; background: #fff; color: #4f46e5; border: 1px solid #4f46e5; font-weight: 600; text-decoration: none; font-size: 12px; }
+        .print-btn .btn-back:hover { background: #4f46e5; color: #fff; }
 
         /* Dedicated print styles */
         @media print {
@@ -64,6 +66,7 @@
 </head>
 <body>
     <div class="print-btn">
+        <a href="{{ route('archives.index') }}" class="btn-back">← Back to Archives</a>
         <button onclick="window.print(); return false;">🖨️ Print Report</button>
     </div>
 

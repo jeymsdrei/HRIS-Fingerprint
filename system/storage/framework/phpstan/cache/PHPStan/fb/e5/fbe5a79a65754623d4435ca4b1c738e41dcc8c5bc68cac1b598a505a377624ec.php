@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Requests\Auth\LoginRequest.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Requests\Auth\LoginRequest
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-a63878fe6288d4baa1f3cfa290a7ac085c6ab671f8c79b98265251ff6fc386a7',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-e2eab3ec849f03f7a6d4380d5a0bbdf10e160dd14af0eba5291207fbdfae3fc8',
    'data' => 
   array (
     'locatedSource' => 
@@ -27,7 +27,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 10,
-    'endLine' => 52,
+    'endLine' => 64,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Foundation\\Http\\FormRequest',
@@ -107,7 +107,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @return array<string, ValidationRule|array<mixed>|string>
  */',
         'startLine' => 25,
-        'endLine' => 31,
+        'endLine' => 32,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -145,8 +145,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  *
  * @throws ValidationException
  */',
-        'startLine' => 38,
-        'endLine' => 51,
+        'startLine' => 39,
+        'endLine' => 63,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => true,

@@ -2,15 +2,11 @@
 
 namespace App\Notifications;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class ResetPasswordCode extends Notification implements ShouldQueue
+class ResetPasswordCode extends Notification
 {
-    use Queueable;
-
     public function __construct(
         public string $code,
         public int $expireMinutes = 60
@@ -28,7 +24,7 @@ class ResetPasswordCode extends Notification implements ShouldQueue
             ->greeting('Hello!')
             ->line('You are receiving this email because we received a password reset request for your account.')
             ->line('Your password reset code is:')
-            ->line('<strong style="font-size: 24px; letter-spacing: 4px; font-family: monospace;">'.$this->code.'</strong>')
+            ->line($this->code)
             ->line('This code will expire in '.$this->expireMinutes.' minutes.')
             ->line('If you did not request a password reset, no further action is required.')
             ->salutation('Regards, HRIS Team');

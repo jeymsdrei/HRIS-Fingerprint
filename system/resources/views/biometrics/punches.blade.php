@@ -3,9 +3,24 @@
 
     <div class="page-container">
         <div class="max-w-lg">
-            <div class="mb-8">
-                <h1 class="text-3xl font-bold text-slate-900">Manual Fingerprint Punch</h1>
-                <p class="mt-2 text-slate-600">Register a manual punch when an employee forgets to scan or the device is down</p>
+            <div class="mb-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <div>
+                    <h1 class="text-3xl font-bold text-slate-900">Manual Fingerprint Punch</h1>
+                    <p class="mt-2 text-slate-600">Register a manual punch when an employee forgets to scan or the device is down</p>
+                </div>
+                <div class="flex gap-2">
+                    @if (auth()->user()->isAdmin())
+                        <a href="{{ route('biometrics.index') }}" class="btn btn-secondary btn-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            Back to Devices
+                        </a>
+                    @else
+                        <a href="{{ route('dashboard') }}" class="btn btn-secondary btn-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            Back to Dashboard
+                        </a>
+                    @endif
+                </div>
             </div>
 
             <div class="card">
@@ -17,18 +32,26 @@
                     <form method="POST" action="{{ route('biometrics.punches.store') }}" class="space-y-4">
                         @csrf
                         <div>
-                            <label class="input-label">Employee</label>
                             <div class="flex items-center gap-3">
                                 <img src="" alt="" class="h-14 w-14 rounded-full object-cover shadow-sm cursor-pointer" id="punch-photo" data-avatar-preview style="display:none">
                                 <div id="punch-photo-initials" class="h-14 w-14 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-700 text-white items-center justify-center text-lg font-bold" style="display:none"></div>
-                                <select name="employee_id" class="input flex-1" required data-punch-employee>
-                                    <option value="">Select employee…</option>
-                                    @foreach ($employees as $e)
-                                        <option value="{{ $e->id }}"
-                                            data-photo="{{ $e->photo_path ? asset('storage/'.$e->photo_path) : '' }}"
-                                            data-initials="{{ mb_strtoupper(mb_substr($e->first_name, 0, 1) . mb_substr($e->last_name, 0, 1)) }}">{{ $e->employee_id }} — {{ $e->full_name }} ({{ $e->classification }})</option>
-                                    @endforeach
-                                </select>
+                                <div class="min-w-0 flex-1">
+                                    <x-typeahead
+                                        name="employee_id"
+                                        id="punch-employee"
+                                        label="Employee"
+                                        placeholder="Type a name or ID…"
+                                        required
+                                        :value="old('employee_id', '')"
+                                        :items="$employees->map(fn ($e) => [
+                                            'id' => $e->id,
+                                            'text' => $e->employee_id.' — '.$e->full_name.' ('.$e->classification.')',
+                                            'label' => $e->full_name,
+                                            'meta' => $e->employee_id.' · '.$e->classification,
+                                            'photo' => $e->photo_path ? asset('storage/'.$e->photo_path) : '',
+                                            'initials' => mb_strtoupper(mb_substr($e->first_name, 0, 1).mb_substr($e->last_name, 0, 1)),
+                                        ])->values()" />
+                                </div>
                             </div>
                         </div>
                         <div>
@@ -46,29 +69,34 @@
                     </form>
 
                     <script>
-                        const punchSelect = document.querySelector('[data-punch-employee]');
                         const punchPhoto = document.getElementById('punch-photo');
                         const punchInitials = document.getElementById('punch-photo-initials');
 
-                        if (punchSelect) {
-                            punchSelect.addEventListener('change', () => {
-                                const option = punchSelect.options[punchSelect.selectedIndex];
-                                const photo = option?.dataset.photo || '';
-                                const initials = option?.dataset.initials || '?';
+                        const paintPunchAvatar = (item) => {
+                            if (! punchPhoto || ! punchInitials) return;
 
-                                if (photo) {
-                                    punchPhoto.src = photo;
-                                    punchPhoto.alt = (option?.textContent || '').trim();
-                                    punchPhoto.style.display = '';
-                                    punchInitials.style.display = 'none';
-                                } else {
-                                    punchInitials.textContent = initials;
-                                    punchInitials.style.display = 'flex';
-                                    punchPhoto.style.display = 'none';
-                                    punchPhoto.src = '';
+                            if (item && item.photo) {
+                                punchPhoto.src = item.photo;
+                                punchPhoto.alt = item.label || '';
+                                punchPhoto.style.display = '';
+                                punchInitials.style.display = 'none';
+                            } else {
+                                punchInitials.textContent = (item && item.initials) || '?';
+                                punchInitials.style.display = 'flex';
+                                punchPhoto.style.display = 'none';
+                                punchPhoto.src = '';
+                            }
+                        };
+
+                        // Employee is a type-ahead now, so it announces picks instead of firing `change`
+                        // on a native <select>. Guarded because inline scripts re-run on SPA navigation.
+                        if (! window.__punchAvatarBound) {
+                            window.__punchAvatarBound = true;
+                            document.addEventListener('typeahead:pick', (event) => {
+                                if (event.detail && event.detail.name === 'employee_id') {
+                                    paintPunchAvatar(event.detail.item);
                                 }
                             });
-                            punchSelect.dispatchEvent(new Event('change'));
                         }
                     </script>
                 </div>

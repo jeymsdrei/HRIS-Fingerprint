@@ -58,7 +58,7 @@
                             </div>
                             <form method="POST" action="{{ route('benefits.destroy', $b) }}" data-confirm="Remove benefit type?">
                                 @csrf @method('DELETE')
-                                <button type="submit" class="text-red-500 hover:text-red-700 text-sm" title="Delete benefit type" aria-label="Delete {{ $b->name }}">✕</button>
+                                <button type="submit" class="shrink-0 text-sm font-medium text-red-600 hover:text-red-700" title="Delete benefit type" aria-label="Delete {{ $b->name }}">Delete</button>
                             </form>
                         </div>
                         @empty
@@ -80,12 +80,18 @@
                     <form method="POST" action="{{ route('benefits.assign') }}" class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-5 items-end">
                         @csrf
                         <div class="col-span-2">
-                            <label class="input-label">Employee</label>
-                            <select name="employee_id" class="input" required>
-                                @foreach (App\Models\Employee::where('is_active', true)->orderBy('last_name')->get() as $e)
-                                    <option value="{{ $e->id }}">{{ $e->employee_id }} — {{ $e->full_name }}</option>
-                                @endforeach
-                            </select>
+                            <x-typeahead
+                                name="employee_id"
+                                label="Employee"
+                                placeholder="Type a name or ID…"
+                                required
+                                :value="old('employee_id', '')"
+                                :items="$employees->map(fn ($e) => [
+                                    'id' => $e->id,
+                                    'text' => $e->employee_id.' — '.$e->full_name,
+                                    'label' => $e->full_name,
+                                    'meta' => $e->employee_id,
+                                ])->values()" />
                         </div>
                         <div>
                             <label class="input-label">Benefit</label>
@@ -100,9 +106,9 @@
                         <button class="btn btn-primary">Assign</button>
                     </form>
 
-                    <form method="GET" class="flex flex-wrap gap-3 items-end mb-5">
+                    <form method="GET" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end mb-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.25fr_1.4fr_1.1fr_1fr_auto]">
                         @include('partials.employee-filters')
-                        <button class="btn btn-primary btn-sm">Filter</button>
+                        <button class="btn btn-primary w-full sm:w-auto">Filter</button>
                     </form>
 
                     <div class="table-container">

@@ -20,7 +20,7 @@
                         <input name="name" placeholder="Course name" class="input flex-1" required>
                         <button class="btn btn-primary">Add</button>
                     </form>
-                    <div class="space-y-1 h-96 overflow-y-auto pr-1 [scrollbar-width:thin]">
+                    <div data-scroll-preserve="courses" class="space-y-1 h-96 overflow-y-auto pr-1 [scrollbar-width:thin]">
                         @forelse ($courses as $c)
                             <div class="flex items-center justify-between gap-2 text-sm border-b border-slate-100 py-1.5">
                                 <span class="text-slate-700"><b>{{ $c->code }}</b> — {{ $c->name }}</span>
@@ -57,7 +57,7 @@
                         <input name="name" placeholder="Subject name" class="input flex-1" required>
                         <button class="btn btn-primary">Add</button>
                     </form>
-                    <div class="space-y-1 h-96 overflow-y-auto pr-1 [scrollbar-width:thin]">
+                    <div data-scroll-preserve="subjects" class="space-y-1 h-96 overflow-y-auto pr-1 [scrollbar-width:thin]">
                         @forelse ($subjects as $s)
                             <div class="flex items-center justify-between gap-2 text-sm border-b border-slate-100 py-1.5">
                                 <span class="text-slate-700"><b>{{ $s->code }}</b> — {{ $s->name }}</span>
@@ -99,7 +99,7 @@
                             @endforeach
                         </div>
                     @endif
-                    <div class="space-y-1 h-96 overflow-y-auto pr-1 [scrollbar-width:thin]">
+                    <div data-scroll-preserve="rooms" class="space-y-1 h-96 overflow-y-auto pr-1 [scrollbar-width:thin]">
                         @forelse ($rooms as $r)
                             <div class="flex items-center justify-between gap-2 text-sm border-b border-slate-100 py-1.5">
                                 <span class="text-slate-700"><b>{{ $r->code }}</b> — {{ $r->name }}</span>
@@ -137,7 +137,7 @@
                         </div>
                         <button class="btn btn-primary w-full">Add School Year</button>
                     </form>
-                    <div class="space-y-3 flex-1 min-h-[5rem] overflow-y-auto pr-1 [scrollbar-width:thin]">
+                    <div data-scroll-preserve="school-years" class="space-y-3 flex-1 min-h-[5rem] overflow-y-auto pr-1 [scrollbar-width:thin]">
                         @forelse ($schoolYears as $sy)
                             <div class="rounded-card border p-3 {{ $sy->is_active ? 'border-indigo-300 bg-indigo-50/40' : 'border-slate-200' }}">
                                 <div class="flex justify-between items-center">

@@ -79,6 +79,12 @@
         <div class="card">
             <div class="card-header flex flex-wrap items-center justify-between gap-3">
                 <h2 class="font-semibold text-slate-900">Filters</h2>
+                <form method="POST" action="{{ route('archives.run') }}" class="flex flex-wrap items-center gap-2">
+                    @csrf
+                    <label for="archive-month" class="sr-only">Archive month</label>
+                    <input id="archive-month" type="month" name="month" value="{{ $startDate->format('Y-m') }}" class="input w-full sm:w-40" required>
+                    <button type="submit" class="btn btn-secondary btn-sm">Archive Month</button>
+                </form>
                 <a href="{{ route('archives.index') }}" class="btn btn-outline btn-sm">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
@@ -86,80 +92,73 @@
                     Reset Filters
                 </a>
             </div>
-            <div class="card-body">
-                <form method="GET" action="{{ route('archives.index') }}" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4 items-end">
-                    <div>
-                        <label class="input-label">Year</label>
-                        <select name="year" class="input">
+            <div class="card-body px-4 py-3">
+                <form method="GET" action="{{ route('archives.index') }}" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[0.7fr_0.8fr_1.2fr_1fr_1fr_1.1fr_0.9fr_0.9fr_auto]">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="archive-filter-year">Year</label>
+                        <select id="archive-filter-year" name="year" class="input w-full min-w-0">
                             @foreach ($years as $y)
                                 <option value="{{ $y }}" @selected($year == $y)>{{ $y }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Month</label>
-                        <select name="month" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="archive-filter-month">Month</label>
+                        <select id="archive-filter-month" name="month" class="input w-full min-w-0">
                             <option value="0" @selected($month == 0)>All Months</option>
                             @foreach ($monthLabels as $i => $m)
                                 <option value="{{ $i + 1 }}" @selected($month == $i + 1)>{{ $m }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Department</label>
-                        <select name="department_id" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="archive-filter-department">Department</label>
+                        <select id="archive-filter-department" name="department_id" class="input w-full min-w-0">
                             <option value="0" @selected(!$departmentId)>All Departments</option>
                             @foreach ($departments as $d)
                                 <option value="{{ $d->id }}" @selected($departmentId == $d->id)>{{ $d->name }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Personnel Type</label>
-                        <select name="classification" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="archive-filter-classification">Personnel Type</label>
+                        <select id="archive-filter-classification" name="classification" class="input w-full min-w-0">
                             <option value="" @selected(!$classification)>All</option>
                             <option value="teaching" @selected($classification == 'teaching')>Teaching</option>
                             <option value="non_teaching" @selected($classification == 'non_teaching')>Non-Teaching</option>
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Employment Type</label>
-                        <select name="employment_status" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="archive-filter-employment">Employment Type</label>
+                        <select id="archive-filter-employment" name="employment_status" class="input w-full min-w-0">
                             <option value="" @selected(!$employmentStatus)>All</option>
                             <option value="permanent" @selected($employmentStatus == 'permanent')>Regular</option>
                             <option value="contractual" @selected($employmentStatus == 'contractual')>Contractual</option>
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Record Type</label>
-                        <select name="record_type" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="archive-filter-record-type">Record Type</label>
+                        <select id="archive-filter-record-type" name="record_type" class="input w-full min-w-0">
                             <option value="" @selected(!$recordType)>All Records</option>
                             @foreach (['attendance','payroll','payslip','payroll_receipt','make_up_class','employee'] as $t)
                                 <option value="{{ $t }}" @selected($recordType == $t)>{{ ucwords(str_replace('_', ' ', $t)) }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="archive-filter-from">From</label>
+                        <input id="archive-filter-from" type="date" name="from" value="{{ $from?->format('Y-m-d') ?? $startDate->format('Y-m-d') }}" class="input w-full min-w-0">
+                    </div>
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="archive-filter-to">To</label>
+                        <input id="archive-filter-to" type="date" name="to" value="{{ $to?->format('Y-m-d') ?? $endDate->format('Y-m-d') }}" class="input w-full min-w-0">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full sm:w-auto">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
                         </svg>
                         Apply Filter
                     </button>
-                </form>
-
-                {{-- Date Range --}}
-                <form method="GET" action="{{ route('archives.index') }}" class="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 md:grid-cols-4 gap-4 items-end">
-                    <div>
-                        <label class="input-label">From</label>
-                        <input type="date" name="from" value="{{ $from?->format('Y-m-d') ?? $startDate->format('Y-m-d') }}" class="input">
-                    </div>
-                    <div>
-                        <label class="input-label">To</label>
-                        <input type="date" name="to" value="{{ $to?->format('Y-m-d') ?? $endDate->format('Y-m-d') }}" class="input">
-                    </div>
-                    <div class="flex gap-2">
-                        <button type="submit" class="btn btn-secondary">Apply Date Range</button>
-                    </div>
                 </form>
             </div>
         </div>
@@ -212,6 +211,13 @@
             $hasPayroll = $kpis['payroll_records'] > 0;
             $hasMakeup = $kpis['makeup_records'] > 0;
             $hasAny = $hasAttendance || $hasPayroll || $hasMakeup || $kpis['archived_employees'] > 0;
+
+            // The chart script below renders unconditionally, so these must exist
+            // even when the analytics blocks (and their calculations) are skipped.
+            $reg = 0;
+            $nonReg = 0;
+            $teach = 0;
+            $nonTeach = 0;
         @endphp
 
         @if ($hasAny)
@@ -352,7 +358,7 @@
                 </div>
                 <div class="card-body">
                     @php
-                        $reg = $employmentType->firstWhere('employment_status', 'permanent')->total ?? 0;
+                        $reg = $employmentType->firstWhere('employment_status', 'permanent')?->total ?? 0;
                         $nonReg = $employmentType->where('employment_status', '!=', 'permanent')->sum('total');
                         $empTotal = $reg + $nonReg;
                     @endphp
@@ -385,7 +391,7 @@
                 </div>
                 <div class="card-body">
                     @php
-                        $teach = $personnelType->firstWhere('classification', 'teaching')->total ?? 0;
+                        $teach = $personnelType->firstWhere('classification', 'teaching')?->total ?? 0;
                         $nonTeach = $personnelType->where('classification', '!=', 'teaching')->sum('total');
                         $perTotal = $teach + $nonTeach;
                     @endphp
@@ -471,6 +477,12 @@
                     <input type="hidden" name="classification" value="{{ $classification }}">
                     <input type="hidden" name="employment_status" value="{{ $employmentStatus }}">
                     <input type="hidden" name="record_type" value="{{ $recordType }}">
+                    @if ($from)
+                        <input type="hidden" name="from" value="{{ $from->format('Y-m-d') }}">
+                    @endif
+                    @if ($to)
+                        <input type="hidden" name="to" value="{{ $to->format('Y-m-d') }}">
+                    @endif
                     <div class="flex-1 min-w-0 sm:flex-none">
                         <label class="input-label sr-only">Search</label>
                         <input name="search" value="{{ request('search') }}" placeholder="Search archived data..." class="input w-full sm:w-56">

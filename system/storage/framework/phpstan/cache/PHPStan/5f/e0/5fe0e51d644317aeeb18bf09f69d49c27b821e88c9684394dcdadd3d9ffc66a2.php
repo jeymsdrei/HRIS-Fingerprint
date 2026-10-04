@@ -567,7 +567,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php' => '6c26ba82697b37ca997f53e05cc811d16ffe51fee02a4737f4775ca32f3c6dcb',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\BiometricService.php' => '2b3768c272d981e6a56bcb129efb85392a681ff95832f7a708eca2b3e60a4bf3',
     ),
   ),
 ));

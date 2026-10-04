@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Services\EmailMask;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -22,7 +23,12 @@ class CodeVerificationController extends Controller
      */
     public function create(Request $request): View
     {
-        return view('auth.verify-code', ['request' => $request]);
+        $email = session('matched_email_full') ?? old('email');
+
+        return view('auth.verify-code', [
+            'request' => $request,
+            'maskedEmail' => EmailMask::mask($email),
+        ]);
     }
 
     /**
@@ -90,7 +96,11 @@ class CodeVerificationController extends Controller
             ]);
         }
 
-        return view('auth.reset-password-code', ['email' => $request->email, 'code' => $request->code]);
+        return view('auth.reset-password-code', [
+            'email' => $request->email,
+            'code' => $request->code,
+            'maskedEmail' => EmailMask::mask($request->email),
+        ]);
     }
 
     /**

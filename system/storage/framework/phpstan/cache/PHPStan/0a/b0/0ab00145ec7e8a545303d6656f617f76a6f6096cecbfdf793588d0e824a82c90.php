@@ -12,6 +12,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -21,6 +22,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => NULL,
@@ -598,6 +600,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -607,6 +610,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'casts',
@@ -618,6 +622,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -627,6 +632,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -659,6 +665,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -668,6 +675,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'employee',
@@ -679,6 +687,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -688,6 +697,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -720,6 +730,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -729,6 +740,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'hasRole',
@@ -740,6 +752,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -749,6 +762,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -781,6 +795,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -790,6 +805,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'isAdmin',
@@ -801,6 +817,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -810,6 +827,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -842,6 +860,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -851,6 +870,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'isHr',
@@ -862,6 +882,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -871,6 +892,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -903,6 +925,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -912,6 +935,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'isPayroll',
@@ -923,6 +947,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -932,6 +957,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -964,6 +990,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -973,6 +1000,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'isDepartmentHead',
@@ -984,6 +1012,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -993,6 +1022,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -1025,6 +1055,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -1034,6 +1065,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'roleLabel',
@@ -1045,6 +1077,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -1054,6 +1087,72 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
+          ),
+           'className' => 'App\\Models\\User',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      'c18bd759003488ffbdac0a3b13b518d9' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Models',
+         'uses' => 
+        array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
+          'userfactory' => 'Database\\Factories\\UserFactory',
+          'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
+          'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+          'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+          'authenticatable' => 'Illuminate\\Foundation\\Auth\\User',
+          'databasenotification' => 'Illuminate\\Notifications\\DatabaseNotification',
+          'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
+          'notifiable' => 'Illuminate\\Notifications\\Notifiable',
+          'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
+        ),
+         'className' => 'App\\Models\\User',
+         'functionName' => 'approvedMakeUpClasses',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Models',
+           'uses' => 
+          array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
+            'userfactory' => 'Database\\Factories\\UserFactory',
+            'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
+            'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+            'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+            'authenticatable' => 'Illuminate\\Foundation\\Auth\\User',
+            'databasenotification' => 'Illuminate\\Notifications\\DatabaseNotification',
+            'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
+            'notifiable' => 'Illuminate\\Notifications\\Notifiable',
+            'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -1086,6 +1185,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'namespace' => 'App\\Models',
          'uses' => 
         array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
           'userfactory' => 'Database\\Factories\\UserFactory',
           'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -1095,6 +1195,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
           'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
         ),
          'className' => 'App\\Models\\User',
          'functionName' => 'getEmailForPasswordReset',
@@ -1106,6 +1207,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
            'namespace' => 'App\\Models',
            'uses' => 
           array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
             'userfactory' => 'Database\\Factories\\UserFactory',
             'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
             'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
@@ -1115,6 +1217,72 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
             'notifiable' => 'Illuminate\\Notifications\\Notifiable',
             'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
+          ),
+           'className' => 'App\\Models\\User',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      '236a538df6565aaf77013ee1f86758d9' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Models',
+         'uses' => 
+        array (
+          'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
+          'userfactory' => 'Database\\Factories\\UserFactory',
+          'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
+          'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+          'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+          'authenticatable' => 'Illuminate\\Foundation\\Auth\\User',
+          'databasenotification' => 'Illuminate\\Notifications\\DatabaseNotification',
+          'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
+          'notifiable' => 'Illuminate\\Notifications\\Notifiable',
+          'carbon' => 'Illuminate\\Support\\Carbon',
+          'db' => 'Illuminate\\Support\\Facades\\DB',
+        ),
+         'className' => 'App\\Models\\User',
+         'functionName' => 'sendPasswordResetNotification',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'App\\Models',
+           'uses' => 
+          array (
+            'resetpasswordcode' => 'App\\Notifications\\ResetPasswordCode',
+            'userfactory' => 'Database\\Factories\\UserFactory',
+            'mustverifyemail' => 'Illuminate\\Contracts\\Auth\\MustVerifyEmail',
+            'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+            'belongsto' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+            'authenticatable' => 'Illuminate\\Foundation\\Auth\\User',
+            'databasenotification' => 'Illuminate\\Notifications\\DatabaseNotification',
+            'databasenotificationcollection' => 'Illuminate\\Notifications\\DatabaseNotificationCollection',
+            'notifiable' => 'Illuminate\\Notifications\\Notifiable',
+            'carbon' => 'Illuminate\\Support\\Carbon',
+            'db' => 'Illuminate\\Support\\Facades\\DB',
           ),
            'className' => 'App\\Models\\User',
            'functionName' => NULL,
@@ -1145,7 +1313,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php' => 'ff1dbf38bd5fa88a1d9610eaf9cc53711e358135c57808a2541dd66ca4ebbb52',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\User.php' => '8f8dd7e1c9c97aaba6101c5135fc5ef95093580420ad47a9cd2094c32ff98357',
       'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\HasFactory.php' => 'b6cb2b164e90168e80963a5549541f5f3188a3ec8cfd368bf3611bd94fbd46a7',
       'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Notifications\\Notifiable.php' => '573fa9bb96fa392434450c9cd9deb8d4e40a5bb93c140a648267b48dfa0433ac',
       'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Notifications\\HasDatabaseNotifications.php' => 'a7a163aa1f98a0ae4cd2135905b6852e29a850beb4296aa72c44c37d22832135',

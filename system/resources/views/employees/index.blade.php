@@ -118,10 +118,11 @@
                                             <path d="M10.5 1.5H9.5A4.5 4.5 0 005 6v8a4.5 4.5 0 004.5 4.5h1a4.5 4.5 0 004.5-4.5V6a4.5 4.5 0 00-4.5-4.5z"></path>
                                         </svg>
                                     </button>
-                                    <div x-show="open" x-cloak class="absolute right-0 mt-8 w-40 rounded-lg bg-white shadow-lg border border-slate-200 py-1">
+                                    <div x-show="open" x-cloak class="absolute right-0 mt-8 w-48 rounded-lg bg-white shadow-lg border border-slate-200 py-1">
                                         <a href="{{ route('employees.edit', $e) }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Edit</a>
                                         <a href="{{ route('employees.show', $e) }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Full Profile</a>
                                         <button type="button" data-delete-employee data-url="{{ route('employees.destroy', $e) }}" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50">Deactivate</button>
+                                        <button type="button" data-permanent-delete-employee data-url="{{ route('employees.delete', $e) }}" class="block w-full px-4 py-2 text-left text-sm text-red-700 hover:bg-red-50 font-medium">Delete Permanently</button>
                                     </div>
                                 </div>
                             </td>
@@ -154,7 +155,6 @@
 
         </div>
     </div>
-</x-app-layout>
 
 <script>
     const employeeSearch = document.getElementById('employee-search');
@@ -254,5 +254,41 @@
             }
         );
     });
+
+    document.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-permanent-delete-employee]');
+        if (!button) return;
+
+        const row = button.closest('[data-employee-id]');
+        const employeeName = row?.querySelector('a[href*="/employees/"]')?.textContent.trim() || 'this employee';
+
+        window.openConfirmDialog(
+            `Permanently delete ${employeeName}? This will remove all their data including attendance records, payroll, loans, and biometric fingerprints from devices. This action CANNOT be undone.`,
+            'Delete Permanently',
+            'btn-danger',
+            async () => {
+                button.disabled = true;
+                button.textContent = 'Deleting...';
+
+                try {
+                    const response = await fetch(button.dataset.url, {
+                        method: 'DELETE',
+                        headers: {
+                            'Accept': 'application/json',
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
+                        },
+                    });
+                    const result = await response.json();
+                    if (!response.ok || !result.ok) throw new Error(result.message || 'Deletion failed.');
+                    window.location.reload();
+                } catch (error) {
+                    button.disabled = false;
+                    button.textContent = 'Delete Permanently';
+                    window.alert(error.message || 'Unable to permanently delete the employee.');
+                }
+            }
+        );
+    });
 </script>
+</x-app-layout>
 

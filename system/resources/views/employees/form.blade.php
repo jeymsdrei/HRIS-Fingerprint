@@ -179,13 +179,19 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="input-label">Course</label>
-                                <select name="course_id" class="input">
-                                    <option value="">Select Course...</option>
-                                    @foreach ($courses as $c)
-                                        <option value="{{ $c->id }}" @selected(old('course_id', $employee->course_id) == $c->id)>{{ $c->code }} — {{ $c->name }}</option>
-                                    @endforeach
-                                </select>
+                                {{-- Acronym stays the prominent line so it is never hidden behind the full course name. --}}
+                                <x-typeahead
+                                    name="course_id"
+                                    label="Course"
+                                    placeholder="Type a course or acronym…"
+                                    empty-text="No courses found."
+                                    :value="old('course_id', $employee->course_id)"
+                                    :items="$courses->map(fn ($c) => [
+                                        'id' => $c->id,
+                                        'text' => $c->code.' — '.$c->name,
+                                        'label' => $c->code,
+                                        'meta' => $c->name,
+                                    ])->values()" />
                             </div>
                         </div>
                     </div>

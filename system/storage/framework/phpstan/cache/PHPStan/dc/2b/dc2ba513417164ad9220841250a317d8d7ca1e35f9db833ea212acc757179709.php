@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\MakeUpClass.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\MakeUpClass
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-dff5d4eef4c18a42491fd6271236d8d2646408c4b34731d5459617952f87a01f',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-b38566a8ec13f0bbd02d8fd469aa8907a77bdc53fa97ba4db5af77326aeec479',
    'data' => 
   array (
     'locatedSource' => 
@@ -36,6 +36,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * @property int|null $approved_by
  * @property Carbon|null $approved_at
  * @property string|null $remarks
+ * @property string|null $reason
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property-read User|null $approver
@@ -66,8 +67,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 51,
-    'endLine' => 90,
+    'startLine' => 52,
+    'endLine' => 101,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -92,23 +93,23 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'type' => NULL,
         'default' => 
         array (
-          'code' => '[\'employee_id\', \'subject_id\', \'class_date\', \'start_time\', \'end_time\', \'hours_rendered\', \'hourly_rate\', \'additional_pay\', \'approval_status\', \'approved_by\', \'approved_at\', \'remarks\']',
+          'code' => '[\'employee_id\', \'subject_id\', \'class_date\', \'start_time\', \'end_time\', \'hours_rendered\', \'hourly_rate\', \'additional_pay\', \'approval_status\', \'approved_by\', \'approved_at\', \'remarks\', \'reason\']',
           'attributes' => 
           array (
-            'startLine' => 55,
-            'endLine' => 59,
+            'startLine' => 56,
+            'endLine' => 60,
             'startTokenPos' => 50,
-            'startFilePos' => 2700,
-            'endTokenPos' => 88,
-            'endFilePos' => 2910,
+            'startFilePos' => 2733,
+            'endTokenPos' => 91,
+            'endFilePos' => 2953,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 55,
-        'endLine' => 59,
+        'startLine' => 56,
+        'endLine' => 60,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -130,20 +131,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'class_date\' => \'date\', \'start_time\' => \'datetime:H:i\', \'end_time\' => \'datetime:H:i\', \'hours_rendered\' => \'decimal:2\', \'hourly_rate\' => \'decimal:2\', \'additional_pay\' => \'decimal:2\', \'approved_at\' => \'datetime\']',
           'attributes' => 
           array (
-            'startLine' => 61,
-            'endLine' => 69,
-            'startTokenPos' => 97,
-            'startFilePos' => 2937,
-            'endTokenPos' => 148,
-            'endFilePos' => 3210,
+            'startLine' => 62,
+            'endLine' => 70,
+            'startTokenPos' => 100,
+            'startFilePos' => 2980,
+            'endTokenPos' => 151,
+            'endFilePos' => 3253,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 61,
-        'endLine' => 69,
+        'startLine' => 62,
+        'endLine' => 70,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -176,8 +177,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 71,
-        'endLine' => 74,
+        'startLine' => 72,
+        'endLine' => 75,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -211,8 +212,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 76,
-        'endLine' => 79,
+        'startLine' => 77,
+        'endLine' => 80,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -246,8 +247,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 81,
-        'endLine' => 84,
+        'startLine' => 82,
+        'endLine' => 85,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -281,8 +282,43 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 86,
-        'endLine' => 89,
+        'startLine' => 87,
+        'endLine' => 90,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\MakeUpClass',
+        'implementingClassName' => 'App\\Models\\MakeUpClass',
+        'currentClassName' => 'App\\Models\\MakeUpClass',
+        'aliasName' => NULL,
+      ),
+      'getStatusLabelAttribute' => 
+      array (
+        'name' => 'getStatusLabelAttribute',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'string',
+            'isIdentifier' => true,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 92,
+        'endLine' => 100,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

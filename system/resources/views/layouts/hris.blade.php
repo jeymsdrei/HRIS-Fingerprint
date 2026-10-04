@@ -316,48 +316,26 @@
                         @endif
                     </a>
 
-                    {{-- User Menu --}}
-                    <div class="flex items-center gap-3" x-data="{ open: false }" @click.outside="open = false">
-                        <button @click="open = !open" class="flex items-center gap-2 p-2 hover:bg-slate-100 rounded-lg transition-colors duration-fast">
-                            <span class="relative">
-                            @php $authPhoto = auth()->user()->employee?->photo_path; @endphp
-                            @if ($authPhoto)
-                                <img src="{{ asset('storage/'.$authPhoto) }}" alt="{{ auth()->user()->name }}" class="h-8 w-8 rounded-lg object-cover shadow-sm cursor-pointer" data-avatar-preview>
-                            @else
-                                <span class="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xs font-bold shadow-sm">
-                                    {{ mb_strtoupper(mb_substr(auth()->user()->name, 0, 1)) }}
-                                </span>
-                            @endif
-                        </span>
-                            <div class="hidden sm:block text-left">
-                                <span class="block text-sm font-medium text-slate-900 leading-tight">{{ auth()->user()->name }}</span>
-                                <span class="block text-xs text-slate-500">{{ auth()->user()->roleLabel() }}</span>
-                            </div>
-                            <svg class="w-4 h-4 text-slate-400 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                            </svg>
-                        </button>
-
-                        {{-- Dropdown Menu --}}
-                        <div x-show="open" x-cloak
-                             class="absolute right-0 top-full mt-2 w-64 rounded-xl bg-white shadow-xl border border-slate-200 py-1 z-50">
-                            <a href="{{ route('profile.edit') }}" 
-                               class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors duration-fast">
-                                <span class="font-medium">Profile & Password</span>
-                            </a>
-                            <a href="{{ route('notifications.index') }}" 
-                               class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors duration-fast">
-                                <span class="font-medium">Notifications</span>
-                            </a>
-                            <div class="border-t border-slate-100 my-1"></div>
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <button class="w-full text-left px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors duration-fast font-medium">
-                                    Sign Out
-                                </button>
-                            </form>
+                    {{-- User Profile (direct link) --}}
+                    <a href="{{ route('profile.edit') }}"
+                       class="flex items-center gap-2 p-2 hover:bg-slate-100 rounded-lg transition-colors duration-fast"
+                       title="Profile &amp; Password"
+                       aria-label="Profile and Password">
+                        <span class="relative">
+                        @php $authPhoto = auth()->user()->employee?->photo_path; @endphp
+                        @if ($authPhoto)
+                            <img src="{{ asset('storage/'.$authPhoto) }}" alt="{{ auth()->user()->name }}" class="h-8 w-8 rounded-lg object-cover shadow-sm" data-avatar-preview>
+                        @else
+                            <span class="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-600 to-indigo-700 text-white flex items-center justify-center text-xs font-bold shadow-sm">
+                                {{ mb_strtoupper(mb_substr(auth()->user()->name, 0, 1)) }}
+                            </span>
+                        @endif
+                    </span>
+                        <div class="hidden sm:block text-left">
+                            <span class="block text-sm font-medium text-slate-900 leading-tight">{{ auth()->user()->name }}</span>
+                            <span class="block text-xs text-slate-500">{{ auth()->user()->roleLabel() }}</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </header>
@@ -722,5 +700,6 @@
     }, true);
 
     </script>
+    <script src="{{ asset('js/scroll-preserve.js') }}"></script>
 </body>
 </html>

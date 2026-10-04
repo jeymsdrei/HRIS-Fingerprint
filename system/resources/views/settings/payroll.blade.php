@@ -2,9 +2,11 @@
     <x-slot name="title">Payroll Settings</x-slot>
 
     <div class="page-container">
-        <div class="mb-8">
-            <h1 class="text-3xl font-bold text-slate-900">Payroll Settings</h1>
-            <p class="mt-2 text-slate-600">Configure payroll computation parameters</p>
+        <div class="mb-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900">Payroll Settings</h1>
+                <p class="mt-2 text-slate-600">Configure payroll computation parameters</p>
+            </div>
         </div>
 
         <div class="max-w-3xl card">

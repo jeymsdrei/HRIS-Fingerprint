@@ -55,10 +55,7 @@
             <div class="card-body">
                 <label for="employee-search" class="input-label">Employee</label>
                 <div class="relative">
-                    <svg class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 10.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" />
-                    </svg>
-                    <input type="text" id="employee-search" class="input pl-9" placeholder="Search employees by name..."
+                    <input type="text" id="employee-search" class="input" placeholder="Search employees by name..."
                            autocomplete="off" aria-label="Search employees" data-selected-name="{{ $employee?->full_name ?? '' }}">
 
                     <div id="employee-search-panel" class="absolute left-0 right-0 z-30 mt-2 max-h-72 overflow-y-auto rounded-xl border border-slate-200 bg-white shadow-xl" hidden>

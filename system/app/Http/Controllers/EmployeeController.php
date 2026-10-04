@@ -3,15 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEmployeeRequest;
+use App\Models\Attendance;
+use App\Models\AttendanceLog;
+use App\Models\BiometricDevice;
 use App\Models\Clearance;
 use App\Models\Course;
 use App\Models\Department;
 use App\Models\Employee;
+use App\Models\EmployeeBenefit;
 use App\Models\EmployeeClearance;
+use App\Models\Loan;
+use App\Models\MakeUpClass;
+use App\Models\Payroll;
+use App\Models\PayrollReceipt;
+use App\Models\Payslip;
 use App\Models\Position;
+use App\Models\TeachingSchedule;
 use App\Models\User;
+use App\Models\WorkSchedule;
+use App\Services\BiometricService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\ValidationException;
 
@@ -159,6 +172,46 @@ class EmployeeController extends Controller
         $employee->user?->update(['is_active' => true]);
 
         return back()->with('success', 'Employee reactivated.');
+    }
+
+    public function delete(Employee $employee)
+    {
+        $fingerprintId = $employee->fingerprint_id;
+
+        $devices = BiometricDevice::where('is_active', true)->where('status', 'online')->get();
+        foreach ($devices as $device) {
+            if ($fingerprintId) {
+                app(BiometricService::class)->deleteFingerprint($device, $fingerprintId);
+            }
+        }
+
+        DB::transaction(function () use ($employee) {
+            $employee->teachingSchedules()->delete();
+            $employee->workSchedules()->delete();
+            $employee->attendances()->delete();
+            $employee->makeUpClasses()->delete();
+            $employee->clearances()->delete();
+            $employee->benefits()->delete();
+            $employee->loans()->delete();
+            $employee->payrolls()->delete();
+            $employee->payslips()->delete();
+            $employee->payrollReceipts()->delete();
+
+            AttendanceLog::where('employee_id', $employee->id)->delete();
+
+            $employee->user?->delete();
+
+            $employee->delete();
+        });
+
+        if (request()->expectsJson()) {
+            return response()->json([
+                'ok' => true,
+                'message' => 'Employee permanently deleted.',
+            ]);
+        }
+
+        return redirect()->route('employees.index')->with('success', 'Employee permanently deleted.');
     }
 
     private function validated(StoreEmployeeRequest $request, ?Employee $employee = null): array

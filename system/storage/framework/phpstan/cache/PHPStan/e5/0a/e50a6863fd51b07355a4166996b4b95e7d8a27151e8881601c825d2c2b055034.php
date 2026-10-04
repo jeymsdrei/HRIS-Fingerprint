@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Requests\UpdatePayrollSettingsRequest.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Requests\UpdatePayrollSettingsRequest
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-5f9afd4e131b1af2b4cc395efa6d62f0d643cc66b94aaa4faf725dfe69db3945',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-7f2b416d33cda48c96dd6a46acc8c60e7171cbdf374084dfef7ab7d277f584e1',
    'data' => 
   array (
     'locatedSource' => 

@@ -56,7 +56,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeBenefitRequest.php' => 'ee0bfb4aa7e3364b8737636a856b382538530573c0b5fea941f18e51cbaf39d7',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeBenefitRequest.php' => '6056e5f7de1200302a775b02198dc5cb3e87ef57140e33b50c75f675dc19ab45',
     ),
   ),
 ));

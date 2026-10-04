@@ -80,6 +80,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware('role:admin,hr')->group(function () {
         Route::resource('employees', EmployeeController::class);
         Route::post('employees/{employee}/reactivate', [EmployeeController::class, 'reactivate'])->name('employees.reactivate');
+        Route::delete('employees/{employee}/delete', [EmployeeController::class, 'delete'])->name('employees.delete');
 
         Route::get('schedules', [ScheduleController::class, 'index'])->name('schedules.index');
         Route::post('schedules/teaching', [ScheduleController::class, 'storeTeaching'])->name('schedules.teaching.store');

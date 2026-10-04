@@ -34,6 +34,10 @@
                         @csrf @method('DELETE')
                         <button class="btn btn-danger btn-sm">Deactivate</button>
                     </form>
+                    <form method="POST" action="{{ route('employees.delete', $employee) }}" data-confirm="Permanently delete {{ $employee->full_name }}? This will remove ALL their data including attendance records, payroll, loans, and biometric fingerprints from devices. This action CANNOT be undone.">
+                        @csrf @method('DELETE')
+                        <button class="btn btn-danger btn-sm" style="background-color: #b91c1c; border-color: #b91c1c;">Delete Permanently</button>
+                    </form>
                     @else
                     <form method="POST" action="{{ route('employees.reactivate', $employee) }}">
                         @csrf

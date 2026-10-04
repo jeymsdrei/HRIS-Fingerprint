@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Models\PayrollPeriod.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\PayrollPeriod
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-ef0bcc71c9b62aa2ce9e3c29cd39401653a5edb2c90844d08af93ea4dc0b23db',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-a831337a77fbb070a5c3a2ee0ca37b52e23d7893a48ee5fa17a75457a45a9538',
    'data' => 
   array (
     'locatedSource' => 
@@ -59,7 +59,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 45,
-    'endLine' => 75,
+    'endLine' => 78,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
@@ -113,20 +113,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'processing\'',
           'attributes' => 
           array (
-            'startLine' => 50,
-            'endLine' => 50,
+            'startLine' => 51,
+            'endLine' => 51,
             'startTokenPos' => 73,
-            'startFilePos' => 2300,
+            'startFilePos' => 2301,
             'endTokenPos' => 73,
-            'endFilePos' => 2311,
+            'endFilePos' => 2312,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 50,
-        'endLine' => 50,
+        'startLine' => 51,
+        'endLine' => 51,
         'startColumn' => 5,
         'endColumn' => 43,
       ),
@@ -142,20 +142,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'released\'',
           'attributes' => 
           array (
-            'startLine' => 51,
-            'endLine' => 51,
+            'startLine' => 53,
+            'endLine' => 53,
             'startTokenPos' => 84,
-            'startFilePos' => 2342,
+            'startFilePos' => 2344,
             'endTokenPos' => 84,
-            'endFilePos' => 2351,
+            'endFilePos' => 2353,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 51,
-        'endLine' => 51,
+        'startLine' => 53,
+        'endLine' => 53,
         'startColumn' => 5,
         'endColumn' => 39,
       ),
@@ -171,20 +171,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '\'closed\'',
           'attributes' => 
           array (
-            'startLine' => 52,
-            'endLine' => 52,
+            'startLine' => 55,
+            'endLine' => 55,
             'startTokenPos' => 95,
-            'startFilePos' => 2380,
+            'startFilePos' => 2383,
             'endTokenPos' => 95,
-            'endFilePos' => 2387,
+            'endFilePos' => 2390,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 52,
-        'endLine' => 52,
+        'startLine' => 55,
+        'endLine' => 55,
         'startColumn' => 5,
         'endColumn' => 35,
       ),
@@ -203,20 +203,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'name\', \'type\', \'start_date\', \'end_date\', \'pay_date\', \'status\', \'generated_by\', \'generated_at\']',
           'attributes' => 
           array (
-            'startLine' => 54,
-            'endLine' => 57,
+            'startLine' => 57,
+            'endLine' => 60,
             'startTokenPos' => 104,
-            'startFilePos' => 2417,
+            'startFilePos' => 2420,
             'endTokenPos' => 130,
-            'endFilePos' => 2535,
+            'endFilePos' => 2538,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 54,
-        'endLine' => 57,
+        'startLine' => 57,
+        'endLine' => 60,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -238,20 +238,20 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'code' => '[\'start_date\' => \'date\', \'end_date\' => \'date\', \'pay_date\' => \'date\', \'generated_at\' => \'datetime\']',
           'attributes' => 
           array (
-            'startLine' => 59,
-            'endLine' => 64,
+            'startLine' => 62,
+            'endLine' => 67,
             'startTokenPos' => 139,
-            'startFilePos' => 2562,
+            'startFilePos' => 2565,
             'endTokenPos' => 169,
-            'endFilePos' => 2698,
+            'endFilePos' => 2701,
           ),
         ),
         'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 59,
-        'endLine' => 64,
+        'startLine' => 62,
+        'endLine' => 67,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -284,8 +284,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 66,
-        'endLine' => 69,
+        'startLine' => 69,
+        'endLine' => 72,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -319,8 +319,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 71,
-        'endLine' => 74,
+        'startLine' => 74,
+        'endLine' => 77,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

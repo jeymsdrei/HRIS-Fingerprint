@@ -53,21 +53,21 @@
 
         {{-- Filters --}}
         <div class="card">
-            <div class="card-body">
-                <form method="GET" class="flex flex-wrap gap-3 items-end">
+            <div class="card-body px-4 py-3">
+                <form method="GET" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.25fr_1.4fr_1.1fr_1fr_1.3fr_auto]">
                     @include('partials.employee-filters')
-                    <div>
-                        <label class="input-label">Status</label>
-                        <select name="status" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="payroll-status">Status</label>
+                        <select id="payroll-status" name="status" class="input w-full min-w-0">
                             <option value="">All Status</option>
                             @foreach (['draft','on_hold','ready','released'] as $s)<option value="{{ $s }}" @selected(request('status') == $s)>{{ ucwords(str_replace('_', ' ', $s)) }}</option>@endforeach
                         </select>
                     </div>
-                    <div class="flex-1 min-w-0 sm:flex-none">
-                        <label class="input-label">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-full sm:w-48">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="payroll-search">Search employee name or ID</label>
+                        <input id="payroll-search" name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-full min-w-0" autocomplete="off">
                     </div>
-                    <button class="btn btn-primary">Filter</button>
+                    <button class="btn btn-primary w-full sm:w-auto">Filter</button>
                 </form>
             </div>
         </div>

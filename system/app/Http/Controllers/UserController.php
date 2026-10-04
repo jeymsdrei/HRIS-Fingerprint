@@ -9,14 +9,15 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
+        // The table filters in the browser on every keystroke, so the whole set has to
+        // be sent: paginating would make the client-side filter blind to rows beyond
+        // page 1. One row per system user keeps this small. The active filters are
+        // mirrored into the query string by the view, so reload and back still work.
         $users = User::with('employee')
-            ->when($request->role, fn ($q, $r) => $q->where('role', $r))
-            ->when($request->search, fn ($q, $s) => $q->where('name', 'like', "%{$s}%")->orWhere('username', 'like', "%{$s}%"))
             ->orderBy('name')
-            ->paginate(15)
-            ->withQueryString();
+            ->get();
 
         return view('users.index', compact('users'));
     }

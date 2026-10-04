@@ -13,6 +13,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+          'rule' => 'Illuminate\\Validation\\Rule',
         ),
          'className' => 'App\\Http\\Requests\\StoreEmployeeRequest',
          'functionName' => NULL,
@@ -36,6 +37,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
          'uses' => 
         array (
           'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+          'rule' => 'Illuminate\\Validation\\Rule',
         ),
          'className' => 'App\\Http\\Requests\\StoreEmployeeRequest',
          'functionName' => 'rules',
@@ -56,7 +58,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeRequest.php' => '6b571da60fa67cc7ecb80c638d97bc366d79cf757c58b2a5b5f6475614ad4ce2',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Requests\\StoreEmployeeRequest.php' => 'a1676368cd9ea3dbcd3392b20b221b140566a1788a479cd37611a4ac4bcbd96e',
     ),
   ),
 ));

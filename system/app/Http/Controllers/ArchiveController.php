@@ -213,8 +213,11 @@ class ArchiveController extends Controller
         // ---- Archived Records Table ----
         $archives = Archive::with('archiver')
             ->when($recordType, fn ($q, $t) => $q->where('archive_type', $t))
-            ->when($year, fn ($q, $y) => $q->where('period_label', 'like', "{$y}%"))
-            ->when($month, fn ($q, $m) => $q->where('period_label', 'like', sprintf('%04d-%02d%%', $year, $m)))
+            ->when($from || $to,
+                fn ($q) => $q->whereBetween('period_label', [$startDate->format('Y-m'), $endDate->format('Y-m')]),
+                fn ($q) => $q->when($year, fn ($q, $y) => $q->where('period_label', 'like', "{$y}%"))
+                    ->when($month, fn ($q, $m) => $q->where('period_label', 'like', sprintf('%04d-%02d%%', $year, $m)))
+            )
             ->when($request->search, fn ($q, $s) => $q->where('data', 'like', "%{$s}%"))
             ->orderByDesc('archived_at')
             ->paginate(20)

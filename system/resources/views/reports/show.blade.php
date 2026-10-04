@@ -28,7 +28,7 @@
 
         {{-- Back + Page Header --}}
         <div class="space-y-1">
-            <a href="{{ route('reports.index') }}" class="btn btn-outline btn-sm">
+            <a href="{{ route('reports.index', request()->only(['type', 'department_id', 'classification', 'employment_status', 'payroll_period_id', 'from', 'to'])) }}" class="btn btn-outline btn-sm">
                 <span aria-hidden="true">←</span> Back to Reports
             </a>
             <div>
@@ -48,31 +48,31 @@
 
         {{-- Filters + Export Toolbar --}}
         <div class="card">
-            <div class="card-body">
-                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
-                    <form method="GET" action="{{ route('reports.show') }}" class="flex flex-wrap gap-3 items-end">
+            <div class="card-body px-4 py-3">
+                <div class="flex flex-col gap-2 xl:flex-row xl:items-end xl:justify-between">
+                    <form method="GET" action="{{ route('reports.show') }}" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 xl:grid-cols-[1.8fr_0.9fr_0.9fr_auto]">
                         <input type="hidden" name="type" value="{{ $type }}">
                         @foreach ($filters as $k => $v)
-                            @if ($v && in_array($k, ['department_id', 'classification', 'employment_status', 'payroll_period_id', 'from', 'to']))
+                            @if ($v && in_array($k, ['department_id', 'classification', 'employment_status', 'payroll_period_id']))
                                 <input type="hidden" name="{{ $k }}" value="{{ $v }}">
                             @endif
                         @endforeach
-                        <div>
-                            <label class="input-label">Search</label>
-                            <input type="text" name="q" value="{{ request('q') }}" placeholder="Name, ID, class…" class="input">
+                        <div class="w-full min-w-0">
+                            <label class="input-label" for="report-show-search">Search</label>
+                            <input id="report-show-search" type="text" name="q" value="{{ request('q') }}" placeholder="Name, ID, class…" class="input w-full min-w-0">
                         </div>
-                        <div>
-                            <label class="input-label">From</label>
-                            <input type="date" name="from" value="{{ $filters['from'] ?? now()->startOfMonth()->format('Y-m-d') }}" class="input">
+                        <div class="w-full min-w-0">
+                            <label class="input-label" for="report-show-from">From</label>
+                            <input id="report-show-from" type="date" name="from" value="{{ $filters['from'] ?? now()->startOfMonth()->format('Y-m-d') }}" class="input w-full min-w-0">
                         </div>
-                        <div>
-                            <label class="input-label">To</label>
-                            <input type="date" name="to" value="{{ $filters['to'] ?? now()->format('Y-m-d') }}" class="input">
+                        <div class="w-full min-w-0">
+                            <label class="input-label" for="report-show-to">To</label>
+                            <input id="report-show-to" type="date" name="to" value="{{ $filters['to'] ?? now()->format('Y-m-d') }}" class="input w-full min-w-0">
                         </div>
-                        <button class="btn btn-primary">Refresh</button>
+                        <button class="btn btn-primary w-full sm:w-auto">Refresh</button>
                     </form>
 
-                    <div class="flex flex-wrap items-end gap-2 lg:shrink-0">
+                    <div class="flex flex-wrap items-center gap-2 xl:shrink-0">
                         @foreach ([['pdf', 'PDF'], ['excel', 'Excel'], ['csv', 'CSV']] as [$fmt, $label])
                         <form method="POST" action="{{ route('reports.export') }}" data-export>
                             @csrf

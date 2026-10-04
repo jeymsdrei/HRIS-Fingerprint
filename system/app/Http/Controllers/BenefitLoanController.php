@@ -8,6 +8,7 @@ use App\Http\Requests\StoreLoanRequest;
 use App\Http\Requests\UpdateLoanRequest;
 use App\Models\Benefit;
 use App\Models\Department;
+use App\Models\Employee;
 use App\Models\EmployeeBenefit;
 use App\Models\Loan;
 use Illuminate\Http\Request;
@@ -26,8 +27,9 @@ class BenefitLoanController extends Controller
             ->withQueryString();
 
         $departments = Department::orderBy('name')->get();
+        $employees = Employee::where('is_active', true)->orderBy('last_name')->get();
 
-        return view('benefits.index', compact('benefits', 'assignments', 'departments'));
+        return view('benefits.index', compact('benefits', 'assignments', 'departments', 'employees'));
     }
 
     public function storeBenefit(StoreBenefitRequest $request)
@@ -71,8 +73,9 @@ class BenefitLoanController extends Controller
             ->withQueryString();
 
         $departments = Department::orderBy('name')->get();
+        $employees = Employee::where('is_active', true)->orderBy('last_name')->get();
 
-        return view('loans.index', compact('loans', 'departments'));
+        return view('loans.index', compact('loans', 'departments', 'employees'));
     }
 
     public function storeLoan(StoreLoanRequest $request)

@@ -161,17 +161,40 @@ function isExecutableScript(script) {
 }
 
 // Scripts inside swapped content never execute on their own (the HTML spec skips
-// them for DOMParser/inserted nodes), so each one must be recreated to run.
+// them for DOMParser/inserted nodes), so each one must be run explicitly.
+//
+// Classic inline bodies are evaluated inside a function scope instead of by
+// re-injecting a <script> element. Re-injection puts top-level `const`/`let` into
+// the global declarative environment, which survives the swap: the next visit to
+// the same page recompiles the same text and throws
+// "SyntaxError: Identifier 'x' has already been declared". That failure happens at
+// compile time, so the whole block never runs, and it is invisible here because a
+// script that fails to compile reports through window.onerror rather than throwing
+// back to this call site.
+const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
+
 function executeContentScripts(root) {
     [...root.querySelectorAll('script')]
         .filter(isExecutableScript)
         .forEach((oldScript) => {
-            try {
-                const script = document.createElement('script');
+            const type = (oldScript.getAttribute('type') || '').toLowerCase();
+            const needsRealElement = oldScript.hasAttribute('src') || type === 'module';
 
-                [...oldScript.attributes].forEach(({ name, value }) => script.setAttribute(name, value));
-                script.textContent = oldScript.textContent;
-                oldScript.replaceWith(script);
+            try {
+                if (needsRealElement) {
+                    const script = document.createElement('script');
+
+                    [...oldScript.attributes].forEach(({ name, value }) => script.setAttribute(name, value));
+                    script.textContent = oldScript.textContent;
+                    oldScript.replaceWith(script);
+
+                    return;
+                }
+
+                const source = oldScript.textContent;
+
+                oldScript.remove();
+                new AsyncFunction(source)();
             } catch (error) {
                 console.error('Failed to run content script:', error);
             }
@@ -198,8 +221,11 @@ function replaceAppContent(documentHtml, url, scrollPositions) {
     currentContent.replaceWith(nextContent);
     document.title = parsed.title;
     history.scrollRestoration = 'manual';
-    window.Alpine.initTree(nextContent);
+    // Scripts must run before initTree: content components register themselves via
+    // Alpine.data(), and initTree evaluates x-data immediately, so the reverse order
+    // leaves those registrations undefined on every SPA navigation.
     executeContentScripts(nextContent);
+    window.Alpine.initTree(nextContent);
     emitContentLifecycleEvents();
     requestAnimationFrame(() => restoreScrollPositions(scrollPositions));
 
@@ -251,10 +277,39 @@ document.addEventListener('click', (event) => {
         return;
     }
 
+    const navigationLink = link.closest('.sidebar-nav a[href]');
+
+    if (navigationLink?.classList.contains('is-loading')) {
+        event.preventDefault();
+        return;
+    }
+
     event.preventDefault();
-    loadAppRequest(url.href, url, true).catch(() => {
-        window.location.href = url.href;
-    });
+    navigationLink?.classList.add('is-loading');
+    navigationLink?.setAttribute('aria-busy', 'true');
+    loadAppRequest(url.href, url, true)
+        .catch(() => {
+            window.location.href = url.href;
+        })
+        .finally(() => {
+            navigationLink?.classList.remove('is-loading');
+            navigationLink?.removeAttribute('aria-busy');
+        });
+}, true);
+
+document.addEventListener('submit', (event) => {
+    const form = event.target;
+
+    if (!(form instanceof HTMLFormElement) || !form.closest('.sidebar')) {
+        return;
+    }
+
+    const submitButton = form.querySelector('button[type="submit"], button:not([type])');
+
+    if (submitButton) {
+        submitButton.classList.add('is-loading');
+        submitButton.setAttribute('aria-busy', 'true');
+    }
 }, true);
 
 window.addEventListener('popstate', () => {

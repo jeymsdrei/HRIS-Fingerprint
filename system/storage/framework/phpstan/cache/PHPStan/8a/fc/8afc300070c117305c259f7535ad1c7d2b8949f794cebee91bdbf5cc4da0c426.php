@@ -106,7 +106,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php' => '7825074066b56aa032829bb0b31c518f8b35e86ffa2a4427a97171a88b8aef7d',
+      'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\RegisteredUserController.php' => 'a77a0510739e34aa72f1bd065bb7ac1e14600d6aef8fb23e857aa65e6b503ddf',
     ),
   ),
 ));

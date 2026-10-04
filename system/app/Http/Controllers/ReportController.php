@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exports\GenericExport;
 use App\Models\Attendance;
+use App\Models\Department;
 use App\Models\PayrollPeriod;
 use App\Services\ReportService;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -19,8 +20,9 @@ class ReportController extends Controller
     public function index()
     {
         $periods = PayrollPeriod::orderByDesc('end_date')->get();
+        $departments = Department::orderBy('name')->get();
 
-        return view('reports.index', compact('periods'));
+        return view('reports.index', compact('periods', 'departments'));
     }
 
     public function show(Request $request)

@@ -10,66 +10,63 @@
 
         {{-- Generate Report --}}
         <div class="card">
-            <div class="card-header">
-                <h2 class="font-semibold text-slate-900">Generate Report</h2>
-            </div>
-            <div class="card-body">
-                <form method="GET" action="{{ route('reports.show') }}" class="grid grid-cols-2 md:grid-cols-4 gap-4 items-end">
-                    <div>
-                        <label class="input-label">Report Type</label>
-                        <select name="type" class="input" required>
-                            <option value="attendance">Attendance Report</option>
-                            <option value="attendance_daily">Attendance Summary (per employee)</option>
-                            <option value="late">Late Report</option>
-                            <option value="absent">Absent Report</option>
-                            <option value="teaching_hours">Teaching Hours Report</option>
-                            <option value="payroll">Payroll Report</option>
-                            <option value="make_up">Make-Up Class Report</option>
-                            <option value="benefits">Benefits Report</option>
-                            <option value="loans">Loan Report</option>
-                            <option value="departments">Department Report</option>
-                            <option value="employees">Employee Report</option>
+            <div class="card-body px-4 py-3">
+                <form method="GET" action="{{ route('reports.show') }}" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.6fr_1.1fr_1fr_1fr_1fr_0.9fr_0.9fr_auto]">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="report-type">Report Type</label>
+                        <select id="report-type" name="type" class="input w-full min-w-0" required>
+                            <option value="attendance" @selected(request('type') === 'attendance')>Attendance Report</option>
+                            <option value="attendance_daily" @selected(request('type') === 'attendance_daily')>Attendance Summary (per employee)</option>
+                            <option value="late" @selected(request('type') === 'late')>Late Report</option>
+                            <option value="absent" @selected(request('type') === 'absent')>Absent Report</option>
+                            <option value="teaching_hours" @selected(request('type') === 'teaching_hours')>Teaching Hours Report</option>
+                            <option value="payroll" @selected(request('type') === 'payroll')>Payroll Report</option>
+                            <option value="make_up" @selected(request('type') === 'make_up')>Make-Up Class Report</option>
+                            <option value="benefits" @selected(request('type') === 'benefits')>Benefits Report</option>
+                            <option value="loans" @selected(request('type') === 'loans')>Loan Report</option>
+                            <option value="departments" @selected(request('type') === 'departments')>Department Report</option>
+                            <option value="employees" @selected(request('type') === 'employees')>Employee Report</option>
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Department</label>
-                        <select name="department_id" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="report-department">Department</label>
+                        <select id="report-department" name="department_id" class="input w-full min-w-0">
                             <option value="">All</option>
-                            @foreach (App\Models\Department::orderBy('name')->get() as $d)<option value="{{ $d->id }}">{{ $d->name }}</option>@endforeach
+                            @foreach ($departments as $d)<option value="{{ $d->id }}" @selected((string) request('department_id') === (string) $d->id)>{{ $d->name }}</option>@endforeach
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Employee Type</label>
-                        <select name="classification" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="report-classification">Employee Type</label>
+                        <select id="report-classification" name="classification" class="input w-full min-w-0">
                             <option value="">All</option>
-                            <option value="teaching">Teaching</option>
-                            <option value="non_teaching">Non-Teaching</option>
+                            <option value="teaching" @selected(request('classification') === 'teaching')>Teaching</option>
+                            <option value="non_teaching" @selected(request('classification') === 'non_teaching')>Non-Teaching</option>
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Employment Status</label>
-                        <select name="employment_status" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="report-employment">Employment Status</label>
+                        <select id="report-employment" name="employment_status" class="input w-full min-w-0">
                             <option value="">All</option>
-                            <option value="permanent">Permanent</option>
-                            <option value="contractual">Contractual</option>
+                            <option value="permanent" @selected(request('employment_status') === 'permanent')>Permanent</option>
+                            <option value="contractual" @selected(request('employment_status') === 'contractual')>Contractual</option>
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">Payroll Period</label>
-                        <select name="payroll_period_id" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="report-period">Payroll Period</label>
+                        <select id="report-period" name="payroll_period_id" class="input w-full min-w-0">
                             <option value="">All</option>
-                            @foreach ($periods as $pp)<option value="{{ $pp->id }}">{{ $pp->name }}</option>@endforeach
+                            @foreach ($periods as $pp)<option value="{{ $pp->id }}" @selected((string) request('payroll_period_id') === (string) $pp->id)>{{ $pp->name }}</option>@endforeach
                         </select>
                     </div>
-                    <div>
-                        <label class="input-label">From</label>
-                        <input type="date" name="from" value="{{ now()->startOfMonth()->format('Y-m-d') }}" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="report-from">From</label>
+                        <input id="report-from" type="date" name="from" value="{{ request('from', now()->startOfMonth()->format('Y-m-d')) }}" class="input w-full min-w-0">
                     </div>
-                    <div>
-                        <label class="input-label">To</label>
-                        <input type="date" name="to" value="{{ now()->format('Y-m-d') }}" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="report-to">To</label>
+                        <input id="report-to" type="date" name="to" value="{{ request('to', now()->format('Y-m-d')) }}" class="input w-full min-w-0">
                     </div>
-                    <button class="btn btn-primary">Generate</button>
+                    <button class="btn btn-primary w-full sm:w-auto">Generate</button>
                 </form>
             </div>
         </div>
@@ -95,6 +92,11 @@
                 <div class="flex flex-wrap gap-2 w-full">
                     <form method="GET" action="{{ route('reports.show') }}" class="w-full">
                         <input type="hidden" name="type" value="{{ $key }}">
+                        @foreach (['department_id', 'classification', 'employment_status', 'payroll_period_id', 'from', 'to'] as $carry)
+                            @if (request($carry))
+                                <input type="hidden" name="{{ $carry }}" value="{{ request($carry) }}">
+                            @endif
+                        @endforeach
                         <button class="btn btn-primary w-full">View</button>
                     </form>
                 </div>

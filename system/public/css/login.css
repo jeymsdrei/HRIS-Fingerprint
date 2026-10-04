@@ -718,7 +718,7 @@ body:has(.form-section.active) .form-section {
 .form-section .role-tag {
   display: inline-block;
   position: relative;
-  left: 33%;
+  left: 27%;
   transform: translateX(-50%);
   color: var(--maroon);
   background: rgba(195, 149, 69, 0.15);

@@ -5,8 +5,12 @@
 @endphp
 
 @if ($success || $error || $status)
-    <div x-data="{ show: true }"
-         x-init="setTimeout(() => show = false, 5000)"
+    {{-- A success flash means a record was written, so any saved scroll offset now
+              points at the wrong place. Scroll-preserve.js reads this marker and
+              discards the stored position instead of restoring it. --}}
+         <div @if ($success) data-scroll-reset @endif
+              x-data="{ show: true }"
+              x-init="setTimeout(() => show = false, 5000)"
          x-show="show"
          x-transition:leave="transition-opacity duration-500"
          x-transition:leave-start="opacity-100"

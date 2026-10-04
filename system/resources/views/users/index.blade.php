@@ -14,26 +14,28 @@
             </a>
         </div>
 
-        {{-- Filters --}}
+        {{-- Filters: no submit button and no request. Filtering runs in the browser on every
+     keystroke, so the whole user set is rendered by the controller. The active values
+     are mirrored into the query string so reload and browser Back still restore them. --}}
         <div class="card">
             <div class="card-body">
-                <form method="GET" class="flex flex-wrap gap-3 items-end">
-                    <div class="flex-1 min-w-0 sm:flex-none">
-                        <label class="input-label">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Search user..." class="input w-full sm:w-56">
+                <div class="grid grid-cols-1 gap-3 items-end sm:grid-cols-[minmax(0,1fr)_minmax(0,14rem)]">
+                    <div class="min-w-0">
+                        <label class="input-label" for="users-search">Search</label>
+                        <input id="users-search" name="search" value="{{ request('search') }}"
+                               placeholder="Search name, username, or employee…"
+                               class="input w-full"
+                               autocomplete="off">
                     </div>
-                    <div>
-                        <label class="input-label">Role</label>
-                        <select name="role" class="input">
+                    <div class="min-w-0">
+                        <label class="input-label" for="users-role">Role</label>
+                        <select id="users-role" name="role" class="input w-full">
                             <option value="">All Roles</option>
                             @foreach (collect(App\Models\User::ROLES)->reject(fn ($r) => $r === 'employee') as $r)<option value="{{ $r }}" @selected(request('role') == $r)>{{ ucwords(str_replace('_', ' ', $r)) }}</option>@endforeach
                         </select>
                     </div>
-                    <button class="btn btn-primary">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 21l-4.35-4.35M17 10.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"></path></svg>
-                        Filter
-                    </button>
-                </form>
+                </div>
+                <p id="users-search-status" class="mt-2 text-xs text-slate-500" aria-live="polite"></p>
             </div>
         </div>
 
@@ -53,7 +55,9 @@
                     </thead>
                     <tbody>
                         @forelse ($users as $u)
-                        <tr class="table-body-row">
+                        <tr class="table-body-row user-row"
+                            data-user-search="{{ strtolower(trim($u->name.' '.$u->username.' '.($u->employee?->employee_id ?? '').' '.($u->employee?->full_name ?? ''))) }}"
+                            data-role="{{ $u->role }}">
                             <td class="table-body-cell font-medium text-slate-900">{{ $u->name }}</td>
                             <td class="table-body-cell text-slate-600">{{ $u->username }}</td>
                             <td class="table-body-cell">
@@ -73,23 +77,123 @@
                                 @endif
                             </td>
                         </tr>
-                        @empty
-                        <tr>
+@empty
+                        <tr id="users-empty">
                             <td colspan="6" class="table-body-cell">
                                 <div class="empty-state">
                                     <div class="empty-state-icon">👤</div>
                                     <div class="empty-state-title">No Users Found</div>
-                                    <p class="empty-state-text">No users matching your criteria.</p>
+                                    <p class="empty-state-text">There are no system users yet.</p>
                                 </div>
                             </td>
                         </tr>
-                        @endforelse
+@endforelse
+                        {{-- Shown only when a filter hides every row. --}}
+                        <tr id="users-no-results" hidden>
+                            <td colspan="6" class="table-body-cell">
+                                <div class="empty-state">
+                                    <div class="empty-state-icon">🔍</div>
+                                    <div class="empty-state-title">No Matching Users</div>
+                                    <p class="empty-state-text">No users match your search or role filter.</p>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-            @if ($users->hasPages())
-                <div class="card-footer">{{ $users->links() }}</div>
-            @endif
         </div>
     </div>
+
+    <script>
+        // IIFE-wrapped so nothing is declared in the global scope: content scripts are
+        // re-run on every SPA swap, and a top-level const would then be a redeclaration.
+        (function () {
+            const search = document.getElementById('users-search');
+            const role = document.getElementById('users-role');
+            const status = document.getElementById('users-search-status');
+            const noResults = document.getElementById('users-no-results');
+            const emptyState = document.getElementById('users-empty');
+
+            if (!search || !role) return;
+
+            const rows = Array.prototype.slice.call(document.querySelectorAll('.user-row'));
+
+            // Sequenced prefix matching, the same rule the attendance and employee
+            // tables use: type letter by letter from the start of any part of the name.
+            function matches(haystack, term) {
+                const nameWords = haystack.trim().split(/\s+/);
+                const termWords = term.trim().split(/\s+/);
+
+                if (termWords.length === 1) {
+                    return nameWords.some(function (word) {
+                        return word.indexOf(termWords[0]) === 0;
+                    });
+                }
+
+                let wordIndex = 0;
+
+                return termWords.every(function (termWord) {
+                    while (wordIndex < nameWords.length) {
+                        if (nameWords[wordIndex].indexOf(termWord) === 0) {
+                            wordIndex++;
+                            return true;
+                        }
+                        wordIndex++;
+                    }
+                    return false;
+                });
+            }
+
+            function apply() {
+                const term = search.value.trim().toLowerCase();
+                const wantedRole = role.value;
+                let visible = 0;
+
+                rows.forEach(function (row) {
+                    const haystack = row.dataset.userSearch || '';
+                    const okSearch = term === '' || matches(haystack, term);
+                    const okRole = wantedRole === '' || row.dataset.role === wantedRole;
+                    const isMatch = okSearch && okRole;
+
+                    row.hidden = !isMatch;
+                    row.style.display = isMatch ? '' : 'none';
+                    if (isMatch) visible++;
+                });
+
+                const hasFilters = term !== '' || wantedRole !== '';
+
+                if (emptyState) emptyState.hidden = visible > 0 || hasFilters;
+                if (noResults) noResults.hidden = !(hasFilters && visible === 0);
+
+                if (status) {
+                    status.textContent = hasFilters
+                        ? visible + ' user' + (visible === 1 ? '' : 's') + ' shown below'
+                        : '';
+                }
+
+                // Mirror the filter into the URL so reload and Back restore it, without
+                // issuing a request. replaceState avoids stacking history entries.
+                const url = new URL(window.location.href);
+
+                if (term) {
+                    url.searchParams.set('search', search.value.trim());
+                } else {
+                    url.searchParams.delete('search');
+                }
+
+                if (wantedRole) {
+                    url.searchParams.set('role', wantedRole);
+                } else {
+                    url.searchParams.delete('role');
+                }
+
+                url.searchParams.delete('page');
+                window.history.replaceState({}, '', url);
+            }
+
+            search.addEventListener('input', apply);
+            role.addEventListener('change', apply);
+            apply();
+        })();
+    </script>
 </x-app-layout>

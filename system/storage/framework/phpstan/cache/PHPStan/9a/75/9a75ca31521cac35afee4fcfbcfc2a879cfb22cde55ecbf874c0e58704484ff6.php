@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Requests\StoreEmployeeRequest.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Http\Requests\StoreEmployeeRequest
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-6b571da60fa67cc7ecb80c638d97bc366d79cf757c58b2a5b5f6475614ad4ce2',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-a1676368cd9ea3dbcd3392b20b221b140566a1788a479cd37611a4ac4bcbd96e',
    'data' => 
   array (
     'locatedSource' => 
@@ -26,8 +26,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 7,
-    'endLine' => 51,
+    'startLine' => 8,
+    'endLine' => 58,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => 'Illuminate\\Foundation\\Http\\FormRequest',
@@ -67,8 +67,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * @return array<string, string>
  */',
-        'startLine' => 12,
-        'endLine' => 50,
+        'startLine' => 13,
+        'endLine' => 57,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,

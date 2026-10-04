@@ -5,6 +5,7 @@ namespace Tests\Feature\Auth;
 use App\Models\Employee;
 use App\Models\User;
 use App\Notifications\ResetPasswordCode;
+use App\Services\EmailMask;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
@@ -53,10 +54,24 @@ class PasswordResetTest extends TestCase
         $this->post('/forgot-password', [
             'action' => 'lookup_username',
             'username' => $user->getAttribute('username'),
-        ])->assertSessionHas('matched_email', 'j***@example.test');
+        ])->assertSessionHas('matched_email', EmailMask::mask($user->employee->email));
 
         Notification::assertNothingSent();
         $this->assertNull($user->fresh()->email);
+    }
+
+    public function test_masked_email_keeps_the_local_part_length(): void
+    {
+        Notification::fake();
+        $user = $this->createPersonnelUser(Employee::CLASSIFICATION_TEACHING);
+
+        $email = $user->employee->email;
+        [$localPart] = explode('@', $email, 2);
+        [$maskedLocalPart] = explode('@', EmailMask::mask($email), 2);
+
+        $this->assertSame(strlen($localPart), strlen($maskedLocalPart));
+        $this->assertSame(1, mb_strlen(str_replace('*', '', $maskedLocalPart)));
+        $this->assertStringContainsString('@example.test', EmailMask::mask($email));
     }
 
     public function test_reset_code_is_sent_only_after_username_confirmation(): void

@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Services\BiometricService.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Services\BiometricService
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.3-8.2.12-6846b474b376089df35dcb62ecc79ad1dfef2efcff65c3c5ff3157cabe5d6232',
+   'variableKey' => 'v2-6.70.0.3-8.2.12-2b3768c272d981e6a56bcb129efb85392a681ff95832f7a708eca2b3e60a4bf3',
    'data' => 
   array (
     'locatedSource' => 
@@ -34,7 +34,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
     ),
     'startLine' => 19,
-    'endLine' => 312,
+    'endLine' => 345,
     'startColumn' => 1,
     'endColumn' => 1,
     'parentClassName' => NULL,
@@ -924,8 +924,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 171,
-            'endLine' => 171,
+            'startLine' => 179,
+            'endLine' => 179,
             'startColumn' => 35,
             'endColumn' => 48,
             'parameterIndex' => 0,
@@ -948,9 +948,17 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Parse raw attendance data frames (12-byte records):
  * user_id(4) + state(1) + timestamp(7, YYMMDDhhmmss packed).
+ *
+ * State values (ZKTeco standard):
+ * 0 = Check In (time_in)
+ * 1 = Check Out (time_out)
+ * 2 = Break Out
+ * 3 = Break In
+ * 4 = Overtime In
+ * 5 = Overtime Out
  */',
-        'startLine' => 171,
-        'endLine' => 207,
+        'startLine' => 179,
+        'endLine' => 225,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -988,8 +996,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 212,
-            'endLine' => 212,
+            'startLine' => 230,
+            'endLine' => 230,
             'startColumn' => 36,
             'endColumn' => 58,
             'parameterIndex' => 0,
@@ -1012,8 +1020,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'docComment' => '/**
  * Pull all attendance records from the device and persist them.
  */',
-        'startLine' => 212,
-        'endLine' => 240,
+        'startLine' => 230,
+        'endLine' => 258,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -1051,8 +1059,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 254,
-            'endLine' => 254,
+            'startLine' => 272,
+            'endLine' => 272,
             'startColumn' => 34,
             'endColumn' => 46,
             'parameterIndex' => 0,
@@ -1066,12 +1074,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 254,
-                'endLine' => 254,
-                'startTokenPos' => 1783,
-                'startFilePos' => 7673,
-                'endTokenPos' => 1783,
-                'endFilePos' => 7676,
+                'startLine' => 272,
+                'endLine' => 272,
+                'startTokenPos' => 1864,
+                'startFilePos' => 8201,
+                'endTokenPos' => 1864,
+                'endFilePos' => 8204,
               ),
             ),
             'type' => 
@@ -1108,8 +1116,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 254,
-            'endLine' => 254,
+            'startLine' => 272,
+            'endLine' => 272,
             'startColumn' => 49,
             'endColumn' => 71,
             'parameterIndex' => 1,
@@ -1123,12 +1131,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => 'null',
               'attributes' => 
               array (
-                'startLine' => 254,
-                'endLine' => 254,
-                'startTokenPos' => 1793,
-                'startFilePos' => 7696,
-                'endTokenPos' => 1793,
-                'endFilePos' => 7699,
+                'startLine' => 272,
+                'endLine' => 272,
+                'startTokenPos' => 1874,
+                'startFilePos' => 8224,
+                'endTokenPos' => 1874,
+                'endFilePos' => 8227,
               ),
             ),
             'type' => 
@@ -1165,8 +1173,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 254,
-            'endLine' => 254,
+            'startLine' => 272,
+            'endLine' => 272,
             'startColumn' => 74,
             'endColumn' => 94,
             'parameterIndex' => 2,
@@ -1180,12 +1188,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
               'code' => '\'device\'',
               'attributes' => 
               array (
-                'startLine' => 254,
-                'endLine' => 254,
-                'startTokenPos' => 1802,
-                'startFilePos' => 7719,
-                'endTokenPos' => 1802,
-                'endFilePos' => 7726,
+                'startLine' => 272,
+                'endLine' => 272,
+                'startTokenPos' => 1883,
+                'startFilePos' => 8247,
+                'endTokenPos' => 1883,
+                'endFilePos' => 8254,
               ),
             ),
             'type' => 
@@ -1203,8 +1211,8 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 254,
-            'endLine' => 254,
+            'startLine' => 272,
+            'endLine' => 272,
             'startColumn' => 97,
             'endColumn' => 121,
             'parameterIndex' => 3,
@@ -1231,16 +1239,16 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
  * the SDK/agent log). Otherwise the legacy (employee_id, punch_time) pair
  * is used so re-syncs of the same log never double-insert.
  *
- * @param  array{fingerprint_id: int, punch_time: mixed, source_key?: string, action?: string|null}  $record
+ * @param  array{fingerprint_id: int, punch_time: mixed, source_key?: string, action?: string|null, score?: int|null}  $record
  * @param  int|null  $deviceId  Must reference a biometric_devices row. Agent
  *                              pushes (USB readers) don\'t own a network device,
  *                              so they pass null — never an agent id.
  */',
-        'startLine' => 254,
-        'endLine' => 311,
+        'startLine' => 272,
+        'endLine' => 344,
         'startColumn' => 5,
         'endColumn' => 5,
-        'couldThrow' => false,
+        'couldThrow' => true,
         'isClosure' => false,
         'isGenerator' => false,
         'isVariadic' => false,

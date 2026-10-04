@@ -10,23 +10,23 @@
 
         {{-- Filters --}}
         <div class="card">
-            <div class="card-body">
-                <form method="GET" class="flex flex-wrap gap-3 items-end">
-                    <div class="flex-1 min-w-0 sm:flex-none">
-                        <label class="input-label">Search</label>
-                        <input name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-full sm:w-56">
+            <div class="card-body px-4 py-3">
+                <form method="GET" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.3fr_1.25fr_1.4fr_1.1fr_1fr_1fr_auto]">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="payslip-search">Search employee name or ID</label>
+                        <input id="payslip-search" name="search" value="{{ request('search') }}" placeholder="Employee..." class="input w-full min-w-0" autocomplete="off">
                     </div>
                     @include('partials.employee-filters')
-                    <div>
-                        <label class="input-label">Period</label>
-                        <select name="payroll_period_id" class="input">
+                    <div class="w-full min-w-0">
+                        <label class="input-label" for="payslip-period">Period</label>
+                        <select id="payslip-period" name="payroll_period_id" class="input w-full min-w-0">
                             <option value="">All Periods</option>
                             @foreach (App\Models\PayrollPeriod::orderByDesc('end_date')->get() as $pp)
                                 <option value="{{ $pp->id }}" @selected(request('payroll_period_id') == $pp->id)>{{ $pp->name }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <button class="btn btn-primary">Filter</button>
+                    <button class="btn btn-primary w-full sm:w-auto">Filter</button>
                 </form>
             </div>
         </div>

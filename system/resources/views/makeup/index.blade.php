@@ -16,21 +16,32 @@
             <div class="card-body">
                 <form method="POST" action="{{ route('makeup.store') }}" class="grid grid-cols-2 md:grid-cols-6 gap-4 items-end">
                     @csrf
-                    <div>
-                        <label class="input-label">Employee</label>
-                        <select name="employee_id" class="input">
-                            @foreach ($employees->where('classification', 'teaching') as $e)
-                                <option value="{{ $e->id }}">{{ $e->employee_id }} — {{ $e->full_name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div>
-                        <label class="input-label">Subject</label>
-                        <select name="subject_id" class="input">
-                            <option value="">—</option>
-                            @foreach ($subjects as $s)<option value="{{ $s->id }}">{{ $s->code }} — {{ $s->name }}</option>@endforeach
-                        </select>
-                    </div>
+                    @php
+                        $teachingEmployees = $employees->where('classification', 'teaching')->values();
+                    @endphp
+                    <x-typeahead
+                        name="employee_id"
+                        label="Employee"
+                        placeholder="Type a name or ID…"
+                        required
+                        :value="old('employee_id', '')"
+                        :items="$teachingEmployees->map(fn ($e) => [
+                            'id' => $e->id,
+                            'text' => $e->employee_id.' — '.$e->full_name,
+                            'label' => $e->full_name,
+                            'meta' => $e->employee_id,
+                        ])->values()" />
+                    <x-typeahead
+                        name="subject_id"
+                        label="Subject"
+                        placeholder="Type a code or name…"
+                        :value="old('subject_id', '')"
+                        :items="$subjects->map(fn ($s) => [
+                            'id' => $s->id,
+                            'text' => $s->code.' — '.$s->name,
+                            'label' => $s->name,
+                            'meta' => $s->code,
+                        ])->values()" />
                     <div>
                         <label class="input-label">Date</label>
                         <input type="date" name="class_date" class="input" required>
@@ -60,18 +71,27 @@
 
         {{-- List --}}
         <div class="card">
-            <div class="card-header">
-                <div class="flex flex-wrap gap-3 items-center justify-between">
+            <div class="card-header p-3">
+                <div class="flex flex-wrap gap-2 items-center justify-between">
                     <h2 class="font-semibold text-slate-900">Make-Up Class Records</h2>
-                    <form method="GET" class="flex flex-wrap gap-2">
+                    <form method="GET" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.25fr_1.4fr_1.1fr_1fr_0.9fr_0.9fr_auto]">
                         @include('partials.employee-filters')
-                        <select name="approval_status" class="input">
-                            <option value="">All Status</option>
-                                    @foreach (['pending','approved','rejected'] as $s)<option value="{{ $s }}" @selected(request('approval_status') == $s)>{{ $s === 'rejected' ? 'Denied' : ucfirst($s) }}</option>@endforeach
-                        </select>
-                        <input type="date" name="from" value="{{ request('from') }}" class="input">
-                        <input type="date" name="to" value="{{ request('to') }}" class="input">
-                        <button class="btn btn-primary btn-sm">Filter</button>
+                        <div class="w-full min-w-0">
+                            <label class="input-label" for="makeup-approval-status">Approval Status</label>
+                            <select id="makeup-approval-status" name="approval_status" class="input w-full min-w-0">
+                                <option value="">All Status</option>
+                                @foreach (['pending','approved','rejected'] as $s)<option value="{{ $s }}" @selected(request('approval_status') == $s)>{{ $s === 'rejected' ? 'Denied' : ucfirst($s) }}</option>@endforeach
+                            </select>
+                        </div>
+                        <div class="w-full min-w-0">
+                            <label class="input-label" for="makeup-from">From</label>
+                            <input id="makeup-from" type="date" name="from" value="{{ request('from') }}" class="input w-full min-w-0">
+                        </div>
+                        <div class="w-full min-w-0">
+                            <label class="input-label" for="makeup-to">To</label>
+                            <input id="makeup-to" type="date" name="to" value="{{ request('to') }}" class="input w-full min-w-0">
+                        </div>
+                        <button class="btn btn-primary w-full sm:w-auto">Filter</button>
                     </form>
                 </div>
             </div>

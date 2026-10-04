@@ -79,8 +79,12 @@ class AttendanceController extends Controller
         // Keep the admin's explicit status choice after recomputation.
         $attendance->update(['status' => $statusByRemark[$request->remarks]]);
 
-        return redirect()->route('attendance.index', ['date' => $attendance->date->format('Y-m-d')])
-            ->with('success', 'Attendance corrected and recomputed.');
+        $carry = $request->only(['department_id', 'classification', 'employment_status', 'status', 'search']);
+
+        return redirect()->route('attendance.index', array_merge(
+            $carry,
+            ['date' => $attendance->date->format('Y-m-d')],
+        ))->with('success', 'Attendance corrected and recomputed.');
     }
 
     /**

@@ -23,15 +23,19 @@
                 @endif
                 <form method="POST" action="{{ route('employee.makeup.store') }}" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     @csrf
-                    <div>
-                        <label for="subject_id" class="input-label">Subject / Class</label>
-                        <select id="subject_id" name="subject_id" class="input w-full">
-                            <option value="">Select a subject (optional)</option>
-                            @foreach ($subjects as $subject)
-                                <option value="{{ $subject->id }}" @selected(old('subject_id') == $subject->id)>{{ $subject->code }} — {{ $subject->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                    <x-typeahead
+                        name="subject_id"
+                        id="subject_id"
+                        label="Subject / Class"
+                        placeholder="Type a code or name…"
+                        empty-text="No subjects found."
+                        :value="old('subject_id', '')"
+                        :items="$subjects->map(fn ($s) => [
+                            'id' => $s->id,
+                            'text' => $s->code.' — '.$s->name,
+                            'label' => $s->name,
+                            'meta' => $s->code,
+                        ])->values()" />
                     <div>
                         <label for="class_date" class="input-label">Date</label>
                         <input id="class_date" type="date" name="class_date" min="{{ now()->toDateString() }}" value="{{ old('class_date') }}" class="input w-full" required>

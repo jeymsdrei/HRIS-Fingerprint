@@ -3,6 +3,12 @@
 
     <div class="page-container">
         <div class="max-w-lg">
+            <div class="mb-4">
+                <a href="{{ route('payroll.index') }}" class="btn btn-outline">
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    Back to Payroll
+                </a>
+            </div>
             <div class="mb-8">
                 <h1 class="text-3xl font-bold text-slate-900">Generate Payroll</h1>
                 <p class="mt-2 text-slate-600">Create a new payroll period</p>

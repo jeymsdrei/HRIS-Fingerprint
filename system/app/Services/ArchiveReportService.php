@@ -107,8 +107,11 @@ class ArchiveReportService
 
         return $q
             ->when($this->recordType, fn ($q, $t) => $q->where('archive_type', $t))
-            ->when($this->year, fn ($q, $y) => $q->where('period_label', 'like', "{$y}%"))
-            ->when($this->month, fn ($q, $m) => $q->where('period_label', 'like', sprintf('%04d-%02d%%', $this->year, $m)))
+            ->when($this->from || $this->to,
+                fn ($q) => $q->whereBetween('period_label', [$this->startDate()->format('Y-m'), $this->endDate()->format('Y-m')]),
+                fn ($q) => $q->when($this->year, fn ($q, $y) => $q->where('period_label', 'like', "{$y}%"))
+                    ->when($this->month, fn ($q, $m) => $q->where('period_label', 'like', sprintf('%04d-%02d%%', $this->year, $m)))
+            )
             ->orderBy('archived_at')
             ->get();
     }

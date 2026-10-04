@@ -1,0 +1,54 @@
+2026-10-01 21:56:59.181 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-01 21:57:00.336 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-01 21:57:01.457 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-01 21:57:10.977 [Info   ] RefreshEmployeesFromHris | fetched 20 employees
+2026-10-01 21:57:22.992 [Info   ] RefreshEmployeesFromHris | fetched 20 employees
+2026-10-01 22:22:04.424 [Info   ] RefreshEmployeesFromHris | fetched 19 employees
+2026-10-01 22:22:11.719 [Info   ] RefreshEmployeesFromHris | fetched 19 employees
+2026-10-01 22:22:11.738 [Info   ] ApplyEmployeeSync | removed inactive employee EMP-001
+2026-10-01 22:22:21.747 [Info   ] RefreshEmployeesFromHris | fetched 18 employees
+2026-10-01 22:22:32.299 [Info   ] RefreshEmployeesFromHris | fetched 17 employees
+2026-10-01 22:22:32.307 [Info   ] ApplyEmployeeSync | removed inactive employee EMP-002
+2026-10-01 22:22:41.900 [Info   ] RefreshEmployeesFromHris | fetched 16 employees
+2026-10-01 22:22:41.907 [Info   ] ApplyEmployeeSync | removed inactive employee EMP-003
+2026-10-01 22:22:50.358 [Info   ] RefreshEmployeesFromHris | fetched 15 employees
+2026-10-01 22:22:50.359 [Info   ] ApplyEmployeeSync | removed inactive employee EMP-004
+2026-10-01 22:23:00.385 [Info   ] RefreshEmployeesFromHris | fetched 14 employees
+2026-10-01 22:23:00.386 [Info   ] ApplyEmployeeSync | removed inactive employee EMP-005
+2026-10-01 22:23:10.408 [Info   ] RefreshEmployeesFromHris | fetched 14 employees
+2026-10-01 22:23:10.410 [Info   ] ApplyEmployeeSync | removed inactive employee EMP-006
+2026-10-01 22:23:20.444 [Info   ] RefreshEmployeesFromHris | fetched 13 employees
+2026-10-01 22:23:30.358 [Info   ] RefreshEmployeesFromHris | fetched 12 employees
+2026-10-01 22:23:30.359 [Info   ] ApplyEmployeeSync | removed inactive employee T-0004
+2026-10-01 22:23:40.211 [Info   ] RefreshEmployeesFromHris | fetched 11 employees
+2026-10-01 22:23:40.212 [Info   ] ApplyEmployeeSync | removed inactive employee T-0007
+2026-10-01 22:23:50.460 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-01 22:23:50.461 [Info   ] ApplyEmployeeSync | removed inactive employee T-0006
+2026-10-01 22:24:00.466 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-01 22:24:00.467 [Info   ] ApplyEmployeeSync | removed inactive employee T-0005
+2026-10-01 22:24:55.724 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-01 22:25:12.611 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-01 22:25:17.126 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-01 22:25:20.607 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-01 22:25:23.411 [Info   ] Identify | fid=3 score=394
+2026-10-01 22:25:32.756 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-01 23:30:02.932 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-01 23:30:13.174 [Info   ] Identify | fid=4 score=461
+2026-10-01 23:42:51.114 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-02 02:40:42.418 [Info   ] OnFormClosing | Application shutting down
+2026-10-02 02:40:44.472 [Warning] RegisterAgentAndFlush | register failed: Unable to connect to the remote server
+2026-10-02 02:40:44.521 [Info   ] CloseDevice | Device closed
+2026-10-02 19:00:21.028 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-02 19:00:27.089 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-02 19:00:27.595 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-02 19:00:32.652 [Info   ] RefreshEmployeesFromHris | fetched 11 employees
+2026-10-02 19:00:42.619 [Info   ] RefreshEmployeesFromHris | fetched 11 employees
+2026-10-02 20:26:54.425 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-02 20:26:55.485 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-02 20:26:59.041 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-02 20:27:01.528 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-02 20:27:03.017 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-02 20:27:05.894 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-02 20:27:21.906 [Info   ] OnFormClosing | Application shutting down
+2026-10-02 20:27:22.504 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-02 20:27:22.627 [Info   ] CloseDevice | Device closed

@@ -16,14 +16,18 @@
             <div class="card-body">
                 <form method="POST" action="{{ route('loans.store') }}" class="grid grid-cols-2 md:grid-cols-5 gap-3 items-end">
                     @csrf
-                    <div>
-                        <label class="input-label">Employee</label>
-                        <select name="employee_id" class="input" required>
-                            @foreach (App\Models\Employee::where('is_active', true)->orderBy('last_name')->get() as $e)
-                                <option value="{{ $e->id }}">{{ $e->employee_id }} — {{ $e->full_name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                    <x-typeahead
+                        name="employee_id"
+                        label="Employee"
+                        placeholder="Type a name or ID…"
+                        required
+                        :value="old('employee_id', '')"
+                        :items="$employees->map(fn ($e) => [
+                            'id' => $e->id,
+                            'text' => $e->employee_id.' — '.$e->full_name,
+                            'label' => $e->full_name,
+                            'meta' => $e->employee_id,
+                        ])->values()" />
                     <div>
                         <label class="input-label">Type</label>
                         <select name="loan_type" class="input" required>
@@ -61,37 +65,34 @@
 
         {{-- Filters --}}
         <div class="card">
-            <div class="card-body">
-                <form method="GET" class="flex flex-wrap gap-3 items-end">
+            <div class="card-body px-4 py-3">
+                <form method="GET" class="grid w-full min-w-0 grid-cols-1 gap-2 items-end sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.25fr_1.4fr_0.9fr_0.95fr_0.9fr_auto]">
                     @include('partials.employee-filters')
-                    <div>
+                    <div class="w-full min-w-0 sm:w-auto">
                         <label class="input-label">Type</label>
-                        <select name="loan_type" class="input">
+                        <select name="loan_type" class="input w-full min-w-0">
                             <option value="">All Types</option>
                             @foreach (['sss','pagibig','company','cash_advance','other'] as $t)
                                 <option value="{{ $t }}" @selected(request('loan_type') == $t)>{{ ucwords(str_replace('_', ' ', $t)) }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <div>
+                    <div class="w-full min-w-0 sm:w-auto">
                         <label class="input-label">Status</label>
-                        <select name="status" class="input">
+                        <select name="status" class="input w-full min-w-0">
                             <option value="">All Status</option>
                             @foreach (['active','paid','closed'] as $s)<option value="{{ $s }}" @selected(request('status') == $s)>{{ ucfirst($s) }}</option>@endforeach
                         </select>
                     </div>
-                    <button class="btn btn-primary">Filter</button>
+                    <button class="btn btn-primary w-full sm:w-auto">Filter</button>
                 </form>
             </div>
         </div>
 
         {{-- Table --}}
-        <div class="card">
+        <div class="card" x-data="loansTable()" x-init="init()">
             <div class="table-container">
-                <table class="data-table"
-                    x-data="loansTable()"
-                    x-init="init()"
-                    @click.outside="closeEditor()">
+                <table class="data-table">
                     <thead class="table-head">
                         <tr>
                             <th class="table-head-cell">Employee</th>
@@ -105,7 +106,7 @@
                     </thead>
                     <tbody>
                         @forelse ($loans as $l)
-                        <tr class="table-body-row" :class="{ 'bg-slate-50': editingId === {{ $l->id }} }" data-loan-id="{{ $l->id }}">
+                        <tr class="table-body-row" data-loan-id="{{ $l->id }}">
 <td class="table-body-cell">
                                  <span id="loan-employee-name-{{ $l->id }}" class="font-medium text-slate-900">{{ $l->employee->full_name }}</span>
                                  <p class="text-xs text-slate-400">{{ $l->employee->employee_id }} · {{ $l->reference_no }}</p>
@@ -120,39 +121,13 @@
                                 <span class="badge {{ $l->status === 'active' ? 'badge-warning' : 'badge-success' }}">{{ ucfirst($l->status) }}</span>
                             </td>
                             <td class="table-body-cell text-right">
-                                <button @click="openEditor({{ $l->id }})" class="btn btn-secondary btn-sm">Update</button>
-                            </td>
-                        </tr>
-                        <tr x-show="editingId === {{ $l->id }}"
-                            x-effect="editingId === {{ $l->id }} && setTimeout(() => { const inp = $el.querySelector('input'); if (inp) inp.focus(); }, 100)"
-                            class="editor-row"
-                            data-loan-id="{{ $l->id }}">
-                            <td colspan="7">
-                                <form action="{{ route('loans.update', $l) }}" method="POST"
-                                    @submit.prevent="submitEditor({{ $l->id }}, $event)"
-                                    class="editor-form">
-                                    @csrf @method('PUT')
-                                    <div class="editor-fields">
-                                        <div class="editor-field">
-                                            <label class="input-label">Balance</label>
-                                            <input type="number" step="0.01" name="balance" value="{{ $l->balance }}" class="input" placeholder="Balance" required>
-                                        </div>
-                                        <div class="editor-field">
-                                            <label class="input-label">Status</label>
-                                            <select name="status" class="input">
-                                                @foreach (['active','paid','closed'] as $s)
-                                                    <option value="{{ $s }}" @selected($l->status == $s)>{{ ucfirst($s) }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                        <div class="editor-field">
-                                            <div class="flex gap-2">
-                                                <button type="submit" class="btn btn-primary btn-sm">Save</button>
-                                                <button type="button" @click="closeEditor()" class="btn btn-secondary btn-sm">Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                <button @click="openEditor($event.currentTarget)"
+                                    data-loan-id="{{ $l->id }}"
+                                    data-employee-name="{{ $l->employee->full_name }}"
+                                    data-balance="{{ $l->balance }}"
+                                    data-status="{{ $l->status }}"
+                                    data-update-url="{{ route('loans.update', $l) }}"
+                                    class="btn btn-secondary btn-sm">Update</button>
                             </td>
                         </tr>
                         @empty
@@ -172,22 +147,68 @@
             @if ($loans->hasPages())
                 <div class="card-footer">{{ $loans->links() }}</div>
             @endif
+
+            <x-modal name="loan-editor" maxWidth="md" focusable>
+                <div role="dialog" aria-modal="true" aria-labelledby="loan-editor-title" class="bg-white">
+                    <div class="card-header">
+                        <h2 id="loan-editor-title" class="font-semibold text-slate-900">Update Loan</h2>
+                        <p class="mt-1 text-sm text-slate-600">Employee: <span x-text="selectedLoan.employeeName" class="font-semibold text-slate-900"></span></p>
+                    </div>
+                    <div class="card-body">
+                        <form :action="selectedLoan.updateUrl" method="POST" @submit.prevent="submitEditor(editingId, $event)" class="space-y-4">
+                            @csrf @method('PUT')
+                            <div>
+                                <label for="loan-editor-balance" class="input-label">Balance</label>
+                                <input id="loan-editor-balance" x-model="selectedLoan.balance" type="number" step="0.01" name="balance" class="input" placeholder="Balance" required>
+                            </div>
+                            <div>
+                                <label for="loan-editor-status" class="input-label">Status</label>
+                                <select id="loan-editor-status" x-model="selectedLoan.status" name="status" class="input">
+                                    <option value="active">Active</option>
+                                    <option value="paid">Paid</option>
+                                    <option value="closed">Closed</option>
+                                </select>
+                            </div>
+                            <div class="flex justify-end gap-2">
+                                <button type="button" @click="closeEditor()" class="btn btn-secondary">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </x-modal>
         </div>
     </div>
-</x-app-layout>
 
 <script>
-document.addEventListener('alpine:init', () => {
-    Alpine.data('loansTable', () => ({
+// On a hard load this inline script runs before the deferred app.js bundle, so the
+// Alpine global does not exist yet. On an SPA swap it already does, and `alpine:init`
+// has long since fired, so registering through that event alone would leave
+// x-data="loansTable()" undefined on every return visit.
+const registerLoansTable = () => Alpine.data('loansTable', () => ({
         editingId: null,
+        selectedLoan: {
+            employeeName: '',
+            balance: '',
+            status: 'active',
+            updateUrl: '',
+        },
 
-        openEditor(id) {
-            this.editingId = id;
-            localStorage.setItem('lastEditedLoan', id);
+        openEditor(button) {
+            this.editingId = Number(button.dataset.loanId);
+            this.selectedLoan = {
+                employeeName: button.dataset.employeeName,
+                balance: button.dataset.balance,
+                status: button.dataset.status,
+                updateUrl: button.dataset.updateUrl,
+            };
+            localStorage.setItem('lastEditedLoan', this.editingId);
+            window.dispatchEvent(new CustomEvent('open-modal', { detail: 'loan-editor' }));
         },
 
         closeEditor() {
             this.editingId = null;
+            window.dispatchEvent(new CustomEvent('close-modal', { detail: 'loan-editor' }));
         },
 
         async submitEditor(id, event) {
@@ -206,24 +227,7 @@ document.addEventListener('alpine:init', () => {
                 });
 
                 if (response.ok || response.status === 302) {
-                    // Highlight employee name
-                    const nameEl = document.getElementById('loan-employee-name-' + id);
-                    if (nameEl) {
-                        nameEl.classList.add('bg-red-100', 'text-red-900', 'px-2', 'rounded', 'animate-pulse');
-                        setTimeout(() => {
-                            nameEl.classList.remove('bg-red-100', 'text-red-900', 'px-2', 'rounded', 'animate-pulse');
-                        }, 2000);
-                    }
-
-                    this.closeEditor();
-                    setTimeout(() => {
-                        this.sortRows();
-                        const el = document.querySelector(`tr[data-loan-id="${id}"]`);
-                        if (el) {
-                            el.classList.add('highlight-row');
-                            setTimeout(() => el.classList.remove('highlight-row'), 2000);
-                        }
-                    }, 50);
+                    window.location.reload();
                     return;
                 }
             } catch (e) {
@@ -263,56 +267,16 @@ document.addEventListener('alpine:init', () => {
             });
             setTimeout(() => self.sortRows(), 150);
         },
-    }));
-});
+}));
+
+if (window.Alpine) {
+    registerLoansTable();
+} else {
+    document.addEventListener('alpine:init', registerLoansTable, { once: true });
+}
 </script>
 
 <style>
-.editor-row td {
-    padding: 0 !important;
-    border-bottom: 2px solid #e2e8f0;
-}
-
-.editor-form {
-    padding: 16px 24px;
-    background: #f8fafc;
-    border-bottom: 2px solid #e2e8f0;
-}
-
-.editor-fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
-    align-items: end;
-}
-
-.editor-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.editor-field .flex {
-    display: flex;
-    gap: 8px;
-}
-
-.editor-field .flex .btn {
-    flex: 1;
-}
-
-@media (max-width: 640px) {
-    .editor-fields {
-        grid-template-columns: 1fr !important;
-    }
-    .editor-field .flex {
-        flex-direction: column;
-    }
-    .editor-field .flex .btn {
-        width: 100%;
-    }
-}
-
 tr.table-body-row.highlight-row {
     animation: highlightPulse 1.8s ease-out forwards;
 }
@@ -323,12 +287,5 @@ tr.table-body-row.highlight-row {
     100% { background-color: transparent; }
 }
 
-@media (max-width: 767px) {
-    .editor-row td {
-        padding: 0 !important;
-    }
-    .editor-form {
-        padding: 12px 14px;
-    }
-}
 </style>
+</x-app-layout>
