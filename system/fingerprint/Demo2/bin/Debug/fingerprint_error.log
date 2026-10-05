@@ -52,3 +52,16 @@
 2026-10-02 20:27:21.906 [Info   ] OnFormClosing | Application shutting down
 2026-10-02 20:27:22.504 [Info   ] RegisterAgentAndFlush | agent registered
 2026-10-02 20:27:22.627 [Info   ] CloseDevice | Device closed
+2026-10-05 20:25:44.676 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-05 20:25:46.865 [Warning] RegisterAgentAndFlush | register failed: Unable to connect to the remote server
+2026-10-05 20:25:47.245 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-05 20:25:51.569 [Warning] RefreshEmployeesFromHris | Unable to connect to the remote server
+2026-10-05 20:25:55.394 [Warning] ResolveHrisFingerprintId | N-0001 -> Unable to connect to the remote server
+2026-10-05 20:26:01.065 [Info   ] Enroll | fid=5 len=734 origDeclared=734 head=4B-9D-53-53-32-31-00-00-02-DE-DD-04-08-05-07-09 addRet=0
+2026-10-05 20:26:01.111 [Info   ] Enroll | saved fid=5 employee=N-0001 total=4
+2026-10-05 20:26:03.158 [Warning] Enroll | template push failed fid=5 (Unable to connect to the remote server)
+2026-10-05 20:26:12.166 [Info   ] Identify | fid=5 score=509
+2026-10-05 20:26:16.216 [Info   ] Identify | fid=5 score=421
+2026-10-05 20:26:26.548 [Info   ] Identify | fid=5 score=317
+2026-10-05 20:26:30.837 [Info   ] Identify | fid=4 score=398
+2026-10-05 20:26:32.883 [Info   ] Identify | fid=5 score=384

@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1791133801,
+	'lastFullAnalysisTime' => 1791202846,
 	'meta' => array (
   'cacheVersion' => 'v13-packageDependencies',
   'phpstanVersion' => '2.2.8',
@@ -7361,6 +7361,86 @@ return [
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\EmailMask.php' => 
   array (
   ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\BackupData.php' => 
+  array (
+    0 => 'symfony/console',
+    1 => 'laravel/framework',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\SyncBiometricCommand.php' => 
+  array (
+    0 => 'symfony/console',
+    1 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'nesbot/carbon',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+    2 => 'barryvdh/laravel-dompdf',
+    3 => 'dompdf/dompdf',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricAgent.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricDevice.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Providers\\AppServiceProvider.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'nesbot/carbon',
+  ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\GenericExport.php' => 
   array (
     0 => 'maatwebsite/excel',
@@ -7456,86 +7536,6 @@ return [
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Semester.php' => 
   array (
     0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\BackupData.php' => 
-  array (
-    0 => 'symfony/console',
-    1 => 'laravel/framework',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Console\\Commands\\SyncBiometricCommand.php' => 
-  array (
-    0 => 'symfony/console',
-    1 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\AuthenticatedSessionController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\EmailVerificationPromptController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\Auth\\PasswordController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\DashboardController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'nesbot/carbon',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Http\\Controllers\\PayslipController.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'symfony/http-foundation',
-    2 => 'barryvdh/laravel-dompdf',
-    3 => 'dompdf/dompdf',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricAgent.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\BiometricDevice.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Clearance.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Course.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Employee.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\EmployeeBenefit.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Loan.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Models\\Payroll.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Providers\\AppServiceProvider.php' => 
-  array (
-    0 => 'laravel/framework',
-  ),
-  'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Services\\AttendanceService.php' => 
-  array (
-    0 => 'laravel/framework',
-    1 => 'nesbot/carbon',
   ),
   'C:\\Users\\Ryzen\\Desktop\\hrissystem-20260812T090006Z-1-001\\hrissystem\\system\\app\\Exports\\ArchiveSheet.php' => 
   array (
