@@ -23,7 +23,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 2,
@@ -49,7 +52,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 3,
@@ -75,7 +81,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 4,
@@ -101,7 +110,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 5,
@@ -127,7 +139,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 6,
@@ -153,7 +168,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 7,
@@ -179,7 +197,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 8,
@@ -205,7 +226,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 9,
@@ -231,7 +255,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 10,
@@ -257,7 +284,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 11,
@@ -283,7 +313,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 12,
@@ -309,7 +342,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 13,
@@ -335,7 +371,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 14,
@@ -361,7 +400,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 15,
@@ -387,7 +429,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 16,
@@ -413,7 +458,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 17,
@@ -439,7 +487,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 18,
@@ -465,7 +516,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 19,
@@ -491,7 +545,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 20,
@@ -517,7 +574,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 21,
@@ -543,7 +603,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 22,
@@ -569,7 +632,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 23,
@@ -595,7 +661,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 24,
@@ -621,7 +690,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 25,
@@ -647,7 +719,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 26,
@@ -673,7 +748,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 27,
@@ -699,7 +777,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 28,
@@ -725,7 +806,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 29,
@@ -751,7 +835,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 30,
@@ -777,7 +864,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 31,
@@ -803,7 +893,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 32,
@@ -829,7 +922,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 33,
@@ -855,7 +951,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 34,
@@ -881,7 +980,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 35,
@@ -907,7 +1009,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 36,
@@ -933,7 +1038,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 37,
@@ -959,7 +1067,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 38,
@@ -985,7 +1096,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 39,
@@ -1011,7 +1125,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 40,
@@ -1037,7 +1154,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 41,
@@ -1063,7 +1183,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 42,
@@ -1089,7 +1212,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 43,
@@ -1115,7 +1241,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 44,
@@ -1141,7 +1270,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 45,
@@ -1167,7 +1299,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 46,
@@ -1193,7 +1328,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 47,
@@ -1219,7 +1357,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 48,
@@ -1245,7 +1386,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 49,
@@ -1271,7 +1415,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 50,
@@ -1297,7 +1444,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 51,
@@ -1323,7 +1473,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 52,
@@ -1349,7 +1502,10 @@
         "updated_at": "2026-08-21 10:36:49",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 53,
@@ -1375,7 +1531,10 @@
         "updated_at": "2026-08-22 17:14:59",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 54,
@@ -1401,7 +1560,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 55,
@@ -1427,7 +1589,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 56,
@@ -1453,7 +1618,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 57,
@@ -1479,7 +1647,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 58,
@@ -1505,7 +1676,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 59,
@@ -1531,7 +1705,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 61,
@@ -1557,7 +1734,10 @@
         "updated_at": "2026-08-29 09:59:57",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 62,
@@ -1583,7 +1763,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 63,
@@ -1609,7 +1792,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 64,
@@ -1635,7 +1821,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 65,
@@ -1661,7 +1850,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 66,
@@ -1687,7 +1879,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 67,
@@ -1713,7 +1908,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 68,
@@ -1739,7 +1937,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 69,
@@ -1765,7 +1966,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 70,
@@ -1791,7 +1995,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 71,
@@ -1817,7 +2024,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 72,
@@ -1843,7 +2053,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 73,
@@ -1869,7 +2082,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 74,
@@ -1895,7 +2111,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 75,
@@ -1921,7 +2140,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 76,
@@ -1947,7 +2169,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 77,
@@ -1973,7 +2198,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 78,
@@ -1999,7 +2227,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 79,
@@ -2025,7 +2256,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 80,
@@ -2051,7 +2285,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 81,
@@ -2077,7 +2314,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 82,
@@ -2103,7 +2343,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 83,
@@ -2129,7 +2372,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 84,
@@ -2155,7 +2401,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 85,
@@ -2181,7 +2430,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 86,
@@ -2207,7 +2459,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 87,
@@ -2233,7 +2488,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 88,
@@ -2259,7 +2517,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 89,
@@ -2285,7 +2546,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 90,
@@ -2311,7 +2575,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 91,
@@ -2337,7 +2604,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 92,
@@ -2363,7 +2633,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 93,
@@ -2389,7 +2662,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 94,
@@ -2415,7 +2691,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 95,
@@ -2441,7 +2720,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 96,
@@ -2467,7 +2749,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 97,
@@ -2493,7 +2778,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 98,
@@ -2519,7 +2807,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 99,
@@ -2545,7 +2836,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 100,
@@ -2571,7 +2865,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 101,
@@ -2597,7 +2894,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 102,
@@ -2623,7 +2923,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 103,
@@ -2649,7 +2952,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 104,
@@ -2675,7 +2981,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 105,
@@ -2701,7 +3010,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 106,
@@ -2727,7 +3039,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 107,
@@ -2753,7 +3068,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 108,
@@ -2779,7 +3097,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 109,
@@ -2805,7 +3126,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 110,
@@ -2831,7 +3155,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 111,
@@ -2857,7 +3184,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 112,
@@ -2883,7 +3213,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 113,
@@ -2909,7 +3242,10 @@
         "updated_at": "2026-08-21 10:25:21",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 114,
@@ -2935,7 +3271,10 @@
         "updated_at": "2026-08-21 10:36:49",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 115,
@@ -2961,7 +3300,10 @@
         "updated_at": "2026-08-22 17:14:59",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 116,
@@ -2987,7 +3329,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 117,
@@ -3013,7 +3358,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 118,
@@ -3039,7 +3387,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 119,
@@ -3065,7 +3416,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 120,
@@ -3091,7 +3445,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 121,
@@ -3117,7 +3474,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 123,
@@ -3143,7 +3503,10 @@
         "updated_at": "2026-08-29 09:59:57",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 124,
@@ -3169,7 +3532,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 125,
@@ -3195,7 +3561,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 126,
@@ -3221,7 +3590,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 127,
@@ -3247,7 +3619,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 128,
@@ -3273,7 +3648,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 129,
@@ -3299,7 +3677,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 130,
@@ -3325,7 +3706,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 131,
@@ -3351,7 +3735,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 132,
@@ -3377,7 +3764,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 133,
@@ -3403,7 +3793,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 134,
@@ -3429,7 +3822,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 135,
@@ -3455,7 +3851,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 136,
@@ -3481,7 +3880,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 137,
@@ -3507,7 +3909,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 138,
@@ -3533,7 +3938,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 139,
@@ -3559,7 +3967,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 140,
@@ -3585,7 +3996,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 141,
@@ -3611,7 +4025,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 142,
@@ -3637,7 +4054,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 143,
@@ -3663,7 +4083,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 144,
@@ -3689,7 +4112,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 145,
@@ -3715,7 +4141,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 146,
@@ -3741,7 +4170,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 147,
@@ -3767,7 +4199,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 148,
@@ -3793,7 +4228,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 149,
@@ -3819,7 +4257,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 150,
@@ -3845,7 +4286,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 151,
@@ -3871,7 +4315,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 152,
@@ -3897,7 +4344,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 153,
@@ -3923,7 +4373,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 154,
@@ -3949,7 +4402,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 155,
@@ -3975,7 +4431,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 156,
@@ -4001,7 +4460,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 157,
@@ -4027,7 +4489,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 158,
@@ -4053,7 +4518,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 159,
@@ -4079,7 +4547,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 160,
@@ -4105,7 +4576,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 161,
@@ -4131,7 +4605,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 162,
@@ -4157,7 +4634,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 163,
@@ -4183,7 +4663,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 164,
@@ -4209,7 +4692,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 165,
@@ -4235,7 +4721,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 166,
@@ -4261,7 +4750,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 167,
@@ -4287,7 +4779,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 168,
@@ -4313,7 +4808,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 169,
@@ -4339,7 +4837,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 170,
@@ -4365,7 +4866,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 171,
@@ -4391,7 +4895,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 172,
@@ -4417,7 +4924,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 173,
@@ -4443,7 +4953,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 174,
@@ -4469,7 +4982,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 175,
@@ -4495,7 +5011,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 176,
@@ -4521,7 +5040,10 @@
         "updated_at": "2026-08-21 10:36:49",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 177,
@@ -4547,7 +5069,10 @@
         "updated_at": "2026-08-22 17:14:59",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 178,
@@ -4573,7 +5098,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 179,
@@ -4599,7 +5127,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 180,
@@ -4625,7 +5156,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 181,
@@ -4651,7 +5185,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 182,
@@ -4677,7 +5214,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 183,
@@ -4703,7 +5243,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 185,
@@ -4729,7 +5272,10 @@
         "updated_at": "2026-08-29 09:59:57",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 186,
@@ -4755,7 +5301,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 187,
@@ -4781,7 +5330,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 188,
@@ -4807,7 +5359,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 189,
@@ -4833,7 +5388,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 190,
@@ -4859,7 +5417,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 191,
@@ -4885,7 +5446,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 192,
@@ -4911,7 +5475,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 193,
@@ -4937,7 +5504,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 194,
@@ -4963,7 +5533,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 195,
@@ -4989,7 +5562,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 196,
@@ -5015,7 +5591,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 197,
@@ -5041,7 +5620,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 198,
@@ -5067,7 +5649,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 199,
@@ -5093,7 +5678,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 200,
@@ -5119,7 +5707,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 201,
@@ -5145,7 +5736,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 202,
@@ -5171,7 +5765,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 203,
@@ -5197,7 +5794,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 204,
@@ -5223,7 +5823,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 205,
@@ -5249,7 +5852,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 206,
@@ -5275,7 +5881,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 207,
@@ -5301,7 +5910,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 208,
@@ -5327,7 +5939,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 209,
@@ -5353,7 +5968,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 210,
@@ -5379,7 +5997,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 211,
@@ -5405,7 +6026,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 212,
@@ -5431,7 +6055,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 213,
@@ -5457,7 +6084,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 214,
@@ -5483,7 +6113,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 215,
@@ -5509,7 +6142,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 216,
@@ -5535,7 +6171,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 217,
@@ -5561,7 +6200,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 218,
@@ -5587,7 +6229,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 219,
@@ -5613,7 +6258,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 220,
@@ -5639,7 +6287,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 221,
@@ -5665,7 +6316,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 222,
@@ -5691,7 +6345,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 223,
@@ -5717,7 +6374,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 224,
@@ -5743,7 +6403,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 225,
@@ -5769,7 +6432,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 226,
@@ -5795,7 +6461,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 227,
@@ -5821,7 +6490,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 228,
@@ -5847,7 +6519,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 229,
@@ -5873,7 +6548,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 230,
@@ -5899,7 +6577,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 231,
@@ -5925,7 +6606,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 232,
@@ -5951,7 +6635,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 233,
@@ -5977,7 +6664,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 234,
@@ -6003,7 +6693,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 235,
@@ -6029,7 +6722,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 236,
@@ -6055,7 +6751,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 237,
@@ -6081,7 +6780,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 238,
@@ -6107,7 +6809,10 @@
         "updated_at": "2026-08-21 10:36:49",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 239,
@@ -6133,7 +6838,10 @@
         "updated_at": "2026-08-22 17:14:59",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 240,
@@ -6159,7 +6867,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 241,
@@ -6185,7 +6896,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 242,
@@ -6211,7 +6925,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 243,
@@ -6237,7 +6954,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 244,
@@ -6263,7 +6983,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 245,
@@ -6289,7 +7012,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 247,
@@ -6315,7 +7041,10 @@
         "updated_at": "2026-08-29 09:59:57",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 248,
@@ -6341,7 +7070,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 249,
@@ -6367,7 +7099,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 250,
@@ -6393,7 +7128,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 251,
@@ -6419,7 +7157,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 252,
@@ -6445,7 +7186,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 253,
@@ -6471,7 +7215,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 254,
@@ -6497,7 +7244,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 255,
@@ -6523,7 +7273,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 256,
@@ -6549,7 +7302,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 257,
@@ -6575,7 +7331,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 258,
@@ -6601,7 +7360,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 259,
@@ -6627,7 +7389,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 260,
@@ -6653,7 +7418,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 261,
@@ -6679,7 +7447,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 262,
@@ -6705,7 +7476,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 263,
@@ -6731,7 +7505,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 264,
@@ -6757,7 +7534,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 265,
@@ -6783,7 +7563,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 266,
@@ -6809,7 +7592,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 267,
@@ -6835,7 +7621,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 268,
@@ -6861,7 +7650,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 269,
@@ -6887,7 +7679,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 270,
@@ -6913,7 +7708,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 271,
@@ -6939,7 +7737,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 272,
@@ -6965,7 +7766,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 273,
@@ -6991,7 +7795,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 274,
@@ -7017,7 +7824,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 275,
@@ -7043,7 +7853,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 276,
@@ -7069,7 +7882,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 277,
@@ -7095,7 +7911,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 278,
@@ -7121,7 +7940,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 279,
@@ -7147,7 +7969,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 280,
@@ -7173,7 +7998,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 281,
@@ -7199,7 +8027,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 282,
@@ -7225,7 +8056,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 283,
@@ -7251,7 +8085,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 284,
@@ -7277,7 +8114,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 285,
@@ -7303,7 +8143,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 286,
@@ -7329,7 +8172,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 287,
@@ -7355,7 +8201,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 288,
@@ -7381,7 +8230,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 289,
@@ -7407,7 +8259,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 290,
@@ -7433,7 +8288,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 291,
@@ -7459,7 +8317,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 292,
@@ -7485,7 +8346,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 293,
@@ -7511,7 +8375,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 294,
@@ -7537,7 +8404,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 295,
@@ -7563,7 +8433,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 296,
@@ -7589,7 +8462,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 297,
@@ -7615,7 +8491,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 298,
@@ -7641,7 +8520,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 299,
@@ -7667,7 +8549,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 300,
@@ -7693,7 +8578,10 @@
         "updated_at": "2026-08-21 10:36:49",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 301,
@@ -7719,7 +8607,10 @@
         "updated_at": "2026-08-22 17:14:59",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 302,
@@ -7745,7 +8636,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 303,
@@ -7771,7 +8665,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 304,
@@ -7797,7 +8694,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 305,
@@ -7823,7 +8723,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 306,
@@ -7849,7 +8752,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 307,
@@ -7875,7 +8781,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 309,
@@ -7901,7 +8810,10 @@
         "updated_at": "2026-08-29 09:59:57",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 310,
@@ -7927,7 +8839,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 311,
@@ -7953,7 +8868,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 312,
@@ -7979,7 +8897,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 313,
@@ -8005,7 +8926,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 314,
@@ -8031,7 +8955,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 315,
@@ -8057,7 +8984,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 316,
@@ -8083,7 +9013,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 317,
@@ -8109,7 +9042,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 318,
@@ -8135,7 +9071,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 319,
@@ -8161,7 +9100,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 320,
@@ -8187,7 +9129,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 321,
@@ -8213,7 +9158,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 322,
@@ -8239,7 +9187,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 323,
@@ -8265,7 +9216,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 324,
@@ -8291,7 +9245,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 325,
@@ -8317,7 +9274,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 326,
@@ -8343,7 +9303,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 327,
@@ -8369,7 +9332,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 328,
@@ -8395,7 +9361,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 329,
@@ -8421,7 +9390,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 330,
@@ -8447,7 +9419,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 331,
@@ -8473,7 +9448,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 332,
@@ -8499,7 +9477,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 333,
@@ -8525,7 +9506,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 334,
@@ -8551,7 +9535,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 335,
@@ -8577,7 +9564,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 336,
@@ -8603,7 +9593,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 337,
@@ -8629,7 +9622,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 338,
@@ -8655,7 +9651,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 339,
@@ -8681,7 +9680,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 340,
@@ -8707,7 +9709,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 341,
@@ -8733,7 +9738,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 342,
@@ -8759,7 +9767,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 343,
@@ -8785,7 +9796,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 344,
@@ -8811,7 +9825,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 345,
@@ -8837,7 +9854,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 346,
@@ -8863,7 +9883,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 347,
@@ -8889,7 +9912,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 348,
@@ -8915,7 +9941,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 349,
@@ -8941,7 +9970,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 350,
@@ -8967,7 +9999,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 351,
@@ -8993,7 +10028,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 352,
@@ -9019,7 +10057,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 353,
@@ -9045,7 +10086,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 354,
@@ -9071,7 +10115,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 355,
@@ -9097,7 +10144,10 @@
         "updated_at": "2026-08-21 10:25:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 356,
@@ -9123,7 +10173,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 357,
@@ -9149,7 +10202,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 358,
@@ -9175,7 +10231,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 359,
@@ -9201,7 +10260,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 360,
@@ -9227,7 +10289,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 361,
@@ -9253,7 +10318,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 362,
@@ -9279,7 +10347,10 @@
         "updated_at": "2026-08-21 10:36:49",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 363,
@@ -9305,7 +10376,10 @@
         "updated_at": "2026-08-22 17:14:59",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 364,
@@ -9331,7 +10405,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 365,
@@ -9357,7 +10434,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 366,
@@ -9383,7 +10463,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 367,
@@ -9409,7 +10492,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 368,
@@ -9435,7 +10521,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 369,
@@ -9461,7 +10550,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 371,
@@ -9487,7 +10579,10 @@
         "updated_at": "2026-08-29 09:59:57",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 372,
@@ -9513,7 +10608,10 @@
         "updated_at": "2026-08-21 10:25:23",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 374,
@@ -9539,7 +10637,10 @@
         "updated_at": "2026-08-29 09:19:04",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 375,
@@ -9565,7 +10666,10 @@
         "updated_at": "2026-08-29 10:00:22",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 376,
@@ -9591,7 +10695,10 @@
         "updated_at": "2026-08-29 09:19:04",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 377,
@@ -9617,7 +10724,10 @@
         "updated_at": "2026-08-29 09:19:04",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 378,
@@ -9643,7 +10753,10 @@
         "updated_at": "2026-08-29 09:19:04",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 379,
@@ -9669,7 +10782,10 @@
         "updated_at": "2026-08-29 09:19:04",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 380,
@@ -9695,7 +10811,10 @@
         "updated_at": "2026-08-29 09:19:04",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 381,
@@ -9721,7 +10840,10 @@
         "updated_at": "2026-08-29 09:59:20",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 382,
@@ -9747,7 +10869,10 @@
         "updated_at": "2026-08-29 09:59:57",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 383,
@@ -9773,7 +10898,10 @@
         "updated_at": "2026-08-29 09:59:57",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 384,
@@ -9799,7 +10927,10 @@
         "updated_at": "2026-09-29 10:19:44",
         "teaching_schedule_id": 31,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 385,
@@ -9825,7 +10956,10 @@
         "updated_at": "2026-09-29 10:19:44",
         "teaching_schedule_id": 2,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 386,
@@ -9851,7 +10985,10 @@
         "updated_at": "2026-09-29 10:19:44",
         "teaching_schedule_id": 7,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 387,
@@ -9877,7 +11014,10 @@
         "updated_at": "2026-09-29 10:19:44",
         "teaching_schedule_id": 12,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 388,
@@ -9903,7 +11043,10 @@
         "updated_at": "2026-09-29 10:19:44",
         "teaching_schedule_id": 17,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 389,
@@ -9929,7 +11072,10 @@
         "updated_at": "2026-09-29 10:19:44",
         "teaching_schedule_id": 22,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 390,
@@ -9955,7 +11101,10 @@
         "updated_at": "2026-09-29 10:19:44",
         "teaching_schedule_id": 27,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     },
     {
         "id": 391,
@@ -9981,6 +11130,9 @@
         "updated_at": "2026-09-29 10:19:44",
         "teaching_schedule_id": null,
         "work_schedule_id": null,
-        "make_up_class_id": null
+        "make_up_class_id": null,
+        "dedupe_key": null,
+        "manual_override_at": null,
+        "manual_override_by": null
     }
 ]

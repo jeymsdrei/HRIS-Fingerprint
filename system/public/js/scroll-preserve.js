@@ -5,16 +5,11 @@
  *
  * Behaviour:
  *   - tracks the page scroll plus any [data-scroll-preserve] inner scrollers
- *   - restores on reload, and on browser Back/Forward via popstate
- *   - re-applies for a short window so late content (charts, fonts) cannot
- *     shift the target, cancelling the moment the user actually scrolls
- *   - discards a stored position on filters, search, pagination and after a
- *     successful save, because those change what the old offset points at
+ *   - restores on reload, full-page navigation, and browser Back/Forward
+ *   - re-applies while page content is loading, cancelling when the user scrolls
  *
  * Opt an inner scroller in with a stable key:
  *   <div data-scroll-preserve="courses" class="overflow-y-auto">
- * Opt a whole page load out of restoring with:
- *   <div data-scroll-reset>
  */
 (function () {
     'use strict';
@@ -24,37 +19,20 @@
     }
 
     var STORAGE_NAMESPACE = 'hris:scroll:';
-    var RETRY_WINDOW_MS = 900;
+    var RETRY_WINDOW_MS = 2500;
     var RETRY_INTERVAL_MS = 60;
-    var RESET_REARM_MS = 2000;
-
-    var PAGINATION_SELECTOR =
-        'nav[aria-label="Pagination Navigation"] a, .paginator a, .pagination a';
-
-    // Any of these means the listing is different now, so a saved offset is meaningless.
-    var RESET_ON_NAVIGATE_SELECTOR = PAGINATION_SELECTOR + ', [data-scroll-reset]';
-
-    var resetRequested = false;
+    var PENDING_STORAGE_KEY = STORAGE_NAMESPACE + 'pending-navigation';
     var userMoved = false;
     var retryTimer = null;
 
-    function requestReset() {
-        resetRequested = true;
-        clear();
-
-        // The navigation may never happen (cancelled confirm, prevented click).
-        // Re-arm saving shortly after so the rest of the page's life is unaffected.
-        window.setTimeout(function () {
-            resetRequested = false;
-        }, RESET_REARM_MS);
-    }
-
     function storageKey() {
-        return STORAGE_NAMESPACE + location.pathname;
+        return STORAGE_NAMESPACE + location.pathname + location.search;
     }
 
     function mainScroller() {
-        return document.scrollingElement || document.documentElement;
+        return document.querySelector('.page-content')
+            || document.scrollingElement
+            || document.documentElement;
     }
 
     function innerScrollers() {
@@ -113,16 +91,31 @@
     }
 
     function save() {
-        // A reset was requested for this navigation; do not write it back on the
-        // way out, otherwise pagehide would re-store the offset we just dropped.
-        if (resetRequested) {
-            return;
-        }
-
         try {
             sessionStorage.setItem(storageKey(), JSON.stringify(collect()));
         } catch (e) {
             /* storage full or unavailable - scroll preservation is optional */
+        }
+    }
+
+    function saveBeforeNavigation() {
+        var state = collect();
+
+        try {
+            sessionStorage.setItem(storageKey(), JSON.stringify(state));
+            sessionStorage.setItem(PENDING_STORAGE_KEY, JSON.stringify(state));
+        } catch (e) {
+            /* storage full or unavailable - scroll preservation is optional */
+        }
+    }
+
+    function readPendingNavigation() {
+        try {
+            var raw = sessionStorage.getItem(PENDING_STORAGE_KEY);
+            sessionStorage.removeItem(PENDING_STORAGE_KEY);
+            return raw ? JSON.parse(raw) : null;
+        } catch (e) {
+            return null;
         }
     }
 
@@ -171,17 +164,14 @@
         window.addEventListener(type, cancelRetriesOnUserInput, { capture: true });
     });
 
+    document.addEventListener('scroll', save, true);
+
     document.addEventListener('click', function (event) {
         if (!event.target || !event.target.closest) {
             return;
         }
 
-        if (event.target.closest(RESET_ON_NAVIGATE_SELECTOR)) {
-            requestReset();
-            return;
-        }
-
-        if (event.target.closest('a[href]')) {
+        if (event.target.closest('a[href], button')) {
             save();
         }
     }, true);
@@ -193,16 +183,10 @@
             return;
         }
 
-        // A GET form is a filter or search: the result set is about to change.
-        if ((form.getAttribute('method') || 'get').toLowerCase() === 'get') {
-            requestReset();
-            return;
-        }
-
         save();
     }, true);
 
-    window.addEventListener('pagehide', save);
+    window.addEventListener('pagehide', saveBeforeNavigation);
 
     // Back/Forward restores cross-document, and we suppress the browser's own
     // handling below, so we have to put the position back ourselves.
@@ -217,10 +201,13 @@
             window.history.scrollRestoration = 'manual';
         }
 
-        // A success flash means a record was written and the listing shifted.
-        if (document.querySelector('[data-scroll-reset]')) {
-            requestReset();
-            return;
+        var pendingState = readPendingNavigation();
+        if (pendingState) {
+            try {
+                sessionStorage.setItem(storageKey(), JSON.stringify(pendingState));
+            } catch (e) {
+                /* storage full or unavailable - scroll preservation is optional */
+            }
         }
 
         restore();
@@ -234,7 +221,7 @@
     }
 
     window.addEventListener('load', function () {
-        if (!userMoved && !resetRequested) {
+        if (!userMoved) {
             restore();
             scheduleRetries();
         }
@@ -244,6 +231,11 @@
         // Restored from the back/forward cache: the browser kept the position.
         if (event.persisted) {
             stopRetrying();
+            try {
+                sessionStorage.removeItem(PENDING_STORAGE_KEY);
+            } catch (e) {
+                /* storage unavailable - scroll preservation is optional */
+            }
         }
     });
 

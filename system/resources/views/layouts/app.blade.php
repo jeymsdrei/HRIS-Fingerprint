@@ -33,5 +33,19 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <script>
+            window.onbeforeunload = function() {
+                sessionStorage.setItem('scrollY', window.scrollY);
+            };
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var scrollY = sessionStorage.getItem('scrollY');
+                if (scrollY !== null) {
+                    window.scrollTo(0, parseInt(scrollY));
+                }
+            });
+        </script>
+
     </body>
 </html>

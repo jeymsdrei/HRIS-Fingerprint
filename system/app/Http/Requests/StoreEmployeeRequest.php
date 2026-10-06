@@ -43,7 +43,7 @@ class StoreEmployeeRequest extends FormRequest
             'bank_name' => 'nullable|string|max:100',
             'bank_account_no' => 'nullable|string|max:50',
             'payment_method' => 'nullable|in:cash,bank_transfer,check',
-            'date_hired' => 'required|date',
+            'date_hired' => 'nullable|date',
             'login_username' => [
                 Rule::requiredIf(fn (): bool => ! $this->route('employee')),
                 'string', 'lowercase', 'max:255', 'regex:/^[a-z0-9._-]+$/',

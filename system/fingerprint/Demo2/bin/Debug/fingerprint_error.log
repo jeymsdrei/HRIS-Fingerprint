@@ -65,3 +65,128 @@
 2026-10-05 20:26:26.548 [Info   ] Identify | fid=5 score=317
 2026-10-05 20:26:30.837 [Info   ] Identify | fid=4 score=398
 2026-10-05 20:26:32.883 [Info   ] Identify | fid=5 score=384
+2026-10-06 02:21:54.289 [Info   ] Identify | fid=5 score=239
+2026-10-06 02:21:59.390 [Info   ] OnFormClosing | Application shutting down
+2026-10-06 02:22:01.213 [Warning] RegisterAgentAndFlush | register failed: Unauthorized (check ApiToken in hris.config)
+2026-10-06 02:22:01.305 [Info   ] CloseDevice | Device closed
+2026-10-06 02:30:23.712 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-06 02:30:26.366 [Warning] RegisterAgentAndFlush | register failed: Unauthorized (check ApiToken in hris.config)
+2026-10-06 02:30:28.445 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-06 02:30:39.928 [Warning] RefreshEmployeesFromHris | Unauthorized (check ApiToken in hris.config)
+2026-10-06 02:58:13.232 [Info   ] OnFormClosing | Application shutting down
+2026-10-06 02:58:14.087 [Warning] RegisterAgentAndFlush | register failed: Unauthorized (check ApiToken in hris.config)
+2026-10-06 02:58:14.245 [Info   ] CloseDevice | Device closed
+2026-10-06 02:58:20.680 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-06 02:58:21.686 [Warning] RegisterAgentAndFlush | register failed: Unauthorized (check ApiToken in hris.config)
+2026-10-06 02:58:22.277 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-06 02:58:24.343 [Warning] RefreshEmployeesFromHris | Unauthorized (check ApiToken in hris.config)
+2026-10-06 03:18:41.907 [Info   ] OnFormClosing | Application shutting down
+2026-10-06 03:18:42.780 [Warning] RegisterAgentAndFlush | register failed: Unauthorized (check ApiToken in hris.config)
+2026-10-06 03:18:42.918 [Info   ] CloseDevice | Device closed
+2026-10-06 03:18:56.774 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-06 03:18:57.603 [Warning] RegisterAgentAndFlush | register failed: Unauthorized (check ApiToken in hris.config)
+2026-10-06 03:18:58.298 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-06 03:19:00.468 [Warning] RefreshEmployeesFromHris | Unauthorized (check ApiToken in hris.config)
+2026-10-06 03:30:48.512 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:30:57.979 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:30:57.985 [Info   ] ApplyEmployeeSync | removed inactive employee N-0001
+2026-10-06 03:30:57.986 [Info   ] ApplyEmployeeSync | removed inactive employee N-0002
+2026-10-06 03:31:18.170 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:31:26.202 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:31:33.905 [Info   ] ResolveHrisFingerprintId | T-0004 -> fid 4
+2026-10-06 03:31:37.739 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:31:41.191 [Info   ] Enroll | fid overridden to 5 (HRIS id 4 collides with T-0003)
+2026-10-06 03:31:41.191 [Info   ] Enroll | fid=5 len=694 origDeclared=694 head=4B-F5-53-53-32-31-00-00-02-B6-B5-04-08-05-07-09 addRet=0
+2026-10-06 03:31:41.204 [Info   ] Enroll | saved fid=5 employee=T-0004 total=4
+2026-10-06 03:31:41.819 [Warning] Enroll | template push failed fid=5 (employee_not_found)
+2026-10-06 03:31:47.694 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:31:47.893 [Info   ] Identify | fid=5 score=427
+2026-10-06 03:31:51.140 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-06 03:31:54.999 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-06 03:31:56.588 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-06 03:31:59.990 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-06 03:32:27.823 [Info   ] RefreshEmployeesFromHris | fetched 9 employees
+2026-10-06 03:32:35.980 [Info   ] Identify | fid=5 score=388
+2026-10-06 03:32:37.902 [Info   ] RefreshEmployeesFromHris | fetched 9 employees
+2026-10-06 03:32:37.903 [Info   ] ApplyEmployeeSync | removed inactive employee T-0004
+2026-10-06 03:32:40.435 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-06 03:32:42.211 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-06 03:32:43.438 [Info   ] RefreshEmployeesFromHris | fetched 9 employees
+2026-10-06 03:32:57.996 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:40:50.006 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:42:07.927 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:47:57.991 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 03:48:30.546 [Info   ] OnFormClosing | Application shutting down
+2026-10-06 03:48:32.599 [Warning] RegisterAgentAndFlush | register failed: Unable to connect to the remote server
+2026-10-06 03:48:32.803 [Info   ] CloseDevice | Device closed
+2026-10-06 22:19:11.391 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-06 22:19:12.527 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-06 22:19:13.727 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-06 23:24:56.440 [Info   ] OnFormClosing | Application shutting down
+2026-10-06 23:24:56.818 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-06 23:24:56.959 [Info   ] CloseDevice | Device closed
+2026-10-06 23:26:35.152 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-06 23:26:36.291 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-06 23:26:37.643 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-06 23:26:41.692 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 23:26:43.601 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-06 23:26:44.944 [Info   ] OnFormClosing | Application shutting down
+2026-10-06 23:26:45.455 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-06 23:26:45.581 [Info   ] CloseDevice | Device closed
+2026-10-06 23:27:46.563 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-06 23:27:47.506 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-06 23:27:48.154 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-06 23:39:57.475 [Info   ] RefreshEmployeesFromHris | fetched 9 employees
+2026-10-06 23:40:07.383 [Info   ] RefreshEmployeesFromHris | fetched 9 employees
+2026-10-06 23:40:07.387 [Info   ] ApplyEmployeeSync | removed inactive employee T-0004
+2026-10-06 23:51:17.473 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-07 02:42:37.049 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-07 02:42:47.865 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-07 02:42:51.490 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-07 02:42:54.102 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-07 02:42:57.374 [Info   ] Identify | fid=3 score=127
+2026-10-07 02:43:03.197 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-07 02:48:12.018 [Info   ] OnFormClosing | Application shutting down
+2026-10-07 02:48:12.478 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-07 02:48:12.553 [Info   ] CloseDevice | Device closed
+2026-10-07 02:48:40.143 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-07 02:48:40.955 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-07 02:48:42.207 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-07 02:49:52.121 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-07 02:49:53.734 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-07 02:49:55.397 [Info   ] ResolveHrisFingerprintId | T-0004 -> fid 4
+2026-10-07 02:50:02.244 [Info   ] Enroll | fid overridden to 5 (HRIS id 4 collides with T-0003)
+2026-10-07 02:50:02.246 [Info   ] Enroll | fid=5 len=734 origDeclared=734 head=4B-9D-53-53-32-31-00-00-02-DE-DD-04-08-05-07-09 addRet=0
+2026-10-07 02:50:02.258 [Info   ] Enroll | saved fid=5 employee=T-0004 total=4
+2026-10-07 02:50:02.842 [Warning] Enroll | template push failed fid=5 (employee_not_found)
+2026-10-07 02:50:07.556 [Info   ] Identify | fid=5 score=578
+2026-10-07 02:50:32.292 [Info   ] Identify | fid=5 score=618
+2026-10-07 02:51:21.185 [Info   ] Identify | fid=5 score=529
+2026-10-07 02:51:21.313 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-07 02:51:41.233 [Info   ] RefreshEmployeesFromHris | fetched 9 employees
+2026-10-07 02:51:50.973 [Info   ] RefreshEmployeesFromHris | fetched 9 employees
+2026-10-07 02:51:50.977 [Info   ] ApplyEmployeeSync | removed inactive employee T-0004
+2026-10-07 02:52:17.862 [Info   ] Identify | fid=4 score=581
+2026-10-07 02:52:21.471 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-07 02:52:23.432 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-07 02:52:25.637 [Error  ] SDK | DefWndProc | DBIdentify | ret=-17 (ZKFP_ERR_IDENTIFY)
+2026-10-07 02:52:27.892 [Info   ] RefreshEmployeesFromHris | fetched 9 employees
+2026-10-07 02:52:40.932 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-07 02:52:45.296 [Info   ] ResolveHrisFingerprintId | T-0004 -> fid 4
+2026-10-07 02:52:49.749 [Info   ] Enroll | fid overridden to 5 (HRIS id 4 collides with T-0003)
+2026-10-07 02:52:49.749 [Info   ] Enroll | fid=5 len=864 origDeclared=864 head=4A-23-53-53-32-31-00-00-03-60-64-04-08-05-07-09 addRet=0
+2026-10-07 02:52:49.770 [Info   ] Enroll | saved fid=5 employee=T-0004 total=4
+2026-10-07 02:52:50.162 [Warning] Enroll | template push failed fid=5 (employee_not_found)
+2026-10-07 02:52:54.171 [Info   ] Identify | fid=5 score=738
+2026-10-07 02:58:52.535 [Info   ] Identify | fid=5 score=475
+2026-10-07 02:59:39.188 [Info   ] Identify | fid=4 score=602
+2026-10-07 02:59:41.257 [Info   ] RefreshEmployeesFromHris | fetched 10 employees
+2026-10-07 03:05:53.174 [Info   ] OnFormClosing | Application shutting down
+2026-10-07 03:05:53.750 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-07 03:05:53.922 [Info   ] CloseDevice | Device closed
+2026-10-07 03:06:00.405 [Info   ] InitializeHrisIntegration | HRIS: configured (http://127.0.0.1:8000/api) | agent=AG-4bd887dad95734a83bc489
+2026-10-07 03:06:01.194 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-07 03:06:01.921 [Info   ] TryAutoInitialize | Device connected successfully
+2026-10-07 03:06:07.198 [Info   ] OnFormClosing | Application shutting down
+2026-10-07 03:06:07.674 [Info   ] RegisterAgentAndFlush | agent registered
+2026-10-07 03:06:07.844 [Info   ] CloseDevice | Device closed

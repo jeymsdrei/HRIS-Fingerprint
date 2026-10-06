@@ -10,6 +10,8 @@
         "generated_by": null,
         "generated_at": "2026-08-21 10:25:23",
         "created_at": "2026-08-21 10:25:23",
-        "updated_at": "2026-08-21 10:25:23"
+        "updated_at": "2026-08-21 10:25:23",
+        "closed_at": null,
+        "closed_by": null
     }
 ]

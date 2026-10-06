@@ -121,7 +121,6 @@
                                     <div x-show="open" x-cloak class="absolute right-0 mt-8 w-48 rounded-lg bg-white shadow-lg border border-slate-200 py-1">
                                         <a href="{{ route('employees.edit', $e) }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Edit</a>
                                         <a href="{{ route('employees.show', $e) }}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50">Full Profile</a>
-                                        <button type="button" data-delete-employee data-url="{{ route('employees.destroy', $e) }}" class="block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50">Deactivate</button>
                                         <button type="button" data-permanent-delete-employee data-url="{{ route('employees.delete', $e) }}" class="block w-full px-4 py-2 text-left text-sm text-red-700 hover:bg-red-50 font-medium">Delete Permanently</button>
                                     </div>
                                 </div>
@@ -152,9 +151,9 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
+</x-app-layout>
 
 <script>
     const employeeSearch = document.getElementById('employee-search');
@@ -164,6 +163,8 @@
     const employeeRows = document.querySelectorAll('.employee-row');
     const employeeSearchStatus = document.getElementById('employee-search-status');
     const employeeFilterEmpty = document.getElementById('employee-filter-empty');
+
+    let lastScrollY = window.scrollY;
 
     function employeeMatches(employeeSearchText, term) {
         const nameWords = employeeSearchText.trim().split(/\s+/);
@@ -214,81 +215,19 @@
         if (employeeFilterEmpty) employeeFilterEmpty.hidden = !hasFilters || visibleCount > 0;
     }
 
-    employeeSearch?.addEventListener('input', filterEmployeeRows);
-    employeeDepartment?.addEventListener('change', filterEmployeeRows);
-    employeeEmploymentStatus?.addEventListener('change', filterEmployeeRows);
-    employeeClassification?.addEventListener('change', filterEmployeeRows);
+    const handleFilterChange = function() {
+        lastScrollY = window.scrollY;
+        filterEmployeeRows();
+        window.scrollTo(0, lastScrollY);
+    };
+
+    employeeSearch?.addEventListener('input', handleFilterChange);
+
+    employeeDepartment?.addEventListener('change', handleFilterChange);
+
+    employeeEmploymentStatus?.addEventListener('change', handleFilterChange);
+
+    employeeClassification?.addEventListener('change', handleFilterChange);
+
     filterEmployeeRows();
-
-    document.addEventListener('click', (event) => {
-        const button = event.target.closest('[data-delete-employee]');
-        if (!button) return;
-
-        const row = button.closest('[data-employee-id]');
-        const employeeName = row?.querySelector('a[href*="/employees/"]')?.textContent.trim() || 'this employee';
-
-        window.openConfirmDialog(
-            `Deactivate ${employeeName}? Their login and record are preserved.`,
-            'Deactivate',
-            'btn-danger',
-            async () => {
-                button.disabled = true;
-                button.textContent = 'Deactivating...';
-
-                try {
-                    const response = await fetch(button.dataset.url, {
-                        method: 'DELETE',
-                        headers: {
-                            'Accept': 'application/json',
-                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
-                        },
-                    });
-                    const result = await response.json();
-                    if (!response.ok || !result.ok) throw new Error(result.message || 'Deactivation failed.');
-                    window.location.reload();
-                } catch (error) {
-                    button.disabled = false;
-                    button.textContent = 'Deactivate';
-                    window.alert(error.message || 'Unable to deactivate the employee.');
-                }
-            }
-        );
-    });
-
-    document.addEventListener('click', (event) => {
-        const button = event.target.closest('[data-permanent-delete-employee]');
-        if (!button) return;
-
-        const row = button.closest('[data-employee-id]');
-        const employeeName = row?.querySelector('a[href*="/employees/"]')?.textContent.trim() || 'this employee';
-
-        window.openConfirmDialog(
-            `Permanently delete ${employeeName}? This will remove all their data including attendance records, payroll, loans, and biometric fingerprints from devices. This action CANNOT be undone.`,
-            'Delete Permanently',
-            'btn-danger',
-            async () => {
-                button.disabled = true;
-                button.textContent = 'Deleting...';
-
-                try {
-                    const response = await fetch(button.dataset.url, {
-                        method: 'DELETE',
-                        headers: {
-                            'Accept': 'application/json',
-                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || '',
-                        },
-                    });
-                    const result = await response.json();
-                    if (!response.ok || !result.ok) throw new Error(result.message || 'Deletion failed.');
-                    window.location.reload();
-                } catch (error) {
-                    button.disabled = false;
-                    button.textContent = 'Delete Permanently';
-                    window.alert(error.message || 'Unable to permanently delete the employee.');
-                }
-            }
-        );
-    });
 </script>
-</x-app-layout>
-

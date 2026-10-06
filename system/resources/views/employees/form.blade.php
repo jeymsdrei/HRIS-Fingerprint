@@ -145,8 +145,8 @@
                                 @error('address') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                             <div>
-                                <label class="input-label">Date Hired <span class="text-red-500">*</span></label>
-                                <input type="date" name="date_hired" value="{{ old('date_hired', $employee->date_hired?->format('Y-m-d')) }}" class="input" required>
+                                <label class="input-label">Date Hired</label>
+                                <input type="date" name="date_hired" value="{{ old('date_hired', $employee->date_hired?->format('Y-m-d')) }}" class="input">
                                 @error('date_hired') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                         </div>
@@ -300,7 +300,18 @@
                             </div>
                             <div>
                                 <label class="input-label">Password <span class="text-red-500">*</span> {{ $employee->exists ? '(leave blank to keep current)' : '' }}</label>
-                                <input type="password" name="login_password" class="input" placeholder="Minimum of 6 characters" {{ !$employee->exists ? 'required' : '' }}>
+                                <div class="employee-password-field">
+                                    <input type="password" name="login_password" class="input pr-12" placeholder="Minimum of 6 characters" {{ !$employee->exists ? 'required' : '' }}>
+                                    <button type="button" id="toggle-password" data-no-loading="true" class="employee-password-toggle rounded p-1 text-slate-500 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-label="Show password" title="Show password">
+                                        <svg class="w-5 h-5 password-show" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 12s3.5-7 9.75-7 9.75 7 9.75 7-3.5 7-9.75 7-9.75-7-9.75-7Z"/>
+                                            <circle cx="12" cy="12" r="3" stroke-width="2"/>
+                                        </svg>
+                                        <svg class="w-5 h-5 password-hide hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.2A10.8 10.8 0 0 1 12 5c6.25 0 9.75 7 9.75 7a16.8 16.8 0 0 1-3.1 4.1M6.2 6.2C3.6 8.1 2.25 12 2.25 12s3.5 7 9.75 7c1.3 0 2.5-.3 3.5-.8"/>
+                                        </svg>
+                                    </button>
+                                </div>
                                 @error('login_password') <p class="text-xs text-red-600 mt-1">{{ $message }}</p> @enderror
                             </div>
                         </div>
@@ -321,3 +332,25 @@
         </form>
     </div>
 </x-app-layout>
+
+<script>
+    document.getElementById('toggle-password')?.addEventListener('click', function() {
+        const passwordInput = document.querySelector('input[name="login_password"]');
+        const showIcon = this.querySelector('.password-show');
+        const hideIcon = this.querySelector('.password-hide');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            showIcon.classList.add('hidden');
+            hideIcon.classList.remove('hidden');
+            this.setAttribute('aria-label', 'Hide password');
+            this.setAttribute('title', 'Hide password');
+        } else {
+            passwordInput.type = 'password';
+            showIcon.classList.remove('hidden');
+            hideIcon.classList.add('hidden');
+            this.setAttribute('aria-label', 'Show password');
+            this.setAttribute('title', 'Show password');
+        }
+    });
+</script>

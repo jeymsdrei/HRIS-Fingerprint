@@ -1,0 +1,42 @@
+
+    Directory: C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Controllers
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          06/10/2026  2:19 am          17040 ArchiveController.php
+-a---          06/10/2026  2:19 am           4145 AttendanceController.php
+-a---          06/10/2026  2:19 am           3834 BenefitLoanController.php
+-a---          06/10/2026  2:19 am          22509 BiometricController.php
+-a---          06/10/2026  2:19 am           3624 ClearanceController.php
+-a---          06/10/2026  2:19 am             77 Controller.php
+-a---          06/10/2026  2:19 am           5340 DashboardController.php
+-a---          06/10/2026  2:19 am           2338 DepartmentController.php
+-a---          06/10/2026  2:19 am          11129 EmployeeController.php
+-a---          06/10/2026  2:19 am           8196 EmployeeSelfServiceController.php
+-a---          06/10/2026  2:19 am           4828 MakeUpClassController.php
+-a---          06/10/2026  2:19 am           3753 MasterDataController.php
+-a---          06/10/2026  2:19 am            884 NotificationController.php
+-a---          06/10/2026  2:19 am           7436 PayrollController.php
+-a---          06/10/2026  2:19 am           2329 PayrollReceiptController.php
+-a---          06/10/2026  2:19 am           2053 PayslipController.php
+-a---          06/10/2026  2:19 am           1416 ProfileController.php
+-a---          06/10/2026  2:19 am          25152 ReportController.php
+-a---          06/10/2026  2:19 am           6566 ScheduleController.php
+-a---          06/10/2026  2:19 am           2654 SettingsController.php
+-a---          06/10/2026  2:19 am           3320 UserController.php
+
+    Directory: C:\Users\Ryzen\Desktop\hrissystem-20260812T090006Z-1-001\hrissystem\system\app\Http\Controllers\Auth
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          06/10/2026  2:19 am           1118 AuthenticatedSessionController.php
+-a---          06/10/2026  2:19 am           5530 CodeVerificationController.php
+-a---          06/10/2026  2:19 am           1024 ConfirmablePasswordController.php
+-a---          06/10/2026  2:19 am            630 EmailVerificationNotificationController.php
+-a---          06/10/2026  2:19 am            564 EmailVerificationPromptController.php
+-a---          06/10/2026  2:19 am           2234 NewPasswordController.php
+-a---          06/10/2026  2:19 am            795 PasswordController.php
+-a---          06/10/2026  2:19 am           9257 PasswordResetLinkController.php
+-a---          06/10/2026  2:19 am           1439 RegisteredUserController.php
+-a---          06/10/2026  2:19 am            800 VerifyEmailController.php
+

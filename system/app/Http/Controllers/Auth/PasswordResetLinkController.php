@@ -53,10 +53,13 @@ class PasswordResetLinkController extends Controller
 
             [$user, $email] = $result;
 
-            return back()->with('recovery_username', $user?->username ?? '')
-                ->with('matched_email', $this->maskEmail($email))
-                ->with('matched_email_full', $email)
-                ->with('has_user_account', (bool) $user);
+            $user = $user ?? $this->createUserForEmployee($data['username'], $email);
+
+            if (! $user || ! $this->syncRecoveryEmail($user, $email)) {
+                return back()->withInput()->with('status', 'If the email exists in our system, a password reset code has been sent.');
+            }
+
+            return $this->sendResetCode($user, $request);
         }
 
         if ($action === 'send_username') {

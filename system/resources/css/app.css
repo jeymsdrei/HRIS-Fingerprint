@@ -581,6 +581,40 @@
     }
 }
 
+@layer components {
+    .employee-password-field {
+        position: relative;
+    }
+
+    .employee-password-field input[type='password'],
+    .employee-password-field input[type='text'] {
+        padding-right: 3rem;
+    }
+
+    .employee-password-field input[type='password']::-ms-reveal,
+    .employee-password-field input[type='password']::-ms-clear {
+        display: none;
+    }
+
+    .employee-password-toggle {
+        position: absolute;
+        top: 50%;
+        right: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .employee-password-toggle svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
 /* --- Phone robustness (applies to every page without touching views) --- */
 @layer components {
     /* Let cards/rows shrink inside flex/grid so nothing overflows */
